@@ -20,8 +20,7 @@ const getNextIndex = (currentIndex, cards) => {
 }
 
 const cardToDisplay = computed(() => {
-    const cardsToDisplay = getCardsToDisplay()
-    return cardsToDisplay[currentCardIndex.value % cardsToDisplay.length]
+    return deckState.value.cards[currentCardIndex.value]
 })
 
 const nextQuestion = (success) => {
@@ -34,9 +33,7 @@ const nextQuestion = (success) => {
     currentCardIndex.value = getNextIndex(currentCardIndex.value, deckState.value.cards)
 }
 
-const getCardsToDisplay = () => {
-    return deckState.value.cards.filter(card => getCardState(card) !== CardState.Learned)
-}
+
 </script>
 
 <template>
