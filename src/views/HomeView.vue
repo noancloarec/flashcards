@@ -1,10 +1,9 @@
 <script setup>
-import QuestionList from '../components/QuestionList.vue'
-import deck from '../assets/data.json'
+import DeckList from '../components/DeckList.vue'
 </script>
 
 <template>
   <main>
-    <QuestionList :deck="deck" />
+    <DeckList />
   </main>
 </template>

@@ -1,12 +1,20 @@
 <script setup>
 import { ref, computed } from 'vue';
-import deck from '../assets/data.json';
+import { useRoute } from 'vue-router';
+import decks from '../assets/data.json';
 import { CardState, getCardState } from '../utils/cards';
 import MemorizationProgress from './MemorizationProgress.vue';
 
-const deckState = ref({ ...deck, cards: deck.cards.map(card => ({ ...card, successfulAttempts: [], failedAttempts: [] })) });
+const getInitialDeck = () => {
+    const deckId = useRoute().params.deckId
+    const deck = decks.find(deck => deck.id === deckId)
+    return { ...deck, cards: deck.cards.map(card => ({ ...card, successfulAttempts: [], failedAttempts: [] })) }
+}
+
+const deckState = ref(getInitialDeck());
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
+
 
 const getNextIndex = (currentIndex, cards) => {
     let i = currentIndex
@@ -104,7 +112,6 @@ const nextQuestion = (success) => {
     margin-right: auto;
     background-color: #dbabef;
     border-radius: 20px;
-    font-family: sans-serif;
     vertical-align: middle;
     line-height: 30px;
     flex-direction: row;
@@ -131,7 +138,6 @@ const nextQuestion = (success) => {
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     height: 40px;
