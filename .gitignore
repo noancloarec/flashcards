@@ -32,3 +32,5 @@ coverage
 .vite/
 .vscode/
 init/
+.firebase/
+
