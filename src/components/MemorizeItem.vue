@@ -2,16 +2,19 @@
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import decks from '../assets/data.json';
+import { collection} from "firebase/firestore"; 
+
 import { CardState, getCardState } from '../utils/cards';
 import MemorizationProgress from './MemorizationProgress.vue';
 
-const getInitialDeck = () => {
+const getInitialDeck = async () => {
     const deckId = useRoute().params.deckId
-    const deck = decks.find(deck => deck.id === deckId)
+    const deck = await collection(db, 'deck_cards').doc(deckId)
     return { ...deck, cards: deck.cards.map(card => ({ ...card, successfulAttempts: [], failedAttempts: [] })) }
 }
 
-const deckState = ref(getInitialDeck());
+const deckState = ref(null);
+getInitialDeck().then(d => deckState.value = d)
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
 
