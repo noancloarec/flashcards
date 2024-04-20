@@ -1,15 +1,16 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import decks from '../assets/data.json';
-import { collection} from "firebase/firestore"; 
+import { collection, getDoc, doc } from "firebase/firestore";
+import { db } from '../utils/cards'
+
 
 import { CardState, getCardState } from '../utils/cards';
 import MemorizationProgress from './MemorizationProgress.vue';
 
 const getInitialDeck = async () => {
     const deckId = useRoute().params.deckId
-    const deck = await collection(db, 'deck_cards').doc(deckId)
+    const deck = (await getDoc(doc(db, "deck", deckId))).data()
     return { ...deck, cards: deck.cards.map(card => ({ ...card, successfulAttempts: [], failedAttempts: [] })) }
 }
 
@@ -48,7 +49,10 @@ const nextQuestion = (success) => {
 </script>
 
 <template>
-    <div v-if="currentCardIndex !== -1">
+    <div v-if="deckState === null">
+        Loading
+    </div>
+    <div v-else-if="currentCardIndex !== -1">
         <div class="question" :class="{ reduced: showAnswer }">
             {{ cardToDisplay.question }}
         </div>
@@ -69,6 +73,8 @@ const nextQuestion = (success) => {
                 </button>
             </template>
         </div>
+        <MemorizationProgress :cards="deckState.cards" :current-card-index="currentCardIndex"
+            @index-change="i => { showAnswer = false; currentCardIndex = i }" />
 
     </div>
     <div v-else>
@@ -76,8 +82,6 @@ const nextQuestion = (success) => {
             You have learned all the cards in this deck!
         </p>
     </div>
-    <MemorizationProgress :cards="deckState.cards" :current-card-index="currentCardIndex"
-        @index-change="i => { showAnswer = false; currentCardIndex = i }" />
 </template>
 
 <style scoped>

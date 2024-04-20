@@ -1,12 +1,12 @@
 const fs = require("fs")
-var admin = require("firebase-admin");
-var firestore = require("firebase-admin/firestore")
+const admin = require("firebase-admin");
+const firestore = require("firebase-admin/firestore")
 
-// var serviceAccount = require("./flashcards-c1e39-firebase-adminsdk-zrpr0-d55bee912b.json");
+const serviceAccount = require("./service_account_key.json");
 
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount)
-// });
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 
 
 
@@ -15,7 +15,7 @@ var firestore = require("firebase-admin/firestore")
  * @param {string} decksJsonFile json file containing an array of decks
  */
 const addDecksToFirestore = (decksJsonFile) => {
-    // const store = firestore.getFirestore()
+    const store = firestore.getFirestore()
     const decks = JSON.parse(fs.readFileSync(decksJsonFile))
     console.log(decks)
     for(const deck of decks){
@@ -30,17 +30,13 @@ const addDecksToFirestore = (decksJsonFile) => {
  * @param {firestore.Firestore} store
 */
 const addDeckToFireStore = (deck, store) => {
-    // TODO remove id from deck
+    const {id:_, ...deckWithoutId} = deck
 
     const deckReference = store.collection("deck").doc()
-    deckReference.update(deck)
+    deckReference.create(deckWithoutId)
 
-    const deckMetadata = {
-        id : deckReference.id,
-        author : deck.author,
-        name : deck.name,
-    }
-    store.collection("deck_metadata").doc(deckReference.id).set(deckMetadata)    
+
+    store.collection("deck_metadata").doc(deckReference.id).set(deckWithoutId)    
 }
 
 addDecksToFirestore("../src/assets/data.json")
