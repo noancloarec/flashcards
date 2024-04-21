@@ -1,7 +1,6 @@
 const fs = require("fs")
 const admin = require("firebase-admin");
 const firestore = require("firebase-admin/firestore")
-
 const serviceAccount = require("./service_account_key.json");
 
 admin.initializeApp({
@@ -39,4 +38,6 @@ const addDeckToFireStore = (deck, store) => {
     store.collection("deck_metadata").doc(deckReference.id).set(deckWithoutId)    
 }
 
-addDecksToFirestore("../src/assets/data.json")
+const input = process.argv[2];
+
+addDecksToFirestore(input)
