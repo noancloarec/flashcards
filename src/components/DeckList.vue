@@ -1,6 +1,24 @@
 <script setup>
 
-import decks from '../assets/data.json'
+// import decks from '../assets/data.json'
+import { ref } from 'vue';
+import {db} from '../utils/cards'
+import { collection, getDocs , where, query} from "firebase/firestore"; 
+
+const decks = ref([])
+
+/**
+ * @returns {Promise.<import('../utils/cards').Deck>}
+ */
+const downloadDeckList = async () => {
+    const metadata = await getDocs(collection(db, 'deck_metadata'));
+    return metadata.docs.map(d => ({
+        id : d.id,
+        ...d.data()
+    }))
+}
+
+downloadDeckList().then(res => decks.value = res)
 
 </script>
 <template>

@@ -1,17 +1,29 @@
 <script setup>
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
-import decks from '../assets/data.json';
+import { collection, getDoc, doc } from "firebase/firestore";
+import { db } from '../utils/cards'
+
+
 import { CardState, getCardState } from '../utils/cards';
 import MemorizationProgress from './MemorizationProgress.vue';
 
-const getInitialDeck = () => {
+const getInitialDeck = async () => {
     const deckId = useRoute().params.deckId
-    const deck = decks.find(deck => deck.id === deckId)
-    return { ...deck, cards: deck.cards.map(card => ({ ...card, successfulAttempts: [], failedAttempts: [] })) }
+    const deck = (await getDoc(doc(db, "deck", deckId))).data()
+    return {
+        ...deck, cards: deck.cards.map(card => (
+            {
+                question: card.question.replaceAll(/\*.*\*/g, s => `<em>${s.substring(1, s.length -1)}</em>`).replaceAll("\n", "</br>"),
+                answer: card.answer.replaceAll(/\*.*\*/g, s => `<em>${s.substring(1, s.length -1)}</em>`).replaceAll("\n", "</br>"),
+                successfulAttempts: [],
+                failedAttempts: []
+            }))
+    }
 }
 
-const deckState = ref(getInitialDeck());
+const deckState = ref(null);
+getInitialDeck().then(d => deckState.value = d)
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
 
@@ -45,12 +57,14 @@ const nextQuestion = (success) => {
 </script>
 
 <template>
-    <div v-if="currentCardIndex !== -1">
-        <div class="question" :class="{ reduced: showAnswer }">
-            {{ cardToDisplay.question }}
+    <div v-if="deckState === null">
+        Loading
+    </div>
+    <div v-else-if="currentCardIndex !== -1">
+        <h2>{{ deckState.name }}</h2>
+        <div class="question" :class="{ reduced: showAnswer }" v-html="cardToDisplay.question">
         </div>
-        <div class="answer" :class="{ shown: showAnswer }">
-            {{ cardToDisplay.answer }}
+        <div class="answer" :class="{ shown: showAnswer }" v-html="cardToDisplay.answer">
         </div>
         <div class="actions">
             <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
@@ -66,6 +80,8 @@ const nextQuestion = (success) => {
                 </button>
             </template>
         </div>
+        <MemorizationProgress :cards="deckState.cards" :current-card-index="currentCardIndex"
+            @index-change="i => { showAnswer = false; currentCardIndex = i }" />
 
     </div>
     <div v-else>
@@ -73,8 +89,6 @@ const nextQuestion = (success) => {
             You have learned all the cards in this deck!
         </p>
     </div>
-    <MemorizationProgress :cards="deckState.cards" :current-card-index="currentCardIndex"
-        @index-change="i => { showAnswer = false; currentCardIndex = i }" />
 </template>
 
 <style scoped>
@@ -85,16 +99,17 @@ const nextQuestion = (success) => {
 }
 
 .question {
-    height: 420px;
+    min-height: 420px;
 }
 
 .question.reduced {
-    height: 200px;
+    min-height: 200px;
     transition: height 0.5s, opacity .5s;
 }
 
 .answer.shown {
-    height: 200px;
+    min-height: 200px;
+    height: auto;
     opacity: 1;
     transition: height.5s, opacity 0.5s, margin-top .5s, color .2s .2s;
     margin-top: 20px;
@@ -114,11 +129,11 @@ const nextQuestion = (success) => {
     border-radius: 20px;
     vertical-align: middle;
     line-height: 30px;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     display: flex;
     justify-content: center;
-    padding: 0 20px;
+    padding: 10px 20px;
     text-align: center;
     color: #340a3c;
 }
