@@ -11,7 +11,6 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
-      includeAssets: ['favicon.ico', 'icon_180.png'],
       manifest: {
         name: "Flash Cards",
         short_name: "Flash Cards",
