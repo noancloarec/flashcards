@@ -34,6 +34,4 @@ coverage
 init/
 .firebase/
 
-
-
-
+dev-dist/

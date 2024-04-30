@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp  } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore , initializeFirestore, persistentLocalCache, persistentMultipleTabManager} from "firebase/firestore";
 
 /**
  * @typedef {Object} Card
@@ -32,7 +32,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
+export const db = initializeFirestore(app, 
+    {localCache: 
+      persistentLocalCache(/*settings*/{tabManager: persistentMultipleTabManager()})
+    });
+  
 
 export const CardState = {
     Learned: Symbol('learned'),
