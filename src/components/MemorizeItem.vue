@@ -3,10 +3,13 @@ import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { collection, getDoc, doc } from "firebase/firestore";
 import { db } from '../utils/cards'
-
+import SpaceBar from './SpaceBar.vue'
 
 import { CardState, getCardState } from '../utils/cards';
 import MemorizationProgress from './MemorizationProgress.vue';
+
+/** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
+const positiveMod = (a, b) => ((a % b) + b) % b;
 
 const getInitialDeck = async () => {
     const deckId = useRoute().params.deckId
@@ -14,8 +17,8 @@ const getInitialDeck = async () => {
     return {
         ...deck, cards: deck.cards.map(card => (
             {
-                question: card.question.replaceAll(/\*.*\*/g, s => `<em>${s.substring(1, s.length -1)}</em>`).replaceAll("\n", "</br>"),
-                answer: card.answer.replaceAll(/\*.*\*/g, s => `<em>${s.substring(1, s.length -1)}</em>`).replaceAll("\n", "</br>"),
+                question: card.question.replaceAll(/\*.*\*/g, s => `<em>${s.substring(1, s.length - 1)}</em>`).replaceAll("\n", "</br>"),
+                answer: card.answer.replaceAll(/\*.*\*/g, s => `<em>${s.substring(1, s.length - 1)}</em>`).replaceAll("\n", "</br>"),
                 successfulAttempts: [],
                 failedAttempts: []
             }))
@@ -27,6 +30,24 @@ getInitialDeck().then(d => deckState.value = d)
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
 
+/** Keyboard nagivation through questions */
+document.addEventListener("keyup", (e) => {
+    // Space = Reveal answer
+    if (!showAnswer.value && e.code == "Space") {
+        showAnswer.value = true
+    // Space on revealed == failure
+    } else if (showAnswer.value && e.code == "Space") {
+        nextQuestion(false)
+    // Enter on revealed = success
+    } else if (showAnswer.value && e.code == "Enter") {
+        nextQuestion(true)
+    // Arrows = next or previous question
+    } else if (e.code == "ArrowRight" || e.code=="ArrowLeft") {
+        const shift = e.code == "ArrowRight" ? 1 : -1
+        showAnswer.value = false
+        currentCardIndex.value = positiveMod(currentCardIndex.value + shift,  deckState.value.cards.length)
+    }
+})
 
 const getNextIndex = (currentIndex, cards) => {
     let i = currentIndex
@@ -68,15 +89,17 @@ const nextQuestion = (success) => {
         </div>
         <div class="actions">
             <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
-                Show Answer
+                Show Answer [
+                <SpaceBar class="space-bar" />]
             </button>
 
             <template v-else>
                 <button @click="nextQuestion(true)" class="success">
-                    Got it
+                    Got it [↲]
                 </button>
                 <button @click="nextQuestion(false)" class="failed">
-                    Failed
+                    Failed [
+                    <SpaceBar class="space-bar" />]
                 </button>
             </template>
         </div>
@@ -92,6 +115,12 @@ const nextQuestion = (success) => {
 </template>
 
 <style scoped>
+.space-bar {
+    width: 20px;
+    height: 10px;
+    fill: white;
+}
+
 .answer {
     opacity: 0;
     height: 0px;
@@ -152,7 +181,6 @@ const nextQuestion = (success) => {
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    display: inline-block;
     font-size: 14px;
     font-weight: 500;
     height: 40px;
@@ -167,6 +195,8 @@ const nextQuestion = (success) => {
     transition: color 100ms;
     vertical-align: baseline;
     touch-action: manipulation;
+    display: flex;
+    align-items: flex-end;
 }
 
 button.show-anwser,
