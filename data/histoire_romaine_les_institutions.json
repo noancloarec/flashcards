@@ -31,14 +31,6 @@
       "answer": "C’est une charge extraordinaire, créée lorsque la République est en danger. Sur proposition du Sénat, les consuls nomment un dictateur. Son imperium est supérieur à celui de tous les autres magistrats et il exerce sa charge pour une durée de six mois."
     },
     {
-      "question": "Quelles sont les trois composantes des institutions politiques de la République romaine selon Polybe ?",
-      "answer": "Les magistratures, le Sénat et les assemblées du peuple."
-    },
-    {
-      "question": "À quels trois types de régime grec Polybe assimile-t-il les trois composantes des institutions romaines ?",
-      "answer": "Aux trois formes de régime que sont la monarchie, l’oligarchie et la démocratie."
-    },
-    {
       "question": "Pourquoi Polybe parle-t-il de « constitution mixte » à propos de Rome ?",
       "answer": "Parce que les institutions romaines associent les trois formes de régime : la monarchie avec les magistratures, l’oligarchie avec le Sénat et la démocratie avec les assemblées du peuple."
     },
@@ -69,6 +61,70 @@
     {
       "question": "Comment les familles aristocratiques entretiennent-elles la mémoire et le prestige de leurs ancêtres ?",
       "answer": "Elles conservent les masques mortuaires des ancêtres dans leur domus, les exposent dans l’atrium et les présentent notamment lors des funérailles."
+    },
+    {
+      "question": "Quels droits confère l'imperium ?",
+      "answer": "L'imperium confère le droit de coercition, c'est-à-dire qu'il peut condamner un citoyen sans jugement. Il confère aussi le droit de prendre des auspices avant chaque décision importante auprès des augures, et le ius agendi cum populo, c'est-à-dire le droit d'assembler le peuple et le Sénat. Il préside également certains tribunaux et commande les armées hors de Rome. Il peut gouverner des provinces."
+    },
+    {
+      "question": "Quelles sont les étapes du cursus honorum ?",
+      "answer": "La première étape est la questure. La deuxième étape est soit l'édilité, soit le tribunat militaire. La troisième étape est la préture. La quatrième étape est le consulat."
+    },
+    {
+      "question": "Citez deux magistratures spécifiques en dehors du cursus honorum.",
+      "answer": "La censure et la dictature."
+    },
+    {
+      "question": "Combien de temps sont élus les magistrats ?",
+      "answer": "Un an, à l'exception des censeurs qui sont élus pour cinq ans et des dictateurs qui sont nommés pour six mois."
+    },
+    {
+      "question": "Quels sont les différents types d'assemblées ?",
+      "answer": "Les comices centuriates, les comices tributes et le concile de la plèbe."
+    },
+    {
+      "question": "Comment votent les comices centuriates ?",
+      "answer": "Une seule voix par centurie, en faisant commencer à voter les centuries de la première classe, c'est-à-dire les plus riches."
+    },
+    {
+      "question": "À part voter lors des comices centuriates, à quoi servent les centuries ?",
+      "answer": "Elles servent à mobiliser l'armée et à lever l'impôt."
+    },
+    {
+      "question": "Où se réunissent les comices centuriates ?",
+      "answer": "Sur le Champ de Mars."
+    },
+    {
+      "question": "De quoi décident les comices centuriates ?",
+      "answer": "Elles élisent les magistrats à imperium, elles décident de la guerre et répondent à la provocatio ad populum."
+    },
+    {
+      "question": "Comment fonctionnent les comices tributes ?",
+      "answer": "Elles sont regroupées en tribus qui sont des circonscriptions géographiques au nombre de 35. Le vote se fait par tribu."
+    },
+    {
+      "question": "En quoi pourrait-on assimiler Rome à une démocratie ?",
+      "answer": "Selon Fergus Millar, les assemblées préparatoires des différents comices et conciles donnaient la parole à plusieurs personnages et assuraient une grande liberté de parole. De plus, les lois tabellaires assuraient un vote sans pression. Enfin, la compétition aristocratique était arbitrée par le peuple."
+    },
+    {
+      "question": "En quoi Rome ne peut-elle pas être qualifiée de démocratie ?",
+      "answer": "Selon Karl Joachim Hölkeskamp, ceux qui sont les plus pauvres ne peuvent pas s'exprimer politiquement. L'égalité n'est que géométrique. Ensuite, le principe d'auctoritas, de nature religieuse, s'impose au peuple et donne énormément de pouvoir aux magistrats à imperium et au Sénat."
+    },
+    {
+      "question": "Comment entre-t-on au Sénat ?",
+      "answer": "On y entre après avoir été chargé d'une magistrature."
+    },
+    {
+      "question": "Quelles sont les compétences du Sénat ?",
+      "answer": "Il est sollicité pour toutes les décisions importantes de la cité. Il est compétent en matière religieuse. Il décide de qui on va honorer, quelle fête ou quel jeu organiser, quel triomphe faire. Il décide de la levée de l'armée, est chargé de créer les provinces, décide de la levée de nouveaux impôts et de mesures exceptionnelles pour lever la dictature."
+    },
+    {
+      "question": "Comment sont habillés les sénateurs ?",
+      "answer": "Ils portent la toga praetexta, dotée du latus clavus, une bande pourpre."
+    },
+    {
+      "question": "Quelles sont les obligations des sénateurs ?",
+      "answer": "Ils sont tenus de résider à Rome et d'être assidus au Sénat. Dans les faits, cette obligation n'est pas toujours respectée."
     }
   ]
 }
