@@ -14,15 +14,6 @@
       "question": "À quel siècle av. J.-C. Rome accélère-t-elle son expansion vers l’Occident puis vers l’Orient ?",
       "answer": "Au IIe siècle av. J.-C."
     },
-
-    {
-      "question": "À quels siècles av. J.-C. le fonctionnement politique romain repose-t-il sur le Sénat, les magistrats et le peuple ?",
-      "answer": "Aux IIIe, IIe et Ier siècles av. J.-C."
-    },
-    {
-      "question": "Entre quelles dates se déroulent les guerres civiles évoquées dans le cours ?",
-      "answer": "De 49 à 31 av. J.-C."
-    },
     {
       "question": "En quelle année la loi Villia Annalis fixe-t-elle l’ordre des magistratures et l’âge minimal pour y accéder ?",
       "answer": "180 av. J.-C."
@@ -34,6 +25,58 @@
     {
       "question": "À quelle période Caius Marius exerce-t-il ses six consulats ?",
       "answer": "De 107 à 100 av. J.-C."
+    },
+    {
+      "question": "Quand débute la République romaine ?",
+      "answer": "En 509 av. J.-C."
+    },
+    {
+      "question": "Quand la gens Claudia s'installe-t-elle sur le territoire de Rome avec 5 000 clients ?",
+      "answer": "En 504 av. J.-C."
+    },
+    {
+      "question": "Quand a lieu la clôture du patriciat ?",
+      "answer": "Au début du Ve siècle av. J.-C."
+    },
+    {
+      "question": "Quand a lieu la première révolte plébéienne, avec la sécession de la plèbe sur l'Aventin et la création des tribuns de la plèbe ?",
+      "answer": "En 494 av. J.-C."
+    },
+    {
+      "question": "Quand la loi des Douze Tables est-elle rédigée ?",
+      "answer": "En 451–450 av. J.-C., elles mettent à l'écrit le droit romain auparavant détenu par les patriciens"
+    },
+    {
+      "question": "Quand sont adoptées les lois Licinio-Sextiennes ?",
+      "answer": "En 367 av. J.-C., elles donnent divers pouvoirs aux plébéiens"
+    },
+    {
+      "question": "Quand est adoptée la loi Ogulnia ?",
+      "answer": "En 300 av. J.-C., elle ouvre aux plébéiens l'accès aux sacerdoces"
+    },
+    {
+      "question": "Quand est adoptée la loi Hortensia ?",
+      "answer": "En 287 av. J.-C., les décisions du Concile de la plèbe s'appliquent alors aussi aux patriciens"
+    },
+    {
+      "question": "Quand est adoptée la loi Villia Annalis ?",
+      "answer": "En 180 av. J.-C., elle définit l'ordre des magistratures et les ages minimum pour y accéder"
+    },
+    {
+      "question": "Quand sont adoptée les lois Gabinia, Cassia et Papiria?",
+      "answer": "En 139, 137 et 130  av. J.-C., elles introduisent le vote à bulletin secret sur des tablettes "
+    },
+    {
+      "question": "Quand Caius Marius est-il consul six fois ?",
+      "answer": "De 107 à 100 av. J.-C."
+    },
+    {
+      "question": "Quand César est-il édile",
+      "answer": "En 65 av. J.-C., il s'endette-t-il lourdement en organisant des jeux et des combats de gladiateurs ?"
+    },
+    {
+      "question": "Quand est-ce que le consul Tiberius Gracchus commence-t-il à s'affranchir de l'avis du Sénat",
+      "answer": "Sous son consulat en 133 av. J.-C."
     }
   ]
 }
