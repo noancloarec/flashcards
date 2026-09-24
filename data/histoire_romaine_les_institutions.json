@@ -1,0 +1,74 @@
+{
+  "name": "Histoire Romaine - Les institutions",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Définis la questure.",
+      "answer": "Elle consiste en la gestion du trésor. Les questeurs exercent dans la cité et dans les provinces."
+    },
+    {
+      "question": "Définis l’édilité.",
+      "answer": "Charge de l’entretien des bâtiments publics, de la voirie et des temples, ainsi que de l’ordre et de l’approvisionnement de la cité (cura annonae). Les édiles peuvent également organiser des jeux."
+    },
+    {
+      "question": "Définis le tribunat de la plèbe.",
+      "answer": "Magistrature créée lors d’une révolte au début de la République entre patriciens et plébéiens. Le tribun de la plèbe peut s’opposer aux décisions des magistrats (intercessio) ou aux décisions du Sénat défavorables à la plèbe (veto). Il peut également convoquer le concile de la plèbe et organiser un plébiscite."
+    },
+    {
+      "question": "Définis la préture.",
+      "answer": "Les préteurs disposent de l’imperium et exercent des fonctions judiciaires. Le préteur urbain règle les conflits entre citoyens romains, tandis que le préteur pérégrin règle les conflits entre citoyens romains et étrangers, ou entre étrangers."
+    },
+    {
+      "question": "Définis le consulat.",
+      "answer": "Les consuls détiennent le pouvoir exécutif dans la cité et le pouvoir militaire à l’extérieur."
+    },
+    {
+      "question": "Définis la censure.",
+      "answer": "Les censeurs sont élus tous les 5 ans parmi les anciens consuls. Ils sont chargés du recensement des citoyens, de l’évaluation de leur fortune et de leur honorabilité. Ils peuvent réviser l’album sénatorial et ont également la charge des contrats entre la cité et les sociétés de publicains. Ils n’ont pas d’imperium."
+    },
+    {
+      "question": "Définis la dictature.",
+      "answer": "C’est une charge extraordinaire, créée lorsque la République est en danger. Sur proposition du Sénat, les consuls nomment un dictateur. Son imperium est supérieur à celui de tous les autres magistrats et il exerce sa charge pour une durée de six mois."
+    },
+    {
+      "question": "Quelles sont les trois composantes des institutions politiques de la République romaine selon Polybe ?",
+      "answer": "Les magistratures, le Sénat et les assemblées du peuple."
+    },
+    {
+      "question": "À quels trois types de régime grec Polybe assimile-t-il les trois composantes des institutions romaines ?",
+      "answer": "Aux trois formes de régime que sont la monarchie, l’oligarchie et la démocratie."
+    },
+    {
+      "question": "Pourquoi Polybe parle-t-il de « constitution mixte » à propos de Rome ?",
+      "answer": "Parce que les institutions romaines associent les trois formes de régime : la monarchie avec les magistratures, l’oligarchie avec le Sénat et la démocratie avec les assemblées du peuple."
+    },
+    {
+      "question": "Pourquoi les détenteurs de l’imperium sont-ils liés à la religion ?",
+      "answer": "Parce que l’imperium est considéré comme un pouvoir de nature divine. Ses détenteurs peuvent prendre les auspices et sont des intermédiaires entre les dieux et la cité."
+    },
+    {
+      "question": "Que représente le faisceau porté par les licteurs ?",
+      "answer": "Il représente le droit de coercition, c’est-à-dire le droit de punir sans jugement."
+    },
+    {
+      "question": "Quelle différence existe-t-il entre le faisceau domi et le faisceau militiae ?",
+      "answer": "Le faisceau domi est constitué uniquement de baguettes liées, tandis que le faisceau militiae contient également une hache."
+    },
+    {
+      "question": "Pourquoi les Romains cherchent-ils à limiter l’itération des magistratures ?",
+      "answer": "Pour réguler la compétition entre les aristocrates et préserver la libertas, notamment en permettant à différents individus d’accéder aux plus hautes charges."
+    },
+    {
+      "question": "Pourquoi la prorogation de l’imperium est-elle mise en place ?",
+      "answer": "Les Romains cessent de nommer de nouveaux préteurs afin de limiter la compétition pour le consulat. Ils prolongent donc l’imperium militiae des préteurs déjà en poste dans les provinces."
+    },
+    {
+      "question": "De quoi dépend le gradus dignitatis d’un aristocrate romain ?",
+      "answer": "Il dépend à la fois des magistratures exercées par l’individu et de la famille à laquelle il appartient."
+    },
+    {
+      "question": "Comment les familles aristocratiques entretiennent-elles la mémoire et le prestige de leurs ancêtres ?",
+      "answer": "Elles conservent les masques mortuaires des ancêtres dans leur domus, les exposent dans l’atrium et les présentent notamment lors des funérailles."
+    }
+  ]
+}

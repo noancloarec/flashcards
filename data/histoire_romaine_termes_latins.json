@@ -1,0 +1,111 @@
+{
+  "name": "Histoire Romaine - Termes latins",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Que signifie « Punicus » ?",
+      "answer": "« Carthaginois »."
+    },
+    {
+      "question": "Que signifie « Pomerium Domi » ?",
+      "answer": "« L'enceinte de la cité »."
+    },
+    {
+      "question": "Que signifie « res publica » ?",
+      "answer": "« Chose de tous » ; désigne la République romaine."
+    },
+    {
+      "question": "Que signifie « Populus Romanus » ?",
+      "answer": "« Peuple romain »."
+    },
+    {
+      "question": "Que signifie « civitas » ?",
+      "answer": "La communauté civique, c’est-à-dire l’ensemble des citoyens et l’organisation politique de la cité."
+    },
+    {
+      "question": "Que signifie « potestas » ?",
+      "answer": "Le pouvoir légal attaché à une magistrature."
+    },
+    {
+      "question": "Que signifie « imperium » ?",
+      "answer": "Le pouvoir de commandement supérieur détenu notamment par les consuls et les préteurs."
+    },
+    {
+      "question": "Que signifie « imperium militiae » ?",
+      "answer": "Le pouvoir de commandement militaire en dehors de Rome"
+    },
+    {
+      "question": "Que signifie « imperium domi » ?",
+      "answer": "Le pouvoir de commandement exercé à l’intérieur de Rome."
+    },
+    {
+      "question": "Que signifie « imperatores » ?",
+      "answer": "Les généraux victorieux, détenteurs de l’imperium."
+    },
+    {
+      "question": "Que signifie « ius agendi cum populo » ?",
+      "answer": "Le droit de convoquer et de réunir le peuple."
+    },
+    {
+      "question": "Que signifie « cursus honorum » ?",
+      "answer": "La carrière des magistratures, c’est-à-dire l’ordre dans lequel les magistratures romaines sont normalement exercées."
+    },
+    {
+      "question": "Que signifie « cura annonae » ?",
+      "answer": "La responsabilité de l’approvisionnement en céréales de Rome."
+    },
+    {
+      "question": "Que signifie « intercessio » ?",
+      "answer": "Le droit d’opposition du tribun de la plèbe à l’acte d’un autre magistrat."
+    },
+    {
+      "question": "Que signifie « veto » ?",
+      "answer": "Le droit d'opposition du tribun de la plebe aux décision du Senat"
+    },
+
+    {
+      "question": "Que signifie « honores » ?",
+      "answer": "Les magistratures et les honneurs publics."
+    },
+    {
+      "question": "Que signifie « dignitas » ?",
+      "answer": "Le prestige et le rang social et politique acquis par un individu."
+    },
+    {
+      "question": "Que signifie « gradus dignitatis » ?",
+      "answer": "Le degré de dignité et de prestige dans la hiérarchie politique romaine."
+    },
+    {
+      "question": "Que signifie « imagines maiorum » ?",
+      "answer": "Les portraits des ancêtres conservés et exposés par les familles aristocratiques."
+    },
+    {
+      "question": "Que signifie « titulus » ?",
+      "answer": "Le nom et le titre d'une personne"
+    },
+    {
+      "question": "Que signifie « pompa funebris » ?",
+      "answer": "Le cortège funéraire."
+    },
+    {
+      "question": "Que signifie « laudatio funebris » ?",
+      "answer": "L’éloge funèbre prononcé lors des funérailles."
+    },
+    {
+      "question": "Que signifie « nobilitas » ?",
+      "answer": "L’élite aristocratique romaine constituée notamment des familles ayant été consuls."
+    },
+    {
+      "question": "Que signifie « pontifex maximus » ?",
+      "answer": "Le grand pontife, principal responsable du collège des pontifes."
+    },
+    {
+      "question": "Que signifie « auspices » ?",
+      "answer": "Les signes divins permettant de connaître la volonté des dieux, notamment à travers l’observation des oiseaux."
+    },
+    {
+      "question": "Que signifie « princeps » ?",
+      "answer": "« Premier » ; titre désignant le princeps, c’est-à-dire le premier des citoyens, dans le cadre du Principat."
+    }
+  ]
+}

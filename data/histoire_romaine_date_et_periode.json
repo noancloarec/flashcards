@@ -1,0 +1,39 @@
+{
+  "name": "Histoire Romaine - Dates et périodes",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Que se passe-t-il en 218 av. J.-C. ?",
+      "answer": "Début de la deuxième guerre punique."
+    },
+    {
+      "question": "En quelle année Rome sort-elle victorieuse de la deuxième guerre punique ?",
+      "answer": "202 av. J.-C."
+    },
+    {
+      "question": "À quel siècle av. J.-C. Rome accélère-t-elle son expansion vers l’Occident puis vers l’Orient ?",
+      "answer": "Au IIe siècle av. J.-C."
+    },
+
+    {
+      "question": "À quels siècles av. J.-C. le fonctionnement politique romain repose-t-il sur le Sénat, les magistrats et le peuple ?",
+      "answer": "Aux IIIe, IIe et Ier siècles av. J.-C."
+    },
+    {
+      "question": "Entre quelles dates se déroulent les guerres civiles évoquées dans le cours ?",
+      "answer": "De 49 à 31 av. J.-C."
+    },
+    {
+      "question": "En quelle année la loi Villia Annalis fixe-t-elle l’ordre des magistratures et l’âge minimal pour y accéder ?",
+      "answer": "180 av. J.-C."
+    },
+    {
+      "question": "En quelle année César est-il édile ?",
+      "answer": "65 av. J.-C."
+    },
+    {
+      "question": "À quelle période Caius Marius exerce-t-il ses six consulats ?",
+      "answer": "De 107 à 100 av. J.-C."
+    }
+  ]
+}

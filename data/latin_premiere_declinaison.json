@@ -1,0 +1,30 @@
+{
+  "name": "Latin - première déclinaison",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Comment se décline rosa au nominatif ?",
+      "answer": "Singulier : rosa ; pluriel : rosae."
+    },
+    {
+      "question": "Comment se décline rosa au vocatif ?",
+      "answer": "Singulier : rosa ; pluriel : rosae."
+    },
+    {
+      "question": "Comment se décline rosa à l'accusatif ?",
+      "answer": "Singulier : rosam ; pluriel : rosas."
+    },
+    {
+      "question": "Comment se décline rosa au génitif ?",
+      "answer": "Singulier : rosae ; pluriel : rosarum."
+    },
+    {
+      "question": "Comment se décline rosa au datif ?",
+      "answer": "Singulier : rosae ; pluriel : rosis."
+    },
+    {
+      "question": "Comment se décline rosa à l'ablatif ?",
+      "answer": "Singulier : rosa ; pluriel : rosis."
+    }
+  ]
+}
