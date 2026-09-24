@@ -1,0 +1,81 @@
+{
+  "name": "Méditerranée - Les califats Arabes au Xe siècle",
+  "author": "Noan",
+  "cards": [
+    {
+      "answer": "Le Califat abbasside, le Califat fatimide et le Califat omeyyade de Cordoue.",
+      "question": "Quels sont les trois califats qui se partagent le monde musulman au Xe siècle ?"
+    },
+    {
+      "answer": "Le calife, le diwan (administration) et l'armée.",
+      "question": "Quelles sont les principales institutions gouvernementales du Califat abbasside ?"
+    },
+    {
+      "question": "Comment le califat abbasside rémunère-t-il notamment ses militaires sans puiser directement dans le trésor ?",
+      "answer": "Grâce au système de l'iqtâ, qui consiste à accorder temporairement des terres de l'État aux militaires afin qu'ils en perçoivent les impôts."
+    },
+    {
+      "question": "Quelle conséquence politique le système de l'iqtâ peut-il avoir pour le calife ?",
+      "answer": "Les militaires auxquels sont accordées les terres peuvent se comporter comme des seigneurs, ce qui réduit le pouvoir du calife et favorise le développement d'une aristocratie foncière."
+    },
+    {
+      "question": "Pourquoi le Califat abbasside connaît-il un affaiblissement politique au Xe siècle ?",
+      "answer": "Ses provinces deviennent progressivement autonomes et l'armée s'empare peu à peu du pouvoir califal, jusqu'à placer le calife sous la tutelle des Bouyides en 945."
+    },
+    {
+      "question": "Quels éléments témoignent de l'âge d'or économique du monde arabe sous les Abbassides ?",
+      "answer": "Le développement de l'irrigation et des terres cultivables, l'essor du commerce autour de Bagdad, une monnaie stable et le développement de techniques commerciales comme la lettre de change."
+    },
+    {
+      "question": "Pourquoi le commerce abbasside fléchit-il dans la seconde moitié du Xe siècle ?",
+      "answer": "Notamment parce que les Byzantins reviennent en force et reconquièrent des places commerciales importantes comme Antioche en 969, tandis que le califat connaît également des troubles politiques à l'Est."
+    },
+    {
+      "question": "Quels sont les trois grands califats étudiés dans le cours et quelle est leur orientation religieuse ?",
+      "answer": "Le Califat abbasside est sunnite, le Califat fatimide est chiite et le Califat omeyyade de Cordoue est sunnite."
+    },
+    {
+      "question": "Comment les Fatimides renforcent-ils leur puissance économique au Xe siècle ?",
+      "answer": "Ils contrôlent une partie importante du Maghreb et la Sicile, disposent des ressources agricoles de l'Égypte et profitent du déplacement du commerce du golfe Persique vers la mer Rouge."
+    },
+    {
+      "question": "Pourquoi Abd al-Rahman adopte-t-il le titre de calife en 929 ?",
+      "answer": "Pour affirmer le Califat omeyyade de Cordoue face aux Fatimides."
+    },
+    { "question": "Quelle est la capitale du Califat abbasside ?", "answer": "Bagdad." },
+    {
+      "answer": "Cordoue.",
+      "question": "Quelle ville est la capitale du Califat omeyyade au Xe siècle ?"
+    },
+    { "question": "Quelle ville est reconquise par les Byzantins en 969 ?", "answer": "Antioche." },
+    {
+      "answer": "Madinat al-Zahra.",
+      "question": "Quelle ville nouvelle est fondée près de Cordoue par les Omeyyades ?"
+    },
+    {
+      "answer": "Kairouan.",
+      "question": "Quelle ville sert initialement ?"
+    },
+    {
+      "question": "Comment s'appelle la capitale des Fatimides à partir de 969 ? Comment s'appelait l'ancienne ville sur laquelle elle est fondée ?",
+      "answer": "Al-Qâhira (Le Caire) est fondée en 969 sur l'emplacement d'Al-Fustat."
+    },
+    {
+      "question": "Qui prend le titre de Mahdi en 910 près de Kairouan ?",
+      "answer": "Ubayd Allah. C'est le 1er calife fatimide"
+    },
+    { "question": "Qui adopte le titre de calife en 929 à Cordoue ?", "answer": "Abd al-Rahman." },
+    {
+      "answer": "Le nouveau calife omeyyade de Cordoue, encore mineur au moment où Al-Mansur s'empare du pouvoir.",
+      "question": "Qui est Hisham II ?"
+    },
+    {
+      "question": "Qui profite de la minorité de Hisham II pour s'emparer du pouvoir en 978 ?",
+      "answer": "Al-Mansur, son vizir."
+    },
+    {
+      "answer": "Un émir bouyide chiite qui entre à Bagdad par les armes en 945, chasse le calife abbasside et en choisit un plus docile.",
+      "question": "Qui est Ahmad Ibn Buwaih ?"
+    }
+  ]
+}

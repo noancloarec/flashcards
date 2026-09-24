@@ -1,0 +1,30 @@
+{
+  "name": "Latin - Cas et fonctions grammaticales",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Quelle est la fonction grammaticale du nominatif ?",
+      "answer": "Sujet ou attribut du sujet."
+    },
+    {
+      "question": "Quelle est la fonction grammaticale du vocatif ?",
+      "answer": "Apostrophe."
+    },
+    {
+      "question": "Quelle est la fonction grammaticale de l'accusatif ?",
+      "answer": "COD ou attribut du COD."
+    },
+    {
+      "question": "Quelle est la fonction grammaticale du génitif ?",
+      "answer": "Complément du nom."
+    },
+    {
+      "question": "Quelle est la fonction grammaticale du datif ?",
+      "answer": "COS ou attribution, c'est-à-dire COI."
+    },
+    {
+      "question": "Quelle est la fonction grammaticale de l'ablatif ?",
+      "answer": "Complément circonstanciel."
+    }
+  ]
+}
