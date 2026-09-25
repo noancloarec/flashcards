@@ -103,7 +103,7 @@ const reset = () => {
     <div class="answer" :class="{ shown: showAnswer }" v-html="cardToDisplay.answer"></div>
     <div class="actions">
       <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
-        Show Answer [
+        Voir la réponse [
         <SpaceBar class="space-bar" />]
       </button>
 
