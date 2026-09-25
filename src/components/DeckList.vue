@@ -1,6 +1,6 @@
 <script setup>
 // import decks from '../assets/data.json'
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { db } from '../utils/cards'
 import { collection, getDocs, where, query, orderBy } from 'firebase/firestore'
 
@@ -24,7 +24,9 @@ const searchTerm = ref('')
 const filteredDecks = computed(() =>
   decks.value.filter((d) => d.name.toLowerCase().includes(searchTerm.value.toLowerCase()))
 )
-downloadDeckList().then((res) => (decks.value = res))
+onMounted(() => {
+  downloadDeckList().then((res) => (decks.value = res))
+})
 </script>
 <template>
   <input type="text" v-model="searchTerm" placeholder="Rechercher ..." />
