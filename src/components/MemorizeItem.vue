@@ -80,6 +80,19 @@ const nextQuestion = (success) => {
   }
   currentCardIndex.value = getNextIndex(currentCardIndex.value, deckState.value.cards)
 }
+
+const reset = () => {
+  deckState.value = {
+    ...deckState.value,
+    cards: deckState.value.cards.map((card) => ({
+      ...card,
+      successfulAttempts: [],
+      failedAttempts: []
+    }))
+  }
+  currentCardIndex.value = 0
+  showAnswer.value = false
+}
 </script>
 
 <template>
@@ -95,9 +108,9 @@ const nextQuestion = (success) => {
       </button>
 
       <template v-else>
-        <button @click="nextQuestion(true)" class="success">Got it [↲]</button>
+        <button @click="nextQuestion(true)" class="success">Je le savais [↲]</button>
         <button @click="nextQuestion(false)" class="failed">
-          Failed [
+          Je ne le savais pas [
           <SpaceBar class="space-bar" />]
         </button>
       </template>
@@ -115,6 +128,7 @@ const nextQuestion = (success) => {
   </div>
   <div v-else>
     <p>Vous avez mémorisé toutes les cartes</p>
+    <button @click="reset()">Recommencer</button>
   </div>
 </template>
 
@@ -178,11 +192,11 @@ h2 {
   justify-content: space-evenly;
   margin: auto;
   padding: 10px;
-  max-width: 300px;
+  max-width: 350px;
 }
 
-.actions > button {
-  border-radius: 8px;
+button {
+  border-radius: 6px;
   border-style: none;
   box-sizing: border-box;
   color: #ffffff;
@@ -205,7 +219,7 @@ h2 {
   align-items: flex-end;
 }
 
-button.show-anwser {
+button {
   background-color: rgb(176, 97, 64);
 }
 

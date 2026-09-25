@@ -63,7 +63,7 @@ li {
 
 a {
   background-color: #f5eee1;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   padding: 5px 15px;
   justify-content: center;
