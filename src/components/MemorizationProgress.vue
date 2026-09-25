@@ -36,6 +36,7 @@ const emit = defineEmits(['indexChange'])
 .progress {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .card-progress {
