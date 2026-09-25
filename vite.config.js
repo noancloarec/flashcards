@@ -10,43 +10,44 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
-      injectRegister: 'auto',
+      injectRegister: null,
       manifest: {
-        name: "Flash Cards",
-        short_name: "Flash Cards",
-        description: "Learn things by heart",
-        theme_color: "#ffffff",
+        name: 'Flash Cards',
+        short_name: 'Flash Cards',
+        description: 'Learn things by heart',
+        theme_color: '#ffffff',
         icons: [
           {
-            src: "pwa-64x64.png",
-            sizes: "64x64",
-            type: "image/png"
+            src: 'pwa-64x64.png',
+            sizes: '64x64',
+            type: 'image/png'
           },
           {
-            src: "pwa-192x192.png",
-            sizes: "192x192",
-            type: "image/png"
+            src: 'pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
           },
           {
-            src: "pwa-512x512.png",
-            sizes: "512x512",
-            type: "image/png"
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
           },
           {
-            src: "maskable-icon-512x512.png",
-            sizes: "512x512",
-            type: "image/png",
-            purpose: "maskable"
+            src: 'maskable-icon-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable'
           }
         ]
-            },
+      },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        cleanupOutdatedCaches: true,
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
       },
       devOptions: {
         enabled: true
-      },
-    }),
+      }
+    })
   ],
   resolve: {
     alias: {
