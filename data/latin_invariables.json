@@ -1,0 +1,28 @@
+{
+  "name": "Latin - Invariables",
+  "author": "Noan",
+  "cards": [
+    { "question": "mais, tandis que", "answer": "autem" },
+    { "question": "rapidement", "answer": "celeriter" },
+    { "question": "avec", "answer": "cum (+ abl.)" },
+    { "question": "enfin", "answer": "deinde" },
+    { "question": "en dehors de, depuis", "answer": "e/ex (+ abl.)" },
+    { "question": "car, en effet", "answer": "enim" },
+    { "question": "donc, ainsi", "answer": "ergo" },
+    { "question": "maintenant, déjà", "answer": "iam" },
+    { "question": "là", "answer": "ibi" },
+    { "question": "dans, à", "answer": "in (+ acc. ou abl.)" },
+    { "question": "entre, parmi", "answer": "inter (+ acc.)" },
+    { "question": "c’est pourquoi", "answer": "itaque" },
+    { "question": "car, en effet", "answer": "nam" },
+    { "question": "à travers", "answer": "per (+ acc.)" },
+    { "question": "après, derrière", "answer": "post (+ acc.)" },
+    { "question": "après que", "answer": "postquam" },
+    { "question": "toujours", "answer": "semper" },
+    { "question": "ainsi", "answer": "sic" },
+    { "question": "sans", "answer": "sine (+ abl.)" },
+    { "question": "lorsque", "answer": "ubi" },
+    { "question": "violemment", "answer": "vehementer" },
+    { "question": "en vérité", "answer": "vero" }
+  ]
+}

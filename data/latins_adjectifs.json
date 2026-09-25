@@ -1,0 +1,25 @@
+{
+  "name": "Latin - Adjectifs",
+  "author": "Noan",
+  "cards": [
+    { "question": "aigu, fin", "answer": "acutus, a, um" },
+    { "question": "épais, dense", "answer": "crassus, a, um" },
+    { "question": "cupide", "answer": "cupidus, a, um" },
+    { "question": "divin", "answer": "divinus, a, um" },
+    { "question": "en colère", "answer": "iratus, a, um" },
+    { "question": "libre", "answer": "liber, bera, berum" },
+    { "question": "grand", "answer": "magnus, a, um" },
+    { "question": "abondant, nombreux", "answer": "multus, a, um" },
+    { "question": "nouveau", "answer": "novus, a, um" },
+    { "question": "petit, peu nombreux", "answer": "parvus, a, um" },
+    { "question": "plein de", "answer": "plenus, a, um (+ génitif)" },
+    { "question": "postérieur, suivant", "answer": "posterus, a, um" },
+    { "question": "premier", "answer": "primus, a, um" },
+    { "question": "beau", "answer": "pulcher, chra, chrum" },
+    { "question": "calme, paisible", "answer": "quietus, a, um" },
+    { "question": "sacré", "answer": "sacer, cra, crum" },
+    { "question": "varié", "answer": "varius, a, um" },
+    { "question": "réel, vrai", "answer": "verus, a, um" },
+    { "question": "un seul, unique", "answer": "unus, a, um" }
+  ]
+}

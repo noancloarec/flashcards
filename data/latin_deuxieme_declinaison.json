@@ -1,0 +1,78 @@
+{
+  "name": "Latin - la deuxième déclinaison",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Décline dominus, i, m. au nominatif.",
+      "answer": "Dominus, domini"
+    },
+    {
+      "question": "Décline dominus, i, m. au vocatif.",
+      "answer": "Domine, domini"
+    },
+    {
+      "question": "Décline dominus, i, m. à l’accusatif.",
+      "answer": "Dominum, dominos"
+    },
+    {
+      "question": "Décline dominus, i, m. au génitif.",
+      "answer": "Domini, dominorum"
+    },
+    {
+      "question": "Décline dominus, i, m. au datif.",
+      "answer": "Domino, dominis"
+    },
+    {
+      "question": "Décline dominus, i, m. à l’ablatif.",
+      "answer": "Domino, dominis"
+    },
+    {
+      "question": "Décline ager, agri, m. au nominatif.",
+      "answer": "Ager, agri"
+    },
+    {
+      "question": "Décline ager, agri, m. au vocatif.",
+      "answer": "Ager, agri"
+    },
+    {
+      "question": "Décline ager, agri, m. à l’accusatif.",
+      "answer": "Agrum, agros"
+    },
+    {
+      "question": "Décline ager, agri, m. au génitif.",
+      "answer": "Agri, agrorum"
+    },
+    {
+      "question": "Décline ager, agri, m. au datif.",
+      "answer": "Agro, agris"
+    },
+    {
+      "question": "Décline ager, agri, m. à l’ablatif.",
+      "answer": "Agro, agris"
+    },
+    {
+      "question": "Décline templum, i, n. au nominatif.",
+      "answer": "Templum, templa"
+    },
+    {
+      "question": "Décline templum, i, n. au vocatif.",
+      "answer": "Templum, templa"
+    },
+    {
+      "question": "Décline templum, i, n. à l’accusatif.",
+      "answer": "Templum, templa"
+    },
+    {
+      "question": "Décline templum, i, n. au génitif.",
+      "answer": "Templi, templorum"
+    },
+    {
+      "question": "Décline templum, i, n. au datif.",
+      "answer": "Templo, templis"
+    },
+    {
+      "question": "Décline templum, i, n. à l’ablatif.",
+      "answer": "Templo, templis"
+    }
+  ]
+}

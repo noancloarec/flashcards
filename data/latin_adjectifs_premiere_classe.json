@@ -1,0 +1,54 @@
+{
+  "name": "Latin - adjectifs de la première classe",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Décline bonus, a, um au nominatif.",
+      "answer": "m. bonus ; n. bonum ; f. bona — m. pl. boni ; n. pl. bona ; f. pl. bonae"
+    },
+    {
+      "question": "Décline bonus, a, um au vocatif.",
+      "answer": "m. bone ; n. bonum ; f. bona — m. pl. boni ; n. pl. bona ; f. pl. bonae"
+    },
+    {
+      "question": "Décline bonus, a, um à l’accusatif.",
+      "answer": "m. bonum ; n. bonum ; f. bonam — m. pl. bonos ; n. pl. bona ; f. pl. bonas"
+    },
+    {
+      "question": "Décline bonus, a, um au génitif.",
+      "answer": "m. boni ; n. boni ; f. bonae — m. pl. bonorum ; n. pl. bonorum ; f. pl. bonarum"
+    },
+    {
+      "question": "Décline bonus, a, um au datif.",
+      "answer": "m. bono ; n. bono ; f. bonae — m. pl. bonis ; n. pl. bonis ; f. pl. bonis"
+    },
+    {
+      "question": "Décline bonus, a, um à l’ablatif.",
+      "answer": "m. bono ; n. bono ; f. bona — m. pl. bonis ; n. pl. bonis ; f. pl. bonis"
+    },
+    {
+      "question": "Décline pulcher, chra, chrum au nominatif.",
+      "answer": "m. pulcher ; n. pulchrum ; f. pulchra — m. pl. pulchri ; n. pl. pulchra ; f. pl. pulchrae"
+    },
+    {
+      "question": "Décline pulcher, chra, chrum au vocatif.",
+      "answer": "m. pulcher ; n. pulchrum ; f. pulchra — m. pl. pulchri ; n. pl. pulchra ; f. pl. pulchrae"
+    },
+    {
+      "question": "Décline pulcher, chra, chrum à l’accusatif.",
+      "answer": "m. pulchrum ; n. pulchrum ; f. pulchram — m. pl. pulchros ; n. pl. pulchra ; f. pl. pulchras"
+    },
+    {
+      "question": "Décline pulcher, chra, chrum au génitif.",
+      "answer": "m. pulchri ; n. pulchri ; f. pulchrae — m. pl. pulchrorum ; n. pl. pulchrorum ; f. pl. pulchrarum"
+    },
+    {
+      "question": "Décline pulcher, chra, chrum au datif.",
+      "answer": "m. pulchro ; n. pulchro ; f. pulchrae — m. pl. pulchris ; n. pl. pulchris ; f. pl. pulchris"
+    },
+    {
+      "question": "Décline pulcher, chra, chrum à l’ablatif.",
+      "answer": "m. pulchro ; n. pulchro ; f. pulchra — m. pl. pulchris ; n. pl. pulchris ; f. pl. pulchris"
+    }
+  ]
+}

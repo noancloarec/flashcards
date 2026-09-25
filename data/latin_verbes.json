@@ -1,0 +1,29 @@
+{
+  "name": "Latin - Verbes",
+  "author": "Noan",
+  "cards": [
+    { "question": "recevoir", "answer": "accipio, is, ere, cepit, ceptum" },
+    { "question": "estimer que", "answer": "aestimo, as, are, aui, atum" },
+    { "question": "constituer, établir", "answer": "constituo, is, ere, tui, tutum" },
+    { "question": "appeler, convoquer", "answer": "convoco, as, are, aui, atum" },
+    { "question": "choisir, élire", "answer": "deligo, is, ere, legi, lectum" },
+    { "question": "désirer", "answer": "desidero, as, are, aui, atum" },
+    { "question": "renoncer à", "answer": "desisto, is, ere, stiti, stitum" },
+    { "question": "diviser, partager", "answer": "divido, is, ere, uisi, uisum" },
+    { "question": "donner", "answer": "do, das, dare, dedi, datum" },
+    { "question": "conduire, mener", "answer": "duco, is, ere, duxi, ductum" },
+    { "question": "estimer, penser", "answer": "existimo, as, are, aui, atum" },
+    { "question": "s’enfuir", "answer": "fugio, is, ere, fugi, —" },
+    { "question": "porter, gérer", "answer": "gero, is, ere, gessi, gestum" },
+    { "question": "avoir, posséder, considérer comme", "answer": "habeo, es, ere, bui, bitum" },
+    { "question": "jeter", "answer": "iacio, is, ere, ieci, iactum" },
+    { "question": "instituer", "answer": "instituo, as, are, uui, atum" },
+    { "question": "louer, faire l’éloge", "answer": "laudo, as, are, aui, atum" },
+    { "question": "affranchir", "answer": "libero, as, are, aui, atum" },
+    { "question": "rester", "answer": "maneo, es, ere, mansi, mansum" },
+    { "question": "appeler, nommer", "answer": "nomino, as, are, aui, atum" },
+    { "question": "compter, dénombrer", "answer": "numero, as, are, aui, atum" },
+    { "question": "faire complètement, achever", "answer": "perficio, is, ere, feci, fectum" },
+    { "question": "rester jusqu’au bout", "answer": "permaneo, es, ere, mansi, mansum" }
+  ]
+}
