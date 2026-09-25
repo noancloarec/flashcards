@@ -19,8 +19,12 @@ main {
 }
 
 * {
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+body {
+  background-color: #fef9ef;
+  color: #2a2b2f;
 }
 
 header {
@@ -30,10 +34,10 @@ header {
   align-items: center;
 }
 
-header>a {
+header > a {
   text-decoration: none;
-  font-size: 2rem;
-  color: #673AB7;
-  font-weight: 600;
+  font-size: 2.5rem;
+  color: #b05a36;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 </style>
