@@ -1,0 +1,38 @@
+{
+  "name": "Méditerranée - Byzance et ses voisins du Xe siècle",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Quelles sont les expansions territoriales de Byzance au Xe siècle ?",
+      "answer": "Byzance connaît plusieurs expansions territoriales : la reconquête de la Crète en 961, la prise d’Antioche en 969, des conquêtes contre les musulmans en Asie Mineure, la conquête de l’Italie du Sud et l’annexion de la Bulgarie entre 1014 et 1018."
+    },
+    {
+      "question": "Quelle dynastie est associée à ces conquêtes ?",
+      "answer": "Il s’agit de la dynastie macédonienne, fondée par Basile Ier. Elle se caractérise notamment par sa longévité et par une période d’expansion territoriale de l’Empire byzantin."
+    },
+    {
+      "question": "Comment devient-on empereur à Byzance ?",
+      "answer": "Il n’existe pas de constitution politique définissant précisément les règles de succession. L’empereur est considéré comme choisi par Dieu. Dans les faits, des généraux victorieux peuvent prendre le pouvoir, puis renforcer leur légitimité en s’intégrant à la dynastie impériale par mariage ou adoption. L’empereur est reconnu ou acclamé, notamment à l’Hippodrome."
+    },
+    {
+      "question": "Quels sont les avantages géographiques de la ville de Byzance ?",
+      "answer": "Byzance est située sur le Bosphore, à un emplacement stratégique entre l’Europe et l’Asie. Sa position lui permet de contrôler le passage de la mer Noire à la Méditerranée. Elle bénéficie d’une position défensive favorable, d'eaux très poissonneuses et du bras de mer de la Corne d'Or où les bateaux peuvent se réfugier"
+    },
+    {
+      "question": "À l’Ouest, jusqu’où s’est étendue la reconquête de Justinien ?",
+      "answer": "La reconquête de Justinien s’étend jusqu’en Bétique, dans l’actuelle Andalousie, avec une frontière atteignant l’océan."
+    },
+    {
+      "question": "Comment Byzance perd-elle son influence en Italie au IXe et Xe siècle ?",
+      "answer": "Les évêques de Rome se rapprochent progressivement des Carolingiens et s’éloignent de Constantinople. Le couronnement de Charlemagne comme empereur à Rome le 25 décembre 800 constitue un défi pour Constantinople. Les Byzantins conservent toutefois des territoires en Italie du Sud et vassalisent des seigneurs lombards au IXe siècle. La Sicile est finalement conquise par les Arabes, avec la prise de Taormine en 902."
+    },
+    {
+      "question": "Quelles sont les différences entre l’Église de Rome et celle de Constantinople ?",
+      "answer": " Les divergences sont surtout disciplinaires et liturgiques : les usages, les vêtements ou encore le port de la barbe diffèrent. Il y a une divergence dogmatique : le Filioque : pour les Byzantins, le Saint-Esprit procède du Père ; dans l’Église de Rome il procède du Père 'et du fils' (Filioque en latin). Les deux Églises cherchent également à étendre leur influence en envoyant des missionnaires auprès des peuples slaves des Balkans."
+    },
+    {
+      "question": "Quelle est l’influence du royaume germanique sur l’Empire byzantin ?",
+      "answer": "Après sa victoire contre les Hongrois à Lechfeld en 955, Otton Ier est couronné empereur à Rome en février 962. Les deux empires entrent en contact et en conflit, notamment en Italie du Sud, mais leurs relations s'apaisent avec une alliance matrimoniale : Otton II épouse Théophano en 972. Otton III mourra prématurément en 1002"
+    }
+  ]
+}
