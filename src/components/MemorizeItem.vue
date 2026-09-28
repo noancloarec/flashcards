@@ -203,7 +203,7 @@ button {
   cursor: pointer;
   font-size: 14px;
   font-weight: 500;
-  height: 40px;
+  min-height: 40px;
   line-height: 20px;
   list-style: none;
   margin: 0;
