@@ -21,9 +21,23 @@ const downloadDeckList = async () => {
 
 const searchTerm = ref('')
 
+/**
+ * Normalizes a string for search purposes
+ * Removes accent and put it into lowercase
+ * @param {string}  str  The string to normalize
+ */
+const normalizeForSearch = (str) =>
+  str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+
 const filteredDecks = computed(() =>
-  decks.value.filter((d) => d.name.toLowerCase().includes(searchTerm.value.toLowerCase()))
+  decks.value.filter((d) =>
+    normalizeForSearch(d.name).includes(normalizeForSearch(searchTerm.value))
+  )
 )
+
 onMounted(() => {
   downloadDeckList().then((res) => (decks.value = res))
 })
