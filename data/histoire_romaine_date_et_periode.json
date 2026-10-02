@@ -7,14 +7,6 @@
       "answer": "Début de la deuxième guerre punique."
     },
     {
-      "question": "En quelle année Rome sort-elle victorieuse de la deuxième guerre punique ?",
-      "answer": "202 av. J.-C."
-    },
-    {
-      "question": "À quel siècle av. J.-C. Rome accélère-t-elle son expansion vers l’Occident puis vers l’Orient ?",
-      "answer": "Au IIe siècle av. J.-C."
-    },
-    {
       "question": "En quelle année la loi Villia Annalis fixe-t-elle l’ordre des magistratures et l’âge minimal pour y accéder ?",
       "answer": "180 av. J.-C."
     },
@@ -29,14 +21,6 @@
     {
       "question": "Quand débute la République romaine ?",
       "answer": "En 509 av. J.-C."
-    },
-    {
-      "question": "Quand la gens Claudia s'installe-t-elle sur le territoire de Rome avec 5 000 clients ?",
-      "answer": "En 504 av. J.-C."
-    },
-    {
-      "question": "Quand a lieu la clôture du patriciat ?",
-      "answer": "Au début du Ve siècle av. J.-C."
     },
     {
       "question": "Quand a lieu la première révolte plébéienne, avec la sécession de la plèbe sur l'Aventin et la création des tribuns de la plèbe ?",
@@ -75,8 +59,44 @@
       "answer": "En 65 av. J.-C., il s'endette-t-il lourdement en organisant des jeux et des combats de gladiateurs ?"
     },
     {
-      "question": "Quand est-ce que le consul Tiberius Gracchus commence-t-il à s'affranchir de l'avis du Sénat",
-      "answer": "Sous son consulat en 133 av. J.-C."
+      "question": "Quand a lieu le traité de Filinos ?",
+      "answer": "-306, c'est un partage territorial entre Rome et Carthage (Rome n'intervient pas en Sicile, Carthage n'intervient pas en Italie)"
+    },
+    {
+      "question": "Quand Rome prend-elle Tarente ?",
+      "answer": "-272, elle commence alors à s'intéresser à la Sicile"
+    },
+    {
+      "question": "Quand a lieu la première guerre punique ?",
+      "answer": "-264 à -241"
+    },
+    {
+      "question": "Quand a lieu la deuxième guerre punique ?",
+      "answer": "-218 à -202"
+    },
+    {
+      "question": "Quand Hannibal arrive-t-il en Italie ?",
+      "answer": "-218"
+    },
+    {
+      "question": "Quand a lieu la bataille de Cannes ?",
+      "answer": "-216"
+    },
+    {
+      "question": "Quand a lieu le tournant de la deuxième guerre punique ?",
+      "answer": "-212, les Romains recrutent une armée et reprennent Capoue"
+    },
+    {
+      "question": "Quand a lieu la bataille de Zama ?",
+      "answer": "-202, Scipion bat Hannibal"
+    },
+    {
+      "question": "Quand a lieu la troisième guerre punique ?",
+      "answer": "-149 à -146"
+    },
+    {
+      "question": "Quand Carthage est-elle détruite et les guerres puniques prennent-elles fin ?",
+      "answer": "-146"
     }
   ]
 }

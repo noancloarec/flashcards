@@ -97,6 +97,35 @@
     {
       "question": "Définis le terme « émir »",
       "answer": "Chef arabe d’une province ou d’une tribu importante."
+    },
+
+    {
+      "question": "Définis le terme « Banū Quraysh ».",
+      "answer": "Clan arabe auquel appartient le prophète Muhammad."
+    },
+    {
+      "question": "Définis le terme « taïfa ».",
+      "answer": "Petit État musulman issu de la fragmentation d’Al-Andalus après la disparition du califat de Cordoue."
+    },
+    {
+      "question": "Définis le terme « Ifrikya » ou « Ifriqiya ».",
+      "answer": "Région correspondant approximativement à la Tunisie actuelle et à une partie de l’est du Maghreb."
+    },
+    {
+      "question": "Définis le terme « Magrib ».",
+      "answer": "Terme arabe signifiant « Occident » et désignant les régions occidentales du monde musulman."
+    },
+    {
+      "question": "Définis le terme « Mashriq ».",
+      "answer": "Terme arabe signifiant « Orient » et désignant les régions orientales du monde musulman."
+    },
+    {
+      "question": "Définis le terme « sultan ».",
+      "answer": "Terme signifiant « autorité » ou « pouvoir » qui devient au XIe siècle un titre de souveraineté, notamment chez les Seldjoukides."
+    },
+    {
+      "question": "Définis le terme « parias ».",
+      "answer": "Tributs versés par les royaumes musulmans de Taïfa aux royaumes chrétiens du Nord de la péninsule Ibérique."
     }
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "name": "Histoire Romaine - Guerres puniques et expansion de Rome",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Quel est le casus belli de la 1ère guerre punique ?",
+      "answer": "En 264 av. J.-C., Rome intervient en Sicile pour venir en aide aux Mamertins de Messine, qui se placent dans le camp romain (deditio)."
+    },
+    {
+      "question": "Comment se termine la 1ère guerre punique ?",
+      "answer": "En 241 av. J.-C., Rome remporte la bataille décisive des îles Égates. Carthage ne peut plus ravitailler ses citadelles ni soutenir Hamilcar en Sicile et doit demander la paix."
+    },
+    {
+      "question": "Quelles sont les conditions du traité de paix après la 1ère guerre punique ?",
+      "answer": "Carthage doit abandonner la Sicile à Rome et payer une lourde indemnité : 1 000 talents euboïques, puis 2 200 talents sur 10 ans."
+    },
+    {
+      "question": "Comment Rome et Carthage évoluent-elles entre ces 2 guerres ?",
+      "answer": "Carthage connaît d’abord de graves difficultés financières et une révolte de ses mercenaires. Elle se redresse ensuite grâce à l’expansion d’Hamilcar en Ibérie et à l’exploitation des mines d’argent. Rome s’empare de la Corse et de la Sardaigne et s’inquiète du redressement carthaginois."
+    },
+    {
+      "question": "Quel est le casus belli de la 2de guerre punique ?",
+      "answer": "En 219 av. J.-C., Hannibal franchit la limite fixée par le traité de 226 en attaquant Sagonte, cité alliée de Rome. C’est le casus belli de la deuxième guerre punique. Il traversera les Alpes en 218"
+    },
+    {
+      "question": "Comment Rome reprend-elle l’avantage dans la 2nde guerre punique ?",
+      "answer": "À partir de 212 av. J.-C., Rome reprend progressivement l’initiative. Elle reprend Capoue, prend Syracuse en 211, puis Tarente en 209. En Espagne, Scipion l'Africain prend Carthagène en 209 et Hasdrubal est vaincu en 207."
+    },
+    {
+      "question": "Comment se termine la 2nde guerre punique ?",
+      "answer": "La guerre se termine par la bataille de Zama en 202 av. J.-C., où Scipion l’Africain vainc Hannibal."
+    },
+    {
+      "question": "Quelles sont les conditions du traité de paix de la 2nde guerre punique ?",
+      "answer": "En 201 av. J.-C., Carthage doit conserver seulement 10 navires, céder l’Ibérie, ne plus faire la guerre sans l’autorisation de Rome, reconnaître le royaume de Numidie de Massinissa et payer une indemnité de 10 000 talents sur 50 ans."
+    },
+    {
+      "question": "Comment évolue Carthage après la 2ème guerre punique ?",
+      "answer": "Malgré les conditions très lourdes du traité, Carthage retrouve une certaine prospérité économique. En 153 av. J.-C., Caton l’Ancien constate qu’elle prospère à nouveau. Rome continue cependant à exercer une surveillance sur Carthage."
+    },
+    {
+      "question": "Quelles sont les causes de la 3ème guerre punique ?",
+      "answer": "La prospérité retrouvée de Carthage inquiète Rome.  Carthage entre en guerre contre la Numidie de Massinissa et arrête de payer les indemnités."
+    },
+    {
+      "question": "Comment se termine la 3ème guerre punique ? Quelle est l’issue pour Carthage ?",
+      "answer": "En 146 av. J.-C., Scipion Émilien s’empare de Carthage après un siège de trois ans. La population est réduite en esclavage et le territoire de Carthage devient une province romaine. C’est la fin des guerres puniques."
+    }
+  ]
+}
