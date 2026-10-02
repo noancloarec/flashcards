@@ -1,0 +1,62 @@
+{
+  "name": "La cité en question - Antiquité et économie",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Définis le primitivisme.",
+      "answer": "Le primitivisme considère que l'économie antique est propre à son époque et qu'elle ne peut pas être comprise avec les catégories de l'économie moderne. Les comportements économiques sont principalement déterminés par des facteurs sociaux, politiques et religieux."
+    },
+    {
+      "question": "Définis le modernisme.",
+      "answer": "Le modernisme considère que l'on peut retrouver dans l'économie antique des caractéristiques de l'économie contemporaine, notamment des comportements rationnels, des marchés, du commerce et des formes de capitalisme."
+    },
+    {
+      "question": "Quelle est la pensée de Bücher ?",
+      "answer": "Karl Bücher est un primitiviste. Pour lui, l'économie antique vise principalement à satisfaire les besoins du foyer. La monnaie joue un rôle limité, la division du travail est technique plutôt que capitaliste et le capital comme moyen de production est peu développé. Il distingue trois stades : l'économie domestique, l'économie urbaine et l'économie nationale."
+    },
+    {
+      "question": "Quelle est la réponse de Meyer ?",
+      "answer": "Édouard Meyer est moderniste. Il refuse de considérer l'Antiquité comme un bloc homogène et distingue plusieurs phases de développement économique. Il souligne le développement du commerce, des activités industrielles, des marchés et d'une bourgeoisie dans le monde grec. Il rapproche notamment le monde homérique du Moyen Âge et l'époque classique de l'époque moderne."
+    },
+    {
+      "question": "Que disent J. Hasebroek, E. Ziebert et O. Erb ?",
+      "answer": "J. Hasebroek insiste sur le rôle central du commerce dans le monde grec, mais replace l'économie dans le cadre politique et social de la cité : l'objectif principal est l'autarcie et la subsistance. E. Ziebert critique cette approche en s'appuyant davantage sur les sources archéologiques, notamment les mines du Laurion, et souligne leur caractère industriel. O. Erb distingue l'oikonomiké, correspondant au commerce local, de la chrematistiké, correspondant au commerce lointain ; il considère la première comme fondamentale et la seconde comme un complément risqué."
+    },
+    {
+      "question": "Quelle est la pensée de M. Rostovtzeff ?",
+      "answer": "Mikhaïl Rostovtzeff est moderniste. Il considère qu'il existe une première mondialisation dans l'Antiquité et développe une conception cyclique de l'économie. Il voit une apogée économique dans le monde hellénistique, suivie d'une régression sous l'Empire romain. Il accorde une grande importance à la bourgeoisie, au commerce, aux investissements et au rôle des institutions étatiques."
+    },
+    {
+      "question": "Cite 2 historien·nes marxistes impliqué·es dans la controverse, et ce qu'ielles apportent.",
+      "answer": "Claude Mossé développe une lecture marxiste de la crise de la démocratie athénienne, reliant la politique aux transformations économiques et à la paupérisation des masses rurales. Pierre Vidal-Naquet analyse la crise de la cité au IVe siècle et participe à la diffusion des thèses de Finley en France, tout en s'inscrivant dans une historiographie attentive aux rapports sociaux et aux classes."
+    },
+    {
+      "question": "Définis le formalisme.",
+      "answer": "Le formalisme considère que les comportements économiques peuvent être analysés à partir de concepts économiques généraux, notamment la rationalité, le choix, l'offre, la demande et la recherche de l'intérêt. Il permet donc d'appliquer des catégories de la science économique moderne à des sociétés anciennes."
+    },
+    {
+      "question": "Définis le substantivisme.",
+      "answer": "Le substantivisme considère que l'économie doit être étudiée à partir de la manière dont une société organise concrètement la production, la distribution et la consommation. Les pratiques économiques sont encastrées dans les institutions et les relations sociales, politiques et religieuses propres à chaque société."
+    },
+    {
+      "question": "Quelle est la pensée de K. Polanyi ?",
+      "answer": "Karl Polanyi considère que l'économie est encastrée dans les institutions sociales, politiques et culturelles. Il distingue notamment les économies organisées autour de la réciprocité, de la redistribution et de l'échange marchand. Il critique l'idée selon laquelle le marché serait une institution naturelle et universelle."
+    },
+    {
+      "question": "Quelle est la pensée de Finley ?",
+      "answer": "Moses Finley développe une approche primitiviste et culturelle de l'économie antique. Il considère que l'économie antique ne constitue pas un domaine autonome et qu'elle est fortement déterminée par les institutions, les statuts sociaux et les valeurs de la cité. Il insiste sur l'autarcie, la place centrale de l'agriculture, le faible statut des commerçants, le coût des transports et l'absence d'un marché comparable au marché moderne. Il analyse les sociétés antiques à partir des différences de statut autant que des rapports économiques."
+    },
+    {
+      "question": "Pourquoi la pensée de Finley est-elle très influente ?",
+      "answer": "La pensée de Finley est très influente en raison de la grande cohérence de son œuvre, de son approche globale des sociétés antiques et de sa critique de l'utilisation de concepts modernes pour analyser l'Antiquité. En France, ses thèses sont notamment diffusées par Pierre Vidal-Naquet après 1965."
+    },
+    {
+      "question": "Quelles sont les oppositions à la pensée de Finley ?",
+      "answer": "Plusieurs historiens lui reprochent notamment de généraliser à toute l'Antiquité un modèle principalement fondé sur le monde grec. Jean Andreau souligne la spécificité professionnelle des manieurs d'argent à Rome. André Tchernia utilise les sources archéologiques pour mettre en évidence des circuits commerciaux, des productions viticoles à grande échelle et des mesures protectionnistes romaines. L'école de Besançon critique également l'empirisme de Finley et insiste sur l'existence de rapports de classes et de comportements économiques rationnels."
+    },
+    {
+      "question": "Quelles idées avance le courant néo-institutionnaliste ?",
+      "answer": "Le néo-institutionnalisme considère que les institutions jouent un rôle déterminant dans le fonctionnement de l'économie. Douglas North distingue les institutions formelles, comme les lois et les décrets, des institutions informelles, comme les coutumes. Elles définissent les règles de propriété et réduisent ou augmentent les coûts de transaction. L'économie ne peut donc pas être expliquée par le seul fonctionnement du marché."
+    }
+  ]
+}
