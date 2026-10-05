@@ -14,16 +14,8 @@ admin.initializeApp({
  * @param {firestore.Firestore} store
  */
 const addDeckToFirestore = async (deck, store) => {
-    const { id: _, ...deckWithoutId } = deck
-
     const deckReference = store.collection("deck").doc()
-
-    await deckReference.create(deckWithoutId)
-
-    await store
-        .collection("deck_metadata")
-        .doc(deckReference.id)
-        .set(deckWithoutId)
+    await deckReference.create(deck)
 }
 
 /**
@@ -42,7 +34,7 @@ const clearCollection = async (collection) => {
 }
 
 /**
- * Delete all decks and their metadata.
+ * Delete all decks .
  */
 const clearDatabase = async () => {
     const store = firestore.getFirestore()
@@ -50,8 +42,6 @@ const clearDatabase = async () => {
     console.log("Clearing deck collection...")
     await clearCollection(store.collection("deck"))
 
-    console.log("Clearing deck_metadata collection...")
-    await clearCollection(store.collection("deck_metadata"))
 
     console.log("Database cleared.")
 }
