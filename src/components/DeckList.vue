@@ -11,9 +11,9 @@ const decks = ref([])
  * @returns {Promise.<import('../utils/cards').Deck>}
  */
 const downloadDeckList = async () => {
-  const deckMetadataRef = collection(db, 'deck_metadata')
-  const metadata = await getDocs(query(deckMetadataRef, orderBy('name')))
-  return metadata.docs.map((d) => ({
+  const deckRef = collection(db, 'deck')
+  const decks = await getDocs(query(deckRef, orderBy('name')))
+  return decks.docs.map((d) => ({
     id: d.id,
     ...d.data()
   }))
@@ -21,7 +21,7 @@ const downloadDeckList = async () => {
 
 const searchTerm = ref('')
 
-/**
+/**x
  * Normalizes a string for search purposes
  * Removes accent and put it into lowercase
  * @param {string}  str  The string to normalize
