@@ -106,6 +106,100 @@
     {
       "question": "Que signifie « princeps » ?",
       "answer": "« Premier » ; titre désignant le princeps, c’est-à-dire le premier des citoyens, dans le cadre du Principat."
+    },
+
+    {
+      "question": "Que signifie Funus publicum ?",
+      "answer": "Funérailles publiques."
+    },
+    {
+      "question": "Que signifie Rostra / rostrum ?",
+      "answer": "Tribune(s) du Forum."
+    },
+    {
+      "question": "Que signifie Populus Romanus ?",
+      "answer": "Communauté civique romaine."
+    },
+    {
+      "question": "Que signifie Pater familias ?",
+      "answer": "Chef de famille."
+    },
+    {
+      "question": "Que signifie Virtus ?",
+      "answer": "Valeur, mérite, courage et qualités civiques."
+    },
+    {
+      "question": "Que signifie Cursus honorum ?",
+      "answer": "Carrière des magistratures."
+    },
+    {
+      "question": "Que signifie Imperium ?",
+      "answer": "Pouvoir de commandement, notamment militaire."
+    },
+    {
+      "question": "Que signifie Eikon ?",
+      "answer": "Masque ou image en cire ; terme grec, et non latin."
+    },
+
+    {
+      "question": "Que signifie Ius imaginis ?",
+      "answer": "Droit aux images des ancêtres."
+    },
+    {
+      "question": "Que signifie Domus ?",
+      "answer": "Maison aristocratique."
+    },
+    {
+      "question": "Que signifie Toga praetexta ?",
+      "answer": "Toge bordée de pourpre. Portée par les magistrats curules (Ediles curules, consul, preteur)"
+    },
+    {
+      "question": "Que signifie Pompa funebris ?",
+      "answer": "Procession funèbre."
+    },
+    {
+      "question": "Que signifie Dignitas ?",
+      "answer": "Dignité, prestige et rang social."
+    },
+    {
+      "question": "Que signifie Exemplum ?",
+      "answer": "Personnages modèle  à imiter."
+    },
+    {
+      "question": "Que signifie Mos maiorum ?",
+      "answer": "Coutume des ancêtres."
+    },
+    {
+      "question": "Que signifie Officium ?",
+      "answer": "Devoir qu'un client doit à son patron."
+    },
+    {
+      "question": "Que signifie Beneficium ?",
+      "answer": "Service rendu par le patron au client en retour de l'officium."
+    },
+    {
+      "question": "Que signifie Pietas ?",
+      "answer": "Respect et devoir envers les dieux, la famille, les ancêtres et la communauté."
+    },
+    {
+      "question": "Que signifie Fides ?",
+      "answer": "Loyauté, confiance et fidélité à la parole donnée."
+    },
+    {
+      "question": "Que signifie Ius ?",
+      "answer": "Le droit."
+    },
+    {
+      "question": "Que signifie Mos ?",
+      "answer": "La coutume, usage ou manière traditionnelle de se comporter."
+    },
+    {
+      "question": "Que signifie Gloria ?",
+      "answer": "Gloire, renommée et prestige acquis notamment par les actions et les mérites."
+    },
+    {
+      "question": "Que signifie Amicitia ?",
+      "answer": "Amitié, relation de confiance et d’entraide entre personnes, notamment dans la vie politique romaine."
     }
   ]
 }

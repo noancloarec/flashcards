@@ -1,0 +1,58 @@
+{
+  "name": "Histoire Romaine - Les institutions",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Quand a vécu Salluste ?",
+      "answer": "Il est né en -86 et meurt en -34 avant Jésus-Christ."
+    },
+    {
+      "question": "Quelle est l'œuvre de Salluste ?",
+      "answer": "Il a écrit La guerre de Jugurtha, l'Histoire (par fragments) et La conjuration de Catilina."
+    },
+    {
+      "question": "Quels sont les motivations de Salluste pour écrire son œuvre ?",
+      "answer": "Salluste se consacre à l'écriture après s'être retiré de la vie politique. Il écrit notamment sur les guerres civiles et la décadence de la République romaine."
+    },
+    {
+      "question": "Donne quelques éléments biographiques sur Salluste.",
+      "answer": "Claudius Salustius Crispus naît à Amiternum en -86 dans une famille aisée. Il étudie à Rome et entame son cursus honorum : questeur en -55 et tribun de la plèbe en -52. Il est exclu du Sénat en -50. En -49, César le réintègre. Salluste devient préteur puis gouverneur de l'Africa Nova, où il se livre à des exactions. Rappelé à Rome, il échappe à un procès grâce à César et se retire de la vie politique. Il se consacre alors à l'écriture jusqu'à sa mort en -34."
+    },
+    {
+      "question": "Quand a vécu Denys d'Halicarnasse ?",
+      "answer": "Il est né vers -60 à Halicarnasse. D'après la correction du TD, il est mort en 8 après Jésus-Christ."
+    },
+    {
+      "question": "Quelle est l'œuvre de Denys d'Halicarnasse ?",
+      "answer": "Son œuvre historique majeure est les Antiquités romaines. Il a également écrit cinq traités et trois lettres de rhétorique et de critique littéraire, regroupés sous le nom d'Opuscules rhétoriques."
+    },
+    {
+      "question": "Quels sont les motivations de Denys d'Halicarnasse pour écrire son œuvre ?",
+      "answer": "Il souhaite fournir à ses lecteurs des modèles éthiques auxquels se conformer et placer la société romaine dans la filiation des Grecs. Il écrit aussi en réaction à une propagande anti-romaine diffusée notamment dans l'entourage de Mithridate, roi du Pont. Dans le contexte augustéen, il exalte les origines de Rome et promeut le retour au calme et au fonctionnement normal des institutions."
+    },
+    {
+      "question": "De quelle période traite l'œuvre de Denys d'Halicarnasse ? Pourquoi cette période ?",
+      "answer": "Les Antiquités romaines racontent l'histoire de Rome depuis ses origines jusqu'en -264, date du début de la première guerre punique, là où commence l'œuvre de Polybe. Denys choisit cette période pour exalter les origines de Rome et promouvoir, dans le contexte du début du principat, le retour au calme et au fonctionnement normal des institutions."
+    },
+    {
+      "question": "Donne quelques éléments biographiques sur Denys d'Halicarnasse.",
+      "answer": "Denys est un historien grec né vers -60 à Halicarnasse, en Asie Mineure, sous tutelle romaine. Il part pour l'Italie après la victoire d'Octave sur Antoine en -31 et s'installe à Rome au début du principat. À son arrivée, il apprend le latin. Il est sous le patronage de Quintus Aelius Tubero. Il est proche de l'élite sénatoriale et écrit les Antiquités romaines, publiées autour de -7."
+    },
+    {
+      "question": "Quand a vécu Polybe ?",
+      "answer": "Il est né autour de 200 avant Jésus-Christ. Il est emmené à Rome en 168 et y reste 17 ans avant d'être libéré en 150."
+    },
+    {
+      "question": "Quelle est l'œuvre de Polybe ?",
+      "answer": "Son œuvre majeure est les Histoires, une œuvre de 40 livres dont cinq nous sont parvenus en totalité."
+    },
+    {
+      "question": "Quels sont les motivations de Polybe pour écrire son œuvre ?",
+      "answer": "Il cherche à comprendre comment et grâce à quel genre de constitution presque toutes les parties de la terre sont passées en moins de cinquante-trois ans sous la domination des Romains. Dans le livre 6, il expose la constitution romaine et défend l'idée du meilleur régime politique, qui combine monarchie, aristocratie et démocratie."
+    },
+    {
+      "question": "Qui Polybe côtoie-t-il ?",
+      "answer": "Amené à Rome comme otage en 168, Polybe côtoie la famille des Scipions et devient précepteur auprès de Scipion Émilien. Il revient ensuite assister Scipion Émilien à Numance en 133 et à Carthage pendant la troisième guerre punique."
+    }
+  ]
+}
