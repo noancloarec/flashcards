@@ -1,18 +1,12 @@
-<script setup>
-import { CardState, getCardState } from '@/utils/cards'
+<script setup lang="ts">
+import type { Card } from '../models/card'
+import { CardState, getCardState } from '../utils/cards'
 
-defineProps({
-  cards: {
-    type: Array,
-    required: true
-  },
-  currentCardIndex: {
-    type: Number,
-    required: true
-  }
-})
-
-const emit = defineEmits(['indexChange'])
+defineProps<{
+  cards: Card[]
+  currentCardIndex: number
+}>()
+const emit = defineEmits<{ indexChange: [index: number] }>()
 </script>
 
 <template>

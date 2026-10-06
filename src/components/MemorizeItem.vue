@@ -1,19 +1,22 @@
-<script setup>
+<script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { collection, getDoc, doc } from 'firebase/firestore'
+import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../utils/cards'
-import SpaceBar from './SpaceBar.vue'
+import SpaceBar from './icons/SpaceBar.vue'
 
 import { CardState, getCardState } from '../utils/cards'
 import MemorizationProgress from './MemorizationProgress.vue'
+import type { Deck } from '../models/deck.ts'
+import type { Card } from '../models/card.ts'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
-const positiveMod = (a, b) => ((a % b) + b) % b
+const positiveMod = (a: number, b: number) => ((a % b) + b) % b
 
-const getInitialDeck = async () => {
-  const deckId = useRoute().params.deckId
-  const deck = (await getDoc(doc(db, 'deck', deckId))).data()
+const getInitialDeck: () => Promise<Deck> = async () => {
+  const deckId = useRoute().params.deckId as string
+  // Todo better types because deck here (from firestore) does not fit the type description, it only fits it on the following line
+  const deck = (await getDoc(doc(db, 'deck', deckId))).data() as Deck
   return {
     ...deck,
     cards: deck.cards.map((card) => ({
@@ -29,7 +32,7 @@ const getInitialDeck = async () => {
   }
 }
 
-const deckState = ref(null)
+const deckState = ref<Deck | null>(null)
 getInitialDeck().then((d) => (deckState.value = d))
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
@@ -51,12 +54,12 @@ document.addEventListener('keyup', (e) => {
     showAnswer.value = false
     currentCardIndex.value = positiveMod(
       currentCardIndex.value + shift,
-      deckState.value.cards.length
+      deckState.value!.cards.length
     )
   }
 })
 
-const getNextIndex = (currentIndex, cards) => {
+const getNextIndex = (currentIndex: number, cards: Card[]) => {
   let i = currentIndex
   do {
     i = (i + 1) % cards.length
@@ -68,23 +71,23 @@ const getNextIndex = (currentIndex, cards) => {
 }
 
 const cardToDisplay = computed(() => {
-  return deckState.value.cards[currentCardIndex.value]
+  return deckState.value!.cards[currentCardIndex.value]
 })
 
-const nextQuestion = (success) => {
+const nextQuestion = (success: boolean) => {
   showAnswer.value = false
   if (success) {
-    deckState.value.cards[currentCardIndex.value].successfulAttempts.unshift(Date.now())
+    deckState.value!.cards[currentCardIndex.value].successfulAttempts.unshift(Date.now())
   } else {
-    deckState.value.cards[currentCardIndex.value].failedAttempts.unshift(Date.now())
+    deckState.value!.cards[currentCardIndex.value].failedAttempts.unshift(Date.now())
   }
-  currentCardIndex.value = getNextIndex(currentCardIndex.value, deckState.value.cards)
+  currentCardIndex.value = getNextIndex(currentCardIndex.value, deckState.value!.cards)
 }
 
 const reset = () => {
   deckState.value = {
-    ...deckState.value,
-    cards: deckState.value.cards.map((card) => ({
+    ...deckState.value!,
+    cards: deckState.value!.cards.map((card) => ({
       ...card,
       successfulAttempts: [],
       failedAttempts: []
