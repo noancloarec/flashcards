@@ -1,22 +1,21 @@
-<script setup>
-// import decks from '../assets/data.json'
-import { computed, onMounted, ref } from 'vue'
+<script setup lang="ts">
+import { computed, onMounted, ref, type Ref } from 'vue'
 import { db } from '../utils/cards'
-import { collection, getDocs, where, query, orderBy } from 'firebase/firestore'
+import { collection, getDocs, query, orderBy } from 'firebase/firestore'
+import type { Deck } from '../models/deck'
 
-/** @type {Ref.<Array.<Deck>>} */
-const decks = ref([])
+const decks: Ref<Deck[]> = ref([])
 
-/**
- * @returns {Promise.<import('../utils/cards').Deck>}
- */
-const downloadDeckList = async () => {
+const downloadDeckList: () => Promise<Deck[]> = async () => {
   const deckRef = collection(db, 'deck')
   const decks = await getDocs(query(deckRef, orderBy('name')))
-  return decks.docs.map((d) => ({
-    id: d.id,
-    ...d.data()
-  }))
+  return decks.docs.map(
+    (d) =>
+      ({
+        id: d.id,
+        ...d.data()
+      }) as Deck
+  )
 }
 
 const searchTerm = ref('')
@@ -26,7 +25,7 @@ const searchTerm = ref('')
  * Removes accent and put it into lowercase
  * @param {string}  str  The string to normalize
  */
-const normalizeForSearch = (str) =>
+const normalizeForSearch = (str: string) =>
   str
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')

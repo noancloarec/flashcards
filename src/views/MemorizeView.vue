@@ -3,5 +3,5 @@ import MemorizeItem from '../components/MemorizeItem.vue'
 </script>
 
 <template>
-    <MemorizeItem />
+  <MemorizeItem />
 </template>
