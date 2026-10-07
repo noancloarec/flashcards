@@ -1,0 +1,141 @@
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+* {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #fef9ef;
+  color: #2a2b2f;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header > a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #b05a36;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+  border-radius: 6px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  touch-action: manipulation;
+  display: flex;
+  align-items: flex-end;
+}
+
+button {
+  background-color: rgb(176, 97, 64);
+}
+
+button.success {
+  background-color: rgb(121, 189, 139);
+}
+
+button.failed {
+  background-color: rgb(176, 97, 64);
+}
+
+/** Form related style, for admin operations **/
+.deck-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.form-header {
+  margin-bottom: 5px;
+}
+
+.form-header h1 {
+  margin: 0 0 8px;
+  color: #2a2b2f;
+}
+
+.form-header p {
+  margin: 0;
+  color: #666;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.field label {
+  font-weight: bold;
+  color: #2a2b2f;
+}
+
+input,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  border: 1px solid #d8cfc0;
+  border-radius: 6px;
+  background-color: #fffdf8;
+  color: #2a2b2f;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #b05a36;
+  box-shadow: 0 0 0 2px rgba(176, 90, 54, 0.15);
+}
+
+textarea {
+  min-height: 250px;
+  resize: vertical;
+  font-family: monospace;
+  line-height: 1.5;
+}
+
+.hint {
+  font-size: 13px;
+  color: #777;
+}
+
+.error {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #f8e5df;
+  color: #9a4328;
+}
+
+.deck-form button {
+  align-self: flex-start;
+}

@@ -5,6 +5,7 @@ import AdminView from '../views/AdminView.vue'
 import { useAuth } from '../composables/useAuth.ts'
 import LoginView from '../views/LoginView.vue'
 import { watch } from 'vue'
+import NewDeckView from '../views/NewDeckView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -28,7 +29,8 @@ const router = createRouter({
       component: MemorizeView
     },
     { path: '/login', component: LoginView },
-    { path: '/admin', component: AdminView, meta: { requiresAuth: true } }
+    { path: '/admin', component: AdminView, meta: { requiresAuth: true } },
+    { path: '/new-deck', component: NewDeckView, meta: { requiresAuth: true } }
   ]
 })
 
