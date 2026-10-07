@@ -2,13 +2,12 @@
 import { ref, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { getDoc, doc } from 'firebase/firestore'
-import { db } from '../utils/cards'
 import SpaceBar from './icons/SpaceBar.vue'
 
-import { CardState, getCardState } from '../utils/cards'
 import MemorizationProgress from './MemorizationProgress.vue'
 import type { Deck } from '../models/deck.ts'
-import type { Card } from '../models/card.ts'
+import { CardState, getCardState, type Card } from '../models/card.ts'
+import { db } from '../services/firebase.ts'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
