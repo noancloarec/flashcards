@@ -197,40 +197,4 @@ h2 {
   padding: 10px;
   max-width: 350px;
 }
-
-button {
-  border-radius: 6px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 500;
-  min-height: 40px;
-  line-height: 20px;
-  list-style: none;
-  margin: 0;
-  outline: none;
-  padding: 10px 16px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  transition: color 100ms;
-  vertical-align: baseline;
-  touch-action: manipulation;
-  display: flex;
-  align-items: flex-end;
-}
-
-button {
-  background-color: rgb(176, 97, 64);
-}
-
-button.success {
-  background-color: rgb(121, 189, 139);
-}
-
-button.failed {
-  background-color: rgb(176, 97, 64);
-}
 </style>
