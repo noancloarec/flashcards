@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, type Ref } from 'vue'
-import { db } from '../utils/cards'
 import { collection, getDocs, query, orderBy } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
+import { db } from '../services/firebase'
 
 const decks: Ref<Deck[]> = ref([])
 

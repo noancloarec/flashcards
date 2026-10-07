@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import type { Card } from '../models/card'
-import { CardState, getCardState } from '../utils/cards'
+import { getCardState, type Card, CardState } from '../models/card'
 
 defineProps<{
   cards: Card[]

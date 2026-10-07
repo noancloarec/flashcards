@@ -1,10 +1,10 @@
 import { initializeApp } from 'firebase/app'
+import { getAuth } from 'firebase/auth'
 import {
   initializeFirestore,
   persistentLocalCache,
   persistentMultipleTabManager
 } from 'firebase/firestore'
-import type { Card } from '../models/card'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
@@ -17,27 +17,16 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 
+/**
+ * Initialises the firestore db
+ */
 export const db = initializeFirestore(app, {
   localCache: persistentLocalCache({
     tabManager: persistentMultipleTabManager()
   })
 })
 
-export enum CardState {
-  Learned = 'learned',
-  Notlearned = 'notlearned',
-  NotTriedYet = 'notTriedYet'
-}
-
-export const getCardState = (card: Card): CardState => {
-  if (!card.successfulAttempts.length && !card.failedAttempts.length) {
-    return CardState.NotTriedYet
-  } else if (
-    !card.successfulAttempts.length ||
-    card.failedAttempts[0] > card.successfulAttempts[0]
-  ) {
-    return CardState.Notlearned
-  } else {
-    return CardState.Learned
-  }
-}
+/**
+ * Provides the Firebase auth service
+ */
+export const auth = getAuth(app)
