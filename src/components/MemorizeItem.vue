@@ -150,6 +150,7 @@ h2 {
   opacity: 0;
   height: 0px;
   color: #340a3c00;
+  overflow: hidden;
 }
 
 .question {

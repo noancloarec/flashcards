@@ -11,7 +11,7 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
 
 <template>
   <div class="progress">
-    <div
+    <button
       v-for="(card, index) in cards"
       :key="card.question"
       class="card-progress"
@@ -22,7 +22,7 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
         'current-card': index === currentCardIndex
       }"
       @click="emit('indexChange', index)"
-    ></div>
+    ></button>
   </div>
 </template>
 
@@ -39,6 +39,7 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
   display: inline-block;
   margin: 5px;
   box-sizing: border-box;
+  border: none;
 }
 
 .card-learned {
