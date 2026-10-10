@@ -1,22 +1,15 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, type Ref } from 'vue'
-import { collection, getDocs, query, orderBy } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
-import { db } from '../services/firebase'
+import { archiveDeck, getDeckList, unArchiveDeck } from '../services/firebase'
+interface Props {
+  showArchiveButton?: boolean
+  /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */
+  targetBaseUrl: string
+}
+const { showArchiveButton = false } = defineProps<Props>()
 
 const decks: Ref<Deck[]> = ref([])
-
-const downloadDeckList: () => Promise<Deck[]> = async () => {
-  const deckRef = collection(db, 'deck')
-  const decks = await getDocs(query(deckRef, orderBy('name')))
-  return decks.docs.map(
-    (d) =>
-      ({
-        id: d.id,
-        ...d.data()
-      }) as Deck
-  )
-}
 
 const searchTerm = ref('')
 
@@ -37,16 +30,42 @@ const filteredDecks = computed(() =>
   )
 )
 
+const deckJustArchived = ref('')
+
+const archive = async (deckId: string) => {
+  await archiveDeck(deckId)
+  deckJustArchived.value = deckId
+  setTimeout(() => {
+    deckJustArchived.value = ''
+  }, 8000)
+}
+const unarchive = async () => {
+  await unArchiveDeck(deckJustArchived.value)
+  deckJustArchived.value = ''
+}
+
 onMounted(() => {
-  downloadDeckList().then((res) => (decks.value = res))
+  getDeckList().then((res) => (decks.value = res))
 })
 </script>
 <template>
   <input type="text" v-model="searchTerm" placeholder="Rechercher ..." />
-  <div>
-    <a v-for="deck in filteredDecks" :key="deck.id" :href="`/memorize/${deck.id}`">{{
-      deck.name
-    }}</a>
+  <div class="deck-list">
+    <a
+      class="deck"
+      v-for="deck in filteredDecks"
+      :key="deck.id"
+      :href="`${targetBaseUrl}${deck.id}`"
+    >
+      <p>
+        {{ deck.name }}
+      </p>
+      <button v-if="showArchiveButton" @click="() => archive(deck.id)">❌</button>
+    </a>
+  </div>
+  <div class="toast">
+    <p>Jeu de cartes archivé.</p>
+    <button @click="() => unarchive()">Annuler</button>
   </div>
 </template>
 
@@ -63,15 +82,14 @@ input {
   background-color: transparent;
   font-size: 1rem;
 }
-
-div {
+.deck-list {
   margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
 }
 
-a {
+.deck {
   background-color: #f5eee1;
   border-radius: 10px;
   display: flex;
