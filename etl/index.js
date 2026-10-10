@@ -67,6 +67,9 @@ const main = async () => {
     console.log(`Adding deck from ${input}...`)
 
     const deck = JSON.parse(fs.readFileSync(input))
+    for (const card of deck.cards) {
+      card.id = crypto.randomUUID()
+    }
     await addDeckToFirestore(deck, store)
   }
 

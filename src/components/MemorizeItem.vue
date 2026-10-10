@@ -26,7 +26,8 @@ const getInitialDeck: () => Promise<Deck> = async () => {
         .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
         .replaceAll('\n', '</br>'),
       successfulAttempts: [],
-      failedAttempts: []
+      failedAttempts: [],
+      id: card.id
     }))
   }
 }

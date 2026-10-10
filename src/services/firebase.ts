@@ -13,7 +13,6 @@ import {
   writeBatch
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
-import { log } from 'firebase/firestore/pipelines'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
