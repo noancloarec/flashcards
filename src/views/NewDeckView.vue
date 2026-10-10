@@ -30,6 +30,10 @@ const saveDeck = async () => {
       throw Error('Chaque carte doit avoir 2 champs : question et answer')
     }
 
+    for (const card of cards) {
+      card.id = crypto.randomUUID()
+    }
+
     deck.value.cards = cards
 
     const id = await addDeckToFirestore(deck.value)
