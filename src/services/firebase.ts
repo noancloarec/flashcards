@@ -13,6 +13,7 @@ import {
   writeBatch
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
+import type { Card } from '../models/card'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
@@ -82,3 +83,41 @@ export const archiveDeck = async (deckId: string) => moveDeck(deckId, 'deck', 'a
  * @param deckId Deck to unarchive
  */
 export const unArchiveDeck = async (deckId: string) => moveDeck(deckId, 'archived_deck', 'deck')
+
+/**
+ * Converts the formatting that has been done in json (bold and newline) to html
+ * @param str the string to format
+ * @returns the html version
+ */
+const jsonToHtml = (str: string) =>
+  str
+    .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
+    .replaceAll('\n', '</br>')
+
+/**
+ * Map a card from firestore to its expected format in the app
+ * @param card the card from firestore
+ * @returns the card ready to use by the app
+ */
+const mapCardFromFirestore = (card: any) =>
+  ({
+    question: jsonToHtml(card.question),
+    answer: jsonToHtml(card.answer),
+    successfulAttempts: [],
+    failedAttempts: [],
+    id: card.id
+  }) as Card
+
+/**
+ * Download and return a deck from firestore
+ * @param deckId The id of the deck to retrieve
+ * @returns The deck
+ */
+export const getDeck = async (deckId: string) => {
+  // Todo better types because deck here (from firestore) does not fit the type description, it only fits it on the following line
+  const deck = (await getDoc(doc(db, 'deck', deckId))).data() as Deck
+  return {
+    ...deck,
+    cards: deck.cards.map(mapCardFromFirestore)
+  } as Deck
+}
