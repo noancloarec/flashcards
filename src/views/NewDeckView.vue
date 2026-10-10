@@ -1,19 +1,19 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import type { Deck, DeckWithoutId } from '../models/deck'
+import type { Deck, FunctionalDeck } from '../models/deck'
 import { useAuth } from '../composables/useAuth'
 import { db } from '../services/firebase'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import router from '../router'
 
 const { user } = useAuth()
 
-const deck = ref<DeckWithoutId>({ author: user.value!.email!, cards: [], name: '' })
+const deck = ref<FunctionalDeck>({ author: user.value!.email!, cards: [], name: '' })
 const cardsJson = ref('')
 const errorMessage = ref('')
 
-const addDeckToFirestore = async (deck: DeckWithoutId) => {
-  const docRef = await addDoc(collection(db, 'deck'), deck)
+const addDeckToFirestore = async (deck: FunctionalDeck) => {
+  const docRef = await addDoc(collection(db, 'deck'), { ...deck, createdAt: serverTimestamp() })
   return docRef.id
 }
 

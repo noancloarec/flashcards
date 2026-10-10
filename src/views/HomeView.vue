@@ -4,6 +4,6 @@ import DeckList from '../components/DeckList.vue'
 
 <template>
   <main>
-    <DeckList />
+    <DeckList target-base-url="/memorize/" />
   </main>
 </template>
