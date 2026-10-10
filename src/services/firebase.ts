@@ -46,6 +46,7 @@ export const auth = getAuth(app)
 export const getDeckList = async () => {
   const deckRef = collection(db, 'deck')
   const decks = await getDocs(query(deckRef, orderBy('createdAt')))
+
   return decks.docs.map(
     (d) =>
       ({
@@ -66,7 +67,7 @@ const moveDeck = async (deckId: string, sourceCollection: string, targetCollecti
   if (!snapshot.exists()) {
     throw new Error(`Deck not found in ${sourceCollection} : ${deckId}`)
   }
-  batch.set(targetRef, snapshot.data)
+  batch.set(targetRef, snapshot.data())
   batch.delete(sourceRef)
   await batch.commit()
 }
@@ -75,10 +76,10 @@ const moveDeck = async (deckId: string, sourceCollection: string, targetCollecti
  * Archive a deck
  * @param deckId Deck to archive
  */
-export const archiveDeck = async (deckId: string) => moveDeck(deckId, 'deck', 'archived_deck')
+export const archiveDeck = (deckId: string) => moveDeck(deckId, 'deck', 'archived_deck')
 
 /**
  * Unarchive a deck
  * @param deckId Deck to unarchive
  */
-export const unArchiveDeck = async (deckId: string) => moveDeck(deckId, 'archived_deck', 'deck')
+export const unArchiveDeck = (deckId: string) => moveDeck(deckId, 'archived_deck', 'deck')

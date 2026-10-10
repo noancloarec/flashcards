@@ -14,6 +14,7 @@ admin.initializeApp({
  */
 const addDeckToFirestore = async (deck, store) => {
   const deckReference = store.collection('deck').doc()
+  deck = { ...deck, createdAt: firestore.FieldValue.serverTimestamp() }
   await deckReference.create(deck)
 }
 
@@ -66,7 +67,7 @@ const main = async () => {
     console.log(`Adding deck from ${input}...`)
 
     const deck = JSON.parse(fs.readFileSync(input))
-    for (card in deck.cards) {
+    for (const card of deck.cards) {
       card.id = crypto.randomUUID()
     }
     await addDeckToFirestore(deck, store)
