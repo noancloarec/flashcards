@@ -1,39 +1,23 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { getDoc, doc } from 'firebase/firestore'
 import SpaceBar from './icons/SpaceBar.vue'
 
-import MemorizationProgress from './MemorizationProgress.vue'
-import type { Deck } from '../models/deck.ts'
 import { CardState, getCardState, type Card } from '../models/card.ts'
-import { db } from '../services/firebase.ts'
+import type { Deck } from '../models/deck.ts'
+import { getDeck } from '../services/firebase.ts'
+import MemorizationProgress from './MemorizationProgress.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
 
-const getInitialDeck: () => Promise<Deck> = async () => {
+const loadDeckInUrl: () => Promise<Deck> = async () => {
   const deckId = useRoute().params.deckId as string
-  // Todo better types because deck here (from firestore) does not fit the type description, it only fits it on the following line
-  const deck = (await getDoc(doc(db, 'deck', deckId))).data() as Deck
-  return {
-    ...deck,
-    cards: deck.cards.map((card) => ({
-      question: card.question
-        .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
-        .replaceAll('\n', '</br>'),
-      answer: card.answer
-        .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
-        .replaceAll('\n', '</br>'),
-      successfulAttempts: [],
-      failedAttempts: [],
-      id: card.id
-    }))
-  }
+  return await getDeck(deckId)
 }
 
 const deckState = ref<Deck | null>(null)
-getInitialDeck().then((d) => (deckState.value = d))
+loadDeckInUrl().then((d) => (deckState.value = d))
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
 
