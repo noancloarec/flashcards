@@ -3,6 +3,7 @@ export interface Card {
   answer: string
   successfulAttempts: number[]
   failedAttempts: number[]
+  id: string
 }
 
 export enum CardState {
