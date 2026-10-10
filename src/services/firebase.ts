@@ -10,6 +10,7 @@ import {
   persistentLocalCache,
   persistentMultipleTabManager,
   query,
+  updateDoc,
   writeBatch
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
@@ -67,7 +68,7 @@ const moveDeck = async (deckId: string, sourceCollection: string, targetCollecti
   if (!snapshot.exists()) {
     throw new Error(`Deck not found in ${sourceCollection} : ${deckId}`)
   }
-  batch.set(targetRef, snapshot.data)
+  batch.set(targetRef, snapshot.data())
   batch.delete(sourceRef)
   await batch.commit()
 }
@@ -76,13 +77,13 @@ const moveDeck = async (deckId: string, sourceCollection: string, targetCollecti
  * Archive a deck
  * @param deckId Deck to archive
  */
-export const archiveDeck = async (deckId: string) => moveDeck(deckId, 'deck', 'archived_deck')
+export const archiveDeck = (deckId: string) => moveDeck(deckId, 'deck', 'archived_deck')
 
 /**
  * Unarchive a deck
  * @param deckId Deck to unarchive
  */
-export const unArchiveDeck = async (deckId: string) => moveDeck(deckId, 'archived_deck', 'deck')
+export const unArchiveDeck = (deckId: string) => moveDeck(deckId, 'archived_deck', 'deck')
 
 /**
  * Converts the formatting that has been done in json (bold and newline) to html
@@ -118,6 +119,21 @@ export const getDeck = async (deckId: string) => {
   const deck = (await getDoc(doc(db, 'deck', deckId))).data() as Deck
   return {
     ...deck,
+    id: deckId,
     cards: deck.cards.map(mapCardFromFirestore)
   } as Deck
+}
+
+/**
+ * Update the deck in parameter
+ * @param deck The deck to update
+ */
+export const updateDeck = async (deck: Deck) => {
+  if (!deck.id) {
+    throw new Error('Deck has no id')
+  }
+  const deckRef = doc(db, 'deck', deck.id)
+  const { id, ...deckData } = deck
+
+  await updateDoc(deckRef, deckData)
 }

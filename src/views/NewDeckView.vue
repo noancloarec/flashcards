@@ -67,7 +67,7 @@ const saveDeck = async () => {
         <textarea
           id="cards"
           placeholder='[
-  {"question": "1515 ?", "answer": "Marignan"},
+  {"question": "1515 ?", "answer": "Marignan"}
 ]'
           v-model="cardsJson"
           spellcheck="false"
