@@ -14,6 +14,10 @@ import {
   getDeckMemorizationStatus,
   saveDeckMemorizationStatus
 } from '../services/firebase.ts'
+import {
+  getDeckMemorizationStatusFromLocalStorage,
+  saveDeckMemorizationStatusToLocalStorage
+} from '../services/localStorageInterface.ts'
 import MemorizationProgress from './MemorizationProgress.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
@@ -29,7 +33,7 @@ const currentCardIndex = ref(0)
 const showAnswer = ref(false)
 const memorizationStatus = ref<DeckMemorizationStatus>({})
 const cardStates = ref<CardState[]>([])
-const { getUserId } = useAuth()
+const { googleUser } = useAuth()
 const savingStatus = ref(SavingStatus.NotSaved)
 
 /**
@@ -56,8 +60,10 @@ const initCardStates = (deckCards: Card[], deckMemorizationStatus?: DeckMemoriza
 onMounted(async () => {
   const deck = await loadDeckInUrl()
   deckState.value = deck
-  const userId = await getUserId()
-  const deckMemorizationStatus = await getDeckMemorizationStatus(userId, deck.id)
+  const deckMemorizationStatus = googleUser.value
+    ? await getDeckMemorizationStatus(googleUser.value.email!, deck.id)
+    : getDeckMemorizationStatusFromLocalStorage(deck.id)
+
   memorizationStatus.value = deckMemorizationStatus
   initCardStates(deck.cards, deckMemorizationStatus)
 })
@@ -133,8 +139,15 @@ const reset = () => {
 
 const saveProgress = async () => {
   savingStatus.value = SavingStatus.Saving
-  const userId = await getUserId()
-  await saveDeckMemorizationStatus(userId, deckState.value!.id, memorizationStatus.value)
+
+  const deckId = deckState.value!.id
+  if (googleUser.value) {
+    const email = googleUser.value.email!
+    await saveDeckMemorizationStatus(email, deckId, memorizationStatus.value)
+  } else {
+    saveDeckMemorizationStatusToLocalStorage(deckId, memorizationStatus.value)
+  }
+
   savingStatus.value = SavingStatus.Saved
 }
 </script>

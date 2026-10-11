@@ -47,7 +47,7 @@ router.beforeEach(async (to) => {
 
   // Already signed in: no reason to see the login page
   if (to.path === '/login' && isLoggedInGoogle.value) {
-    return '/admin'
+    return '/'
   }
 
   return true
