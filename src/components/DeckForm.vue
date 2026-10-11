@@ -1,8 +1,13 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { Card } from '../models/card'
 import type { FunctionalDeck } from '../models/deck'
+import CardsJsonField from './CardsJsonField.vue'
 
 const deck = defineModel<FunctionalDeck>({ required: true })
+const displayJsonField = ref(false)
+
+const bulkCards = ref<Card[]>([])
 
 const moveUp = (card: Card) => {
   const cards = deck.value.cards
@@ -36,6 +41,12 @@ const deleteCard = (card: Card) => {
   if (index === -1) return
 
   deck.value.cards.splice(index, 1)
+}
+
+const addBulkCards = () => {
+  deck.value.cards = deck.value.cards.concat(bulkCards.value)
+  bulkCards.value = []
+  displayJsonField.value = false
 }
 </script>
 
@@ -177,6 +188,11 @@ const deleteCard = (card: Card) => {
         <span class="button-icon">+</span>
         Ajouter une carte
       </button>
+      <button @click="() => (displayJsonField = true)">Ajouter plusieurs cartes JSON</button>
+      <div v-if="displayJsonField" class="card-fields">
+        <CardsJsonField v-model="bulkCards" />
+        <button @click="addBulkCards">Ajouter au deck</button>
+      </div>
     </section>
 
     <div class="form-footer">
