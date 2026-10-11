@@ -5,12 +5,11 @@ import { useAuth } from '../composables/useAuth'
 import type { FunctionalDeck } from '../models/deck'
 import router from '../router'
 import { db } from '../services/firebase'
+import CardsJsonField from '../components/CardsJsonField.vue'
 
 const { googleUser } = useAuth()
 
 const deck = ref<FunctionalDeck>({ author: googleUser.value!.email!, cards: [], name: '' })
-const cardsJson = ref('')
-const errorMessage = ref('')
 
 const addDeckToFirestore = async (deck: FunctionalDeck) => {
   const docRef = await addDoc(collection(db, 'deck'), { ...deck, createdAt: serverTimestamp() })
@@ -18,30 +17,8 @@ const addDeckToFirestore = async (deck: FunctionalDeck) => {
 }
 
 const saveDeck = async () => {
-  try {
-    const cards = JSON.parse(cardsJson.value)
-    if (!Array.isArray(cards)) {
-      throw Error('On attend un tableau de cartes')
-    }
-    const cardsHaveQuestionAndAnswer = cards.every(
-      (obj: object) => Object.keys(obj).sort().join() === 'answer,question'
-    )
-    if (!cardsHaveQuestionAndAnswer) {
-      throw Error('Chaque carte doit avoir 2 champs : question et answer')
-    }
-
-    for (const card of cards) {
-      card.id = crypto.randomUUID()
-    }
-
-    deck.value.cards = cards
-
-    const id = await addDeckToFirestore(deck.value)
-    await router.replace(`/memorize/${id}`)
-  } catch (error) {
-    errorMessage.value = String(error)
-    throw error
-  }
+  const id = await addDeckToFirestore(deck.value)
+  await router.replace(`/edit-deck/${id}`)
 }
 </script>
 <template>
@@ -61,23 +38,7 @@ const saveDeck = async () => {
           v-model="deck.name"
         />
       </div>
-
-      <div class="field">
-        <label for="cards">Cartes</label>
-        <textarea
-          id="cards"
-          placeholder='[
-  {"question": "1515 ?", "answer": "Marignan"}
-]'
-          v-model="cardsJson"
-          spellcheck="false"
-        ></textarea>
-        <span class="hint">Chaque carte doit contenir uniquement « question » et « answer ».</span>
-      </div>
-
-      <p v-if="errorMessage" class="error">
-        {{ errorMessage }}
-      </p>
+      <CardsJsonField v-model="deck.cards" />
 
       <button type="submit">Publier le jeu</button>
     </form>
