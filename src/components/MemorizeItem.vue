@@ -5,11 +5,15 @@ import SpaceBar from './icons/SpaceBar.vue'
 
 import { Timestamp } from 'firebase/firestore'
 import { useAuth } from '../composables/useAuth.ts'
-import { CardState } from '../models/card.ts'
+import { CardState, type Card } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationStatus } from '../models/memorizationStatus.ts'
 import { SavingStatus } from '../models/savingStatus.ts'
-import { getDeck, saveDeckMemorizationStatus } from '../services/firebase.ts'
+import {
+  getDeck,
+  getDeckMemorizationStatus,
+  saveDeckMemorizationStatus
+} from '../services/firebase.ts'
 import MemorizationProgress from './MemorizationProgress.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
@@ -29,18 +33,33 @@ const { getUserId } = useAuth()
 const savingStatus = ref(SavingStatus.NotSaved)
 
 /**
- * Init the learning state of the cards in the deck
+ * Init the learning state of the cards in the deck, according to the deckMemorizationStatus from firestore if present
+ * If deckMemorizationStatus is not specified, all cards are set to NotTriedYet
  * @param deck The loaded deck
+ * @param deckMemorizationStatus deckMemorizationStatus from firestore
  */
-const initCardStates = (deck: Deck) => {
-  cardStates.value = Array<CardState>(deck.cards.length).fill(CardState.NotTriedYet)
+const initCardStates = (deckCards: Card[], deckMemorizationStatus?: DeckMemorizationStatus) => {
+  if (!deckMemorizationStatus) {
+    cardStates.value = Array<CardState>(deckCards.length).fill(CardState.NotTriedYet)
+    return
+  }
+  cardStates.value = deckCards.map((card) =>
+    deckMemorizationStatus[card.id]?.successfulAttempts?.length
+      ? CardState.Learned
+      : CardState.NotTriedYet
+  )
+  if (cardStates.value[0] === CardState.Learned) {
+    currentCardIndex.value = getNextIndex()
+  }
 }
 
-onMounted(() => {
-  loadDeckInUrl().then((d) => {
-    deckState.value = d
-    initCardStates(d)
-  })
+onMounted(async () => {
+  const deck = await loadDeckInUrl()
+  deckState.value = deck
+  const userId = await getUserId()
+  const deckMemorizationStatus = await getDeckMemorizationStatus(userId, deck.id)
+  memorizationStatus.value = deckMemorizationStatus
+  initCardStates(deck.cards, deckMemorizationStatus)
 })
 
 /** Keyboard nagivation through questions */
@@ -107,7 +126,7 @@ const nextQuestion = (success: boolean) => {
 }
 
 const reset = () => {
-  initCardStates(deckState.value!)
+  initCardStates(deckState.value!.cards)
   currentCardIndex.value = 0
   showAnswer.value = false
 }
