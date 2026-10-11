@@ -1,15 +1,24 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, type Ref } from 'vue'
+import { useAuth } from '../composables/useAuth.ts'
 import type { Deck } from '../models/deck'
-import { archiveDeck, getDeckList, unArchiveDeck } from '../services/firebase'
+import { type UserMemorizationStatus } from '../models/memorizationStatus.ts'
+import {
+  archiveDeck,
+  getDeckList,
+  getUserMemorizationStatus,
+  unArchiveDeck
+} from '../services/firebase'
+import StarProgress from './StarProgress.vue'
 interface Props {
   showArchiveButton?: boolean
   /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */
   targetBaseUrl: string
 }
 const { showArchiveButton = false } = defineProps<Props>()
-
+const { getUserId } = useAuth()
 const decks: Ref<Deck[]> = ref([])
+const memorizationStatus = ref<UserMemorizationStatus>({})
 
 const searchTerm = ref('')
 
@@ -48,8 +57,25 @@ const unarchive = async () => {
   deckJustArchived.value = null
 }
 
-onMounted(() => {
-  getDeckList().then((res) => (decks.value = res))
+const computeProgress = (deck: Deck) => {
+  const deckMemorizationStatus = memorizationStatus.value[deck.id]
+
+  if (!deckMemorizationStatus) {
+    return 0
+  }
+
+  const nbCardsInDeck = deck.cards.length
+  const nbLearnedCards = Object.values(deckMemorizationStatus).filter(
+    (cardStatus) => cardStatus.successfulAttempts.length > 0
+  ).length
+  return nbLearnedCards / nbCardsInDeck
+}
+
+onMounted(async () => {
+  const deckList = await getDeckList()
+  decks.value = deckList
+  const userId = await getUserId()
+  memorizationStatus.value = await getUserMemorizationStatus(userId)
 })
 </script>
 <template>
@@ -57,6 +83,7 @@ onMounted(() => {
 
   <div class="deck-list">
     <div class="deck" v-for="deck in filteredDecks" :key="deck.id">
+      <StarProgress :progress="computeProgress(deck)" />
       <a class="deck-link" :href="`${targetBaseUrl}${deck.id}`">
         <p>{{ deck.name }}</p>
       </a>
@@ -107,6 +134,7 @@ input {
   border-radius: 10px;
   min-height: 100px;
   color: #2a2b2f;
+  padding: 7px 10px;
 }
 
 .deck-link {
@@ -114,13 +142,18 @@ input {
   align-items: center;
   justify-content: center;
   min-height: 100px;
-  padding: 15px 40px;
   box-sizing: border-box;
 
+  padding-top: 0;
+  padding-bottom: 24px;
   text-align: center;
   color: inherit;
   text-decoration: none;
   font-size: 1.15rem;
+}
+
+.deck-link:hover {
+  text-decoration: underline;
 }
 
 .deck-link p {

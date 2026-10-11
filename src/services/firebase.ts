@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
+import { getAuth, type User } from 'firebase/auth'
 import {
   collection,
   doc,
@@ -16,7 +16,7 @@ import {
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
 import type { Card } from '../models/card'
-import type { DeckMemorizationStatus } from '../models/memorizationStatus'
+import type { DeckMemorizationStatus, UserMemorizationStatus } from '../models/memorizationStatus'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
@@ -164,5 +164,21 @@ export async function getDeckMemorizationStatus(userId: string, deckId: string) 
   const deckRef = doc(db, 'memorization_status', userId, 'deck', deckId)
 
   const response = await getDoc(deckRef)
+  if (!response.exists()) {
+    return {}
+  }
   return response.data() as DeckMemorizationStatus
+}
+
+/**
+ * Loads a DeckMemorizationStatus in the db
+ * @param userId the id for the user
+ * @param statuses statuses for learned cards in all 'touched' decks
+ */
+export async function getUserMemorizationStatus(userId: string) {
+  const deckMemorizedRef = collection(db, 'memorization_status', userId, 'deck')
+
+  const response = await getDocs(deckMemorizedRef)
+  const res = Object.fromEntries(response.docs.map((d) => [d.id, d.data()]))
+  return res as UserMemorizationStatus
 }

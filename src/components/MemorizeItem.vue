@@ -172,7 +172,6 @@ const saveProgress = async () => {
   </div>
   <div v-else>
     <p>Vous avez mémorisé toutes les cartes</p>
-    <button @click="reset()">Recommencer</button>
   </div>
   <button @click="saveProgress" :disabled="savingStatus !== SavingStatus.NotSaved">
     <template v-if="savingStatus === SavingStatus.NotSaved"> Sauvegarder la progression </template>
@@ -181,6 +180,7 @@ const saveProgress = async () => {
       Progression sauvegardée ✅
     </template>
   </button>
+  <button @click="reset()">Recommencer</button>
 </template>
 
 <style scoped>
