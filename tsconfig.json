@@ -5,11 +5,9 @@
     "checkJs": false,
     "strict": true,
     "noEmit": true,
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "target": "ES2022",
+    "lib": ["ES2025", "DOM"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

@@ -65,11 +65,14 @@ const computeProgress = (deck: Deck) => {
     return 0
   }
 
-  const nbCardsInDeck = deck.cards.length
-  const nbLearnedCards = Object.values(deckMemorizationStatus).filter(
-    (cardStatus) => cardStatus.successfulAttempts.length > 0
-  ).length
-  return nbLearnedCards / nbCardsInDeck
+  const cardsInDeck = new Set(deck.cards.map((c) => c.id))
+  const learnedCards = new Set(
+    Object.entries(deckMemorizationStatus)
+      .filter(([_, cardStatus]) => cardStatus.successfulAttempts.length > 0)
+      .map(([cardId, _]) => cardId)
+  )
+  const learnedCardsInDeck = cardsInDeck.intersection(learnedCards)
+  return learnedCardsInDeck.size / cardsInDeck.size
 }
 
 onMounted(async () => {
