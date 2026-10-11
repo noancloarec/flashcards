@@ -8,6 +8,8 @@ import { watch } from 'vue'
 import NewDeckView from '../views/NewDeckView.vue'
 import EditDeckView from '../views/EditDeckView.vue'
 
+const { isLoggedInGoogle, authReady } = useAuth()
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -37,15 +39,14 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-  const { authReady, isLoggedIn } = useAuth()
   await authReady
 
-  if (to.meta.requiresAuth && !isLoggedIn.value) {
+  if (to.meta.requiresAuth && !isLoggedInGoogle.value) {
     return { path: '/login', query: { redirect: to.fullPath } }
   }
 
   // Already signed in: no reason to see the login page
-  if (to.path === '/login' && isLoggedIn.value) {
+  if (to.path === '/login' && isLoggedInGoogle.value) {
     return '/admin'
   }
 
@@ -53,8 +54,7 @@ router.beforeEach(async (to) => {
 })
 
 // If the user signs out while on a protected page, kick them out
-const { isLoggedIn } = useAuth()
-watch(isLoggedIn, (loggedIn) => {
+watch(isLoggedInGoogle, (loggedIn) => {
   if (!loggedIn && router.currentRoute.value.meta.requiresAuth) {
     router.replace('/login')
   }
