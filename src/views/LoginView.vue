@@ -16,7 +16,7 @@ async function handleSignIn() {
 
   try {
     await signIn()
-    const redirect = typeof route.query.redirect === 'string' ? route.query.redirect : '/admin'
+    const redirect = typeof route.query.redirect === 'string' ? route.query.redirect : '/'
     await router.replace(redirect)
   } catch (err) {
     if ((err as { code?: string }).code !== 'auth/popup-closed-by-user') {

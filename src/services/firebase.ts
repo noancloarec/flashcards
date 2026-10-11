@@ -171,7 +171,7 @@ export async function getDeckMemorizationStatus(userId: string, deckId: string) 
 }
 
 /**
- * Loads a DeckMemorizationStatus in the db
+ * Loads a UserMemorizationStatus in the db
  * @param userId the id for the user
  * @param statuses statuses for learned cards in all 'touched' decks
  */

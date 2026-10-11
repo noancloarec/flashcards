@@ -20,32 +20,12 @@ const authReady = new Promise<void>((resolve) => {
   })
 })
 
-/**
- * UserId defaulting to the email address of the user, that falls back to a random uuid persisted in local storage
- * Used to store their data in firestore, , so they can retrieve
- * @returns The user id to be used in firestore to store their data
- */
-const getUserId = async () => {
-  await authReady
-  if (googleUser.value?.email) {
-    return googleUser.value.email
-  } else {
-    let id = localStorage.getItem('user-id')
-    if (!id) {
-      id = crypto.randomUUID()
-      localStorage.setItem('user-id', id)
-    }
-    return id
-  }
-}
-
 const provider = new GoogleAuthProvider()
 
 export function useAuth() {
   return {
     googleUser,
     loading,
-    getUserId,
     isLoggedInGoogle: computed(() => googleUser.value !== null),
     authReady,
     signIn: () => signInWithPopup(auth, provider),

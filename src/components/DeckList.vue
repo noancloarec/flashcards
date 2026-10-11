@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, type Ref } from 'vue'
+import { computed, onMounted, ref, watch, type Ref } from 'vue'
 import { useAuth } from '../composables/useAuth.ts'
 import type { Deck } from '../models/deck'
 import { type UserMemorizationStatus } from '../models/memorizationStatus.ts'
@@ -10,13 +10,14 @@ import {
   unArchiveDeck
 } from '../services/firebase'
 import StarProgress from './StarProgress.vue'
+import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
 interface Props {
   showArchiveButton?: boolean
   /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */
   targetBaseUrl: string
 }
 const { showArchiveButton = false } = defineProps<Props>()
-const { getUserId } = useAuth()
+const { googleUser } = useAuth()
 const decks: Ref<Deck[]> = ref([])
 const memorizationStatus = ref<UserMemorizationStatus>({})
 
@@ -74,9 +75,18 @@ const computeProgress = (deck: Deck) => {
 onMounted(async () => {
   const deckList = await getDeckList()
   decks.value = deckList
-  const userId = await getUserId()
-  memorizationStatus.value = await getUserMemorizationStatus(userId)
 })
+watch(
+  googleUser,
+  async () => {
+    if (googleUser.value?.email) {
+      memorizationStatus.value = await getUserMemorizationStatus(googleUser.value.email)
+    } else {
+      memorizationStatus.value = getUserMemorizationStatusFromLocalStorage()
+    }
+  },
+  { immediate: true }
+)
 </script>
 <template>
   <input type="text" v-model="searchTerm" placeholder="Rechercher ..." />
