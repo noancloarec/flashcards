@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { Deck, FunctionalDeck } from '../models/deck'
-import { useAuth } from '../composables/useAuth'
-import { db } from '../services/firebase'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
+import { ref } from 'vue'
+import { useAuth } from '../composables/useAuth'
+import type { FunctionalDeck } from '../models/deck'
 import router from '../router'
+import { db } from '../services/firebase'
 
-const { user } = useAuth()
+const { googleUser } = useAuth()
 
-const deck = ref<FunctionalDeck>({ author: user.value!.email!, cards: [], name: '' })
+const deck = ref<FunctionalDeck>({ author: googleUser.value!.email!, cards: [], name: '' })
 const cardsJson = ref('')
 const errorMessage = ref('')
 
