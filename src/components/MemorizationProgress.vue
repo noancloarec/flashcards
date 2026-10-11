@@ -37,8 +37,9 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
   height: 20px;
   display: inline-block;
   margin: 5px;
-  box-sizing: border-box;
   border: none;
+  box-sizing: border-box;
+  border: 2px solid transparent;
 }
 
 .card-learned {

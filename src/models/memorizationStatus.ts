@@ -1,7 +1,12 @@
 import type { Timestamp } from 'firebase/firestore'
 
-interface CardMemorizationStatus {
+export interface CardMemorizationStatus {
   successfulAttempts: Timestamp[]
 }
 
-export type DeckMemorizationStatus = Record<string, CardMemorizationStatus>
+type CardId = string
+
+export type DeckMemorizationStatus = Record<CardId, CardMemorizationStatus>
+
+type DeckId = string
+export type UserMemorizationStatus = Record<DeckId, DeckMemorizationStatus>
