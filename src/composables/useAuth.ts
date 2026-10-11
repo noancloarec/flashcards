@@ -27,7 +27,7 @@ const authReady = new Promise<void>((resolve) => {
  */
 const getUserId = async () => {
   await authReady
-  if (googleUser.value) {
+  if (googleUser.value?.email) {
     return googleUser.value.email
   } else {
     let id = localStorage.getItem('user-id')

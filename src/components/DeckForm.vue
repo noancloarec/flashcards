@@ -26,9 +26,7 @@ const newCard = () => {
   deck.value.cards.push({
     question: '',
     answer: '',
-    id: crypto.randomUUID(),
-    successfulAttempts: [],
-    failedAttempts: []
+    id: crypto.randomUUID()
   })
 }
 
