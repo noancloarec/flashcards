@@ -153,3 +153,16 @@ export async function saveDeckMemorizationStatus(
 
   await setDoc(deckRef, statuses)
 }
+
+/**
+ * Loads a DeckMemorizationStatus in the db
+ * @param userId the id for the user
+ * @param deckId the id of the deck
+ * @param statuses statuses for cards
+ */
+export async function getDeckMemorizationStatus(userId: string, deckId: string) {
+  const deckRef = doc(db, 'memorization_status', userId, 'deck', deckId)
+
+  const response = await getDoc(deckRef)
+  return response.data() as DeckMemorizationStatus
+}
