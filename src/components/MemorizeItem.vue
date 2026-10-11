@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import SpaceBar from './icons/SpaceBar.vue'
 
-import { CardState, getCardState, type Card } from '../models/card.ts'
+import { Timestamp } from 'firebase/firestore'
+import { useAuth } from '../composables/useAuth.ts'
+import { CardState } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
-import { getDeck } from '../services/firebase.ts'
+import { type DeckMemorizationStatus } from '../models/memorizationStatus.ts'
+import { SavingStatus } from '../models/savingStatus.ts'
+import { getDeck, saveDeckMemorizationStatus } from '../services/firebase.ts'
 import MemorizationProgress from './MemorizationProgress.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
@@ -17,9 +21,27 @@ const loadDeckInUrl: () => Promise<Deck> = async () => {
 }
 
 const deckState = ref<Deck | null>(null)
-loadDeckInUrl().then((d) => (deckState.value = d))
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
+const memorizationStatus = ref<DeckMemorizationStatus>({})
+const cardStates = ref<CardState[]>([])
+const { getUserId } = useAuth()
+const savingStatus = ref(SavingStatus.NotSaved)
+
+/**
+ * Init the learning state of the cards in the deck
+ * @param deck The loaded deck
+ */
+const initCardStates = (deck: Deck) => {
+  cardStates.value = Array<CardState>(deck.cards.length).fill(CardState.NotTriedYet)
+}
+
+onMounted(() => {
+  loadDeckInUrl().then((d) => {
+    deckState.value = d
+    initCardStates(d)
+  })
+})
 
 /** Keyboard nagivation through questions */
 document.addEventListener('keyup', (e) => {
@@ -43,14 +65,15 @@ document.addEventListener('keyup', (e) => {
   }
 })
 
-const getNextIndex = (currentIndex: number, cards: Card[]) => {
-  let i = currentIndex
+const getNextIndex = () => {
+  let i = currentCardIndex.value
+
   do {
-    i = (i + 1) % cards.length
-    if (getCardState(cards[i]) !== CardState.Learned) {
+    i = (i + 1) % cardStates.value.length
+    if (cardStates.value[i] !== CardState.Learned) {
       return i
     }
-  } while (i !== currentIndex)
+  } while (i !== currentCardIndex.value)
   return -1
 }
 
@@ -58,27 +81,42 @@ const cardToDisplay = computed(() => {
   return deckState.value!.cards[currentCardIndex.value]
 })
 
-const nextQuestion = (success: boolean) => {
-  showAnswer.value = false
-  if (success) {
-    deckState.value!.cards[currentCardIndex.value].successfulAttempts.unshift(Date.now())
-  } else {
-    deckState.value!.cards[currentCardIndex.value].failedAttempts.unshift(Date.now())
+/**
+ * Register the attempt (learned or not learned) in the memorizationStatus
+ * @param success whether the user has learned the card or not
+ */
+const registerSuccessInMemorizationStatus = () => {
+  const currentCardId = deckState.value!.cards[currentCardIndex.value].id
+  let memorizationStatusForCard = memorizationStatus.value[currentCardId]
+  if (memorizationStatusForCard === undefined) {
+    memorizationStatusForCard = {
+      successfulAttempts: []
+    }
   }
-  currentCardIndex.value = getNextIndex(currentCardIndex.value, deckState.value!.cards)
+
+  memorizationStatusForCard.successfulAttempts.unshift(Timestamp.now())
+  memorizationStatus.value[currentCardId] = memorizationStatusForCard
+}
+
+const nextQuestion = (success: boolean) => {
+  savingStatus.value = SavingStatus.NotSaved
+  showAnswer.value = false
+  if (success) registerSuccessInMemorizationStatus()
+  cardStates.value[currentCardIndex.value] = success ? CardState.Learned : CardState.Notlearned
+  currentCardIndex.value = getNextIndex()
 }
 
 const reset = () => {
-  deckState.value = {
-    ...deckState.value!,
-    cards: deckState.value!.cards.map((card) => ({
-      ...card,
-      successfulAttempts: [],
-      failedAttempts: []
-    }))
-  }
+  initCardStates(deckState.value!)
   currentCardIndex.value = 0
   showAnswer.value = false
+}
+
+const saveProgress = async () => {
+  savingStatus.value = SavingStatus.Saving
+  const userId = await getUserId()
+  await saveDeckMemorizationStatus(userId, deckState.value!.id, memorizationStatus.value)
+  savingStatus.value = SavingStatus.Saved
 }
 </script>
 
@@ -103,7 +141,7 @@ const reset = () => {
       </template>
     </div>
     <MemorizationProgress
-      :cards="deckState.cards"
+      :card-states="cardStates"
       :current-card-index="currentCardIndex"
       @index-change="
         (i) => {
@@ -117,6 +155,13 @@ const reset = () => {
     <p>Vous avez mémorisé toutes les cartes</p>
     <button @click="reset()">Recommencer</button>
   </div>
+  <button @click="saveProgress" :disabled="savingStatus !== SavingStatus.NotSaved">
+    <template v-if="savingStatus === SavingStatus.NotSaved"> Sauvegarder la progression </template>
+    <template v-else-if="savingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
+    <template v-else-if="savingStatus === SavingStatus.Saved">
+      Progression sauvegardée ✅
+    </template>
+  </button>
 </template>
 
 <style scoped>

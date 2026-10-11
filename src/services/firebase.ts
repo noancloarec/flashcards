@@ -10,11 +10,13 @@ import {
   persistentLocalCache,
   persistentMultipleTabManager,
   query,
+  setDoc,
   updateDoc,
   writeBatch
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
 import type { Card } from '../models/card'
+import type { DeckMemorizationStatus } from '../models/memorizationStatus'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
@@ -100,12 +102,10 @@ const jsonToHtml = (str: string) =>
  * @param card the card from firestore
  * @returns the card ready to use by the app
  */
-const mapCardFromFirestore = (card: any) =>
+const mapCardFromFirestore = (card: Card) =>
   ({
     question: jsonToHtml(card.question),
     answer: jsonToHtml(card.answer),
-    successfulAttempts: [],
-    failedAttempts: [],
     id: card.id
   }) as Card
 
@@ -116,11 +116,11 @@ const mapCardFromFirestore = (card: any) =>
  */
 export const getDeck = async (deckId: string) => {
   // Todo better types because deck here (from firestore) does not fit the type description, it only fits it on the following line
-  const deck = (await getDoc(doc(db, 'deck', deckId))).data() as Deck
+  const deck = (await getDoc(doc(db, 'deck', deckId))).data()
   return {
     ...deck,
     id: deckId,
-    cards: deck.cards.map(mapCardFromFirestore)
+    cards: deck!.cards.map(mapCardFromFirestore)
   } as Deck
 }
 
@@ -136,4 +136,20 @@ export const updateDeck = async (deck: Deck) => {
   const { id, ...deckData } = deck
 
   await updateDoc(deckRef, deckData)
+}
+
+/**
+ * Saves a DeckMemorizationStatus in the db
+ * @param userId the id for the user
+ * @param deckId the id of the deck
+ * @param statuses statuses for cards
+ */
+export async function saveDeckMemorizationStatus(
+  userId: string,
+  deckId: string,
+  statuses: DeckMemorizationStatus
+) {
+  const deckRef = doc(db, 'memorization_status', userId, 'deck', deckId)
+
+  await setDoc(deckRef, statuses)
 }

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { getCardState, type Card, CardState } from '../models/card'
+import { CardState } from '../models/card'
 
 defineProps<{
-  cards: Card[]
+  cardStates: CardState[]
   currentCardIndex: number
 }>()
 const emit = defineEmits<{ indexChange: [index: number] }>()
@@ -11,13 +11,13 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
 <template>
   <div class="progress">
     <button
-      v-for="(card, index) in cards"
-      :key="card.question"
+      v-for="(cardState, index) in cardStates"
+      :key="index"
       class="card-progress"
       :class="{
-        'card-learned': getCardState(card) === CardState.Learned,
-        'card-not-learned': getCardState(card) === CardState.Notlearned,
-        'card-not-tried-yet': getCardState(card) === CardState.NotTriedYet,
+        'card-learned': cardState === CardState.Learned,
+        'card-not-learned': cardState === CardState.Notlearned,
+        'card-not-tried-yet': cardState === CardState.NotTriedYet,
         'current-card': index === currentCardIndex
       }"
       @click="emit('indexChange', index)"
