@@ -88,28 +88,6 @@ export const archiveDeck = (deckId: string) => moveDeck(deckId, 'deck', 'archive
 export const unArchiveDeck = (deckId: string) => moveDeck(deckId, 'archived_deck', 'deck')
 
 /**
- * Converts the formatting that has been done in json (bold and newline) to html
- * @param str the string to format
- * @returns the html version
- */
-const jsonToHtml = (str: string) =>
-  str
-    .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
-    .replaceAll('\n', '</br>')
-
-/**
- * Map a card from firestore to its expected format in the app
- * @param card the card from firestore
- * @returns the card ready to use by the app
- */
-const mapCardFromFirestore = (card: Card) =>
-  ({
-    question: jsonToHtml(card.question),
-    answer: jsonToHtml(card.answer),
-    id: card.id
-  }) as Card
-
-/**
  * Download and return a deck from firestore
  * @param deckId The id of the deck to retrieve
  * @returns The deck
@@ -119,8 +97,7 @@ export const getDeck = async (deckId: string) => {
   const deck = (await getDoc(doc(db, 'deck', deckId))).data()
   return {
     ...deck,
-    id: deckId,
-    cards: deck!.cards.map(mapCardFromFirestore)
+    id: deckId
   } as Deck
 }
 

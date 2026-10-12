@@ -150,14 +150,32 @@ const saveProgress = async () => {
 
   savingStatus.value = SavingStatus.Saved
 }
+
+/**
+ * Converts the formatting that has been done in json (bold and newline) to html
+ * @param str the string to format
+ * @returns the html version
+ */
+const jsonToHtml = (str: string) =>
+  str
+    .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
+    .replaceAll('\n', '</br>')
 </script>
 
 <template>
   <div v-if="deckState === null">Loading</div>
   <div v-else-if="currentCardIndex !== -1">
     <h2>{{ deckState.name }}</h2>
-    <div class="question" :class="{ reduced: showAnswer }" v-html="cardToDisplay.question"></div>
-    <div class="answer" :class="{ shown: showAnswer }" v-html="cardToDisplay.answer"></div>
+    <div
+      class="question"
+      :class="{ reduced: showAnswer }"
+      v-html="jsonToHtml(cardToDisplay.question)"
+    ></div>
+    <div
+      class="answer"
+      :class="{ shown: showAnswer }"
+      v-html="jsonToHtml(cardToDisplay.answer)"
+    ></div>
     <div class="actions">
       <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
         Voir la réponse [
