@@ -43,6 +43,14 @@ const deleteCard = (card: Card) => {
   deck.value.cards.splice(index, 1)
 }
 
+const insertCard = (index: number) => {
+  deck.value.cards.splice(index, 0, {
+    question: '',
+    answer: '',
+    id: crypto.randomUUID()
+  })
+}
+
 const addBulkCards = () => {
   deck.value.cards = deck.value.cards.concat(bulkCards.value)
   bulkCards.value = []
@@ -120,6 +128,15 @@ const addBulkCards = () => {
         >
           <div class="card-editor-header">
             <div class="card-actions">
+              <button
+                type="button"
+                class="icon-button insert-button"
+                :aria-label="`Insérer une carte avant la carte ${index + 1}`"
+                title="Insérer une carte avant"
+                @click="insertCard(index)"
+              >
+                +
+              </button>
               <button
                 type="button"
                 class="icon-button move-button"
@@ -646,5 +663,15 @@ const addBulkCards = () => {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+.deck-form .insert-button {
+  color: #8f4a2e;
+  font-size: 22px;
+}
+
+.deck-form .insert-button:hover {
+  border-color: #c99b83;
+  background-color: #f3e5d9;
+  color: #8f4a2e;
 }
 </style>
