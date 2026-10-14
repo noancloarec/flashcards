@@ -2,15 +2,15 @@
 import { computed, onMounted, ref, watch, type Ref } from 'vue'
 import { useAuth } from '../composables/useAuth.ts'
 import type { Deck } from '../models/deck'
-import { type UserMemorizationStatus } from '../models/memorizationStatus.ts'
+import { type UserMemorizationStatus } from '../models/memorization.ts'
 import {
   archiveDeck,
   getDeckList,
   getUserMemorizationStatus,
   unArchiveDeck
 } from '../services/firebase'
-import StarProgress from './StarProgress.vue'
 import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
+import StarProgress from './StarProgress.vue'
 interface Props {
   showArchiveButton?: boolean
   /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */

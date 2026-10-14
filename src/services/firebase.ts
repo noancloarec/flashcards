@@ -16,7 +16,7 @@ import {
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
 import type { Card } from '../models/card'
-import type { DeckMemorizationStatus, UserMemorizationStatus } from '../models/memorizationStatus'
+import type { DeckMemorizationStatus, UserMemorizationStatus } from '../models/memorization'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
