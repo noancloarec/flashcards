@@ -18,46 +18,13 @@ const addDeckToFirestore = async (deck, store) => {
   await deckReference.create(deck)
 }
 
-/**
- * Delete all documents from a Firestore collection.
- * @param {firestore.CollectionReference} collection
- */
-const clearCollection = async (collection) => {
-  const snapshot = await collection.get()
-  const batch = collection.firestore.batch()
-
-  snapshot.docs.forEach((doc) => {
-    batch.delete(doc.ref)
-  })
-
-  await batch.commit()
-}
-
-/**
- * Delete all decks .
- */
-const clearDatabase = async () => {
-  const store = firestore.getFirestore()
-
-  console.log('Clearing deck collection...')
-  await clearCollection(store.collection('deck'))
-
-  console.log('Database cleared.')
-}
-
 const main = async () => {
   const inputs = process.argv.slice(2)
-
-  if (inputs.includes('--clear-db')) {
-    await clearDatabase()
-    return
-  }
 
   if (inputs.length === 0) {
     console.error('Usage:')
     console.error('  node index.js <deck.json> [deck2.json ...]')
     console.error('  node index.js data/*.json')
-    console.error('  node index.js --clear-db')
     process.exit(1)
   }
 
