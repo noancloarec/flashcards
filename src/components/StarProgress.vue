@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { CardState } from '../models/memorization'
 
 interface Props {
   progress?: number
+  status?: CardState
 }
 
-const { progress = 1 } = defineProps<Props>()
+const { progress = 1, status = CardState.Learned } = defineProps<Props>()
 
 const normalizedProgress = computed(() => Math.max(0, Math.min(1, progress)))
 
@@ -18,7 +20,7 @@ const clipId = `star-clip-${Math.random().toString(36).slice(2)}`
 
 <template>
   <svg
-    class="star-progress"
+    :class="{ 'star-progress': true, 'to-learn-again': status === CardState.ToLearnAgain }"
     viewBox="0 0 24 24"
     role="img"
     :aria-label="`Progression : ${Math.round(normalizedProgress * 100)} %`"
@@ -63,12 +65,19 @@ const clipId = `star-clip-${Math.random().toString(36).slice(2)}`
 
 .star-background {
   fill: transparent;
-  stroke: rgb(176, 97, 64);
+  stroke: rgb(121, 189, 139);
   stroke-width: 1;
   stroke-linejoin: round;
 }
 
 .star-fill {
-  fill: rgb(176, 97, 64);
+  fill: rgb(121, 189, 139);
+}
+
+.to-learn-again .star-background {
+  stroke: #ffc12f;
+}
+.to-learn-again .star-fill {
+  fill: #ffc12f;
 }
 </style>

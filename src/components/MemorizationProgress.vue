@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CardState } from '../models/card'
+import { CardState } from '../models/memorization'
 
 defineProps<{
   cardStates: CardState[]
@@ -18,6 +18,7 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
         'card-learned': cardState === CardState.Learned,
         'card-not-learned': cardState === CardState.Notlearned,
         'card-not-tried-yet': cardState === CardState.NotTriedYet,
+        'card-to-learn-again': cardState === CardState.ToLearnAgain,
         'current-card': index === currentCardIndex
       }"
       @click="emit('indexChange', index)"
@@ -53,6 +54,10 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
 .card-not-tried-yet {
   border: 2px solid rgb(209, 201, 191);
   background-color: transparent;
+}
+
+.card-to-learn-again {
+  background-color: #ffc12f;
 }
 .current-card {
   border-bottom: 4px solid rgb(153, 146, 137);

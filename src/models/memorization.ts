@@ -65,3 +65,46 @@ export const getCardMemorizationLevel = (
 
   return level
 }
+
+export enum CardState {
+  Learned = 'learned',
+  Notlearned = 'notlearned',
+  NotTriedYet = 'notTriedYet',
+  ToLearnAgain = 'ToLearnAgain'
+}
+
+/**
+ * Determines when a card can be memorized again given its last memorization and its current level
+ * @param lastMemorization the last time the user has memorized the card
+ * @param currentLevel the current level for the card
+ * @returns When the user can reach the next level if they memorize the card (can be in the future or the past)
+ */
+export const getNextLevelAvailabilityDate = (lastMemorization: Timestamp, currentLevel: number) => {
+  const daysToWait = cardMemorizationLevels[currentLevel].daysToUnlock
+  const nextStarUnlockTime = lastMemorization.toMillis() + daysToWait * dayInMillis
+  return Timestamp.fromMillis(nextStarUnlockTime)
+}
+
+/**
+ * Determine if a card should be learned or not in the memorization round to come
+ * @param memorizationStatus the memorization history for the card
+ * @returns the state of the card, Learned, NotTriedYet or ToLearnAgain
+ */
+export const getCardState = (memorizationStatus: CardMemorizationStatus | undefined) => {
+  if (!memorizationStatus?.successfulAttempts.length) return CardState.NotTriedYet
+
+  const cardLevel = getCardMemorizationLevel(memorizationStatus)
+  if (cardLevel >= cardMemorizationLevels.length - 1) return CardState.Learned
+
+  const nextLevelTime = getNextLevelAvailabilityDate(
+    memorizationStatus.successfulAttempts[0],
+    cardLevel
+  )
+
+  // If nextLevelTime is in the future, no need to learn the card again
+  if (Timestamp.now().toMillis() <= nextLevelTime.toMillis()) {
+    return CardState.Learned
+  } else {
+    return CardState.ToLearnAgain
+  }
+}
