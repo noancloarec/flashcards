@@ -5,9 +5,9 @@ import SpaceBar from './icons/SpaceBar.vue'
 
 import { Timestamp } from 'firebase/firestore'
 import { useAuth } from '../composables/useAuth.ts'
-import { CardState, type Card } from '../models/card.ts'
+import { CardState, type Card } from '../models/memorization.ts'
 import type { Deck } from '../models/deck.ts'
-import { type DeckMemorizationStatus } from '../models/memorization.ts'
+import { getCardState, type DeckMemorizationStatus } from '../models/memorization.ts'
 import { SavingStatus } from '../models/savingStatus.ts'
 import {
   getDeck,
@@ -44,15 +44,8 @@ const savingStatus = ref(SavingStatus.NotSaved)
  * @param deckMemorizationStatus deckMemorizationStatus from firestore
  */
 const initCardStates = (deckCards: Card[], deckMemorizationStatus?: DeckMemorizationStatus) => {
-  if (!deckMemorizationStatus) {
-    cardStates.value = Array<CardState>(deckCards.length).fill(CardState.NotTriedYet)
-    return
-  }
-  cardStates.value = deckCards.map((card) =>
-    deckMemorizationStatus[card.id]?.successfulAttempts?.length
-      ? CardState.Learned
-      : CardState.NotTriedYet
-  )
+  cardStates.value = deckCards.map((card) => getCardState(deckMemorizationStatus?.[card.id]))
+
   if (cardStates.value[0] === CardState.Learned) {
     currentCardIndex.value = getNextIndex()
   }

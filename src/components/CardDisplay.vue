@@ -3,8 +3,11 @@ import { computed, onUnmounted, ref } from 'vue'
 import type { Card } from '../models/card'
 import {
   cardMemorizationLevels,
+  CardState,
   dayInMillis,
   getCardMemorizationLevel,
+  getCardState,
+  getNextLevelAvailabilityDate,
   type CardMemorizationStatus
 } from '../models/memorization'
 import StarProgress from './StarProgress.vue'
@@ -17,6 +20,10 @@ interface Props {
 }
 
 const { card, memorizationStatus, showAnswer } = defineProps<Props>()
+
+const cardIsToLearnAgain = computed(
+  () => getCardState(memorizationStatus) === CardState.ToLearnAgain
+)
 
 /**
  * Controls whether the star notification is visible.
@@ -74,23 +81,20 @@ const memorizationLevel = computed(() => getCardMemorizationLevel(memorizationSt
  * no successful attempts are recorded.
  */
 const nextStarUnlockLabel = computed(() => {
-  if (memorizationStatus === undefined || !memorizationStatus.successfulAttempts.length) {
+  if (memorizationStatus?.successfulAttempts[0] === undefined) {
     return ''
   }
 
-  const lastMemorization = memorizationStatus.successfulAttempts[0]
-  const daysToWait = cardMemorizationLevels[memorizationLevel.value].daysToUnlock
+  const nextLevelAvailabilityDate = getNextLevelAvailabilityDate(
+    memorizationStatus.successfulAttempts[0],
+    memorizationLevel.value
+  )
 
-  const nextStarUnlockTime = lastMemorization.toMillis() + daysToWait * dayInMillis
-
-  if (nextStarUnlockTime <= Timestamp.now().toMillis()) {
+  if (nextLevelAvailabilityDate.toMillis() <= Timestamp.now().toMillis()) {
     return 'Réponds à la question pour gagner une nouvelle étoile'
   }
 
-  return (
-    'Prochaine étoile atteignable le ' +
-    dateTooltipFormat(Timestamp.fromMillis(nextStarUnlockTime).toDate())
-  )
+  return 'Prochaine étoile atteignable le ' + dateTooltipFormat(nextLevelAvailabilityDate.toDate())
 })
 
 /**
@@ -132,11 +136,10 @@ onUnmounted(() => {
         class="stars-button"
         :aria-label="nextStarUnlockLabel || `Niveau de mémorisation : ${memorizationLevel} étoiles`"
         :aria-describedby="showStarTooltip && nextStarUnlockLabel ? starTooltipId : undefined"
-        @mouseenter="showTooltipTemporarily"
-        @focus="showTooltipTemporarily"
         @click="showTooltipTemporarily"
       >
         <StarProgress v-for="(_, index) in memorizationLevel" :key="index" />
+        <StarProgress v-if="cardIsToLearnAgain" :status="CardState.ToLearnAgain" />
       </button>
     </div>
 
