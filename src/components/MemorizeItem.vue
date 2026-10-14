@@ -7,7 +7,7 @@ import { Timestamp } from 'firebase/firestore'
 import { useAuth } from '../composables/useAuth.ts'
 import { CardState, type Card } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
-import { type DeckMemorizationStatus } from '../models/memorizationStatus.ts'
+import { type DeckMemorizationStatus } from '../models/memorization.ts'
 import { SavingStatus } from '../models/savingStatus.ts'
 import {
   getDeck,
@@ -19,6 +19,7 @@ import {
   saveDeckMemorizationStatusToLocalStorage
 } from '../services/localStorageInterface.ts'
 import MemorizationProgress from './MemorizationProgress.vue'
+import CardDisplay from './CardDisplay.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
@@ -150,32 +151,17 @@ const saveProgress = async () => {
 
   savingStatus.value = SavingStatus.Saved
 }
-
-/**
- * Converts the formatting that has been done in json (bold and newline) to html
- * @param str the string to format
- * @returns the html version
- */
-const jsonToHtml = (str: string) =>
-  str
-    .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
-    .replaceAll('\n', '</br>')
 </script>
 
 <template>
   <div v-if="deckState === null">Loading</div>
   <div v-else-if="currentCardIndex !== -1">
     <h2>{{ deckState.name }}</h2>
-    <div
-      class="question"
-      :class="{ reduced: showAnswer }"
-      v-html="jsonToHtml(cardToDisplay.question)"
-    ></div>
-    <div
-      class="answer"
-      :class="{ shown: showAnswer }"
-      v-html="jsonToHtml(cardToDisplay.answer)"
-    ></div>
+    <CardDisplay
+      :card="cardToDisplay"
+      :show-answer="showAnswer"
+      :memorization-status="memorizationStatus[cardToDisplay.id]"
+    />
     <div class="actions">
       <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
         Voir la réponse [
@@ -223,51 +209,6 @@ h2 {
   width: 20px;
   height: 10px;
   fill: white;
-}
-
-.answer {
-  opacity: 0;
-  height: 0px;
-  color: #340a3c00;
-  overflow: hidden;
-}
-
-.question {
-  min-height: 420px;
-}
-
-.question.reduced {
-  min-height: 200px;
-  transition:
-    height 0.5s,
-    opacity 0.5s;
-}
-
-.answer.shown {
-  min-height: 200px;
-  height: auto;
-  opacity: 1;
-  transition:
-    height.5s,
-    opacity 0.5s,
-    margin-top 0.5s,
-    color 0.2s 0.2s;
-  margin-top: 20px;
-}
-
-.question,
-.answer.shown {
-  font-size: 1.7rem;
-  width: 90%;
-  vertical-align: middle;
-  line-height: 30px;
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  padding: 10px 20px;
-  text-align: left;
-  color: #2a2b2f;
-  border-left: 2px solid #aa193b;
 }
 
 .actions {

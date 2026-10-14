@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-const props = defineProps<{
-  progress: number
-}>()
+interface Props {
+  progress?: number
+}
 
-const normalizedProgress = computed(() => Math.max(0, Math.min(1, props.progress)))
+const { progress = 1 } = defineProps<Props>()
+
+const normalizedProgress = computed(() => Math.max(0, Math.min(1, progress)))
 
 const fillPercentage = computed(() =>
   normalizedProgress.value === 1 ? 100 : normalizedProgress.value * 80
