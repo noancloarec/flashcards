@@ -1,0 +1,102 @@
+{
+  "name": "Latin - Adjectifs",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "aigu, fin",
+      "answer": "acutus, a, um",
+      "id": "fc7c35ba-72e9-4c3f-9cc8-b8125de80c91"
+    },
+    {
+      "question": "épais, dense",
+      "answer": "crassus, a, um",
+      "id": "1039f507-7521-484a-9503-20b828439476"
+    },
+    {
+      "question": "cupide",
+      "answer": "cupidus, a, um",
+      "id": "2da5aca4-a520-4491-b378-460fe2be4a75"
+    },
+    {
+      "question": "divin",
+      "answer": "divinus, a, um",
+      "id": "df17fcb1-3cf1-4eab-ba21-cfdc46ce4613"
+    },
+    {
+      "question": "en colère",
+      "answer": "iratus, a, um",
+      "id": "3cd71304-0028-41a5-a3dd-243eb0449b09"
+    },
+    {
+      "question": "libre",
+      "answer": "liber, bera, berum",
+      "id": "ca2ee72d-8e13-4d0d-a8e9-10efdbc3251e"
+    },
+    {
+      "question": "grand",
+      "answer": "magnus, a, um",
+      "id": "55087b3c-cb10-454d-811b-5f8fc38b2b96"
+    },
+    {
+      "question": "abondant, nombreux",
+      "answer": "multus, a, um",
+      "id": "5a9a8ab5-f523-4344-b4d1-d7e724e9e2d3"
+    },
+    {
+      "question": "nouveau",
+      "answer": "novus, a, um",
+      "id": "503e549f-f79a-416f-9ef3-335939f55b5e"
+    },
+    {
+      "question": "petit, peu nombreux",
+      "answer": "parvus, a, um",
+      "id": "272c4b53-d7b7-4f04-a472-569838f4e6e6"
+    },
+    {
+      "question": "plein de",
+      "answer": "plenus, a, um (+ génitif)",
+      "id": "e057cefd-cd0e-4ebf-a808-08ef3f0b3e06"
+    },
+    {
+      "question": "postérieur, suivant",
+      "answer": "posterus, a, um",
+      "id": "d42b4732-115a-4ede-9fda-5cc9fe147487"
+    },
+    {
+      "question": "premier",
+      "answer": "primus, a, um",
+      "id": "c2484789-86e9-4311-85c5-ef4b42ddd8a6"
+    },
+    {
+      "question": "beau",
+      "answer": "pulcher, chra, chrum",
+      "id": "2d8f9a53-c985-42b0-9923-97b30c8f987a"
+    },
+    {
+      "question": "calme, paisible",
+      "answer": "quietus, a, um",
+      "id": "ac5c8844-718d-484b-979b-00637753a00d"
+    },
+    {
+      "question": "sacré",
+      "answer": "sacer, cra, crum",
+      "id": "5d62c387-b6c8-4f0c-8bce-3c677c48150d"
+    },
+    {
+      "question": "varié",
+      "answer": "varius, a, um",
+      "id": "9d274269-57c5-4314-a884-15f24bf42bf9"
+    },
+    {
+      "question": "réel, vrai",
+      "answer": "verus, a, um",
+      "id": "edfebfcd-beab-4b04-9010-a1514f02593c"
+    },
+    {
+      "question": "un seul, unique",
+      "answer": "unus, a, um",
+      "id": "21782aed-5fcf-420d-b89b-395fdd22984b"
+    }
+  ],
+  "createdAt": "2026-10-10T20:16:44.345Z"
+}

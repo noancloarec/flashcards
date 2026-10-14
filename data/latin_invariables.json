@@ -2,27 +2,116 @@
   "name": "Latin - Invariables",
   "author": "Noan",
   "cards": [
-    { "question": "mais, tandis que", "answer": "autem" },
-    { "question": "rapidement", "answer": "celeriter" },
-    { "question": "avec", "answer": "cum (+ abl.)" },
-    { "question": "enfin", "answer": "deinde" },
-    { "question": "en dehors de, depuis", "answer": "e/ex (+ abl.)" },
-    { "question": "car, en effet", "answer": "enim" },
-    { "question": "donc, ainsi", "answer": "ergo" },
-    { "question": "maintenant, déjà", "answer": "iam" },
-    { "question": "là", "answer": "ibi" },
-    { "question": "dans, à", "answer": "in (+ acc. ou abl.)" },
-    { "question": "entre, parmi", "answer": "inter (+ acc.)" },
-    { "question": "c’est pourquoi", "answer": "itaque" },
-    { "question": "car, en effet", "answer": "nam" },
-    { "question": "à travers", "answer": "per (+ acc.)" },
-    { "question": "après, derrière", "answer": "post (+ acc.)" },
-    { "question": "après que", "answer": "postquam" },
-    { "question": "toujours", "answer": "semper" },
-    { "question": "ainsi", "answer": "sic" },
-    { "question": "sans", "answer": "sine (+ abl.)" },
-    { "question": "lorsque", "answer": "ubi" },
-    { "question": "violemment", "answer": "vehementer" },
-    { "question": "en vérité", "answer": "vero" }
-  ]
+    {
+      "question": "mais, tandis que",
+      "answer": "autem",
+      "id": "672e4a86-5245-457d-a660-1a874af11029"
+    },
+    {
+      "question": "rapidement",
+      "answer": "celeriter",
+      "id": "4de16fce-2859-40c7-9af0-6f1be1869d28"
+    },
+    {
+      "question": "avec",
+      "answer": "cum (+ abl.)",
+      "id": "8bdbdab9-5d50-4ffa-83df-29ce7862f051"
+    },
+    {
+      "question": "enfin",
+      "answer": "deinde",
+      "id": "3d3215bb-e9af-44e4-9a15-21e5fcf1e45c"
+    },
+    {
+      "question": "en dehors de, depuis",
+      "answer": "e/ex (+ abl.)",
+      "id": "f9551ab4-be62-4b57-a724-b0b413a89c8a"
+    },
+    {
+      "question": "car, en effet",
+      "answer": "enim",
+      "id": "a1708e41-d51a-43a3-b7de-4b14a57824f8"
+    },
+    {
+      "question": "donc, ainsi",
+      "answer": "ergo",
+      "id": "26f520a0-6a41-4598-8854-3cb21ef58bb8"
+    },
+    {
+      "question": "maintenant, déjà",
+      "answer": "iam",
+      "id": "de4f257e-adb1-4a3d-b053-620a93bdfcb8"
+    },
+    {
+      "question": "là",
+      "answer": "ibi",
+      "id": "bd631c6b-dafc-4a75-8ba4-2cbb8e44f2db"
+    },
+    {
+      "question": "dans, à",
+      "answer": "in (+ acc. ou abl.)",
+      "id": "9b665255-c886-4711-b55e-a87a43d14c5a"
+    },
+    {
+      "question": "entre, parmi",
+      "answer": "inter (+ acc.)",
+      "id": "5aeccb1e-64d9-4033-bef7-cc3140a7f0c7"
+    },
+    {
+      "question": "c’est pourquoi",
+      "answer": "itaque",
+      "id": "545f7758-f56e-4b59-9445-e909fef48584"
+    },
+    {
+      "question": "car, en effet",
+      "answer": "nam",
+      "id": "019c1f85-83a6-453d-bd63-f6ac0eeb50c9"
+    },
+    {
+      "question": "à travers",
+      "answer": "per (+ acc.)",
+      "id": "a7b64cec-b563-40ad-bdcb-2908af4390c7"
+    },
+    {
+      "question": "après, derrière",
+      "answer": "post (+ acc.)",
+      "id": "d98739c0-d025-4c9f-8b2b-7b8d8b0954b8"
+    },
+    {
+      "question": "après que",
+      "answer": "postquam",
+      "id": "09aad4d9-cb6f-4d16-93b7-fe4171b2c215"
+    },
+    {
+      "question": "toujours",
+      "answer": "semper",
+      "id": "47017124-d4aa-4701-867d-16012d24b479"
+    },
+    {
+      "question": "ainsi",
+      "answer": "sic",
+      "id": "0c11a991-910a-4b5d-be61-b46c1f31645c"
+    },
+    {
+      "question": "sans",
+      "answer": "sine (+ abl.)",
+      "id": "7dd97279-6735-414f-94c2-e3b2555accfc"
+    },
+    {
+      "question": "lorsque",
+      "answer": "ubi",
+      "id": "1f16a6c4-f5c3-4622-9b74-cbecec11a85e"
+    },
+    {
+      "question": "violemment",
+      "answer": "vehementer",
+      "id": "1bfd05c0-33f1-4c82-8006-8833c1527b85"
+    },
+    {
+      "question": "en vérité",
+      "answer": "vero",
+      "id": "9c46fc49-60d0-49e8-9b81-72876ebae3bb"
+    }
+  ],
+  "createdAt": "2026-10-10T20:16:44.246Z"
 }

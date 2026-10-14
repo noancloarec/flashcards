@@ -1,0 +1,97 @@
+{
+  "name": "Latin - la deuxième déclinaison",
+  "author": "Noan",
+  "cards": [
+    {
+      "question": "Décline dominus, i, m. au nominatif.",
+      "answer": "Dominus, domini",
+      "id": "3dce38de-0e5d-44f0-950a-f1c2b402b540"
+    },
+    {
+      "question": "Décline dominus, i, m. au vocatif.",
+      "answer": "Domine, domini",
+      "id": "9657a7c9-99ee-4d0b-a86e-09371db430a6"
+    },
+    {
+      "question": "Décline dominus, i, m. à l’accusatif.",
+      "answer": "Dominum, dominos",
+      "id": "e46cb6f1-1f96-41a9-b93f-4d341d23a9cf"
+    },
+    {
+      "question": "Décline dominus, i, m. au génitif.",
+      "answer": "Domini, dominorum",
+      "id": "19604557-21de-444f-9025-004068dbd527"
+    },
+    {
+      "question": "Décline dominus, i, m. au datif.",
+      "answer": "Domino, dominis",
+      "id": "8a0517d5-5d83-4cc0-b1fe-b469e804ba0a"
+    },
+    {
+      "question": "Décline dominus, i, m. à l’ablatif.",
+      "answer": "Domino, dominis",
+      "id": "8172a209-3ae0-4f44-b0eb-7d160244ea94"
+    },
+    {
+      "question": "Décline ager, agri, m. au nominatif.",
+      "answer": "Ager, agri",
+      "id": "7acb95c7-cf3e-4fc3-904a-b1570d447761"
+    },
+    {
+      "question": "Décline ager, agri, m. au vocatif.",
+      "answer": "Ager, agri",
+      "id": "bacb3250-b6ce-46b4-b865-e557df6028e0"
+    },
+    {
+      "question": "Décline ager, agri, m. à l’accusatif.",
+      "answer": "Agrum, agros",
+      "id": "c61a7540-7185-4a20-8073-fab2f7f26f63"
+    },
+    {
+      "question": "Décline ager, agri, m. au génitif.",
+      "answer": "Agri, agrorum",
+      "id": "98dffe13-d994-479a-aec6-4e1a3c383141"
+    },
+    {
+      "question": "Décline ager, agri, m. au datif.",
+      "answer": "Agro, agris",
+      "id": "535236b8-4265-4b51-8b07-a14761e9b18f"
+    },
+    {
+      "question": "Décline ager, agri, m. à l’ablatif.",
+      "answer": "Agro, agris",
+      "id": "4aa4251d-5113-48e8-9b7c-e1f071230820"
+    },
+    {
+      "question": "Décline templum, i, n. au nominatif.",
+      "answer": "Templum, templa",
+      "id": "ad3be038-a71b-4610-a366-1c3ca70ef040"
+    },
+    {
+      "question": "Décline templum, i, n. au vocatif.",
+      "answer": "Templum, templa",
+      "id": "dd06453c-0bfb-4ab1-bea7-1cfa7b97b267"
+    },
+    {
+      "question": "Décline templum, i, n. à l’accusatif.",
+      "answer": "Templum, templa",
+      "id": "3e2e8173-5f9c-4ee5-834d-1e6dab101217"
+    },
+    {
+      "question": "Décline templum, i, n. au génitif.",
+      "answer": "Templi, templorum",
+      "id": "c5c65342-5acb-48b1-8d40-599602628a33"
+    },
+    {
+      "question": "Décline templum, i, n. au datif.",
+      "answer": "Templo, templis",
+      "id": "fd63e4c8-b849-405d-b021-946224345a3c"
+    },
+    {
+      "question": "Décline templum, i, n. à l’ablatif.",
+      "answer": "Templo, templis",
+      "id": "eb40c482-8728-4c91-9cec-7564344b7147"
+    }
+  ],
+  "createdAt": "2026-10-10T20:16:44.172Z"
+}

@@ -2,28 +2,121 @@
   "name": "Latin - Verbes",
   "author": "Noan",
   "cards": [
-    { "question": "recevoir", "answer": "accipio, is, ere, cepit, ceptum" },
-    { "question": "estimer que", "answer": "aestimo, as, are, aui, atum" },
-    { "question": "constituer, établir", "answer": "constituo, is, ere, tui, tutum" },
-    { "question": "appeler, convoquer", "answer": "convoco, as, are, aui, atum" },
-    { "question": "choisir, élire", "answer": "deligo, is, ere, legi, lectum" },
-    { "question": "désirer", "answer": "desidero, as, are, aui, atum" },
-    { "question": "renoncer à", "answer": "desisto, is, ere, stiti, stitum" },
-    { "question": "diviser, partager", "answer": "divido, is, ere, uisi, uisum" },
-    { "question": "donner", "answer": "do, das, dare, dedi, datum" },
-    { "question": "conduire, mener", "answer": "duco, is, ere, duxi, ductum" },
-    { "question": "estimer, penser", "answer": "existimo, as, are, aui, atum" },
-    { "question": "s’enfuir", "answer": "fugio, is, ere, fugi, —" },
-    { "question": "porter, gérer", "answer": "gero, is, ere, gessi, gestum" },
-    { "question": "avoir, posséder, considérer comme", "answer": "habeo, es, ere, bui, bitum" },
-    { "question": "jeter", "answer": "iacio, is, ere, ieci, iactum" },
-    { "question": "instituer", "answer": "instituo, as, are, uui, atum" },
-    { "question": "louer, faire l’éloge", "answer": "laudo, as, are, aui, atum" },
-    { "question": "affranchir", "answer": "libero, as, are, aui, atum" },
-    { "question": "rester", "answer": "maneo, es, ere, mansi, mansum" },
-    { "question": "appeler, nommer", "answer": "nomino, as, are, aui, atum" },
-    { "question": "compter, dénombrer", "answer": "numero, as, are, aui, atum" },
-    { "question": "faire complètement, achever", "answer": "perficio, is, ere, feci, fectum" },
-    { "question": "rester jusqu’au bout", "answer": "permaneo, es, ere, mansi, mansum" }
-  ]
+    {
+      "question": "recevoir",
+      "answer": "accipio, is, ere, cepit, ceptum",
+      "id": "3e617705-4d4e-4847-9666-210fa4e91eab"
+    },
+    {
+      "question": "estimer que",
+      "answer": "aestimo, as, are, aui, atum",
+      "id": "27741a2b-0cd9-49aa-831a-c0ff746ac9e8"
+    },
+    {
+      "question": "constituer, établir",
+      "answer": "constituo, is, ere, tui, tutum",
+      "id": "31fcfb0b-1523-4f9a-a567-ccc173c47c2e"
+    },
+    {
+      "question": "appeler, convoquer",
+      "answer": "convoco, as, are, aui, atum",
+      "id": "75c3b1d0-19f3-4846-8417-bcf214fdde9b"
+    },
+    {
+      "question": "choisir, élire",
+      "answer": "deligo, is, ere, legi, lectum",
+      "id": "7df06af4-e2d0-499b-9c76-b38c81128c09"
+    },
+    {
+      "question": "désirer",
+      "answer": "desidero, as, are, aui, atum",
+      "id": "81fea10b-edb8-469d-a0e5-d25b32cef173"
+    },
+    {
+      "question": "renoncer à",
+      "answer": "desisto, is, ere, stiti, stitum",
+      "id": "e5ce1301-1ce0-4d7e-a3b8-acdfeb9c285e"
+    },
+    {
+      "question": "diviser, partager",
+      "answer": "divido, is, ere, uisi, uisum",
+      "id": "468a5853-dbf5-4b2e-a53b-6e2803b3e5e0"
+    },
+    {
+      "question": "donner",
+      "answer": "do, das, dare, dedi, datum",
+      "id": "1ace9990-b45a-4480-8a3f-b38a7a99d15d"
+    },
+    {
+      "question": "conduire, mener",
+      "answer": "duco, is, ere, duxi, ductum",
+      "id": "5de9594f-673a-4941-9027-51978b6ad0ec"
+    },
+    {
+      "question": "estimer, penser",
+      "answer": "existimo, as, are, aui, atum",
+      "id": "37d15f3a-1510-4f97-9275-72d73d06e82b"
+    },
+    {
+      "question": "s’enfuir",
+      "answer": "fugio, is, ere, fugi, —",
+      "id": "a78dc33b-a144-49c7-91e4-bbb8a73af258"
+    },
+    {
+      "question": "porter, gérer",
+      "answer": "gero, is, ere, gessi, gestum",
+      "id": "218c9a39-b2c2-4444-b18f-07402c878a8b"
+    },
+    {
+      "question": "avoir, posséder, considérer comme",
+      "answer": "habeo, es, ere, bui, bitum",
+      "id": "d13d4a57-240b-41b2-a11b-76d9ecfe7bfd"
+    },
+    {
+      "question": "jeter",
+      "answer": "iacio, is, ere, ieci, iactum",
+      "id": "6d3905b0-c5bd-47f9-8a36-940c3c42cb94"
+    },
+    {
+      "question": "instituer",
+      "answer": "instituo, as, are, uui, atum",
+      "id": "971a50ad-d2a5-47da-b975-c37aba5604d6"
+    },
+    {
+      "question": "louer, faire l’éloge",
+      "answer": "laudo, as, are, aui, atum",
+      "id": "5c7b7418-0efb-44ca-8e86-6c56c93dce11"
+    },
+    {
+      "question": "affranchir",
+      "answer": "libero, as, are, aui, atum",
+      "id": "c6b0a1c4-d4de-4cf9-b020-35990f783bd7"
+    },
+    {
+      "question": "rester",
+      "answer": "maneo, es, ere, mansi, mansum",
+      "id": "7a0e5645-af40-4e2a-b4b1-44e3f2bc480d"
+    },
+    {
+      "question": "appeler, nommer",
+      "answer": "nomino, as, are, aui, atum",
+      "id": "a7a7af72-2403-420c-b47d-e5e50552373c"
+    },
+    {
+      "question": "compter, dénombrer",
+      "answer": "numero, as, are, aui, atum",
+      "id": "cae2a04f-607b-4df3-a2ab-9d58aafdca54"
+    },
+    {
+      "question": "faire complètement, achever",
+      "answer": "perficio, is, ere, feci, fectum",
+      "id": "50f58c58-aa42-4d33-9f20-d6a79191e759"
+    },
+    {
+      "question": "rester jusqu’au bout",
+      "answer": "permaneo, es, ere, mansi, mansum",
+      "id": "be56bdef-1fdf-440f-b128-3bee1efe53dc"
+    }
+  ],
+  "createdAt": "2026-10-10T20:16:44.468Z"
 }

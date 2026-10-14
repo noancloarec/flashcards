@@ -1,0 +1,107 @@
+{
+  "name": "Méditerranée - Les califats Arabes au Xe siècle",
+  "author": "Noan",
+  "cards": [
+    {
+      "answer": "Le calife, le diwan (administration) et l'armée.",
+      "question": "Quelles sont les principales institutions gouvernementales du Califat abbasside ?",
+      "id": "c3aec428-0762-4902-85c5-f0e090db76a2"
+    },
+    {
+      "question": "Comment le califat abbasside rémunère-t-il notamment ses militaires sans puiser directement dans le trésor ?",
+      "answer": "Grâce au système de l'iqtâ, qui consiste à accorder temporairement des terres de l'État aux militaires afin qu'ils en perçoivent les impôts.",
+      "id": "edf96f31-a97c-48af-b1fe-927fe6fde4c5"
+    },
+    {
+      "question": "Quelle conséquence politique le système de l'iqtâ peut-il avoir pour le calife ?",
+      "answer": "Les militaires auxquels sont accordées les terres peuvent se comporter comme des seigneurs, ce qui réduit le pouvoir du calife et favorise le développement d'une aristocratie foncière.",
+      "id": "eadc858f-c4b4-4fab-a00f-0b94bdab755a"
+    },
+    {
+      "question": "Pourquoi le Califat abbasside connaît-il un affaiblissement politique au Xe siècle ?",
+      "answer": "Ses provinces deviennent progressivement autonomes et l'armée s'empare peu à peu du pouvoir califal, jusqu'à placer le calife sous la tutelle des Bouyides en 945.",
+      "id": "d2c2c3b4-b33c-414c-9b6b-c7a03016ba81"
+    },
+    {
+      "question": "Quels éléments témoignent de l'âge d'or économique du monde arabe sous les Abbassides ?",
+      "answer": "Le développement de l'irrigation et des terres cultivables, l'essor du commerce autour de Bagdad, une monnaie stable et le développement de techniques commerciales comme la lettre de change.",
+      "id": "194bd6c7-55f3-4ee0-96a2-2b2c7595bbc6"
+    },
+    {
+      "question": "Pourquoi le commerce abbasside fléchit-il dans la seconde moitié du Xe siècle ?",
+      "answer": "Notamment parce que les Byzantins reviennent en force et reconquièrent des places commerciales importantes comme Antioche en 969, tandis que le califat connaît également des troubles politiques à l'Est.",
+      "id": "42387777-70b3-4eb0-a77a-606f9e65b6bb"
+    },
+    {
+      "question": "Quels sont les trois grands califats étudiés dans le cours et quelle est leur orientation religieuse ?",
+      "answer": "Le Califat abbasside est sunnite, le Califat fatimide est chiite et le Califat omeyyade de Cordoue est sunnite.",
+      "id": "a9a4c7fe-ca3b-499b-8318-7ced4f3b3670"
+    },
+    {
+      "question": "Comment les Fatimides renforcent-ils leur puissance économique au Xe siècle ?",
+      "answer": "Ils contrôlent une partie importante du Maghreb et la Sicile, disposent des ressources agricoles de l'Égypte et profitent du déplacement du commerce du golfe Persique vers la mer Rouge.",
+      "id": "f5db1a0b-85f1-4dc0-97f8-1127a68a577e"
+    },
+    {
+      "question": "Pourquoi Abd al-Rahman adopte-t-il le titre de calife en 929 ?",
+      "answer": "Pour affirmer le Califat omeyyade de Cordoue face aux Fatimides.",
+      "id": "b2c7dc6e-95b4-47fd-9545-0d35500375d9"
+    },
+    {
+      "question": "Quelle est la capitale du Califat abbasside ?",
+      "answer": "Bagdad.",
+      "id": "b2077c9b-eaf6-4a26-838e-92b51e8a68d5"
+    },
+    {
+      "answer": "Cordoue.",
+      "question": "Quelle ville est la capitale du Califat omeyyade au Xe siècle ?",
+      "id": "ee9405d4-08dd-4f96-9333-f85cdffd42d5"
+    },
+    {
+      "question": "Quelle ville est reconquise par les Byzantins en 969 ?",
+      "answer": "Antioche.",
+      "id": "789a4e41-9b72-4872-84f4-08e8a35176a8"
+    },
+    {
+      "answer": "Madinat al-Zahra.",
+      "question": "Quelle ville nouvelle est fondée près de Cordoue par les Omeyyades ?",
+      "id": "d1c57af2-bc9a-41f0-b0d9-566cfd7d31b2"
+    },
+    {
+      "answer": "Kairouan.",
+      "question": "Quelle ville sert initialement de capitale aux Fatimides ?",
+      "id": "b461d05a-19f8-472d-85e7-5d8ffcb163d3"
+    },
+    {
+      "question": "Comment s'appelle la capitale des Fatimides à partir de 969 ? Comment s'appelait l'ancienne ville sur laquelle elle est fondée ?",
+      "answer": "Al-Qâhira (Le Caire) est fondée en 969 sur l'emplacement d'Al-Fustat.",
+      "id": "ef42e068-d67a-439a-9877-355768e0d6e3"
+    },
+    {
+      "question": "Qui prend le titre de Mahdi en 910 près de Kairouan ?",
+      "answer": "Ubayd Allah. C'est le 1er calife fatimide",
+      "id": "40e47742-a8d1-49a0-b2ae-9c17a26a1f4f"
+    },
+    {
+      "question": "Qui adopte le titre de calife en 929 à Cordoue ?",
+      "answer": "Abd al-Rahman.",
+      "id": "d9004b6f-6972-491d-9e4b-e0b2c9398aec"
+    },
+    {
+      "answer": "Le nouveau calife omeyyade de Cordoue, encore mineur au moment où Al-Mansur s'empare du pouvoir.",
+      "question": "Qui est Hisham II ?",
+      "id": "25613615-a304-48e9-b204-25538762844c"
+    },
+    {
+      "question": "Qui profite de la minorité de Hisham II pour s'emparer du pouvoir en 978 ?",
+      "answer": "Al-Mansur, son vizir.",
+      "id": "aada33b7-b034-440b-b949-67dc66310773"
+    },
+    {
+      "answer": "Un émir bouyide chiite qui entre à Bagdad par les armes en 945, chasse le calife abbasside et en choisit un plus docile.",
+      "question": "Qui est Ahmad Ibn Buwaih ?",
+      "id": "c62d0944-afae-4e14-a999-8be6090298c1"
+    }
+  ],
+  "createdAt": "2026-10-10T20:16:44.578Z"
+}

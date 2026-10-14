@@ -4,27 +4,34 @@
   "cards": [
     {
       "question": "Comment se décline rosa au nominatif ?",
-      "answer": "Singulier : rosa ; pluriel : rosae."
+      "answer": "Singulier : rosa ; pluriel : rosae.",
+      "id": "774659ae-2459-46f6-8878-5c17e2c438ce"
     },
     {
       "question": "Comment se décline rosa au vocatif ?",
-      "answer": "Singulier : rosa ; pluriel : rosae."
+      "answer": "Singulier : rosa ; pluriel : rosae.",
+      "id": "ae87da43-6990-4622-9649-9a71df5a580b"
     },
     {
       "question": "Comment se décline rosa à l'accusatif ?",
-      "answer": "Singulier : rosam ; pluriel : rosas."
+      "answer": "Singulier : rosam ; pluriel : rosas.",
+      "id": "935f5923-4da7-44b7-8eae-304e9f7c3025"
     },
     {
       "question": "Comment se décline rosa au génitif ?",
-      "answer": "Singulier : rosae ; pluriel : rosarum."
+      "answer": "Singulier : rosae ; pluriel : rosarum.",
+      "id": "b346b5a7-51a0-4997-a730-a73d9e23dc77"
     },
     {
       "question": "Comment se décline rosa au datif ?",
-      "answer": "Singulier : rosae ; pluriel : rosis."
+      "answer": "Singulier : rosae ; pluriel : rosis.",
+      "id": "2b990fed-bda4-4415-abbc-96687f6bf0f4"
     },
     {
       "question": "Comment se décline rosa à l'ablatif ?",
-      "answer": "Singulier : rosa ; pluriel : rosis."
+      "answer": "Singulier : rosa ; pluriel : rosis.",
+      "id": "aefdca27-3786-441d-bd69-9c239a8812be"
     }
-  ]
+  ],
+  "createdAt": "2026-10-10T20:16:44.299Z"
 }
