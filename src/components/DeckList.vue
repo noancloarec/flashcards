@@ -5,6 +5,8 @@ import type { Deck } from '../models/deck'
 import { type UserMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
   getUserMemorizationStatus,
+  maxLevel,
+  type DeckMemorizationStatus,
   type UserMemorizationStatus
 } from '../models/memorizationStatus.ts'
 import {
@@ -15,6 +17,7 @@ import {
 } from '../services/firebase'
 import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
 import StarProgress from './StarProgress.vue'
+import { range } from '../services/basicOperations.ts'
 interface Props {
   showArchiveButton?: boolean
   /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */
@@ -62,21 +65,25 @@ const unarchive = async () => {
   deckJustArchived.value = null
 }
 
-const computeProgress = (deck: Deck) => {
-  const deckMemorizationStatus = memorizationStatus.value[deck.id]
+const progressByLevel: (deck: Deck) => number[] = (deck) => {
+  const deckMemorizationStatus: DeckMemorizationStatus = memorizationStatus.value[deck.id]
 
   if (!deckMemorizationStatus) {
-    return 0
+    return []
   }
 
   const cardsInDeck = new Set(deck.cards.map((c) => c.id))
-  const learnedCards = new Set(
-    Object.entries(deckMemorizationStatus)
-      .filter(([_, cardStatus]) => cardStatus.level > 0)
-      .map(([cardId, _]) => cardId)
+  const learnedCardsInDeck = Object.entries(deckMemorizationStatus)
+    .filter(([cardId, _]) => cardsInDeck.has(cardId))
+    .map(([_, cardStatus]) => cardStatus)
+
+  const cardsMemorizedByLevel = range(1, maxLevel)
+    .map((level) => learnedCardsInDeck.filter((cardStatus) => cardStatus.level >= level).length)
+    .filter((nbCardsReachingLevel) => nbCardsReachingLevel > 0)
+
+  return cardsMemorizedByLevel.map(
+    (nbCardsReachingLevel) => nbCardsReachingLevel / cardsInDeck.size
   )
-  const learnedCardsInDeck = cardsInDeck.intersection(learnedCards)
-  return learnedCardsInDeck.size / cardsInDeck.size
 }
 
 onMounted(async () => {
@@ -99,7 +106,7 @@ watch(
 
   <div class="deck-list">
     <div class="deck" v-for="deck in filteredDecks" :key="deck.id">
-      <StarProgress :progress="computeProgress(deck)" />
+      <StarProgress v-for="progress of progressByLevel(deck)" :progress="progress" />
       <a class="deck-link" :href="`${targetBaseUrl}${deck.id}`">
         <p>{{ deck.name }}</p>
       </a>

@@ -85,6 +85,8 @@ const cardMemorizationLevels: CardMemorizationSpan[] = [
   // At this point I guess the card should be remembered for years
 ]
 
+export const maxLevel = cardMemorizationLevels.length
+
 /**
  * Compute the memorization level of a card
  * @param memorizationStatus the attempts for this card
@@ -140,7 +142,7 @@ const getCardState: (nextLevelAvailabilityDate: Timestamp, level: number) => Car
 ) => {
   if (level === 0) return CardState.NotTriedYet
 
-  if (level >= cardMemorizationLevels.length - 1) return CardState.Learned
+  if (level >= maxLevel) return CardState.Learned
 
   const nextLevelIsInTheFuture = Timestamp.now().toMillis() <= nextLevelAvailabilityDate.toMillis()
   return nextLevelIsInTheFuture ? CardState.Learned : CardState.ToLearnAgain
