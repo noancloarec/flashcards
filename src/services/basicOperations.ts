@@ -12,3 +12,15 @@ export const mapValues = <K extends string, V, R>(
     K,
     R
   >
+
+/**
+ * Generates numbers between a range
+ * @param start start number (included)
+ * @param stop end number (excluded)
+ * @param step step between each number
+ * @returns a list of numbers ranging between start and stop (excluded)
+ */
+export const range = (start: number, stop: number, step = 1) =>
+  Array(Math.ceil((stop - start) / step))
+    .fill(start)
+    .map((x, y) => x + y * step)

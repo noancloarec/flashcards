@@ -9,11 +9,24 @@ interface Props {
 
 const { progress = 1, status = CardState.Learned } = defineProps<Props>()
 
+// Vertical extent of the star path inside the 24x24 viewBox
+const starTop = 2
+const starBottom = 21.02
+const startHeight = starBottom - starTop
+const viewboxSize = 24
+
+// Maximum fill before the star is complete (progress === 1 jumps to 100%)
+const maxPartialFill = 0.85
+
 const normalizedProgress = computed(() => Math.max(0, Math.min(1, progress)))
 
-const fillPercentage = computed(() =>
-  normalizedProgress.value === 1 ? 100 : normalizedProgress.value * 80
+const fillRatio = computed(() =>
+  normalizedProgress.value === 1 ? 1 : normalizedProgress.value * maxPartialFill
 )
+
+// The clip rect starts at the fill line and extends to the bottom of the viewBox
+const clipY = computed(() => starBottom - startHeight * fillRatio.value)
+const clipHeight = computed(() => viewboxSize - clipY.value)
 
 const clipId = `star-clip-${Math.random().toString(36).slice(2)}`
 </script>
@@ -27,12 +40,7 @@ const clipId = `star-clip-${Math.random().toString(36).slice(2)}`
   >
     <defs>
       <clipPath :id="clipId">
-        <rect
-          x="0"
-          :y="24 - (24 * fillPercentage) / 100"
-          width="24"
-          :height="(24 * fillPercentage) / 100"
-        />
+        <rect x="0" :y="clipY" :width="viewboxSize" :height="clipHeight" />
       </clipPath>
     </defs>
 
@@ -77,6 +85,7 @@ const clipId = `star-clip-${Math.random().toString(36).slice(2)}`
 .to-learn-again .star-background {
   stroke: #ffc12f;
 }
+
 .to-learn-again .star-fill {
   fill: #ffc12f;
 }
