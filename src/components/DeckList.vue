@@ -2,11 +2,15 @@
 import { computed, onMounted, ref, watch, type Ref } from 'vue'
 import { useAuth } from '../composables/useAuth.ts'
 import type { Deck } from '../models/deck'
-import { type UserMemorizationStatus } from '../models/memorization.ts'
+import { type UserMemorizationHistory } from '../models/memorizationHistory.ts'
+import {
+  getUserMemorizationStatus,
+  type UserMemorizationStatus
+} from '../models/memorizationStatus.ts'
 import {
   archiveDeck,
   getDeckList,
-  getUserMemorizationStatus,
+  getUserMemorizationHistory,
   unArchiveDeck
 } from '../services/firebase'
 import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
@@ -68,7 +72,7 @@ const computeProgress = (deck: Deck) => {
   const cardsInDeck = new Set(deck.cards.map((c) => c.id))
   const learnedCards = new Set(
     Object.entries(deckMemorizationStatus)
-      .filter(([_, cardStatus]) => cardStatus.successfulAttempts.length > 0)
+      .filter(([_, cardStatus]) => cardStatus.level > 0)
       .map(([cardId, _]) => cardId)
   )
   const learnedCardsInDeck = cardsInDeck.intersection(learnedCards)
@@ -80,13 +84,12 @@ onMounted(async () => {
   decks.value = deckList
 })
 watch(
-  googleUser,
+  [googleUser, decks],
   async () => {
-    if (googleUser.value?.email) {
-      memorizationStatus.value = await getUserMemorizationStatus(googleUser.value.email)
-    } else {
-      memorizationStatus.value = getUserMemorizationStatusFromLocalStorage()
-    }
+    const memorizationHistory: UserMemorizationHistory = googleUser.value?.email
+      ? await getUserMemorizationHistory(googleUser.value.email)
+      : getUserMemorizationStatusFromLocalStorage()
+    memorizationStatus.value = getUserMemorizationStatus(decks.value, memorizationHistory)
   },
   { immediate: true }
 )

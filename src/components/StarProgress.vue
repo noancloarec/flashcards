@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { CardState } from '../models/memorization'
+import { CardState } from '../models/memorizationStatus'
 
 interface Props {
   progress?: number

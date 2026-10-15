@@ -16,7 +16,10 @@ import {
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
 import type { Card } from '../models/card'
-import type { DeckMemorizationStatus, UserMemorizationStatus } from '../models/memorization'
+import type {
+  DeckMemorizationHistory,
+  UserMemorizationHistory
+} from '../models/memorizationHistory'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBHPBl6MD-7vbGIkoyWwQZsE0GH1AOS3cM',
@@ -121,12 +124,12 @@ export const updateDeck = async (deck: Deck) => {
  * @param deckId the id of the deck
  * @param statuses statuses for cards
  */
-export async function saveDeckMemorizationStatus(
+export async function saveDeckMemorizationHistory(
   userId: string,
   deckId: string,
-  statuses: DeckMemorizationStatus
+  statuses: DeckMemorizationHistory
 ) {
-  const deckRef = doc(db, 'memorization_status', userId, 'deck', deckId)
+  const deckRef = doc(db, 'memorization_history', userId, 'deck', deckId)
 
   await setDoc(deckRef, statuses)
 }
@@ -137,25 +140,25 @@ export async function saveDeckMemorizationStatus(
  * @param deckId the id of the deck
  * @param statuses statuses for cards
  */
-export async function getDeckMemorizationStatus(userId: string, deckId: string) {
-  const deckRef = doc(db, 'memorization_status', userId, 'deck', deckId)
+export async function getDeckMemorizationHistory(userId: string, deckId: string) {
+  const deckRef = doc(db, 'memorization_history', userId, 'deck', deckId)
 
   const response = await getDoc(deckRef)
   if (!response.exists()) {
     return {}
   }
-  return response.data() as DeckMemorizationStatus
+  return response.data() as DeckMemorizationHistory
 }
 
 /**
- * Loads a UserMemorizationStatus in the db
+ * Loads a UserMemorizationHistory in the db
  * @param userId the id for the user
  * @param statuses statuses for learned cards in all 'touched' decks
  */
-export async function getUserMemorizationStatus(userId: string) {
-  const deckMemorizedRef = collection(db, 'memorization_status', userId, 'deck')
+export async function getUserMemorizationHistory(userId: string) {
+  const deckMemorizedRef = collection(db, 'memorization_history', userId, 'deck')
 
   const response = await getDocs(deckMemorizedRef)
   const res = Object.fromEntries(response.docs.map((d) => [d.id, d.data()]))
-  return res as UserMemorizationStatus
+  return res as UserMemorizationHistory
 }

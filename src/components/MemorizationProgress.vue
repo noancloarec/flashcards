@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CardState } from '../models/memorization'
+import { CardState } from '../models/memorizationStatus'
 
 defineProps<{
   cardStates: CardState[]
@@ -60,6 +60,6 @@ const emit = defineEmits<{ indexChange: [index: number] }>()
   background-color: #ffc12f;
 }
 .current-card {
-  border-bottom: 4px solid rgb(153, 146, 137);
+  border-bottom: 4px solid rgb(55, 71, 71);
 }
 </style>

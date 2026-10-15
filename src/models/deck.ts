@@ -1,5 +1,6 @@
 import type { Timestamp } from 'firebase/firestore'
 import type { Card } from '../models/card'
+export type DeckId = string
 
 export interface FunctionalDeck {
   name: string
@@ -8,6 +9,6 @@ export interface FunctionalDeck {
 }
 
 export interface Deck extends FunctionalDeck {
-  id: string
+  id: DeckId
   createdAt: Timestamp
 }
