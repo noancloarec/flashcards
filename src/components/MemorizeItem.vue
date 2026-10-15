@@ -5,21 +5,26 @@ import SpaceBar from './icons/SpaceBar.vue'
 
 import { Timestamp } from 'firebase/firestore'
 import { useAuth } from '../composables/useAuth.ts'
-import { CardState, type Card } from '../models/memorization.ts'
 import type { Deck } from '../models/deck.ts'
-import { getCardState, type DeckMemorizationStatus } from '../models/memorization.ts'
+import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
 import { SavingStatus } from '../models/savingStatus.ts'
 import {
   getDeck,
-  getDeckMemorizationStatus,
-  saveDeckMemorizationStatus
+  getDeckMemorizationHistory,
+  saveDeckMemorizationHistory
 } from '../services/firebase.ts'
 import {
   getDeckMemorizationStatusFromLocalStorage,
-  saveDeckMemorizationStatusToLocalStorage
+  saveDeckMemorizationStatusToLocalStorage as saveDeckMemorizationHistoryToLocalStorage
 } from '../services/localStorageInterface.ts'
 import MemorizationProgress from './MemorizationProgress.vue'
 import CardDisplay from './CardDisplay.vue'
+import type { Card } from '../models/card.ts'
+import {
+  CardState,
+  getDeckMemorizationStatus,
+  type DeckMemorizationStatus
+} from '../models/memorizationStatus.ts'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
@@ -32,6 +37,7 @@ const loadDeckInUrl: () => Promise<Deck> = async () => {
 const deckState = ref<Deck | null>(null)
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
+const memorizationHistory = ref<DeckMemorizationHistory>({})
 const memorizationStatus = ref<DeckMemorizationStatus>({})
 const cardStates = ref<CardState[]>([])
 const { googleUser } = useAuth()
@@ -43,8 +49,8 @@ const savingStatus = ref(SavingStatus.NotSaved)
  * @param deck The loaded deck
  * @param deckMemorizationStatus deckMemorizationStatus from firestore
  */
-const initCardStates = (deckCards: Card[], deckMemorizationStatus?: DeckMemorizationStatus) => {
-  cardStates.value = deckCards.map((card) => getCardState(deckMemorizationStatus?.[card.id]))
+const initCardStates = () => {
+  cardStates.value = deckState.value!.cards.map((card) => memorizationStatus.value[card.id].state)
 
   if (cardStates.value[0] === CardState.Learned) {
     currentCardIndex.value = getNextIndex()
@@ -54,12 +60,12 @@ const initCardStates = (deckCards: Card[], deckMemorizationStatus?: DeckMemoriza
 onMounted(async () => {
   const deck = await loadDeckInUrl()
   deckState.value = deck
-  const deckMemorizationStatus = googleUser.value
-    ? await getDeckMemorizationStatus(googleUser.value.email!, deck.id)
+  memorizationHistory.value = googleUser.value
+    ? await getDeckMemorizationHistory(googleUser.value.email!, deck.id)
     : getDeckMemorizationStatusFromLocalStorage(deck.id)
 
-  memorizationStatus.value = deckMemorizationStatus
-  initCardStates(deck.cards, deckMemorizationStatus)
+  memorizationStatus.value = getDeckMemorizationStatus(deck, memorizationHistory.value)
+  initCardStates()
 })
 
 /** Keyboard nagivation through questions */
@@ -101,32 +107,32 @@ const cardToDisplay = computed(() => {
 })
 
 /**
- * Register the attempt (learned or not learned) in the memorizationStatus
+ * Register the attempt (learned or not learned) in the memorization history
  * @param success whether the user has learned the card or not
  */
-const registerSuccessInMemorizationStatus = () => {
+const registerSuccessInMemorizationHistory = () => {
   const currentCardId = deckState.value!.cards[currentCardIndex.value].id
-  let memorizationStatusForCard = memorizationStatus.value[currentCardId]
-  if (memorizationStatusForCard === undefined) {
-    memorizationStatusForCard = {
+  let memorizationHistoryForCard = memorizationHistory.value[currentCardId]
+  if (memorizationHistoryForCard === undefined) {
+    memorizationHistoryForCard = {
       successfulAttempts: []
     }
   }
 
-  memorizationStatusForCard.successfulAttempts.unshift(Timestamp.now())
-  memorizationStatus.value[currentCardId] = memorizationStatusForCard
+  memorizationHistoryForCard.successfulAttempts.unshift(Timestamp.now())
+  memorizationHistory.value[currentCardId] = memorizationHistoryForCard
 }
 
 const nextQuestion = (success: boolean) => {
   savingStatus.value = SavingStatus.NotSaved
   showAnswer.value = false
-  if (success) registerSuccessInMemorizationStatus()
+  if (success) registerSuccessInMemorizationHistory()
   cardStates.value[currentCardIndex.value] = success ? CardState.Learned : CardState.Notlearned
   currentCardIndex.value = getNextIndex()
 }
 
 const reset = () => {
-  initCardStates(deckState.value!.cards)
+  cardStates.value = Array(deckState.value!.cards.length).fill(CardState.NotTriedYet)
   currentCardIndex.value = 0
   showAnswer.value = false
 }
@@ -137,9 +143,9 @@ const saveProgress = async () => {
   const deckId = deckState.value!.id
   if (googleUser.value) {
     const email = googleUser.value.email!
-    await saveDeckMemorizationStatus(email, deckId, memorizationStatus.value)
+    await saveDeckMemorizationHistory(email, deckId, memorizationHistory.value)
   } else {
-    saveDeckMemorizationStatusToLocalStorage(deckId, memorizationStatus.value)
+    saveDeckMemorizationHistoryToLocalStorage(deckId, memorizationHistory.value)
   }
 
   savingStatus.value = SavingStatus.Saved
@@ -147,7 +153,7 @@ const saveProgress = async () => {
 </script>
 
 <template>
-  <div v-if="deckState === null">Loading</div>
+  <div v-if="deckState === null || Object.keys(memorizationStatus).length === 0">Loading</div>
   <div v-else-if="currentCardIndex !== -1">
     <h2>{{ deckState.name }}</h2>
     <CardDisplay

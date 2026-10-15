@@ -33,9 +33,9 @@ service cloud.firestore {
                          && request.auth.token.email_verified == true;
     }
 
-    // Collection: memorization_status
+    // Collection: memorization_history
     // Verified users can access only their own document.
-    match /memorization_status/{userEmail}/{document=**} {
+    match /memorization_history/{userEmail}/{document=**} {
       allow read, write: if request.auth != null
                          && request.auth.token.email == userEmail
                          && request.auth.token.email_verified == true;

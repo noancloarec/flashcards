@@ -1,29 +1,16 @@
 <script setup lang="ts">
 import { computed, onUnmounted, ref } from 'vue'
 import type { Card } from '../models/card'
-import {
-  cardMemorizationLevels,
-  CardState,
-  dayInMillis,
-  getCardMemorizationLevel,
-  getCardState,
-  getNextLevelAvailabilityDate,
-  type CardMemorizationStatus
-} from '../models/memorization'
+import { CardState, type CardMemorizationStatus } from '../models/memorizationStatus.ts'
 import StarProgress from './StarProgress.vue'
-import { Timestamp } from 'firebase/firestore'
 
 interface Props {
   card: Card
-  memorizationStatus?: CardMemorizationStatus
+  memorizationStatus: CardMemorizationStatus
   showAnswer: boolean
 }
 
 const { card, memorizationStatus, showAnswer } = defineProps<Props>()
-
-const cardIsToLearnAgain = computed(
-  () => getCardState(memorizationStatus) === CardState.ToLearnAgain
-)
 
 /**
  * Controls whether the star notification is visible.
@@ -69,32 +56,19 @@ const dateTooltipFormat = (date: Date) =>
     .replace(':', 'h')
 
 /**
- * Returns the current memorization level of the card.
- */
-const memorizationLevel = computed(() => getCardMemorizationLevel(memorizationStatus))
-
-/**
- * Calculates when the next memorization star becomes available.
+ * Tells what to do to reach the next star
  *
- * Assumes successfulAttempts[0] contains the most recent successful attempt.
- * Returns an empty string when the next star is already available or when
- * no successful attempts are recorded.
+ * Returns encouragements if the next star is already available, else tells when it will be available
  */
 const nextStarUnlockLabel = computed(() => {
-  if (memorizationStatus?.successfulAttempts[0] === undefined) {
-    return ''
-  }
-
-  const nextLevelAvailabilityDate = getNextLevelAvailabilityDate(
-    memorizationStatus.successfulAttempts[0],
-    memorizationLevel.value
-  )
-
-  if (nextLevelAvailabilityDate.toMillis() <= Timestamp.now().toMillis()) {
+  if (memorizationStatus.state === CardState.ToLearnAgain) {
     return 'Réponds à la question pour gagner une nouvelle étoile'
   }
 
-  return 'Prochaine étoile atteignable le ' + dateTooltipFormat(nextLevelAvailabilityDate.toDate())
+  return (
+    'Prochaine étoile atteignable le ' +
+    dateTooltipFormat(memorizationStatus.nextLevelAvailabilityDate.toDate())
+  )
 })
 
 /**
@@ -134,12 +108,17 @@ onUnmounted(() => {
       <button
         type="button"
         class="stars-button"
-        :aria-label="nextStarUnlockLabel || `Niveau de mémorisation : ${memorizationLevel} étoiles`"
+        :aria-label="
+          nextStarUnlockLabel || `Niveau de mémorisation : ${memorizationStatus.level} étoiles`
+        "
         :aria-describedby="showStarTooltip && nextStarUnlockLabel ? starTooltipId : undefined"
         @click="showTooltipTemporarily"
       >
-        <StarProgress v-for="(_, index) in memorizationLevel" :key="index" />
-        <StarProgress v-if="cardIsToLearnAgain" :status="CardState.ToLearnAgain" />
+        <StarProgress v-for="(_, index) in memorizationStatus.level" :key="index" />
+        <StarProgress
+          v-if="memorizationStatus.state === CardState.ToLearnAgain"
+          :status="CardState.ToLearnAgain"
+        />
       </button>
     </div>
 
