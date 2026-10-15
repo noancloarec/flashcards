@@ -46,7 +46,6 @@ const clipId = `star-clip-${Math.random().toString(36).slice(2)}`
 
     <!-- Background star -->
     <path
-      v-if="progress > 0"
       class="star-background"
       d="M12 2 L15.09 8.26 L22 9.27 L17 14.14
          L18.18 21.02 L12 17.77 L5.82 21.02

@@ -5,10 +5,9 @@ import type { Deck } from '../models/deck'
 import { type UserMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
   getUserMemorizationStatus,
-  maxLevel,
-  type DeckMemorizationStatus,
   type UserMemorizationStatus
 } from '../models/memorizationStatus.ts'
+
 import {
   archiveDeck,
   getDeckList,
@@ -16,8 +15,7 @@ import {
   unArchiveDeck
 } from '../services/firebase'
 import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
-import StarProgress from './StarProgress.vue'
-import { range } from '../services/basicOperations.ts'
+import ProgressBar from './ProgressBar.vue'
 interface Props {
   showArchiveButton?: boolean
   /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */
@@ -65,27 +63,6 @@ const unarchive = async () => {
   deckJustArchived.value = null
 }
 
-const progressByLevel: (deck: Deck) => number[] = (deck) => {
-  const deckMemorizationStatus: DeckMemorizationStatus = memorizationStatus.value[deck.id]
-
-  if (!deckMemorizationStatus) {
-    return []
-  }
-
-  const cardsInDeck = new Set(deck.cards.map((c) => c.id))
-  const learnedCardsInDeck = Object.entries(deckMemorizationStatus)
-    .filter(([cardId, _]) => cardsInDeck.has(cardId))
-    .map(([_, cardStatus]) => cardStatus)
-
-  const cardsMemorizedByLevel = range(1, maxLevel)
-    .map((level) => learnedCardsInDeck.filter((cardStatus) => cardStatus.level >= level).length)
-    .filter((nbCardsReachingLevel) => nbCardsReachingLevel > 0)
-
-  return cardsMemorizedByLevel.map(
-    (nbCardsReachingLevel) => nbCardsReachingLevel / cardsInDeck.size
-  )
-}
-
 onMounted(async () => {
   const deckList = await getDeckList()
   decks.value = deckList
@@ -106,7 +83,7 @@ watch(
 
   <div class="deck-list">
     <div class="deck" v-for="deck in filteredDecks" :key="deck.id">
-      <StarProgress v-for="progress of progressByLevel(deck)" :progress="progress" />
+      <ProgressBar :deck="deck" :memorization-status="memorizationStatus[deck.id]" />
       <a class="deck-link" :href="`${targetBaseUrl}${deck.id}`">
         <p>{{ deck.name }}</p>
       </a>
@@ -261,6 +238,9 @@ input {
   transform: translateY(20px);
 }
 
+.stars-container {
+  height: 24px;
+}
 /* Mobile layout */
 @media (max-width: 480px) {
   .toast {
