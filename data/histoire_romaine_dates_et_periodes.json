@@ -4,29 +4,24 @@
   "createdAt": "2026-10-10T20:16:43.574Z",
   "cards": [
     {
-      "question": "Que se passe-t-il en 218 av. J.-C. ?",
       "answer": "Début de la deuxième guerre punique.",
+      "question": "Que se passe-t-il en 218 av. J.-C. ?",
       "id": "9110d7bb-3657-42cf-8089-2c436536811a"
     },
     {
-      "question": "À quelle période Caius Marius exerce-t-il ses six consulats ?",
-      "answer": "De 107 à 100 av. J.-C.",
-      "id": "1b8c946a-b9e1-42c4-9cc2-9826b6c89b38"
-    },
-    {
       "question": "Quand débute la République romaine ?",
-      "answer": "En 509 av. J.-C.",
-      "id": "c9561e6c-cba1-46fc-aaa0-733719553dd8"
+      "id": "c9561e6c-cba1-46fc-aaa0-733719553dd8",
+      "answer": "En 509 av. J.-C."
     },
     {
+      "id": "9c5f7686-f13b-431e-86e9-4ef544ef078e",
       "question": "Quand a lieu la première révolte plébéienne, avec la sécession de la plèbe sur l'Aventin et la création des tribuns de la plèbe ?",
-      "answer": "En 494 av. J.-C.",
-      "id": "9c5f7686-f13b-431e-86e9-4ef544ef078e"
+      "answer": "En 494 av. J.-C."
     },
     {
       "question": "Quand la loi des Douze Tables est-elle rédigée ?",
-      "answer": "En 451–450 av. J.-C., elles mettent à l'écrit le droit romain auparavant détenu par les patriciens",
-      "id": "b2fd45ff-655b-4560-a010-996ca5f2fa3d"
+      "id": "b2fd45ff-655b-4560-a010-996ca5f2fa3d",
+      "answer": "En 451–450 av. J.-C., elles mettent à l'écrit le droit romain auparavant détenu par les patriciens"
     },
     {
       "question": "Quand est adoptée la loi Ogulnia ?",
@@ -40,73 +35,103 @@
     },
     {
       "question": "Quand est adoptée la loi Villia Annalis ?",
-      "answer": "En 180 av. J.-C., elle définit l'ordre des magistratures et les ages minimum pour y accéder",
-      "id": "b6b55c93-a0b2-475c-97f3-2ae00052ec69"
+      "id": "b6b55c93-a0b2-475c-97f3-2ae00052ec69",
+      "answer": "En 180 av. J.-C., elle définit l'ordre des magistratures et les ages minimum pour y accéder"
     },
     {
+      "id": "81ff3080-cf57-4682-890b-7cb351698c48",
       "question": "Quand sont adoptée les lois Gabinia, Cassia et Papiria?",
-      "answer": "En 139, 137 et 130  av. J.-C., elles introduisent le vote à bulletin secret sur des tablettes ",
-      "id": "81ff3080-cf57-4682-890b-7cb351698c48"
+      "answer": "En 139, 137 et 130  av. J.-C., elles introduisent le vote à bulletin secret sur des tablettes "
     },
     {
-      "question": "Quand Caius Marius est-il consul six fois ?",
-      "answer": "De 107 à 100 av. J.-C.",
-      "id": "099c227d-cc56-448a-9f49-70200cc727c4"
+      "id": "099c227d-cc56-448a-9f49-70200cc727c4",
+      "question": "Quand Caius Marius est-il consul six fois de suite ?",
+      "answer": "De 107 à 100 av. J.-C."
     },
     {
+      "id": "7d39e1ed-cb3e-4f1d-b092-1e88b1a6f472",
       "question": "Quand César est-il édile",
-      "answer": "En 65 av. J.-C., il s'endette-t-il lourdement en organisant des jeux et des combats de gladiateurs ?",
-      "id": "7d39e1ed-cb3e-4f1d-b092-1e88b1a6f472"
+      "answer": "En 65 av. J.-C., il s'endette lourdement en organisant des jeux et des combats de gladiateurs "
     },
     {
-      "question": "Quand a lieu le traité de Filinos ?",
       "answer": "-306, c'est un partage territorial entre Rome et Carthage (Rome n'intervient pas en Sicile, Carthage n'intervient pas en Italie)",
-      "id": "086e8f19-7b4d-4227-9ceb-80e02cd4fb40"
+      "id": "086e8f19-7b4d-4227-9ceb-80e02cd4fb40",
+      "question": "Quand a lieu le traité de Filinos ?"
     },
     {
-      "question": "Quand Rome prend-elle Tarente ?",
       "answer": "-272, elle commence alors à s'intéresser à la Sicile",
+      "question": "Quand Rome prend-elle Tarente ?",
       "id": "fe0a2f97-91f3-41f0-9685-3420d0d25e4d"
     },
     {
+      "id": "a57e89ac-05f6-4c42-9cf0-e88462e8770b",
       "question": "Quand a lieu la première guerre punique ?",
-      "answer": "-264 à -241",
-      "id": "a57e89ac-05f6-4c42-9cf0-e88462e8770b"
+      "answer": "-264 à -241"
     },
     {
-      "question": "Quand a lieu la deuxième guerre punique ?",
       "answer": "-218 à -202",
+      "question": "Quand a lieu la deuxième guerre punique ?",
       "id": "08875d81-a8f6-4ee9-94bb-a2fed8b8ced2"
     },
     {
       "question": "Quand Hannibal arrive-t-il en Italie ?",
-      "answer": "-218",
-      "id": "633636c9-f4ba-4547-951e-ca8bbd203a34"
+      "id": "633636c9-f4ba-4547-951e-ca8bbd203a34",
+      "answer": "-218"
     },
     {
-      "question": "Quand a lieu la bataille de Cannes ?",
       "answer": "-216",
-      "id": "0a34e942-de3a-4de7-9d59-eec2036b4de6"
+      "id": "0a34e942-de3a-4de7-9d59-eec2036b4de6",
+      "question": "Quand a lieu la bataille de Cannes ?"
     },
     {
+      "id": "b3e7647b-a4ed-4997-9379-7a03bef566db",
       "question": "Quand a lieu le tournant de la deuxième guerre punique ?",
-      "answer": "-212, les Romains recrutent une armée et reprennent Capoue",
-      "id": "b3e7647b-a4ed-4997-9379-7a03bef566db"
+      "answer": "-212, les Romains recrutent une armée et reprennent Capoue"
     },
     {
-      "question": "Quand a lieu la bataille de Zama ?",
       "answer": "-202, Scipion bat Hannibal",
+      "question": "Quand a lieu la bataille de Zama ?",
       "id": "5896fb0f-6512-478d-9d4a-7be01d6a9d19"
     },
     {
+      "id": "3dd7b631-f585-47b2-8d94-a4b0f3d5c9a8",
       "question": "Quand a lieu la troisième guerre punique ?",
-      "answer": "-149 à -146",
-      "id": "3dd7b631-f585-47b2-8d94-a4b0f3d5c9a8"
+      "answer": "-149 à -146"
     },
     {
       "question": "Quand Carthage est-elle détruite et les guerres puniques prennent-elles fin ?",
-      "answer": "-146",
-      "id": "f555f534-9d5e-41c3-aa13-766f71e16223"
+      "id": "f555f534-9d5e-41c3-aa13-766f71e16223",
+      "answer": "-146"
+    },
+    {
+      "question": "Quel terme désigne le territoire de Rome ?",
+      "answer": "Ager romanus",
+      "id": "07fa197d-1557-483a-a23a-6662c7ba24b6"
+    },
+    {
+      "question": "Quel terme désigne la propriété de Rome ?",
+      "answer": "Ager publicus",
+      "id": "5536fe6c-5691-4330-a2ec-b2c52f03a61e"
+    },
+    {
+      "question": "Quel terme désigne la reddition ?",
+      "answer": "Deditio",
+      "id": "1bba3ceb-bc26-4382-8820-c7ac680ecc74"
+    },
+    {
+      "question": "Quel terme désigne le droit de contester la décision d'un magistrat auprès du peuple ?",
+      "answer": "Provocatio ad populum",
+      "id": "aba97723-3822-464f-a346-bf2848d45b8e"
+    },
+    {
+      "question": "Quel terme désigne l'impôt sur les personnes ?",
+      "answer": "Tributum",
+      "id": "018d006a-8ae3-4f8d-95f9-4a68255059a4"
+    },
+    {
+      "question": "Quel terme désigne l'impôt foncier ?",
+      "answer": "Stipendium",
+      "id": "bab48d17-a290-4ef1-8b8c-36e26940e648"
     }
   ]
 }
