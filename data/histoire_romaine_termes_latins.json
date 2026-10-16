@@ -9,19 +9,19 @@
       "answer": "Punicus"
     },
     {
-      "question": "Quel est le terme qui désigne « l'enceinte de la cité » ?",
       "answer": "Pomerium Domi",
-      "id": "57d21517-4b4f-43d8-8600-469a09ce99be"
+      "id": "57d21517-4b4f-43d8-8600-469a09ce99be",
+      "question": "Quel est le terme qui désigne « l'enceinte de la cité » ?"
     },
     {
-      "question": "Quel est le terme qui désigne la « chose de tous », c'est-à-dire la République romaine ?",
       "id": "882979b3-af6a-4555-8ed0-16f6efd8cbde",
-      "answer": "Res publica"
+      "answer": "Res publica",
+      "question": "Quel est le terme qui désigne la « chose de tous », c'est-à-dire la République romaine ?"
     },
     {
+      "id": "2a2c0189-6b24-4d91-b617-30b7b5962977",
       "answer": "Populus Romanus",
-      "question": "Quel est le terme qui désigne le « peuple romain » ?",
-      "id": "2a2c0189-6b24-4d91-b617-30b7b5962977"
+      "question": "Quel est le terme qui désigne le « peuple romain » ?"
     },
     {
       "id": "c02104fe-c1ad-4e5a-8400-a83381b393d1",
@@ -29,18 +29,18 @@
       "question": "Quel est le terme qui désigne la communauté civique, c'est-à-dire l'ensemble des citoyens et l'organisation politique de la cité ?"
     },
     {
+      "question": "Quel est le terme qui désigne le pouvoir légal attaché à une magistrature ?",
       "id": "43bbbc4f-2556-4e70-83be-6e5411c7fae5",
-      "answer": "Potestas",
-      "question": "Quel est le terme qui désigne le pouvoir légal attaché à une magistrature ?"
+      "answer": "Potestas"
     },
     {
-      "id": "9e8cc221-3879-42a2-99ab-7f2b5b63d837",
+      "question": "Quel est le terme qui désigne le pouvoir de commandement supérieur détenu notamment par les consuls et les préteurs ?",
       "answer": "Imperium",
-      "question": "Quel est le terme qui désigne le pouvoir de commandement supérieur détenu notamment par les consuls et les préteurs ?"
+      "id": "9e8cc221-3879-42a2-99ab-7f2b5b63d837"
     },
     {
-      "answer": "Imperium militiae",
       "question": "Quel est le terme qui désigne le pouvoir de commandement militaire en dehors de Rome ?",
+      "answer": "Imperium militiae",
       "id": "905bd6b6-5b35-465c-b746-8622c1e9cf13"
     },
     {
@@ -49,33 +49,33 @@
       "question": "Quel est le terme qui désigne le pouvoir de commandement exercé à l'intérieur de Rome ?"
     },
     {
-      "question": "Quel est le terme qui désigne les généraux victorieux, détenteurs de l'imperium ?",
       "answer": "Imperatores",
+      "question": "Quel est le terme qui désigne les généraux victorieux, détenteurs de l'imperium ?",
       "id": "71348156-3a67-49f6-bdb8-1a178eeec5e2"
     },
     {
-      "question": "Quel est le terme qui désigne le droit de convoquer et de réunir le peuple ?",
       "answer": "Ius agendi cum populo",
-      "id": "c11bb500-edeb-4bce-9001-33dbf77d13f3"
+      "id": "c11bb500-edeb-4bce-9001-33dbf77d13f3",
+      "question": "Quel est le terme qui désigne le droit de convoquer et de réunir le peuple ?"
     },
     {
-      "id": "56c3b64b-346e-4bd4-9348-072f15eebdb0",
       "question": "Quel est le terme qui désigne la carrière des magistratures, c'est-à-dire l'ordre dans lequel les magistratures romaines sont normalement exercées ?",
-      "answer": "Cursus honorum"
+      "answer": "Cursus honorum",
+      "id": "56c3b64b-346e-4bd4-9348-072f15eebdb0"
     },
     {
       "answer": "Cura annonae",
-      "id": "30ba0111-4d55-45a1-8ae1-918902ee12dd",
-      "question": "Quel est le terme qui désigne la responsabilité de l'approvisionnement en céréales de Rome ?"
+      "question": "Quel est le terme qui désigne la responsabilité de l'approvisionnement en céréales de Rome ?",
+      "id": "30ba0111-4d55-45a1-8ae1-918902ee12dd"
     },
     {
       "question": "Quel est le terme qui désigne le droit d'opposition du tribun de la plèbe à l'acte d'un autre magistrat ?",
-      "answer": "Intercessio",
-      "id": "ad8ffea6-3583-44a5-b119-f666deec22f6"
+      "id": "ad8ffea6-3583-44a5-b119-f666deec22f6",
+      "answer": "Intercessio"
     },
     {
-      "id": "e3857d58-b9e0-4aec-a7a3-215516f49eb6",
       "question": "Quel est le terme qui désigne le droit d'opposition du tribun de la plèbe aux décisions du Sénat ?",
+      "id": "e3857d58-b9e0-4aec-a7a3-215516f49eb6",
       "answer": "Veto"
     },
     {
@@ -84,13 +84,13 @@
       "answer": "Honores"
     },
     {
-      "answer": "Dignitas",
+      "question": "Quel est le terme qui désigne le prestige et le rang social et politique acquis par un individu ?",
       "id": "e1c57862-5dae-4bcf-b304-283f63658cce",
-      "question": "Quel est le terme qui désigne le prestige et le rang social et politique acquis par un individu ?"
+      "answer": "Dignitas"
     },
     {
-      "answer": "Gradus dignitatis",
       "question": "Quel est le terme qui désigne le degré de dignité et de prestige dans la hiérarchie politique romaine ?",
+      "answer": "Gradus dignitatis",
       "id": "b2ce61b8-d34c-465c-ab20-acf73e1a242b"
     },
     {
@@ -100,43 +100,43 @@
     },
     {
       "id": "5ea8ef3a-1550-4998-9b75-f5e2be55386e",
-      "question": "Quel est le terme qui désigne le nom et le titre d'une personne ?",
-      "answer": "Titulus"
+      "answer": "Titulus",
+      "question": "Quel est le terme qui désigne le nom et le titre d'une personne ?"
     },
     {
       "question": "Quel est le terme qui désigne le cortège funéraire ?",
-      "answer": "Pompa funebris",
-      "id": "d69ddfbb-2090-4713-abcf-e0aa008e7925"
+      "id": "d69ddfbb-2090-4713-abcf-e0aa008e7925",
+      "answer": "Pompa funebris"
     },
     {
-      "answer": "Laudatio funebris",
+      "question": "Quel est le terme qui désigne l'éloge funèbre prononcé lors des funérailles ?",
       "id": "641aee3c-4db1-4ebf-8ef9-efed45d6fedf",
-      "question": "Quel est le terme qui désigne l'éloge funèbre prononcé lors des funérailles ?"
+      "answer": "Laudatio funebris"
     },
     {
-      "answer": "Nobilitas",
+      "id": "898746b6-a403-4fac-b66e-dd13ef1e76f5",
       "question": "Quel est le terme qui désigne l'élite aristocratique romaine constituée notamment des familles ayant été consuls ?",
-      "id": "898746b6-a403-4fac-b66e-dd13ef1e76f5"
+      "answer": "Nobilitas"
     },
     {
       "id": "ac912eae-3225-4ae7-be97-237553598488",
-      "question": "Quel est le terme qui désigne le grand pontife, principal responsable du collège des pontifes ?",
-      "answer": "Pontifex maximus"
+      "answer": "Pontifex maximus",
+      "question": "Quel est le terme qui désigne le grand pontife, principal responsable du collège des pontifes ?"
     },
     {
+      "question": "Quel est le terme qui signifie « premier » et désigne le premier des citoyens dans le cadre du Principat ?",
       "answer": "Princeps",
-      "id": "43d1315c-9d98-4346-a5b3-dad9b9c37974",
-      "question": "Quel est le terme qui signifie « premier » et désigne le premier des citoyens dans le cadre du Principat ?"
+      "id": "43d1315c-9d98-4346-a5b3-dad9b9c37974"
     },
     {
       "question": "Quel est le terme qui désigne les funérailles publiques ?",
-      "answer": "Funus publicum",
-      "id": "584f4f8c-4985-448c-9052-3198e60715cc"
+      "id": "584f4f8c-4985-448c-9052-3198e60715cc",
+      "answer": "Funus publicum"
     },
     {
-      "id": "431dc076-3373-49f9-98e8-84231d1f7e27",
       "question": "Quel est le terme qui désigne les tribunes du Forum ?",
-      "answer": "Rostra / rostrum"
+      "answer": "Rostra / rostrum",
+      "id": "431dc076-3373-49f9-98e8-84231d1f7e27"
     },
     {
       "id": "6f21a1e0-9b4d-46e3-823e-943ee5882908",
@@ -144,69 +144,69 @@
       "answer": "Pater familias"
     },
     {
+      "question": "Quel est le terme qui désigne la valeur, le mérite, le courage et les qualités civiques ?",
       "answer": "Virtus",
-      "id": "1efc5559-e3ee-4894-9b02-4db8aaa7a122",
-      "question": "Quel est le terme qui désigne la valeur, le mérite, le courage et les qualités civiques ?"
+      "id": "1efc5559-e3ee-4894-9b02-4db8aaa7a122"
     },
     {
-      "answer": "Eikon",
       "id": "5999daac-7f1b-4d34-9143-6d9337ecd004",
-      "question": "Quel est le terme qui désigne un masque ou une image en cire, terme grec et non latin ?"
+      "question": "Quel est le terme qui désigne un masque ou une image en cire, terme grec et non latin ?",
+      "answer": "Eikon"
     },
     {
-      "question": "Quel est le terme qui désigne le droit aux images des ancêtres ?",
       "id": "65efbf50-de04-4c0e-b7cf-bf0f8e59b73f",
+      "question": "Quel est le terme qui désigne le droit aux images des ancêtres ?",
       "answer": "Ius imaginis"
     },
     {
       "question": "Quel est le terme qui désigne la maison aristocratique ?",
-      "answer": "Domus",
-      "id": "f3af5d2e-c998-4a38-b92c-3b1b87850ae0"
+      "id": "f3af5d2e-c998-4a38-b92c-3b1b87850ae0",
+      "answer": "Domus"
     },
     {
-      "id": "d74ffe79-2d44-4891-a672-6aa8ab4e3846",
       "question": "Quel est le terme qui désigne la toge bordée de pourpre portée par les magistrats curules, notamment les édiles curules, les consuls et les préteurs ?",
-      "answer": "Toga praetexta"
+      "answer": "Toga praetexta",
+      "id": "d74ffe79-2d44-4891-a672-6aa8ab4e3846"
     },
     {
+      "question": "Quel est le terme qui désigne les personnages modèles à imiter ?",
       "answer": "Exemplum",
-      "id": "6d8ca8e2-6663-44e9-8ac4-cd8e891c494e",
-      "question": "Quel est le terme qui désigne les personnages modèles à imiter ?"
+      "id": "6d8ca8e2-6663-44e9-8ac4-cd8e891c494e"
     },
     {
-      "question": "Quel est le terme qui désigne la coutume des ancêtres ?",
       "id": "fde57720-3266-48ca-bfac-673dca07b758",
-      "answer": "Mos maiorum"
+      "answer": "Mos maiorum",
+      "question": "Quel est le terme qui désigne la coutume des ancêtres ?"
     },
     {
       "answer": "Officium",
-      "id": "698877e5-fcd6-43f6-80d1-2021749d1e6f",
-      "question": "Quel est le terme qui désigne le devoir qu'un client doit à son patron ?"
+      "question": "Quel est le terme qui désigne le devoir qu'un client doit à son patron ?",
+      "id": "698877e5-fcd6-43f6-80d1-2021749d1e6f"
     },
     {
       "id": "588c0699-e2d4-4ad2-a78a-b0ef4e7a9c6e",
-      "question": "Quel est le terme qui désigne le service rendu par le patron au client en retour de l'officium ?",
-      "answer": "Beneficium"
+      "answer": "Beneficium",
+      "question": "Quel est le terme qui désigne le service rendu par le patron au client en retour de l'officium ?"
     },
     {
-      "id": "af485e43-460f-49f4-8c9b-3f0936698f6c",
       "question": "Quel est le terme qui désigne le respect et le devoir envers les dieux, la famille, les ancêtres et la communauté ?",
-      "answer": "Pietas"
+      "answer": "Pietas",
+      "id": "af485e43-460f-49f4-8c9b-3f0936698f6c"
     },
     {
-      "answer": "Fides",
       "question": "Quel est le terme qui désigne la loyauté, la confiance et la fidélité à la parole donnée ?",
-      "id": "5af160e9-449e-4746-86ec-50f6fba670e2"
+      "id": "5af160e9-449e-4746-86ec-50f6fba670e2",
+      "answer": "Fides"
     },
     {
-      "id": "e8fa39c0-143e-4baa-9aa5-9be7229fe006",
       "question": "Quel est le terme latin qui signifie « le droit » ?",
+      "id": "e8fa39c0-143e-4baa-9aa5-9be7229fe006",
       "answer": "Ius"
     },
     {
-      "answer": "Mos",
+      "id": "94013b2e-1414-4f29-b2a1-095b5e0d235a",
       "question": "Quel est le terme qui désigne la coutume, l'usage ou la manière traditionnelle de se comporter ?",
-      "id": "94013b2e-1414-4f29-b2a1-095b5e0d235a"
+      "answer": "Mos"
     },
     {
       "answer": "Gloria",
@@ -214,9 +214,39 @@
       "id": "9d590613-7a4c-49b7-902c-59fa45669444"
     },
     {
-      "question": "Quel est le terme qui désigne l'amitié, la relation de confiance et d'entraide entre personnes, notamment dans la vie politique romaine ?",
       "answer": "Amicitia",
-      "id": "647b9eaa-f9d6-495f-bfab-b61bfc2c61a8"
+      "id": "647b9eaa-f9d6-495f-bfab-b61bfc2c61a8",
+      "question": "Quel est le terme qui désigne l'amitié, la relation de confiance et d'entraide entre personnes, notamment dans la vie politique romaine ?"
+    },
+    {
+      "question": "Quel terme désigne le territoire de Rome ?",
+      "answer": "Ager romanus",
+      "id": "d3b9bd50-997f-4860-a817-4349f3f4306a"
+    },
+    {
+      "question": "Quel terme désigne la propriété de Rome ?",
+      "answer": "Ager publicus",
+      "id": "d7bb8981-751b-4468-bb41-4ae2101862eb"
+    },
+    {
+      "question": "Quel terme désigne la reddition ?",
+      "answer": "Deditio",
+      "id": "8205c600-b17d-4358-ba94-0cbab423e13b"
+    },
+    {
+      "question": "Quel terme désigne le droit de contester la décision d'un magistrat auprès du peuple ?",
+      "answer": "Provocatio ad populum",
+      "id": "464dcb30-4e3e-450a-b901-3296ebe497ea"
+    },
+    {
+      "question": "Quel terme désigne l'impôt sur les personnes ?",
+      "answer": "Tributum",
+      "id": "d264e12b-10bb-44f6-a2af-d5ddc2a1a69e"
+    },
+    {
+      "question": "Quel terme désigne l'impôt foncier ?",
+      "answer": "Stipendium",
+      "id": "1f868323-6b4c-45e1-a142-56cb7e1c567f"
     }
   ]
 }
