@@ -52,7 +52,7 @@ const insertCard = (index: number) => {
 }
 
 const addBulkCards = () => {
-  deck.value.cards = deck.value.cards.concat(bulkCards.value)
+  deck.value.cards = bulkCards.value.concat(deck.value.cards)
   bulkCards.value = []
   displayJsonField.value = false
 }
@@ -106,6 +106,11 @@ const addBulkCards = () => {
           {{ deck.cards.length }}
           {{ deck.cards.length > 1 ? 'cartes' : 'carte' }}
         </span>
+      </div>
+      <button @click="() => (displayJsonField = true)">Ajouter plusieurs cartes JSON</button>
+      <div v-if="displayJsonField" class="card-fields">
+        <CardsJsonField v-model="bulkCards" />
+        <button @click="addBulkCards">Ajouter au deck</button>
       </div>
 
       <div v-if="deck.cards.length === 0" class="empty-state">
@@ -205,11 +210,6 @@ const addBulkCards = () => {
         <span class="button-icon">+</span>
         Ajouter une carte
       </button>
-      <button @click="() => (displayJsonField = true)">Ajouter plusieurs cartes JSON</button>
-      <div v-if="displayJsonField" class="card-fields">
-        <CardsJsonField v-model="bulkCards" />
-        <button @click="addBulkCards">Ajouter au deck</button>
-      </div>
     </section>
 
     <div class="form-footer">
