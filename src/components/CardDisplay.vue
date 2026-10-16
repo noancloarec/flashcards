@@ -3,6 +3,7 @@ import { computed, onUnmounted, ref } from 'vue'
 import type { Card } from '../models/card'
 import { CardState, type CardMemorizationStatus } from '../models/memorizationStatus.ts'
 import StarProgress from './StarProgress.vue'
+import { marked } from 'marked'
 
 interface Props {
   card: Card
@@ -23,18 +24,6 @@ const showStarTooltip = ref(false)
 const starTooltipId = `star-tooltip-${Math.random().toString(36).slice(2, 11)}`
 
 let tooltipTimeout: ReturnType<typeof setTimeout> | undefined
-
-/**
- * Converts the formatting that has been done in JSON (italic and newline)
- * to HTML.
- *
- * @param str The string to format.
- * @returns The HTML version of the string.
- */
-const jsonToHtml = (str: string) =>
-  str
-    .replaceAll(/\*.*\*/g, (s) => `<em>${s.substring(1, s.length - 1)}</em>`)
-    .replaceAll('\n', '</br>')
 
 /**
  * Formats a date in French.
@@ -122,10 +111,10 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <div class="question-content" v-html="jsonToHtml(card.question)"></div>
+    <div class="question-content" v-html="marked.parse(card.question)"></div>
   </div>
 
-  <div class="answer" :class="{ shown: showAnswer }" v-html="jsonToHtml(card.answer)"></div>
+  <div class="answer" :class="{ shown: showAnswer }" v-html="marked.parse(card.answer)"></div>
 
   <!--
     Teleport places the notification directly under <body>, preventing
@@ -257,5 +246,9 @@ onUnmounted(() => {
   .star-tooltip {
     animation: none;
   }
+}
+
+ul {
+  list-style-type: '- ';
 }
 </style>
