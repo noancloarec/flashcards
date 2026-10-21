@@ -7,7 +7,7 @@ import {
   type UserMemorizationHistory
 } from './memorizationHistory'
 import type { Deck } from './deck'
-import { mapValues } from '../services/basicOperations'
+import { mapValues } from '../services/javascriptMissingFunctions'
 
 /**
  * The state of a card to display in the app

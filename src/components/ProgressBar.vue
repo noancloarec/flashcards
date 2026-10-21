@@ -7,7 +7,7 @@ import {
   type CardMemorizationStatus,
   type DeckMemorizationStatus
 } from '../models/memorizationStatus.ts'
-import { range } from '../services/basicOperations.ts'
+import { range } from '../services/javascriptMissingFunctions.ts'
 import StarProgress from './StarProgress.vue'
 
 interface Props {

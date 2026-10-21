@@ -16,6 +16,7 @@ import {
 } from '../services/firebase'
 import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
 import ProgressBar from './ProgressBar.vue'
+import { searchResults } from '../services/search.ts'
 interface Props {
   showArchiveButton?: boolean
   /** The base for the target url of each deck button, if set to /memo/ each link will point to /memo/<deck_id> */
@@ -28,21 +29,8 @@ const memorizationStatus = ref<UserMemorizationStatus>({})
 
 const searchTerm = ref('')
 
-/**x
- * Normalizes a string for search purposes
- * Removes accent and put it into lowercase
- * @param {string}  str  The string to normalize
- */
-const normalizeForSearch = (str: string) =>
-  str
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-
 const filteredDecks = computed(() =>
-  decks.value.filter((d) =>
-    normalizeForSearch(d.name).includes(normalizeForSearch(searchTerm.value))
-  )
+  searchResults(searchTerm.value, decks.value, (deck) => deck.name)
 )
 
 const deckJustArchived = ref<Deck | null>(null)
