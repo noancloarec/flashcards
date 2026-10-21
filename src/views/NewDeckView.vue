@@ -3,7 +3,7 @@ import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { ref } from 'vue'
 import { useAuth } from '../composables/useAuth'
 import type { FunctionalDeck } from '../models/deck'
-import router from '../router'
+import router from '../router.ts'
 import { db } from '../services/firebase'
 import CardsJsonField from '../components/CardsJsonField.vue'
 
