@@ -4,7 +4,7 @@ import type {
   ElementByCardByDeck,
   UserMemorizationHistory
 } from '../models/memorizationHistory'
-import { mapValues } from './basicOperations'
+import { mapValues } from './javascriptMissingFunctions'
 
 type FirestoreTimestampNotParsed = {
   type: 'firestore/timestamp/1.0'
