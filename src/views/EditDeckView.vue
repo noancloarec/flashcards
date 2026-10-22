@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 import DeckForm from '../components/DeckForm.vue'
 import type { Deck } from '../models/deck.ts'
 import { useRoute } from 'vue-router'
 import { getDeck, updateDeck } from '../services/firebase.ts'
 import { SavingStatus } from '../models/savingStatus.ts'
+import { usePreventTableCloseOnUnsavedChanges } from '../composables/usePreventTabCloseOnUnsavedChanges.ts'
 
 const editedDeck = ref<Deck | null>(null)
 const savingStatus = ref(SavingStatus.Saved)
@@ -28,7 +29,17 @@ const saveDeck = async () => {
   }
 }
 
-watch(editedDeck, () => (savingStatus.value = SavingStatus.NotSaved), { deep: true })
+watch(
+  editedDeck,
+  (_, previous) => {
+    // Do not want to mark the form as touched on deck load
+    if (previous !== null) {
+      savingStatus.value = SavingStatus.NotSaved
+    }
+  },
+  { deep: true }
+)
+usePreventTableCloseOnUnsavedChanges(() => savingStatus.value)
 </script>
 
 <template>

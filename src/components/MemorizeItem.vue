@@ -25,6 +25,7 @@ import {
   getDeckMemorizationStatus,
   type DeckMemorizationStatus
 } from '../models/memorizationStatus.ts'
+import { usePreventTableCloseOnUnsavedChanges } from '../composables/usePreventTabCloseOnUnsavedChanges.ts'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
@@ -151,6 +152,8 @@ const saveProgress = async () => {
 
   savingStatus.value = SavingStatus.Saved
 }
+
+usePreventTableCloseOnUnsavedChanges(() => savingStatus.value)
 </script>
 
 <template>
