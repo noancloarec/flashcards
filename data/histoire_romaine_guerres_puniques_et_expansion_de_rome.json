@@ -1,16 +1,77 @@
 {
   "name": "Histoire Romaine - Guerres puniques et expansion de Rome",
   "author": "Noan",
+  "createdAt": "2026-10-10T20:16:43.673Z",
   "cards": [
     {
-      "question": "Quel est le casus belli de la 1ère guerre punique ?",
-      "answer": "En 264 av. J.-C., Rome intervient en Sicile pour venir en aide aux Mamertins de Messine, qui se placent dans le camp romain (deditio).",
-      "id": "9e7e7050-b3cb-47c5-b852-9cd5912837bd"
+      "question": "Cite les guerres majeures en Grèce et leurs dates.",
+      "answer": "- Deuxième guerre de Macédoine : 200-197 av. J.-C.\n- Guerre étolo-syrienne : 192-188 av. J.-C.\n- Troisième guerre de Macédoine : 171-168 av. J.-C.",
+      "id": "3c849a03-c727-440d-a03d-41b8f1ec5a08"
     },
     {
+      "question": "Quel est le casus belli de la deuxième guerre de Macédoine ?",
+      "answer": "La crainte d’une alliance entre Philippe V et les cités grecques d’Italie du Sud, après son alliance avec Carthage pendant la deuxième guerre punique.",
+      "id": "7572e1d0-7eca-458f-8470-3f92bf584b34"
+    },
+    {
+      "answer": "À Cynoscéphales, en 197 av. J.-C., par Titus Quinctius Flamininus.",
+      "question": "Où est remportée la victoire de la deuxième guerre de Macédoine et par qui ?",
+      "id": "ac636cd4-f6d0-49a3-ba0b-8aa301d4d8ca"
+    },
+    {
+      "answer": "L’alliance des Étoliens avec Antiochos III contre Rome, en raison de leur mécontentement après la deuxième guerre de Macédoine.",
+      "id": "cb0db25f-d945-49cf-bf3a-00f95c31b938",
+      "question": "Quel est le casus belli de la guerre étolo-syrienne ?"
+    },
+    {
+      "question": "Où et quand est remportée la victoire de la guerre étolo-syrienne, et par qui ?",
+      "answer": "Aux Thermopyles en 191 av. J.-C., par les Romains, puis à Magnésie du Sipyle en 189 av. J.-C., par Lucius Cornelius Scipion.",
+      "id": "52b04adb-3bef-426b-b2af-09f8a7c7276f"
+    },
+    {
+      "answer": "- Macédoine redevenue riche et puissante\n- Persée épouse la fille de Seleucos IV et s'allie avec la Bithynie\n- Pergame et Rhodes s'inquiètent",
+      "id": "053123bc-d708-425f-bf08-3597361b2a0d",
+      "question": "Quel est le casus belli de la troisième guerre de Macédoine ?"
+    },
+    {
+      "id": "c6b3c7f2-1e94-46b5-8a1a-701bb2ed228f",
+      "answer": "À Pydna, en 168 av. J.-C., par Lucius Aemilius Paullus.",
+      "question": "Où et quand est remportée la victoire de la troisième guerre de Macédoine ?"
+    },
+    {
+      "answer": "- 209 : Prise de Carthagène\n- 206 : fondation d’Italica.\n- 197 : création des provinces d’Espagne citérieure et ultérieure.\n- 133 : prise de Numance par Scipion Émilien.",
+      "question": "Cite les étapes importantes de la colonisation de l’Espagne.",
+      "id": "580fd40d-1d83-45e9-b66e-996955a27a04"
+    },
+    {
+      "question": "Cite les étapes importantes de la colonisation de la Gaule transalpine.",
+      "answer": "- 181 et 154 : Aide aux marseillais contre les Ligures\n- 122 : fondation d’Aquae Sextiae (Aix-en-Provence).\n- 121 : victoire romaine contre les Arvernes et les Allobroges.\n- 122-118 : création de la via Domitia et fondation de Narbonne.",
+      "id": "92713dd4-19be-41a4-878d-ae08fdf645b7"
+    },
+    {
+      "answer": "- Aider Marseille contre les Ligures\n - sécuriser la voie de communication entre l’Italie et l’Ibérie \n- développer leurs intérêts commerciaux.",
+      "question": "Pourquoi les Romains interviennent-ils en Gaule transalpine ?",
+      "id": "ea3907bd-aa48-40ea-81cb-19e7d9f2d5d9"
+    },
+    {
+      "question": "Cite les héritiers d’Alexandre le Grand.",
+      "id": "535f7e0e-a734-4181-97a1-2b7ff083db00",
+      "answer": "- Les Lagides en Égypte.\n- Les Séleucides en Orient.\n- Les Antigonides en Macédoine.\n- Les Attalides à Pergame.\n- Rhodes."
+    },
+    {
+      "id": "58a2bf62-0a2c-422e-bda3-c41217d67878",
+      "answer": "- 1000 prisonniers de la ligue achéenne\n- L'île de Délos est faite port franc pour ruiner Rhodes",
+      "question": "Comment Rome sanctionne-t-elle ses alliés trop tièdes après la 3ème guerre de Macédoine"
+    },
+    {
+      "answer": "En 264 av. J.-C., Rome intervient en Sicile pour venir en aide aux Mamertins de Messine, qui se placent dans le camp romain (deditio).",
+      "id": "9e7e7050-b3cb-47c5-b852-9cd5912837bd",
+      "question": "Quel est le casus belli de la 1ère guerre punique ?"
+    },
+    {
+      "id": "850e49dc-7444-4cda-adfb-1a8ebc9d6079",
       "question": "Comment se termine la 1ère guerre punique ?",
-      "answer": "En 241 av. J.-C., Rome remporte la bataille décisive des îles Égates. Carthage ne peut plus ravitailler ses citadelles ni soutenir Hamilcar en Sicile et doit demander la paix.",
-      "id": "850e49dc-7444-4cda-adfb-1a8ebc9d6079"
+      "answer": "En 241 av. J.-C., Rome remporte la bataille décisive des îles Égates. Carthage ne peut plus ravitailler ses citadelles ni soutenir Hamilcar en Sicile et doit demander la paix."
     },
     {
       "question": "Quelles sont les conditions du traité de paix après la 1ère guerre punique ?",
@@ -19,8 +80,8 @@
     },
     {
       "question": "Comment Rome et Carthage évoluent-elles entre ces 2 guerres ?",
-      "answer": "Carthage connaît d’abord de graves difficultés financières et une révolte de ses mercenaires. Elle se redresse ensuite grâce à l’expansion d’Hamilcar en Ibérie et à l’exploitation des mines d’argent. Rome s’empare de la Corse et de la Sardaigne et s’inquiète du redressement carthaginois.",
-      "id": "28b23913-939e-4f41-afcb-3df59534d32c"
+      "id": "28b23913-939e-4f41-afcb-3df59534d32c",
+      "answer": "- Révolte de mercenaire à Carthage \n- Elle se redresse ensuite grâce à l’expansion d’Hamilcar en Ibérie et à l’exploitation des mines d’argent\n-  Rome s’empare de la Corse et de la Sardaigne et s’inquiète du redressement carthaginois."
     },
     {
       "question": "Quel est le casus belli de la 2de guerre punique ?",
@@ -28,35 +89,34 @@
       "id": "ccfeb528-aaa8-4bce-b169-5ae7b8e2bfb5"
     },
     {
-      "question": "Comment Rome reprend-elle l’avantage dans la 2nde guerre punique ?",
       "answer": "À partir de 212 av. J.-C., Rome reprend progressivement l’initiative. Elle reprend Capoue, prend Syracuse en 211, puis Tarente en 209. En Espagne, Scipion l'Africain prend Carthagène en 209 et Hasdrubal est vaincu en 207.",
+      "question": "Comment Rome reprend-elle l’avantage dans la 2nde guerre punique ?",
       "id": "936d700e-4410-4e11-873e-f16b34fc756e"
     },
     {
-      "question": "Comment se termine la 2nde guerre punique ?",
       "answer": "La guerre se termine par la bataille de Zama en 202 av. J.-C., où Scipion l’Africain vainc Hannibal.",
+      "question": "Comment se termine la 2nde guerre punique ?",
       "id": "786b5f10-a54b-492d-8824-7bd1f75d0ee3"
     },
     {
+      "id": "0ab68a52-daeb-45bd-b531-68b2f61b834f",
       "question": "Quelles sont les conditions du traité de paix de la 2nde guerre punique ?",
-      "answer": "En 201 av. J.-C., Carthage doit conserver seulement 10 navires, céder l’Ibérie, ne plus faire la guerre sans l’autorisation de Rome, reconnaître le royaume de Numidie de Massinissa et payer une indemnité de 10 000 talents sur 50 ans.",
-      "id": "0ab68a52-daeb-45bd-b531-68b2f61b834f"
+      "answer": "En 201 av. J.-C., Carthage doit conserver seulement 10 navires, céder l’Ibérie, ne plus faire la guerre sans l’autorisation de Rome, reconnaître le royaume de Numidie de Massinissa et payer une indemnité de 10 000 talents sur 50 ans."
     },
     {
+      "id": "7408b9ef-eea7-45d4-a40d-98c029432b35",
       "question": "Comment évolue Carthage après la 2ème guerre punique ?",
-      "answer": "Malgré les conditions très lourdes du traité, Carthage retrouve une certaine prospérité économique. En 153 av. J.-C., Caton l’Ancien constate qu’elle prospère à nouveau. Rome continue cependant à exercer une surveillance sur Carthage.",
-      "id": "7408b9ef-eea7-45d4-a40d-98c029432b35"
+      "answer": "Malgré les conditions très lourdes du traité, Carthage retrouve une certaine prospérité économique. En 153 av. J.-C., Caton l’Ancien constate qu’elle prospère à nouveau. Rome continue cependant à exercer une surveillance sur Carthage."
     },
     {
+      "id": "aabe1c44-7b33-4533-b4fd-4608d81d1e74",
       "question": "Quelles sont les causes de la 3ème guerre punique ?",
-      "answer": "La prospérité retrouvée de Carthage inquiète Rome.  Carthage entre en guerre contre la Numidie de Massinissa et arrête de payer les indemnités.",
-      "id": "aabe1c44-7b33-4533-b4fd-4608d81d1e74"
+      "answer": "La prospérité retrouvée de Carthage inquiète Rome.  Carthage entre en guerre contre la Numidie de Massinissa et arrête de payer les indemnités."
     },
     {
+      "id": "840f887e-82bf-4fe7-904b-ab14f7407221",
       "question": "Comment se termine la 3ème guerre punique ? Quelle est l’issue pour Carthage ?",
-      "answer": "En 146 av. J.-C., Scipion Émilien s’empare de Carthage après un siège de trois ans. La population est réduite en esclavage et le territoire de Carthage devient une province romaine. C’est la fin des guerres puniques.",
-      "id": "840f887e-82bf-4fe7-904b-ab14f7407221"
+      "answer": "En 146 av. J.-C., Scipion Émilien s’empare de Carthage après un siège de trois ans. La population est réduite en esclavage et le territoire de Carthage devient une province romaine. C’est la fin des guerres puniques."
     }
-  ],
-  "createdAt": "2026-10-10T20:16:43.673Z"
+  ]
 }
