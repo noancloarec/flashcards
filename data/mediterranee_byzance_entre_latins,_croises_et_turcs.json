@@ -4,34 +4,34 @@
   "createdAt": "2026-10-19T10:14:42.324Z",
   "cards": [
     {
-      "id": "bcec62cb-c2b5-42b3-bf31-487b24eb10ce",
       "answer": "- Constantin VII Porphyrogénète (913-959)\n- Nicéphore II Phocas (963-969) : reconquiert la Crête\n- Jean Ier Tzimiskès (969-976) : prend Antioche, fait assassiner Nicéphore",
-      "question": "Cite les empereurs byzantins du Xe siècle et leurs dates"
+      "id": "bcec62cb-c2b5-42b3-bf31-487b24eb10ce",
+      "question": "Cite les empereurs byzantins du Xe siècle et leurs dates de règne"
     },
     {
+      "id": "5ba8a059-7f76-417d-b566-8ca236c451fa",
       "answer": "Entre l'émirat d'Alep (et de Damas, disputé)",
-      "question": "Où les byzantins et les fatimides partagent-ils une frontière en Orient au XIe siècle?",
-      "id": "5ba8a059-7f76-417d-b566-8ca236c451fa"
+      "question": "Où les byzantins et les fatimides partagent-ils une frontière en Orient au XIe siècle?"
     },
     {
-      "answer": "Byzance. L'émirat d'Alep reste autonome mais paie un tribut à Constantinople",
       "id": "8545e290-1aa1-49c1-8738-c71d52cebabc",
-      "question": "Qui domine l'émirat d'Alep après 969 ? Comment ?"
+      "question": "Qui domine l'émirat d'Alep après 969 ? Comment ?",
+      "answer": "Byzance. L'émirat d'Alep reste autonome mais paie un tribut à Constantinople"
     },
     {
-      "question": "Les Fatimides et les Byzantins sont-ils en paix entre 969 et 1055 ?",
       "id": "ffd51953-cccf-4061-8dd7-dac665a8a142",
-      "answer": "Non, mais :\n\n- Ils maintiennent beaucoup de relations diplomatiques\n- Ils signent régulièrement des trêves\n- Ils commercent"
+      "answer": "Non, mais :\n\n- Ils maintiennent beaucoup de relations diplomatiques\n- Ils signent régulièrement des trêves\n- Ils commercent",
+      "question": "Les Fatimides et les Byzantins sont-ils en paix entre 969 et 1055 ?"
     },
     {
-      "answer": "La Khotba se fait au nom du calife abbasside (et plus fatimide)",
+      "question": "Quelle trace a-t-on changement d'alliance des fatimides vers les seldjoukides en 1055 ?",
       "id": "5f3d6148-6450-4fc3-a55f-0915b334b68d",
-      "question": "Quelle trace a-t-on changement d'alliance des fatimides vers les seldjoukides en 1055 ?"
+      "answer": "La Khotba se fait au nom du calife abbasside (et plus fatimide)"
     },
     {
+      "answer": "- Incursions en Arménie (pas d'état tampon comme l'émirat d'Alep)\n- Perte d'Ani en 1064\n- Défaite de Manzikert le 16 aout 1071",
       "question": "Comment la perte d'influence des Byzantins en Arménie se matérialise-t-elle au XIe siècle ?",
-      "id": "c3ae94d3-8760-4c0a-b6b3-e02ea9ed3894",
-      "answer": "- Incursions en Arménie (pas d'état tampon comme l'émirat d'Alep)\n- Perte d'Ani en 1064\n- Défaite de Manzikert le 16 aout 1071"
+      "id": "c3ae94d3-8760-4c0a-b6b3-e02ea9ed3894"
     },
     {
       "question": "Cite 2 cités occidentales qui commercent particulièrement avec Byzance",
@@ -39,39 +39,59 @@
       "id": "f4be4925-13b9-4574-8ed5-b773965ce606"
     },
     {
+      "question": "Donne une illustration de l'étroiteté des relations entre Byzance et Amalfi",
       "answer": "- L'archevêque d'Amalfi part en délégation du pape à Constantinople en 1054 (il parle bien Grec)\n- Les amalfitains sont très présents dans la ville de Constantinople, sur la Corne d'or, et dans d'autres cités byzantines.",
-      "id": "57c44c9b-b542-4058-b6bb-2e4269526b0b",
-      "question": "Donne une illustration de l'étroiteté des relations entre Byzance et Amalfi"
+      "id": "57c44c9b-b542-4058-b6bb-2e4269526b0b"
     },
     {
+      "answer": "- Ils sont exonérés de kommerkion en 1082\n- Ils sont très présents dans la ville de Constantinople, sur la Corne d'or",
       "question": "Donne une illustration de l'étroiteté des relations entre Byzance et Venise",
-      "id": "ee018ceb-3d1f-406d-a6ea-2adba083f131",
-      "answer": "- Ils sont exonérés de kommerkion en 1082\n- Ils sont très présents dans la ville de Constantinople, sur la Corne d'or"
+      "id": "ee018ceb-3d1f-406d-a6ea-2adba083f131"
     },
     {
       "answer": "Robert Guiscard, nommé duc des Pouilles et de Calabre, futur duc de Sicile par le Pape.",
-      "id": "3b711e2d-4dce-478f-88e1-f6e64296fa14",
-      "question": "Cite un chef normand ennemi de Byzance au Xe siècle"
+      "question": "Cite un chef normand ennemi de Byzance au Xe siècle",
+      "id": "3b711e2d-4dce-478f-88e1-f6e64296fa14"
     },
     {
-      "answer": "Non\n\n- Alliance matrimoniale en 1074\n- Remise en cause et reprise de la guerre en 1078",
       "question": "Robert Guiscard sera-t-il perpétuellement en guerre avec Byzance ?",
+      "answer": "Non\n\n- Alliance matrimoniale en 1074\n- Remise en cause et reprise de la guerre en 1078",
       "id": "7923846d-3405-4deb-b6a7-0853ffc41067"
     },
     {
-      "answer": "Dans les Balkans\n\n- Il prend Corfou en 1082\n- Dyrrachium en 1083",
       "id": "4e401dc7-10cb-43f0-b276-5299cfa5c5da",
-      "question": "Où et quand Robert Guiscard attaque-t-il Byzance hors d'Italie ?"
+      "question": "Où et quand Robert Guiscard attaque-t-il Byzance hors d'Italie ?",
+      "answer": "Dans les Balkans\n\n- Il prend Corfou en 1082\n- Dyrrachium en 1083"
     },
     {
       "question": "Pourquoi l'incursion des Normands marque-t-elle un précédent ?",
-      "id": "00010e7a-e09f-4678-a638-026edb4a2717",
-      "answer": "C'est la première agression de chrétiens sur Byzance depuis l'Antiquité."
+      "answer": "C'est la première agression de chrétiens sur Byzance depuis l'Antiquité.",
+      "id": "00010e7a-e09f-4678-a638-026edb4a2717"
     },
     {
       "question": "1054 est-elle la date du schisme entre les Eglises latines et byzantines ?",
-      "answer": "Non\n\n- Les divergences disciplinaires lui préexistaient\n- Les tensions diplomatiques aussi\n- Le patriarche Michel Cerulaire n'a pas fait fermer les églises latines\n- L'ex-communication prononcée par les légats du pape n'a pas eu d'écho et est invalide",
-      "id": "6ffdee41-8aeb-4835-91cc-aa80a305cc09"
+      "id": "6ffdee41-8aeb-4835-91cc-aa80a305cc09",
+      "answer": "Non\n\n- Les divergences disciplinaires lui préexistaient\n- Les tensions diplomatiques aussi\n- Le patriarche Michel Cerulaire n'a pas fait fermer les églises latines\n- L'ex-communication prononcée par les légats du pape n'a pas eu d'écho et est invalide"
+    },
+    {
+      "question": "Qui est Suleiman 1er ?",
+      "answer": "Le 1er sultan de Rum, son père (seldjoukide) a aidé Nicéphore Botaneiates à prendre le trône à Michel VII\n",
+      "id": "012891e5-8f6e-411e-b0f1-4ff1d5a3cf98"
+    },
+    {
+      "question": "Où les turcs de Rum établissent-ils leur capitale ? ",
+      "answer": "A Nicée, 100km au sud de Constantinople",
+      "id": "f59eb625-f5c8-459f-bd50-680ea3a61b91"
+    },
+    {
+      "question": "Quelles positions Byzance conserve-t-elle en Asie mineure en 1095 ?",
+      "answer": "Seulement quelques poches.",
+      "id": "07d38443-4177-4b14-bc52-b895ddfaa324"
+    },
+    {
+      "question": "",
+      "answer": "",
+      "id": "df23e828-a6a3-4115-892b-854522156995"
     }
   ]
 }
