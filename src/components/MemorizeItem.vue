@@ -7,7 +7,6 @@ import { Timestamp } from 'firebase/firestore'
 import { useAuth } from '../composables/useAuth.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
-import { SavingStatus } from '../models/savingStatus.ts'
 import {
   getDeck,
   getDeckMemorizationHistory,
@@ -25,7 +24,7 @@ import {
   getDeckMemorizationStatus,
   type DeckMemorizationStatus
 } from '../models/memorizationStatus.ts'
-import { usePreventTableCloseOnUnsavedChanges } from '../composables/usePreventTabCloseOnUnsavedChanges.ts'
+import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
@@ -42,7 +41,7 @@ const memorizationHistory = ref<DeckMemorizationHistory>({})
 const memorizationStatus = ref<DeckMemorizationStatus>({})
 const cardStates = ref<CardState[]>([])
 const { googleUser } = useAuth()
-const savingStatus = ref(SavingStatus.NotSaved)
+const { elementSavingStatus } = useSavingStatus(memorizationHistory)
 
 /**
  * Init the learning state of the cards in the deck, according to the deckMemorizationStatus from firestore if present
@@ -126,7 +125,6 @@ const registerSuccessInMemorizationHistory = () => {
 }
 
 const nextQuestion = (success: boolean) => {
-  savingStatus.value = SavingStatus.NotSaved
   showAnswer.value = false
   if (success) registerSuccessInMemorizationHistory()
   cardStates.value[currentCardIndex.value] = success ? CardState.Learned : CardState.Notlearned
@@ -140,7 +138,7 @@ const reset = () => {
 }
 
 const saveProgress = async () => {
-  savingStatus.value = SavingStatus.Saving
+  elementSavingStatus.value = SavingStatus.Saving
 
   const deckId = deckState.value!.id
   if (googleUser.value) {
@@ -150,10 +148,8 @@ const saveProgress = async () => {
     saveDeckMemorizationHistoryToLocalStorage(deckId, memorizationHistory.value)
   }
 
-  savingStatus.value = SavingStatus.Saved
+  elementSavingStatus.value = SavingStatus.Saved
 }
-
-usePreventTableCloseOnUnsavedChanges(() => savingStatus.value)
 </script>
 
 <template>
@@ -193,10 +189,12 @@ usePreventTableCloseOnUnsavedChanges(() => savingStatus.value)
   <div v-else>
     <p>Vous avez mémorisé toutes les cartes</p>
   </div>
-  <button @click="saveProgress" :disabled="savingStatus !== SavingStatus.NotSaved">
-    <template v-if="savingStatus === SavingStatus.NotSaved"> Sauvegarder la progression </template>
-    <template v-else-if="savingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
-    <template v-else-if="savingStatus === SavingStatus.Saved">
+  <button @click="saveProgress" :disabled="elementSavingStatus !== SavingStatus.NotSaved">
+    <template v-if="elementSavingStatus === SavingStatus.NotSaved">
+      Sauvegarder la progression
+    </template>
+    <template v-else-if="elementSavingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
+    <template v-else-if="elementSavingStatus === SavingStatus.Saved">
       Progression sauvegardée ✅
     </template>
   </button>

@@ -4,16 +4,16 @@ import DeckForm from '../components/DeckForm.vue'
 import type { Deck } from '../models/deck.ts'
 import { useRoute } from 'vue-router'
 import { getDeck, updateDeck } from '../services/firebase.ts'
-import { SavingStatus } from '../models/savingStatus.ts'
-import { usePreventTableCloseOnUnsavedChanges } from '../composables/usePreventTabCloseOnUnsavedChanges.ts'
+import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
 
 const editedDeck = ref<Deck | null>(null)
-const savingStatus = ref(SavingStatus.Saved)
 
 const loadDeckInUrl: () => Promise<Deck> = async () => {
   const deckId = useRoute().params.deckId as string
   return await getDeck(deckId)
 }
+
+const { elementSavingStatus } = useSavingStatus(editedDeck)
 
 loadDeckInUrl().then((d) => {
   editedDeck.value = d
@@ -21,25 +21,10 @@ loadDeckInUrl().then((d) => {
 })
 
 const saveDeck = async () => {
-  savingStatus.value = SavingStatus.Saving
-  try {
-    await updateDeck(editedDeck.value!)
-  } finally {
-    savingStatus.value = SavingStatus.Saved
-  }
+  elementSavingStatus.value = SavingStatus.Saving
+  await updateDeck(editedDeck.value!)
+  elementSavingStatus.value = SavingStatus.Saved
 }
-
-watch(
-  editedDeck,
-  (_, previous) => {
-    // Do not want to mark the form as touched on deck load
-    if (previous !== null) {
-      savingStatus.value = SavingStatus.NotSaved
-    }
-  },
-  { deep: true }
-)
-usePreventTableCloseOnUnsavedChanges(() => savingStatus.value)
 </script>
 
 <template>
@@ -47,10 +32,12 @@ usePreventTableCloseOnUnsavedChanges(() => savingStatus.value)
     <DeckForm v-if="editedDeck" v-model="editedDeck" />
 
     <div class="save-button-container">
-      <button @click="saveDeck" :disabled="savingStatus !== SavingStatus.NotSaved">
-        <template v-if="savingStatus === SavingStatus.NotSaved"> Sauvegarder </template>
-        <template v-else-if="savingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
-        <template v-else-if="savingStatus === SavingStatus.Saved"> Sauvegardée ✅ </template>
+      <button @click="saveDeck" :disabled="elementSavingStatus !== SavingStatus.NotSaved">
+        <template v-if="elementSavingStatus === SavingStatus.NotSaved"> Sauvegarder </template>
+        <template v-else-if="elementSavingStatus === SavingStatus.Saving">
+          Sauvegarde ...
+        </template>
+        <template v-else-if="elementSavingStatus === SavingStatus.Saved"> Sauvegardée ✅ </template>
       </button>
     </div>
   </main>
