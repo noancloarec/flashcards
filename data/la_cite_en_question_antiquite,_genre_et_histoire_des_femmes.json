@@ -1,0 +1,67 @@
+{
+  "author": "noan.cloarec@gmail.com",
+  "name": "La cité en question - Antiquité, genre et histoire des femmes",
+  "createdAt": "2026-10-16T16:17:52.412Z",
+  "cards": [
+    {
+      "id": "5065afe7-52f5-4a96-9df6-2b5c32e57549",
+      "answer": "- Michelet qui les cantonnes à leur nature maternelle, ou sauvage\n- L'école méthodique et l'école des annales (au début) ne s'y intéressent pas\n- Levi-Strauss --> Elles sont un objet d'échange",
+      "question": "Quelles sont les premiers courants de l'historiographie qui ne s'intéressent pas à l'histoire des femmes ? Evoquer Michelet, Levi-Strauss"
+    },
+    {
+      "question": "Comment est abordée la première histoire des femmes ?",
+      "answer": "- Seminaire Les femmes ont-elles une histoire par Michèle Perrot, Fabienne Bock et Pauline Schmitt (1973)\n- Influence de la sociologie (Condition de la francaise d'aujourd'hui)\n- C'est d'abord une histoire de la famille.",
+      "id": "f559f44d-cdb4-42af-8cb6-cc75c47e33d7"
+    },
+    {
+      "question": "En quoi l'orga du séminaire Les femmes ont-elles une histoire ? marque-t-il un tournant ?",
+      "id": "a94c1476-34cd-41c2-b819-154f88110f97",
+      "answer": "- 1er colloque organisé par des femmes\n- Peu de sources ou matériau de recherche\n- Femmes auparavant réduite à leur rôle reproductif\n- La femme était jusque là essentialise (P. Grimal Histoire mondiale de la femme)"
+    },
+    {
+      "question": "Qui sera l'historienne meneuse des gender studies ? Comment conçoit-elle l'histoire des femmes",
+      "id": "b5d2590f-7b12-43b1-a9c6-bbcd1f61ef2b",
+      "answer": "Joan Scott\n\n- Fait du genre Une catégorie utile d'analyse historique (1986)\n- Etudie la persistance des inégalités hommes femmes"
+    },
+    {
+      "question": "Quel débat sera soulevé par l'émergence des gender studies ?",
+      "id": "b0ca26fc-8c1a-455d-9766-642b400b0418",
+      "answer": "Histoire des femmes VS histoire du genre\n\n- Besoin d'écrire d'abord l'histoire des femmes\n- Peur d'invisibiliser à nouveau les femmes\n\nJoan Scott a gagné le débat depuis"
+    },
+    {
+      "id": "a75bc28c-c437-482d-bfea-71418e5e40b2",
+      "question": "Qu'est-ce que la deuxième histoire des femmes ?",
+      "answer": "- Un courant historiographique en France influencé par les gender studies et les travaux de Joan Scott\n- Une étude des femmes dans leurs milieux sociaux\n- Un début d'étude de l'histoire des masculinités, indispensable à l'histoire féminine (et inversement)"
+    },
+    {
+      "answer": "- D'abord ignorée\n  - Histoire politique en France passée de mode depuis les Annales\n  - Femmes exclues de la politique au XXe siècle\n- Pourquoi elles sont exclues des activités\n  - De délibération\n  - Judiciaires\n  - Exécutive\n- Comment elles sont inclues dans la vie politique, en ayant une définition plus large de la politique\n  - Participation au culte\n- Comment l'expression de genre est importante\n  - Timarque prostitué interdit de tribune\n  - Nééra trop libre sexuellement interdite de citoyenneté",
+      "id": "3c1e76af-8945-49dc-af2a-f8e87a9bfc75",
+      "question": "Comment évolue l'histoire politique des femmes dans l'antiquité ?"
+    },
+    {
+      "question": "Cite 3 éléments qui informent sur la place des femmes grecques dans la religion",
+      "answer": " - Voile (plus culturel que religieux, agentivité)\n - Divinités masculines et féminines (Athéna casquée, tissage)\n - Rites réservés aux femmes (fécondité)",
+      "id": "104e8715-383d-434c-82b6-835f4f27614b"
+    },
+    {
+      "question": "En quoi l'archéologie a-t-elle été biaisée dans ses études de tombes avant les années 80 ?",
+      "answer": "Détermination du genre selon des critères culturels contemporains : \n - armes --> masculin\n - bijoux --> féminin",
+      "id": "8f8570af-3d45-4f83-ad7c-19e71b560890"
+    },
+    {
+      "question": "Pourquoi est-il difficile d'interpréter des symboles en archéologie funéraire?",
+      "answer": "Des objets peuvent changer de signification dans le monde des morts, ex : \n - Miroir --> féminin\n - Strigile ---> masculin (pour se nettoyer après la lutte)\nUne fois mort :\n - Miroir chez certains hommes (raffinement)\n - Strigile chez des femmes",
+      "id": "3bb42ca4-208d-4819-82e4-543bb737ac3a"
+    },
+    {
+      "question": "Dans l'oikos (le foyer), existe-t-il des pièces réservées aux hommes ou aux femmes ?",
+      "answer": "Non\n - Traces de tissage dans toutes les pièces\n - Traces de banquet dans toutes les pièces\n\n--> c'est l'activité à un instant t qui sépare les gens",
+      "id": "f3f0e3ce-d948-42fa-a6f1-ffaea4813e5b"
+    },
+    {
+      "question": "Que nous apprend l'étude des maisons de Pompéi sur la répartition des pièces d'une domus ?",
+      "answer": " - Pas de séparation genrée\n - Séparation selon l'age (graffiti des enfants)\n",
+      "id": "79f87d9b-3d50-43d3-97fd-6104050e78ae"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "author": "noan.cloarec@gmail.com",
+  "name": "Mediterranée - Formes de pouvoirs en terre d'Islam au XIIe siècle",
+  "createdAt": "2026-10-22T08:58:57.661Z",
+  "cards": [
+    {
+      "id": "c594f152-9400-4a91-b260-039fb0352fd1",
+      "question": "Quel calife abbasside essaie de profiter du déclin des sultans seldjoukides pour reprendre du pouvoir ?",
+      "answer": "al-Nāṣir li-Dīn Allāh (1180-1225)"
+    },
+    {
+      "question": "Quelles sont les fonctions du sultanat seldjoukide ?",
+      "id": "f42c714a-a9cb-4180-82c5-575c06ff264f",
+      "answer": " - Militaire (gère l'iqta)\n - Fiscal (kharaj, douane, domaines de l'état)\n - Nomination administrative (gourverneurs provinciaux, émirs militaire, hauts fonctionnaires)"
+    },
+    {
+      "question": "Quelle crise politique survient à la fin du XIe siècle ?",
+      "answer": "Succession après la mort du sultan Malik Shah.  \nDes gouverneurs provinciaux s'autonomisent officieusement\n",
+      "id": "cc28a6d3-b4ba-4ee7-9f52-94720197f0ec"
+    },
+    {
+      "id": "1ad9b8e9-5242-42a4-80ec-6d34b6baa6a6",
+      "answer": " - Mosaïque de pouvoirs locaux\n -  Zengi, Nūr al-Dīn puis Saladin rassemblent sous le thème du jihad",
+      "question": "Pourquoi les croisades en 1097 fonctionne-t-elle ? Comment les musulmans s'organisent-ils"
+    },
+    {
+      "question": "Comment les émirs gagnent-ils en pouvoir lors de l'affaiblissement de l'autorité seldjoukides ?",
+      "answer": "Grâce au système de l'iqta ils peuvent\n - S'autonomiser fiscalement\n - Développer un réseau de clientèle  \n - Transformer leurs succès militaires en légitimation politique",
+      "id": "ed1558f5-4ea8-4776-9fbe-4f040f43d473"
+    },
+    {
+      "question": "Qui est Tughtakîn ?",
+      "answer": "Fondateur des **Bourides**\n - Ancien mamelouk turc devenu Atabeg seldjoukide de damas au début du XIIe siècle, \n- Autonomisé du pouvoir central\n- Fait face aux francs",
+      "id": "9c05f766-fa49-4a15-8bfe-a41ccf3fb29a"
+    },
+    {
+      "question": "Qui est Zengi ?",
+      "answer": "Fondateur des **Zenguides**\n - Atabeg de Mossoul nommé en 1127\n - Étend son autorité jusqu'à Alep\n - Père de  Nūr al-Dīn",
+      "id": "ab46ac78-d490-4bba-b7da-0253530092fd"
+    },
+    {
+      "question": "Comment les Zenguides affirment-ils leur pouvoir ?",
+      "answer": " - Conquête militaire contre les Etats latins (Mossoul, Alep, Damas)\n - Promotion du sunnisme (madrasas, ʿulamā)\n - Reconnaissance spirituelle du calife abbasside",
+      "id": "094b6968-5504-4613-9075-a16f973774e3"
+    },
+    {
+      "question": "Qui est Saladin ?",
+      "answer": "Le fondateur des **Ayyoubides**\n - Un serviteur de Nūr al-Dīn \n - Envoyé en Egypte pour intervenir dans les luttes de pouvoir du califat fatimide\n - Nommé vizir en Egypte en 1169",
+      "id": "73e6a41d-d82b-4d63-bfce-4f35dbc2abc5"
+    },
+    {
+      "question": "Comment Saladin prend-il le pouvoir ?",
+      "answer": " - Profite des conflits de succession à la mort de Nūr al-Dīn en 1174\n - Contrôle Le Caire, Damas, Alep, la Haute-Mésopotamie\n - En 1187, gagne à Hattin et reprend Jerusalem à Guy de Lusignan",
+      "id": "1da50a2b-9acc-44b7-9e7b-0eb80b4b5879"
+    },
+    {
+      "question": "L'état ayyoubide est-il centralisé ?",
+      "answer": "Non, c'est plutôt une confédération de familles",
+      "id": "2304ea55-f796-48d9-835b-86ad5a4b4bdd"
+    },
+    {
+      "question": "En conclusion, comment s'est partagé le pouvoir en Islam au XIIe siècle ?\n",
+      "answer": " - Califes arabes (autorité religieuse)\n - Sultans seldjoukides \n - Dynasties régionales d'émirs \n - Dynasties militaires turcs ou kurdes (Bourides, Zenguides, Ayyoubides)",
+      "id": "25a7a3c3-d768-4242-94bf-73814479adf6"
+    }
+  ]
+}

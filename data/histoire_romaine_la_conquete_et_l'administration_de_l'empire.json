@@ -1,0 +1,162 @@
+{
+  "author": "noan.cloarec@gmail.com",
+  "name": "Histoire romaine - La conquête et l'administration de l'empire",
+  "createdAt": "2026-10-16T08:53:17.240Z",
+  "cards": [
+    {
+      "id": "472ffdcb-4e04-48f2-94d4-f53f527c6f6e",
+      "question": "Comment définir l'impérialisme au sens contemporain ?",
+      "answer": "Etendre un état aux dépens d'autres états, culturellement ou militairement"
+    },
+    {
+      "id": "1f9f3b9b-6948-41b9-947b-46f47931d3a5",
+      "answer": "Politiquement et économiquement oui, moins culturellement. On se demande plutôt s'il a été conscient ou non.",
+      "question": "Y a-t-il eu une forme d'impérialisme romain ?"
+    },
+    {
+      "answer": "En Italie oui (communauté de races), outre-mer il y a débat.",
+      "id": "f96e6d31-9489-407d-82e1-7c34343e380f",
+      "question": "L'impérialisme romain a-t-il été conscient ?"
+    },
+    {
+      "question": "Pourquoi les historiens de la fin du XIXe parlaient d'un impérialisme défensif ?",
+      "answer": "- interventions en Grèce et Macédoine sans conquête immédiate\n- Proclamation de la liberté du monde Grec en 196\n- Caton l'ancien défend Rhodes des sanctions romaines",
+      "id": "2608e16e-7e80-4bc3-bdf4-6cf933711db4"
+    },
+    {
+      "answer": "- Destruction de Corinthe et Carthage en 146 (ils reprennent Polybe)\n- Création des provinces d'Orient en 129\n- Les magistrats font la guerre pour le butin",
+      "question": "A quel période les tenants de la thèse de l'impérialisme défensif y voient un tournant ?",
+      "id": "30bacd66-2d90-4ef2-93d2-46dbd4c12b2c"
+    },
+    {
+      "question": "Quels historiens du XXe siècle ont montré que Rome fait preuve d'un impérialisme offensif ? Pourquoi ce tournant historiographique ?",
+      "answer": "- C. Nicolet : Rome a compris sa supériorité militaire dès les débuts de la république, l'expansion lui semble bénéfique\n- W. Harris : War and Imperialism in republican Rome (1979)\n  - Appat du gain\n  - Guerre centrale dans l'identité aristocratique\n  - Ecrit pendant la guerre du Vietnam, remise en question des impérialisme",
+      "id": "a66a3a30-ba25-4b7c-8711-797a3574bb8a"
+    },
+    {
+      "answer": "- A. Eckstein : Mediterranean Anarchy (2006), étudie Rome dans le système international\n  - Pas différente des autres cités\n  - Superpuissante en Méditerranée\n  - Pas d'instances internationales\n- P-L. Brisson : Le moment unipolaire. Rome et la Méditerranée hellénistique (2021)\n  - Puissance entre les mains d'un seul acteur (unipolarité)\n  - Différent d'un empire : les états restent autonomes\n  - Rome veut maintenir sa supériorité, devient paranoïaque et brutale (ex : ligue achéenne, Corinthe, Carthage)",
+      "id": "faae4a45-3049-410d-b856-60c2dec85c68",
+      "question": "Quels historiens du XXIe siècle raffinent les thèses du XXe siècle"
+    },
+    {
+      "question": "Où Rome crée-t-elle les premières provinces ?",
+      "id": "7d3204e0-b8d1-4d1f-89d6-3efd31b3c1d2",
+      "answer": "- En dehors de l'Italie, qui appartient au territoire de la cité (ager romanus)\n- En Sicile, Sardaigne et Corse (entre 241 et 227)\n- En Espagne Citérieure et Espagne Ultérieure en 197\n- En Macédoine en 148\n- En Afrique et Achaïe en 146\n- En Asie en 129 (ancien royaume de Pergame, légué à Rome)\n- En Gaule transalpine entre 122 et 118"
+    },
+    {
+      "question": "Qui se charge d'aller créer la province ?",
+      "answer": "Le magistrat qui obtient la deditio, souvent aidée d'une commission sénatoriale (les légats)",
+      "id": "9c3bcdcb-2bc5-4781-b8fe-706fbe9e0731"
+    },
+    {
+      "id": "fdd7b9e2-f6e6-4ad3-9737-9ed8b0fdf073",
+      "question": "Qu'est-ce que l'ager publicus ?",
+      "answer": "La propriété de Rome, différente de l'ager romanus (territoire de Rome)"
+    },
+    {
+      "id": "c2878a91-62b4-4e39-88ab-5e9967f9cca8",
+      "question": "Quels postes Rome a-t-elle créés pour gouverner les provinces ?",
+      "answer": "- Nouveaux prêteur en Sicile, Sardaigne, Corse et Espagne\n- Proprêteurs ou proconsuls ensuite\n- Limiter le nombre de détenteurs d'imperium\n- Réguler la compétition au consulat"
+    },
+    {
+      "id": "e5aa6f0f-6de4-42b4-b7b3-34fc1e0b2db2",
+      "answer": "Officiellement 1 an, 3 ans en moyenne.",
+      "question": "Combien de temps dure la prorogation de l'impérium ?"
+    },
+    {
+      "answer": "- Pacifier la province\n- Percevoir le tributum\n- Rendre la justice",
+      "question": "Quelle sont les missions des gouverneurs ?",
+      "id": "dd40ba68-39b2-4f97-9e4c-76b370084898"
+    },
+    {
+      "id": "6181837e-6105-49aa-b26b-eeb795908ddd",
+      "question": "Pourquoi le gouverneur est-il puissant en sa province ?",
+      "answer": "Peu de contre-pouvoirs\n\n- Pas de Senat\n- Pas de tribun de la plèbe"
+    },
+    {
+      "question": "Qui aide le gouverneur ?",
+      "answer": "- Des légats (justice, militaire)\n- Un questeur (pour l'impôt)\n- Des esclaves et affranchis\n- Des scribes et licteurs",
+      "id": "34039b6f-cef9-4497-8ad5-60e90e4c457e"
+    },
+    {
+      "id": "f6363413-998a-478e-9c3e-3ea72fbaae29",
+      "question": "Quelle parties des provinces deviennent souvent ager publicus ?",
+      "answer": "- Les propriétés personnelles des monarques conquis\n- Les cités rebelles à Rome (Sardaigne, Corinthe, Carthage)"
+    },
+    {
+      "question": "Comment Rome impose-t-elle les provinces ?",
+      "answer": "- Impôts direct : elle suit le mode existant avant la conquête\n  - Tributum (sur les personnes)\n  - Stipendium (foncier), en Espagnes\n  - La dîme (sur les récolte), en Sicile et en Asie.\n- Impôts indirect\n  - Droit de douanes (Romains exemptés)\n  - Mines\n  - Confiscation des trésors royaux\n  - Réquisition pour le gouverneur",
+      "id": "fbadcbe3-3bb6-4dad-a9eb-acc3e7694d0c"
+    },
+    {
+      "question": "Quels sont les impacts des impôts sur les provinces ?",
+      "answer": "Elles s'endettent lourdement pour les payer, auprès des publicains.",
+      "id": "5d6903ca-220c-427f-a9c1-da03b1566dc8"
+    },
+    {
+      "answer": "- Au début : récompense du vainqueur d'une guerre juste\n- On limitera les abus pendant la période impériale",
+      "question": "Comment les romains réagissent-ils à l'écrasement fiscal des provinces ?",
+      "id": "222ec0d8-7ca9-40b6-b5b9-b237c0a10c01"
+    },
+    {
+      "answer": "- La ville de Rome\n- Les aristocrates (prestige)\n- Les vétérans (reçoivent des colonies)\n- Les publicains (récoltent l'impôt)\n- Les negotiatores (exemptés de taxes)\n- Après Pydna, Paul Emile ramène un trésor suffisant pour supprimer les impôts des romains pendant plus d'un siècle\n- 200-157 : 14 millions de deniers / an",
+      "question": "Qui bénéficie de la prédation romaine ?",
+      "id": "666cb5fe-6b63-49cf-846f-24da5b898106"
+    },
+    {
+      "id": "40bf2526-1fdf-4493-a15f-01cc37aaa08e",
+      "answer": "Verrès, propreteur en Sicile entre 73 et 71 av. J-C.",
+      "question": "Donne un exemple de gouverneur abusif"
+    },
+    {
+      "answer": "Le quaestio perpetua de repetundis par la lex Calpurnia de 149\n - Présidé par le préteur pérégrin\n - Saisi par les provinciaux\n - Tribunal perpétuel",
+      "question": "Que met-on en place au IIe siècle pour lutter contre les extorsions ?",
+      "id": "64a745ac-f59e-4d12-93c5-edcc59e6992d"
+    },
+    {
+      "question": "Donne quelques chiffres de l'esclavage ramenés des campagnes",
+      "answer": " - 30 000 habitants de Tarente en 209\n - 150 000 macédoniens et Epirotes après Pydna\n - 1 million de Gaulois après la guerre des Gaules",
+      "id": "55866933-55c1-4450-86e8-0a2c476e058d"
+    },
+    {
+      "answer": "Non, se développent également : \n\n - La traite (ile de Délos)\n - La piraterie",
+      "id": "aa13d64b-74f5-48aa-8937-6de7dbc43a7f",
+      "question": "Les guerres sont-elles les seules sources d'esclave ?"
+    },
+    {
+      "question": "Quelle proportion de la population italienne est réduite en esclavage ?",
+      "id": "0d35c337-8c57-4006-8a36-0830da58df7e",
+      "answer": "1/3 à 1/2, 70% dans certains campagnes"
+    },
+    {
+      "id": "03fc9e74-df5c-4a09-b1bb-0126c16d6c2d",
+      "answer": " - L'agriculture (villae, latifundia)\n - L'artisanat (céramique, amphore, textile)\n - La construction (d'aqueducs, d'insulae, de ports)",
+      "question": "Quels domaines économiques vont s'appuyer sur la main d'oeuvre servile ?"
+    },
+    {
+      "question": "Donne un exemple de port construit au IIe siècle av. J-C",
+      "answer": "L'emporium (le port fluvial de Rome), qui jouxte le Porticus Aemilia (plus grand marché du monde) construit par M. Aemilius Lepidus",
+      "id": "e5b10c9a-b309-4ad1-b2fb-6384378de56f"
+    },
+    {
+      "id": "288f49c9-f52e-4cdf-a283-ccf2ff412f3e",
+      "answer": "Une grande exploitation agricole, dédiée à \n - La culture\n   - Blé, vignes, oliviers\n - L'élevage ovin (textile)\n",
+      "question": "Qu'est-ce qu'une latifundia ?"
+    },
+    {
+      "answer": "Une exploitation agricole spéculative\n - Vigne\n - Oliviers",
+      "id": "7bfca294-6e40-478d-939b-985acd3600be",
+      "question": "Qu'est-ce qu'une villae ?"
+    },
+    {
+      "question": "Combien d'habitants Rome compte au cours du IIe siècle ?",
+      "answer": " - 200 000 au début\n - 700 000 à la fin\n\nIssus de la croissance démographique",
+      "id": "0fd06232-b225-4173-8af7-b49621a4ce3d"
+    },
+    {
+      "answer": " - Problème d'approvisionnement\n - Affranchis clients de leurs anciens maitre\n - Plèbe très politisée\n",
+      "id": "940189ba-96a2-4843-bfa7-8ac9d9feffb3",
+      "question": "Quel effet a la croissance démographique de Rome ?"
+    }
+  ]
+}
