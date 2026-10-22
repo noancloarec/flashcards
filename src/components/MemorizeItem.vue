@@ -59,6 +59,7 @@ const initCardStates = () => {
 
 onMounted(async () => {
   const deck = await loadDeckInUrl()
+  document.title = deck.name
   deckState.value = deck
   memorizationHistory.value = googleUser.value
     ? await getDeckMemorizationHistory(googleUser.value.email!, deck.id)

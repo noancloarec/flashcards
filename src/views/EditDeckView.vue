@@ -14,7 +14,10 @@ const loadDeckInUrl: () => Promise<Deck> = async () => {
   return await getDeck(deckId)
 }
 
-loadDeckInUrl().then((d) => (editedDeck.value = d))
+loadDeckInUrl().then((d) => {
+  editedDeck.value = d
+  document.title = `Édition - ${d.name}`
+})
 
 const saveDeck = async () => {
   savingStatus.value = SavingStatus.Saving

@@ -24,8 +24,16 @@ const router = createRouter({
       component: MemorizeView
     },
     { path: '/login', component: LoginView },
-    { path: '/admin', component: AdminView, meta: { requiresAuth: true } },
-    { path: '/new-deck', component: NewDeckView, meta: { requiresAuth: true } },
+    {
+      path: '/admin',
+      component: AdminView,
+      meta: { requiresAuth: true, title: 'Administration - Flashcards' }
+    },
+    {
+      path: '/new-deck',
+      component: NewDeckView,
+      meta: { requiresAuth: true, title: 'Nouveau jeu de cartes - Flashcards' }
+    },
     { path: '/edit-deck/:deckId', component: EditDeckView, meta: { requiresAuth: true } }
   ]
 })
@@ -43,6 +51,11 @@ router.beforeEach(async (to) => {
   }
 
   return true
+})
+router.afterEach((to) => {
+  if (to.meta.title) {
+    document.title = to.meta.title as string
+  }
 })
 
 // If the user signs out while on a protected page, kick them out
