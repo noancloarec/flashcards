@@ -1,11 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 import type { Card } from '../models/card'
 import type { FunctionalDeck } from '../models/deck'
 import CardsJsonField from './CardsJsonField.vue'
+import { renderMarkdown } from '../services/markdown.ts'
 
 const deck = defineModel<FunctionalDeck>({ required: true })
 const displayJsonField = ref(false)
+const previewFields = ref<Record<string, boolean>>({})
+
+const togglePreview = (fieldKey: string) => {
+  previewFields.value[fieldKey] = !previewFields.value[fieldKey]
+}
 
 const bulkCards = ref<Card[]>([])
 
@@ -177,25 +184,49 @@ const addBulkCards = () => {
           </div>
           <div class="card-fields">
             <div class="field">
-              <label :for="`question-${card.id}`">Question</label>
+              <div class="field-heading">
+                <label :for="`question-${card.id}`">Question</label>
+                <button
+                  type="button"
+                  class="preview-toggle"
+                  :aria-pressed="!!previewFields[`${card.id}-question`]"
+                  @click="togglePreview(`${card.id}-question`)"
+                >
+                  {{ previewFields[`${card.id}-question`] ? 'Modifier' : 'Prévisualiser' }}
+                </button>
+              </div>
 
               <textarea
+                v-if="!previewFields[`${card.id}-question`]"
                 :id="`question-${card.id}`"
                 v-model="card.question"
                 placeholder="Ex. En quelle année a eu lieu la bataille de Marignan ?"
                 rows="3"
               ></textarea>
+              <div v-else class="markdown-preview" v-html="renderMarkdown(card.question)" />
             </div>
 
             <div class="field">
-              <label :for="`answer-${card.id}`">Réponse</label>
+              <div class="field-heading">
+                <label :for="`answer-${card.id}`">Réponse</label>
+                <button
+                  type="button"
+                  class="preview-toggle"
+                  :aria-pressed="!!previewFields[`${card.id}-answer`]"
+                  @click="togglePreview(`${card.id}-answer`)"
+                >
+                  {{ previewFields[`${card.id}-answer`] ? 'Modifier' : 'Prévisualiser' }}
+                </button>
+              </div>
 
               <textarea
+                v-if="!previewFields[`${card.id}-answer`]"
                 :id="`answer-${card.id}`"
                 v-model="card.answer"
                 placeholder="Ex. En 1515."
                 rows="3"
               ></textarea>
+              <div v-else class="markdown-preview" v-html="renderMarkdown(card.answer)" />
             </div>
           </div>
         </article>
@@ -673,5 +704,63 @@ const addBulkCards = () => {
   border-color: #c99b83;
   background-color: #f3e5d9;
   color: #8f4a2e;
+}
+
+.field-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.preview-toggle {
+  padding: 12px 8px;
+  border: 1px solid #e3d8cb;
+  border-radius: 6px;
+  background-color: #fffdf8;
+  color: #8f4a2e;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.preview-toggle:hover {
+  border-color: #c99b83;
+  background-color: #f3e5d9;
+}
+
+.markdown-preview {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100px;
+  padding: 12px 14px;
+  border: 1px solid #ded4c7;
+  border-radius: 8px;
+  background-color: #fffdf8;
+  color: #2a2b2f;
+  overflow-wrap: anywhere;
+}
+
+.markdown-preview :deep(:first-child) {
+  margin-top: 0;
+}
+
+.markdown-preview :deep(:last-child) {
+  margin-bottom: 0;
+}
+
+.markdown-preview :deep(pre) {
+  overflow-x: auto;
+  padding: 10px;
+  border-radius: 6px;
+  background: #f1e7dc;
+}
+
+.markdown-preview :deep(code) {
+  overflow-wrap: anywhere;
+}
+
+.markdown-preview :deep(img) {
+  max-width: 100%;
 }
 </style>

@@ -4,6 +4,7 @@ import type { Card } from '../models/card'
 import { CardState, type CardMemorizationStatus } from '../models/memorizationStatus.ts'
 import StarProgress from './StarProgress.vue'
 import { marked } from 'marked'
+import { renderMarkdown } from '../services/markdown.ts'
 
 interface Props {
   card: Card
@@ -111,10 +112,10 @@ onUnmounted(() => {
       </button>
     </div>
 
-    <div class="question-content" v-html="marked.parse(card.question)"></div>
+    <div class="question-content" v-html="renderMarkdown(card.question)"></div>
   </div>
 
-  <div class="answer" :class="{ shown: showAnswer }" v-html="marked.parse(card.answer)"></div>
+  <div class="answer" :class="{ shown: showAnswer }" v-html="renderMarkdown(card.answer)"></div>
 
   <!--
     Teleport places the notification directly under <body>, preventing
