@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import { Timestamp } from 'firebase/firestore'
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import SpaceBar from './icons/SpaceBar.vue'
 
-import { Timestamp } from 'firebase/firestore'
 import { useAuth } from '../composables/useAuth.ts'
+import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
+import {
+  CardState,
+  type DeckMemorizationStatus,
+  getDeckMemorizationStatus} from '../models/memorizationStatus.ts'
 import {
   getDeck,
   getDeckMemorizationHistory,
@@ -16,15 +20,9 @@ import {
   getDeckMemorizationStatusFromLocalStorage,
   saveDeckMemorizationStatusToLocalStorage as saveDeckMemorizationHistoryToLocalStorage
 } from '../services/localStorageInterface.ts'
-import MemorizationProgress from './MemorizationProgress.vue'
 import CardDisplay from './CardDisplay.vue'
-import type { Card } from '../models/card.ts'
-import {
-  CardState,
-  getDeckMemorizationStatus,
-  type DeckMemorizationStatus
-} from '../models/memorizationStatus.ts'
-import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
+import SpaceBar from './icons/SpaceBar.vue'
+import MemorizationProgress from './MemorizationProgress.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b

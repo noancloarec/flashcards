@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch, type Ref } from 'vue'
+import { computed, onMounted, type Ref,ref, watch } from 'vue'
+
 import ConnectionLinks from '../components/ConnectionLinks.vue'
+import ProgressBar from '../components/ProgressBar.vue'
+import { useAuth } from '../composables/useAuth.ts'
+import type { Deck } from '../models/deck.ts'
 import { type UserMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
   getUserMemorizationStatus,
   type UserMemorizationStatus
 } from '../models/memorizationStatus.ts'
-
 import { getDeckList, getUserMemorizationHistory } from '../services/firebase'
 import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
 import { searchResults } from '../services/search.ts'
-import type { Deck } from '../models/deck.ts'
-import { useAuth } from '../composables/useAuth.ts'
-import ProgressBar from '../components/ProgressBar.vue'
 
 const decks: Ref<Deck[]> = ref([])
 

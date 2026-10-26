@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { computed, onUnmounted, ref } from 'vue'
+
 import type { Card } from '../models/card'
-import { CardState, type CardMemorizationStatus } from '../models/memorizationStatus.ts'
-import StarProgress from './StarProgress.vue'
-import { marked } from 'marked'
+import { type CardMemorizationStatus,CardState } from '../models/memorizationStatus.ts'
 import { renderMarkdown } from '../services/markdown.ts'
+import StarProgress from './StarProgress.vue'
 
 interface Props {
   card: Card

@@ -4,20 +4,33 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
+  env: {
+    browser: true,
+    es2022: true,
+    node: true
+  },
 
   extends: [
-    'plugin:vue/vue3-essential',
+    'plugin:vue/essential',
     'eslint:recommended',
-    '@vue/eslint-config-prettier/skip-formatting',
+    '@vue/eslint-config-prettier/skip-formatting'
   ],
-
+  ignorePatterns: ['etl/'],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
-    sourceType: 'module',
+    sourceType: 'module'
   },
 
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+
+  rules: {
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'unused-imports/no-unused-imports': 'error'
+  },
 
   overrides: [
     {
@@ -26,8 +39,8 @@ module.exports = {
       parserOptions: {
         parser: '@typescript-eslint/parser',
         ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
-    },
-  ],
+        sourceType: 'module'
+      }
+    }
+  ]
 }

@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+
 import type { Deck } from '../models/deck.ts'
 import {
-  CardState,
-  maxLevel,
   type CardMemorizationStatus,
-  type DeckMemorizationStatus
+  CardState,
+  type DeckMemorizationStatus,
+  maxLevel
 } from '../models/memorizationStatus.ts'
 import { range } from '../services/javascriptMissingFunctions.ts'
 import StarProgress from './StarProgress.vue'
@@ -24,8 +25,8 @@ const progressByLevel = computed(() => {
 
   const cardsInDeck = new Set(deck.cards.map((c) => c.id))
   const learnedCardsInDeck = Object.entries(memorizationStatus)
-    .filter(([cardId, _]) => cardsInDeck.has(cardId))
-    .map(([_, cardStatus]) => cardStatus)
+    .filter(([cardId]) => cardsInDeck.has(cardId))
+    .map(([, cardStatus]) => cardStatus)
 
   const cardsMemorizedByLevel: number[] = range(1, maxLevel)
     .map((level) => learnedCardsInDeck.filter((cardStatus) => cardStatus.level >= level).length)
@@ -41,7 +42,7 @@ const levelHasCardToLearn: (
   deckMemorizationStatus: DeckMemorizationStatus
 ) => boolean = (level, deckMemorizationStatus) => {
   const cardMemorizationStatuses = Object.entries(deckMemorizationStatus).map(
-    ([_, cardMemorizationStatus]) => cardMemorizationStatus
+    ([, cardMemorizationStatus]) => cardMemorizationStatus
   )
 
   const cardsAtLevel = cardMemorizationStatuses.filter(

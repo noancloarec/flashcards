@@ -14,6 +14,7 @@ import {
   updateDoc,
   writeBatch
 } from 'firebase/firestore'
+
 import type { Deck } from '../models/deck'
 import type {
   DeckMemorizationHistory,

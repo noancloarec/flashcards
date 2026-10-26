@@ -1,4 +1,3 @@
-import { computed, ref } from 'vue'
 import {
   GoogleAuthProvider,
   onAuthStateChanged,
@@ -6,6 +5,8 @@ import {
   signOut,
   type User
 } from 'firebase/auth'
+import { computed, ref } from 'vue'
+
 import { auth } from '../services/firebase'
 
 const googleUser = ref<User | null>(null)

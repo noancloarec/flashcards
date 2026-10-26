@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from 'vue'
-import DeckForm from '../components/DeckForm.vue'
-import type { Deck } from '../models/deck.ts'
+import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { getDeck, updateDeck } from '../services/firebase.ts'
+
+import DeckForm from '../components/DeckForm.vue'
 import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
+import type { Deck } from '../models/deck.ts'
+import { getDeck, updateDeck } from '../services/firebase.ts'
 
 const editedDeck = ref<Deck | null>(null)
 

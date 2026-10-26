@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+
 import { type Card } from '../models/card'
 const cards = defineModel<Card[]>({ required: true })
 

@@ -1,4 +1,6 @@
 import { Timestamp } from 'firebase/firestore'
+
+import type { Deck } from './deck'
 import {
   type DeckMemorizationHistory,
   type ElementByCard,
@@ -6,8 +8,6 @@ import {
   type MemorizationHistory,
   type UserMemorizationHistory
 } from './memorizationHistory'
-import type { Deck } from './deck'
-import { mapValues } from '../services/javascriptMissingFunctions'
 
 /**
  * The state of a card to display in the app

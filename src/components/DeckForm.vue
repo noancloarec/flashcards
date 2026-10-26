@@ -3,8 +3,8 @@ import { ref } from 'vue'
 
 import type { Card } from '../models/card'
 import type { FunctionalDeck } from '../models/deck'
-import CardsJsonField from './CardsJsonField.vue'
 import { renderMarkdown } from '../services/markdown.ts'
+import CardsJsonField from './CardsJsonField.vue'
 
 const deck = defineModel<FunctionalDeck>({ required: true })
 const displayJsonField = ref(false)

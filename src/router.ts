@@ -1,12 +1,13 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from './views/HomeView.vue'
-import MemorizeView from './views/MemorizeView.vue'
-import AdminView from './views/AdminView.vue'
-import { useAuth } from './composables/useAuth.ts'
-import LoginView from './views/LoginView.vue'
 import { watch } from 'vue'
-import NewDeckView from './views/NewDeckView.vue'
+import { createRouter, createWebHistory } from 'vue-router'
+
+import { useAuth } from './composables/useAuth.ts'
+import AdminView from './views/AdminView.vue'
 import EditDeckView from './views/EditDeckView.vue'
+import HomeView from './views/HomeView.vue'
+import LoginView from './views/LoginView.vue'
+import MemorizeView from './views/MemorizeView.vue'
+import NewDeckView from './views/NewDeckView.vue'
 
 const { isLoggedInGoogle, authReady } = useAuth()
 

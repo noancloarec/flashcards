@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, type Ref } from 'vue'
+import { computed, onMounted, type Ref, ref } from 'vue'
+
 import ConnectionLinks from '../components/ConnectionLinks.vue'
 import type { Deck } from '../models/deck.ts'
 import { archiveDeck, getDeckList, unArchiveDeck } from '../services/firebase.ts'
@@ -69,7 +70,7 @@ const unarchive = async () => {
     <ConnectionLinks />
   </main>
 </template>
-<style>
+<style scoped>
 .deck-link {
   margin-top: 24px;
 }
