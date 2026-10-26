@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getAuth, type User } from 'firebase/auth'
+import { getAuth } from 'firebase/auth'
 import {
   collection,
   doc,
@@ -15,7 +15,6 @@ import {
   writeBatch
 } from 'firebase/firestore'
 import type { Deck } from '../models/deck'
-import type { Card } from '../models/card'
 import type {
   DeckMemorizationHistory,
   UserMemorizationHistory
