@@ -71,7 +71,8 @@ const downloadAllDecks = async (store, outputDir) => {
 
     const serializedDeck = {
       ...deck,
-      createdAt: deck.createdAt?.toDate?.().toISOString() ?? null
+      createdAt: deck.createdAt?.toDate?.().toISOString() ?? null,
+      id: doc.id
     }
 
     const outputPath = path.join(outputDir, `${filename}.json`)
