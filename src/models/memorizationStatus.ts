@@ -55,7 +55,9 @@ export const getDeckMemorizationStatus: (
   const cardsLatestMemorization = Object.values(deckMemorizationHistory).map(
     (cardMemorizationHistory) => cardMemorizationHistory.successfulAttempts[0].toMillis()
   )
-  const latestMemorization = Timestamp.fromMillis(Math.max(...cardsLatestMemorization))
+  const latestMemorization = cardsLatestMemorization.length
+    ? Timestamp.fromMillis(Math.max(...cardsLatestMemorization))
+    : undefined
 
   const cardsMemorization = Object.fromEntries(
     deck.cards.map((card) => [
