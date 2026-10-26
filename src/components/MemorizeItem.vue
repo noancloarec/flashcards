@@ -157,7 +157,9 @@ const saveProgress = async () => {
 </script>
 
 <template>
-  <div v-if="deckState === null || Object.keys(memorizationStatus).length === 0">Loading</div>
+  <div v-if="deckState === null || Object.keys(memorizationStatus.cardsMemorization).length === 0">
+    Loading
+  </div>
   <div v-else-if="currentCardIndex !== -1">
     <h2>{{ deckState.name }}</h2>
     <CardDisplay

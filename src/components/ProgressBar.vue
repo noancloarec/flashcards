@@ -24,7 +24,7 @@ const progressByLevel = computed(() => {
   }
 
   const cardsInDeck = new Set(deck.cards.map((c) => c.id))
-  const learnedCardsInDeck = Object.entries(memorizationStatus)
+  const learnedCardsInDeck = Object.entries(memorizationStatus.cardsMemorization)
     .filter(([cardId]) => cardsInDeck.has(cardId))
     .map(([, cardStatus]) => cardStatus)
 
@@ -41,7 +41,7 @@ const levelHasCardToLearn: (
   level: number,
   deckMemorizationStatus: DeckMemorizationStatus
 ) => boolean = (level, deckMemorizationStatus) => {
-  const cardMemorizationStatuses = Object.entries(deckMemorizationStatus).map(
+  const cardMemorizationStatuses = Object.entries(deckMemorizationStatus.cardsMemorization).map(
     ([, cardMemorizationStatus]) => cardMemorizationStatus
   )
 
