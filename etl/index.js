@@ -42,6 +42,80 @@ const sortObjectKeys = (value) => {
 }
 
 /**
+ * Recursively convert Firestore-specific types into JSON-friendly values.
+ */
+const serializeValue = (value) => {
+  if (value instanceof firestore.Timestamp) return value.toDate().toISOString()
+  if (value instanceof firestore.GeoPoint) {
+    return { latitude: value.latitude, longitude: value.longitude }
+  }
+  if (value instanceof firestore.DocumentReference) return value.path
+  if (Array.isArray(value)) return value.map(serializeValue)
+  if (value !== null && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, serializeValue(v)]))
+  }
+  return value
+}
+
+/**
+ * Recursively dump a document: its fields plus all of its subcollections.
+ * @param {firestore.DocumentReference} docRef
+ */
+const dumpDocument = async (docRef) => {
+  const snap = await docRef.get()
+  const result = {
+    id: docRef.id,
+    data: snap.exists ? serializeValue(snap.data()) : null
+  }
+
+  const subcollections = await docRef.listCollections()
+  for (const sub of subcollections) {
+    result[sub.id] = await dumpCollection(sub)
+  }
+  return result
+}
+
+/**
+ * Recursively dump a collection as an array of documents.
+ * @param {firestore.CollectionReference} colRef
+ */
+const dumpCollection = async (colRef) => {
+  // listDocuments() also returns docs that have no fields but own subcollections
+  const docRefs = await colRef.listDocuments()
+  const docs = []
+  for (const docRef of docRefs) {
+    docs.push(await dumpDocument(docRef))
+  }
+  return docs
+}
+
+/**
+ * Download /memorization_history including all subcollections (e.g. deck).
+ * One JSON file per user document.
+ * @param {firestore.Firestore} store
+ * @param {string} outputDir
+ */
+const downloadMemorizationHistory = async (store, outputDir) => {
+  console.log('Downloading memorization_history collection...')
+
+  fs.mkdirSync(outputDir, { recursive: true })
+
+  const docRefs = await store.collection('memorization_history').listDocuments()
+
+  for (const docRef of docRefs) {
+    const dumped = await dumpDocument(docRef)
+
+    const filename = docRef.id.replace(/[<>:"/\\|?*\x00-\x1F]/g, '_') || 'unknown'
+
+    const outputPath = path.join(outputDir, `${filename}.json`)
+    fs.writeFileSync(outputPath, JSON.stringify(sortObjectKeys(dumped), null, 2))
+    console.log(`Downloaded: ${outputPath}`)
+  }
+
+  console.log(`Downloaded ${docRefs.length} user(s) to "${outputDir}".`)
+}
+
+/**
  * Download the entire deck collection from Firestore.
  * Each deck is saved as a separate JSON file.
  * Filenames are lowercase, without accents, and with spaces replaced by underscores.
@@ -97,6 +171,18 @@ const main = async () => {
     }
 
     await downloadAllDecks(store, outputDir)
+    return
+  }
+
+  if (inputs[0] === '--download-memorization-history') {
+    const outputDir = inputs[1]
+
+    if (!outputDir) {
+      console.error('Usage: node index.js --download-memorization-history <output-folder>')
+      process.exit(1)
+    }
+
+    await downloadMemorizationHistory(store, outputDir)
     return
   }
 
