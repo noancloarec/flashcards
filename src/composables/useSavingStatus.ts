@@ -1,4 +1,4 @@
-import { onMounted, onUnmounted, type Ref,ref, watch } from 'vue'
+import { onMounted, onUnmounted, type Ref, ref, watch } from 'vue'
 
 export enum SavingStatus {
   NotSaved = 'notsaved',
@@ -32,7 +32,6 @@ export const useSavingStatus = <T>(watchedElement: Ref<T>) => {
   watch(
     watchedElement,
     (_, previous) => {
-      console.log(JSON.parse(JSON.stringify(previous)))
       if (previous === null) {
         return
       }

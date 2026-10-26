@@ -28,12 +28,12 @@ const getOrderedDecksByLatestMemorization = (
 ) => {
   const decksToSort = [...decks]
   decksToSort.sort((a, b) => {
-    if (memorizationStatus[a.id]?.latestMemorization === undefined) return -1
-    if (memorizationStatus[b.id]?.latestMemorization === undefined) return 1
+    if (memorizationStatus[a.id]?.latestMemorization === undefined) return 1
+    if (memorizationStatus[b.id]?.latestMemorization === undefined) return -1
 
     return (
-      memorizationStatus[a.id].latestMemorization!.toMillis() -
-      memorizationStatus[b.id].latestMemorization!.toMillis()
+      memorizationStatus[b.id].latestMemorization!.toMillis() -
+      memorizationStatus[a.id].latestMemorization!.toMillis()
     )
   })
   return decksToSort
