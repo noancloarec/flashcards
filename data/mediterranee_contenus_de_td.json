@@ -1,17 +1,15 @@
 {
-  "name": "Méditerranée - Contenus de TD",
   "author": "Noan",
-  "createdAt": "2026-10-10T20:16:44.636Z",
   "cards": [
     {
+      "answer": "1031",
       "id": "35dcf014-56c0-4d89-b605-701b3cb24ebb",
-      "question": "Quand prend fin officiellement l'autorité centrale du califat de Cordoue ?",
-      "answer": "1031"
+      "question": "Quand prend fin officiellement l'autorité centrale du califat de Cordoue ?"
     },
     {
-      "question": "Quelle est l'étymologie de comte ?",
       "answer": "Le terme vient de comes, qui signifie « compagnon ».",
-      "id": "40d0151f-80ff-48dc-86ec-cc0271ac9d1e"
+      "id": "40d0151f-80ff-48dc-86ec-cc0271ac9d1e",
+      "question": "Quelle est l'étymologie de comte ?"
     },
     {
       "answer": "Les duodécimains (dont sont issus les bouyides), les ismaéliens (fatimides) et les zaïdistes.",
@@ -19,19 +17,19 @@
       "question": "Quels sont les trois principaux courants du chiisme mentionnés dans le TD ?"
     },
     {
-      "question": "Pourquoi les Bouyides ne peuvent-ils pas être califes ?",
+      "answer": "Parce qu'ils sont chiites et ne sont pas descendants des Banu Quraysh ",
       "id": "16579e96-50ae-4dc1-91cb-936197082c74",
-      "answer": "Parce qu'ils sont chiites et ne sont pas descendants des Banu Quraysh "
+      "question": "Pourquoi les Bouyides ne peuvent-ils pas être califes ?"
     },
     {
-      "id": "84ba3177-1d95-4157-94df-424a69fb1eb6",
       "answer": "Il est chargé de la diplomatie de l'empereur.",
+      "id": "84ba3177-1d95-4157-94df-424a69fb1eb6",
       "question": "Quel est le rôle du logothète du drome ?"
     },
     {
       "answer": "Trois prières, contre cinq pour les autres courants de l'islam.",
-      "question": "Combien de prières quotidiennes les chiites accomplissent-ils ?",
-      "id": "b8308fa6-00fa-42ac-bf9b-c4ce19f67df8"
+      "id": "b8308fa6-00fa-42ac-bf9b-c4ce19f67df8",
+      "question": "Combien de prières quotidiennes les chiites accomplissent-ils ?"
     },
     {
       "answer": "Il permet une transmission rapide des nouvelles et témoigne de l'efficacité administrative de l'État.",
@@ -39,8 +37,8 @@
       "question": "Quelle est la fonction du système de postes dans l'Empire ?"
     },
     {
-      "id": "e7b9688f-2fe9-4d8a-b45d-c2bfef83fc5c",
       "answer": "Constantin VII Porphyrogénète.",
+      "id": "e7b9688f-2fe9-4d8a-b45d-c2bfef83fc5c",
       "question": "Auprès de quel empereur Lutprand effectue-t-il sa première ambassade à Constantinople ?"
     },
     {
@@ -49,8 +47,8 @@
       "question": "Que signifie Porphyrogénète ?"
     },
     {
-      "id": "8ebe1fb8-ca21-4d95-9b1c-e94d9f9ced6e",
       "answer": "Elle renvoie au trône de Salomon et à sa richesse, et présente l'empereur comme l'héritier des Romains et des rois bibliques.",
+      "id": "8ebe1fb8-ca21-4d95-9b1c-e94d9f9ced6e",
       "question": "Que signifie la référence au lion dans le texte de Lutprand ?"
     },
     {
@@ -60,18 +58,20 @@
     },
     {
       "answer": "Ils rapprochent symboliquement l'empereur du Christ et des anges, en raison de leur caractère asexué.",
-      "question": "Que symbolisent les eunuques portant l'empereur ?",
-      "id": "5f978f18-451f-4e29-8704-9cb952992e4f"
+      "id": "5f978f18-451f-4e29-8704-9cb952992e4f",
+      "question": "Que symbolisent les eunuques portant l'empereur ?"
     },
     {
-      "question": "Comment Liudprand se présente-t-il face à Nicéphore Phocas ?",
+      "answer": "Il se présente comme un homme cultivé, parlant latin et grec, et donc comme un non-barbare, tandis qu'il rapproche Nicéphore du barbare.",
       "id": "b52a0bb1-f70a-453a-a5b4-ec326f7f5174",
-      "answer": "Il se présente comme un homme cultivé, parlant latin et grec, et donc comme un non-barbare, tandis qu'il rapproche Nicéphore du barbare."
+      "question": "Comment Liudprand se présente-t-il face à Nicéphore Phocas ?"
     },
     {
-      "question": "Pourquoi Lutprand multiplie-t-il les références antiques dans son paragraphe d'insultes ?",
+      "answer": "Pour étaler sa culture et donner aux mots et aux insultes plusieurs niveaux de signification.",
       "id": "2caedac8-3df2-490c-ad53-a49c4086b8bf",
-      "answer": "Pour étaler sa culture et donner aux mots et aux insultes plusieurs niveaux de signification."
+      "question": "Pourquoi Lutprand multiplie-t-il les références antiques dans son paragraphe d'insultes ?"
     }
-  ]
+  ],
+  "createdAt": "2026-10-10T20:16:44.636Z",
+  "name": "Méditerranée - Contenus de TD"
 }

@@ -2,71 +2,71 @@
   "author": "noan.cloarec@gmail.com",
   "cards": [
     {
-      "question": "En quoi le mythe est-il différent d'un conte ? D'une allégorie",
       "answer": "- Une allégorie peut n'être qu'une image, le mythe est un récit\n- Par rapport au conte, le mythe est sacrée et édifiant",
-      "id": "38d337e8-118e-4859-be3b-3a2fe8e48819"
+      "id": "38d337e8-118e-4859-be3b-3a2fe8e48819",
+      "question": "En quoi le mythe est-il différent d'un conte ? D'une allégorie"
     },
     {
-      "question": "Qu'est-ce que la mythologie ?",
       "answer": "L'ensemble des mythes qui appartiennent à un même contexte culturel",
-      "id": "1cb2fe74-701a-49a4-bc72-b494207fde29"
+      "id": "1cb2fe74-701a-49a4-bc72-b494207fde29",
+      "question": "Qu'est-ce que la mythologie ?"
     },
     {
-      "question": "Quelles sont les différentes fonctions du mythe ?",
       "answer": "- Expliquer les obligations du culte\n- Etiologique (mythe des origines)\n- Légitimer un pouvoir\n- Expliquer des phénomènes (ex : la mort)",
-      "id": "bd831da3-88f7-4ae9-be63-f6e51ee42990"
+      "id": "bd831da3-88f7-4ae9-be63-f6e51ee42990",
+      "question": "Quelles sont les différentes fonctions du mythe ?"
     },
     {
-      "question": "La théogonie est-il le seul récit cosmogonique ?",
       "answer": "Non, on en retrouve plusieurs autres aux Proche-Orient",
-      "id": "26cc53c6-a10c-4248-a596-2a4abf415f00"
+      "id": "26cc53c6-a10c-4248-a596-2a4abf415f00",
+      "question": "La théogonie est-il le seul récit cosmogonique ?"
     },
     {
-      "question": "Raconte les grandes lignes de la théogonie",
       "answer": "- Chaos, Gaia et Eros\n- Gaia enfante Ouranos et Pontos\n- Gaia et Ouranos enfantent les cyclopes, titans et géants, Ouranos les empêchent de naitre\n- Gaia donne une serpe à Cronos, qui châtre son père, qui se sépare de la terre\n- Les enfants de Cronos, menés par Zeus, affrontent et battent leur père",
-      "id": "57a53195-fe5f-485a-ae69-ee4e1ddbd546"
+      "id": "57a53195-fe5f-485a-ae69-ee4e1ddbd546",
+      "question": "Raconte les grandes lignes de la théogonie"
     },
     {
-      "question": "Le logos a-t-il émergé du muthos ?",
       "answer": "- Pour Ernest Renan, oui. C'est le miracle Grec\n  - Le muthos \"la parole formulée\" fait partie du logos \"ce qui est dit\"\n  - Le logos se transforme pour désigner la raison\n  - Le muthos évoque alors la fable, voire le mensonge\n- Pour JP Vernant, non\n  - Le logos explique le monde en dehors des causes divines\n  - Il émerge de la démocratie\n  - Ce n'est qu'une forme de raison\n  - Le muthos explique le monde aussi\n  - Le processus est lent",
-      "id": "2dcd8132-7d2c-4ed2-a0e7-165eed9aa07c"
+      "id": "2dcd8132-7d2c-4ed2-a0e7-165eed9aa07c",
+      "question": "Le logos a-t-il émergé du muthos ?"
     },
     {
-      "question": "Les Grecs ont-il cru en leur mythes ? Cite un auteur",
       "answer": "- P. Veyne : Qu'est-ce que croire signifie ?\n  - Le contexte d'utilisation du mythe définit combien on le prend au sérieux, c'est un spectre\n  - Dépend aussi des lieux et des époques.\n- Vernant: plusieurs programmes de réalité\n  - Métaphorique\n  - Physique\n  - Historique",
-      "id": "539c201d-0bca-4ae5-b2e9-cc6f91856798"
+      "id": "539c201d-0bca-4ae5-b2e9-cc6f91856798",
+      "question": "Les Grecs ont-il cru en leur mythes ? Cite un auteur"
     },
     {
-      "question": "Définis le structuralisme.",
       "answer": "- Comprendre un élément selon sa relation avec les autres éléments\n- Comprendre sa place dans un système",
-      "id": "846133b9-3813-403e-8e76-e9264847aa25"
+      "id": "846133b9-3813-403e-8e76-e9264847aa25",
+      "question": "Définis le structuralisme."
     },
     {
-      "question": "Quelles sont les origines du structuralisme ?",
       "answer": "- Roman Jakobson, linguiste : étude des pronoms selon leurs place dans le discours. Il initiera C. Levi-Strauss\n- Ignace Meyerson : Psychologie comparative, étudie les oeuvres\n- G. Dumézil\n  - Compare les mythes des peuples indo-européens\n  - Trouve des structures communes\n  - Tripartition\n    - Sacré\n    - Guerrier\n    - Productif et reproductif",
-      "id": "6195ca63-ab94-4cd6-9754-dc0b0b76eb4f"
+      "id": "6195ca63-ab94-4cd6-9754-dc0b0b76eb4f",
+      "question": "Quelles sont les origines du structuralisme ?"
     },
     {
-      "question": "Quel est le sujet d'étude de Claude Levy Strauss évoqué dans le cours ?",
       "answer": "- La parentalité\n  - Constante interdit inceste\n- Les mythes en Amérique du Sud\n  - Cohérence des société\n  - Contrairement aux approches évolutionnistes",
-      "id": "649a6d59-daa8-4aed-a18f-5b7b4607a8ae"
+      "id": "649a6d59-daa8-4aed-a18f-5b7b4607a8ae",
+      "question": "Quel est le sujet d'étude de Claude Levy Strauss évoqué dans le cours ?"
     },
     {
-      "question": "Qu'est-ce que JP Vernant veut comprendre en étudiant les mythes grecques",
       "answer": "- Le fonctionnement mental collectif\n- Pas une pensée unifiée",
-      "id": "c5b713a6-0e06-48f8-9f3f-daa5a4f088d1"
+      "id": "c5b713a6-0e06-48f8-9f3f-daa5a4f088d1",
+      "question": "Qu'est-ce que JP Vernant veut comprendre en étudiant les mythes grecques"
     },
     {
-      "question": "Donne un exemple de mythe étudiée par J-P Vernant",
       "answer": "Le mythe des races humaines\n\n- Race d'or, dominée par la dikè (justice)\n- Race d'argent puis de bronze, coupables d'hubris\n- Race des héros, plus juste et brave\n- Race fer (actuelle), trouve encore \"quelques biens mélés à tant de maux\"\n\nC'est une réflexion sur les valeurs du monde grec",
-      "id": "7ee16f1b-8b67-4933-8152-0b42ae940f30"
+      "id": "7ee16f1b-8b67-4933-8152-0b42ae940f30",
+      "question": "Donne un exemple de mythe étudiée par J-P Vernant"
     },
     {
-      "question": "Comment Vernant réhabilite-t-il le mythe dans l'historiographie ?",
       "answer": "Ce n'est plus une absurdité logique, mais un sujet d'études pour comprendre les sociétés antiques",
-      "id": "6c9b8479-e70c-4e35-9578-ce011c9233d2"
+      "id": "6c9b8479-e70c-4e35-9578-ce011c9233d2",
+      "question": "Comment Vernant réhabilite-t-il le mythe dans l'historiographie ?"
     }
   ],
-  "name": "La cité en question - Mythes et sociétés",
-  "createdAt": "2026-10-16T10:33:54.367Z"
+  "createdAt": "2026-10-16T10:33:54.367Z",
+  "name": "La cité en question - Mythes et sociétés"
 }

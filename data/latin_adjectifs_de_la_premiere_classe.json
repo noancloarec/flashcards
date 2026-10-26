@@ -1,67 +1,67 @@
 {
-  "name": "Latin - adjectifs de la première classe",
   "author": "Noan",
   "cards": [
     {
-      "question": "Décline bonus, a, um au nominatif.",
       "answer": "m. bonus ; n. bonum ; f. bona — m. pl. boni ; n. pl. bona ; f. pl. bonae",
-      "id": "69942c7f-29f4-46d0-9748-917743b1f512"
+      "id": "69942c7f-29f4-46d0-9748-917743b1f512",
+      "question": "Décline bonus, a, um au nominatif."
     },
     {
-      "question": "Décline bonus, a, um au vocatif.",
       "answer": "m. bone ; n. bonum ; f. bona — m. pl. boni ; n. pl. bona ; f. pl. bonae",
-      "id": "1acbf44d-e77c-4734-a5c8-2ab26f72e9dd"
+      "id": "1acbf44d-e77c-4734-a5c8-2ab26f72e9dd",
+      "question": "Décline bonus, a, um au vocatif."
     },
     {
-      "question": "Décline bonus, a, um à l’accusatif.",
       "answer": "m. bonum ; n. bonum ; f. bonam — m. pl. bonos ; n. pl. bona ; f. pl. bonas",
-      "id": "dd27d942-289e-4618-9b21-c92ad462c9ac"
+      "id": "dd27d942-289e-4618-9b21-c92ad462c9ac",
+      "question": "Décline bonus, a, um à l’accusatif."
     },
     {
-      "question": "Décline bonus, a, um au génitif.",
       "answer": "m. boni ; n. boni ; f. bonae — m. pl. bonorum ; n. pl. bonorum ; f. pl. bonarum",
-      "id": "917f16aa-22b4-458c-9d2f-478b9f915343"
+      "id": "917f16aa-22b4-458c-9d2f-478b9f915343",
+      "question": "Décline bonus, a, um au génitif."
     },
     {
-      "question": "Décline bonus, a, um au datif.",
       "answer": "m. bono ; n. bono ; f. bonae — m. pl. bonis ; n. pl. bonis ; f. pl. bonis",
-      "id": "df38fa89-665a-4de6-b11a-fa860abfb40e"
+      "id": "df38fa89-665a-4de6-b11a-fa860abfb40e",
+      "question": "Décline bonus, a, um au datif."
     },
     {
-      "question": "Décline bonus, a, um à l’ablatif.",
       "answer": "m. bono ; n. bono ; f. bona — m. pl. bonis ; n. pl. bonis ; f. pl. bonis",
-      "id": "eaa703ea-c1b0-4c14-8f11-0f6840206597"
+      "id": "eaa703ea-c1b0-4c14-8f11-0f6840206597",
+      "question": "Décline bonus, a, um à l’ablatif."
     },
     {
-      "question": "Décline pulcher, chra, chrum au nominatif.",
       "answer": "m. pulcher ; n. pulchrum ; f. pulchra — m. pl. pulchri ; n. pl. pulchra ; f. pl. pulchrae",
-      "id": "24864f03-dac5-4839-a854-a5e36efbe136"
+      "id": "24864f03-dac5-4839-a854-a5e36efbe136",
+      "question": "Décline pulcher, chra, chrum au nominatif."
     },
     {
-      "question": "Décline pulcher, chra, chrum au vocatif.",
       "answer": "m. pulcher ; n. pulchrum ; f. pulchra — m. pl. pulchri ; n. pl. pulchra ; f. pl. pulchrae",
-      "id": "bd3b885c-2608-41cd-bf3a-33789b3a03b3"
+      "id": "bd3b885c-2608-41cd-bf3a-33789b3a03b3",
+      "question": "Décline pulcher, chra, chrum au vocatif."
     },
     {
-      "question": "Décline pulcher, chra, chrum à l’accusatif.",
       "answer": "m. pulchrum ; n. pulchrum ; f. pulchram — m. pl. pulchros ; n. pl. pulchra ; f. pl. pulchras",
-      "id": "d9399e16-320e-4723-a411-b0c69df6cd28"
+      "id": "d9399e16-320e-4723-a411-b0c69df6cd28",
+      "question": "Décline pulcher, chra, chrum à l’accusatif."
     },
     {
-      "question": "Décline pulcher, chra, chrum au génitif.",
       "answer": "m. pulchri ; n. pulchri ; f. pulchrae — m. pl. pulchrorum ; n. pl. pulchrorum ; f. pl. pulchrarum",
-      "id": "dd22229c-c476-4fa2-95f0-7809427b478a"
+      "id": "dd22229c-c476-4fa2-95f0-7809427b478a",
+      "question": "Décline pulcher, chra, chrum au génitif."
     },
     {
-      "question": "Décline pulcher, chra, chrum au datif.",
       "answer": "m. pulchro ; n. pulchro ; f. pulchrae — m. pl. pulchris ; n. pl. pulchris ; f. pl. pulchris",
-      "id": "4031ace9-4740-4a51-8d0e-9d91c52691d8"
+      "id": "4031ace9-4740-4a51-8d0e-9d91c52691d8",
+      "question": "Décline pulcher, chra, chrum au datif."
     },
     {
-      "question": "Décline pulcher, chra, chrum à l’ablatif.",
       "answer": "m. pulchro ; n. pulchro ; f. pulchra — m. pl. pulchris ; n. pl. pulchris ; f. pl. pulchris",
-      "id": "e06af093-c34a-4fbb-acb2-fd429c2384ae"
+      "id": "e06af093-c34a-4fbb-acb2-fd429c2384ae",
+      "question": "Décline pulcher, chra, chrum à l’ablatif."
     }
   ],
-  "createdAt": "2026-10-10T20:16:44.033Z"
+  "createdAt": "2026-10-10T20:16:44.033Z",
+  "name": "Latin - adjectifs de la première classe"
 }

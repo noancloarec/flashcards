@@ -1,11 +1,9 @@
 {
   "author": "Noan",
-  "createdAt": "2026-10-10T20:16:44.808Z",
-  "name": "Méditerranée - Le tournant du XIe siècle",
   "cards": [
     {
-      "id": "aef70904-750d-4508-9f09-47fb7ea76182",
       "answer": "- Les Turcs en Orient, avec les Seldjoukides\n- Les Berbères en Occident, avec les Almoravides.",
+      "id": "aef70904-750d-4508-9f09-47fb7ea76182",
       "question": "Quels sont les deux grands peuples non arabes qui prennent le pouvoir dans le monde musulman au XIe siècle ?"
     },
     {
@@ -14,89 +12,89 @@
       "question": "Pourquoi les nouveaux pouvoirs turcs et berbères cherchent-ils leur légitimité dans la religion ?"
     },
     {
-      "id": "bfd188bc-4a0b-4bd8-a565-e53195816ff6",
       "answer": "- Almoravides au Maghreb et en Al-Andalus\n- Seldjoukides en Orient \n- Fatimides en Égypte.",
+      "id": "bfd188bc-4a0b-4bd8-a565-e53195816ff6",
       "question": "Quels sont les trois grands pouvoirs musulmans étudiés pour le XIe siècle ?"
     },
     {
-      "question": "Que sont les royaumes de Taïfa ?",
+      "answer": "Ce sont les pouvoirs locaux qui se forment en Al-Andalus après la disparition du califat de Cordoue en 1031.",
       "id": "aab4aa35-14e6-48c0-852c-5a933e7c366b",
-      "answer": "Ce sont les pouvoirs locaux qui se forment en Al-Andalus après la disparition du califat de Cordoue en 1031."
+      "question": "Que sont les royaumes de Taïfa ?"
     },
     {
+      "answer": "La division d’Al-Andalus en plusieurs taïfas affaiblit politiquement les musulmans et permet aux royaumes chrétiens du Nord de progresser vers le sud.",
       "id": "cc1cfdc5-a0f2-4332-9cd8-d36d56cba416",
-      "question": "Pourquoi la fragmentation d’Al-Andalus favorise-t-elle l’expansion chrétienne ?",
-      "answer": "La division d’Al-Andalus en plusieurs taïfas affaiblit politiquement les musulmans et permet aux royaumes chrétiens du Nord de progresser vers le sud."
+      "question": "Pourquoi la fragmentation d’Al-Andalus favorise-t-elle l’expansion chrétienne ?"
     },
     {
+      "answer": "Parce qu’ils sont menacés par l’expansion des royaumes chrétiens et cherchent l’aide de la puissance musulmane la plus forte au-delà du détroit.",
       "id": "74cd8f91-d7da-4cf2-a09c-54bef49d1869",
-      "question": "Pourquoi les rois de Taïfa font-ils appel aux Almoravides ?",
-      "answer": "Parce qu’ils sont menacés par l’expansion des royaumes chrétiens et cherchent l’aide de la puissance musulmane la plus forte au-delà du détroit."
+      "question": "Pourquoi les rois de Taïfa font-ils appel aux Almoravides ?"
     },
     {
+      "answer": "- Réforme religieuse menée par Ibn Yassin\n- Conquête progressive du Sahara occidental et du Maghreb\n- Interviennent en Al-Andalus.",
       "id": "84f3055e-9554-4503-8d03-070ea9d381ea",
-      "question": "Comment les Almoravides parviennent-ils à contrôler un vaste territoire ?",
-      "answer": "- Réforme religieuse menée par Ibn Yassin\n- Conquête progressive du Sahara occidental et du Maghreb\n- Interviennent en Al-Andalus."
+      "question": "Comment les Almoravides parviennent-ils à contrôler un vaste territoire ?"
     },
     {
-      "id": "038d18b4-0d6e-4ad4-a5a4-340fe292edc8",
       "answer": "Tughril Beg entre à Bagdad en 1055, supprime le pouvoir bouyide et se présente comme protecteur du calife abbasside.",
+      "id": "038d18b4-0d6e-4ad4-a5a4-340fe292edc8",
       "question": "Comment les Seldjoukides prennent-ils le contrôle du pouvoir à Bagdad ?"
     },
     {
-      "question": "Quelle différence existe-t-il entre le calife et le sultan sous les Seldjoukides ?",
+      "answer": "- Le calife conserve une autorité religieuse et symbolique\n-Le sultan exerce concrètement le pouvoir politique et militaire.",
       "id": "2da0fd6e-d2df-4002-ab89-829a91c1f5c5",
-      "answer": "- Le calife conserve une autorité religieuse et symbolique\n-Le sultan exerce concrètement le pouvoir politique et militaire."
+      "question": "Quelle différence existe-t-il entre le calife et le sultan sous les Seldjoukides ?"
     },
     {
-      "question": "Quel événement marque la défaite de Byzance face aux Seldjoukides en Anatolie ?",
       "answer": "La bataille de Manzikert le 26 aout 1071.",
-      "id": "0a697752-7474-4b69-a363-7e1511874e0e"
+      "id": "0a697752-7474-4b69-a363-7e1511874e0e",
+      "question": "Quel événement marque la défaite de Byzance face aux Seldjoukides en Anatolie ?"
     },
     {
-      "id": "87d89ad6-503c-49a6-9888-6b855ea4e472",
       "answer": "Parce que les califes conservent leur fonction religieuse et leur légitimité, mais le pouvoir politique réel passe progressivement entre les mains de chefs militaires non arabes.",
+      "id": "87d89ad6-503c-49a6-9888-6b855ea4e472",
       "question": "Pourquoi peut-on parler de califats arabes sous tutelle au XIe siècle ?"
     },
     {
+      "answer": "À la suite de graves crises politiques et d’une guerre civile, le calife fait appel à Badr al-Jamali en 1073, qui devient le véritable détenteur du pouvoir.",
       "id": "e92d3399-413b-460b-a130-e42c0ea8a2ff",
-      "question": "Pourquoi le califat fatimide passe-t-il sous la tutelle de l’armée ?",
-      "answer": "À la suite de graves crises politiques et d’une guerre civile, le calife fait appel à Badr al-Jamali en 1073, qui devient le véritable détenteur du pouvoir."
+      "question": "Pourquoi le califat fatimide passe-t-il sous la tutelle de l’armée ?"
     },
     {
-      "id": "9ecc2aa2-6ffc-40d7-aa76-c3b8151a9c33",
       "answer": "Parce que les anciens pouvoirs califaux arabes sont progressivement supplantés ou placés sous tutelle par de nouveaux pouvoirs militaires turcs et berbères, tandis que les frontières et les équilibres politiques se transforment.",
+      "id": "9ecc2aa2-6ffc-40d7-aa76-c3b8151a9c33",
       "question": "Pourquoi le XIe siècle est-il considéré comme un tournant pour le monde musulman ?"
     },
     {
+      "answer": "Non. \n- Le Mashriq connaît un recul économique\n- Le Maghrib et l’espace almoravide connaissent une période de dynamisme.",
       "id": "f641631e-ceee-4ff4-b2c4-6e803a84135d",
-      "question": "Le XIe siècle correspond-il à un déclin généralisé du monde musulman ?",
-      "answer": "Non. \n- Le Mashriq connaît un recul économique\n- Le Maghrib et l’espace almoravide connaissent une période de dynamisme."
+      "question": "Le XIe siècle correspond-il à un déclin généralisé du monde musulman ?"
     },
     {
-      "question": "Qu’est-ce que le système des parias ?",
       "answer": "Ce sont des tributs versés par les taïfas musulmanes aux royaumes chrétiens du Nord de la péninsule Ibérique.",
-      "id": "777fe472-4fc5-4f13-9118-3b177e320d4c"
+      "id": "777fe472-4fc5-4f13-9118-3b177e320d4c",
+      "question": "Qu’est-ce que le système des parias ?"
     },
     {
+      "answer": "- La Reconquista dans la péninsule Ibérique \n- L’expansion normande en Méditerranée, notamment en Sicile\n- Les conquêtes de la Première Croisade en Orient.",
       "id": "2d0dba8b-1ae1-40e2-b58b-0328aa5cc67f",
-      "question": "Quels sont les  grands axes de l’expansion du monde latin au XIe siècle ?",
-      "answer": "- La Reconquista dans la péninsule Ibérique \n- L’expansion normande en Méditerranée, notamment en Sicile\n- Les conquêtes de la Première Croisade en Orient."
+      "question": "Quels sont les  grands axes de l’expansion du monde latin au XIe siècle ?"
     },
     {
-      "id": "8a0868f9-9678-47b1-a284-8fab675f6245",
       "answer": "Initialement présents comme mercenaires en Italie du Sud, ils profitent de la fragmentation politique de la Sicile pour entreprendre sa conquête.",
+      "id": "8a0868f9-9678-47b1-a284-8fab675f6245",
       "question": "Pourquoi les Normands interviennent-ils en Sicile ?"
     },
     {
-      "question": "Pourquoi les Byzantins font-ils appel aux Occidentaux à la fin du XIe siècle ?",
+      "answer": "L’expansion des Seldjoukides en Asie Mineure menace l’Empire byzantin, qui demande une aide militaire aux chrétiens d’Occident.",
       "id": "1bd94748-c01b-4d13-ac99-f3ceead343ae",
-      "answer": "L’expansion des Seldjoukides en Asie Mineure menace l’Empire byzantin, qui demande une aide militaire aux chrétiens d’Occident."
+      "question": "Pourquoi les Byzantins font-ils appel aux Occidentaux à la fin du XIe siècle ?"
     },
     {
+      "answer": "- Le comté d’Édesse (1098)\n- La principauté d’Antioche 1098\n- Le royaume de Jérusalem (1099)\n- Le comté de Tortose puis Tripoli (1102).",
       "id": "526cc5d6-f2f8-4657-84c3-261b47e11bae",
-      "question": "Quels sont les principaux États issus de la Première Croisade ?",
-      "answer": "- Le comté d’Édesse (1098)\n- La principauté d’Antioche 1098\n- Le royaume de Jérusalem (1099)\n- Le comté de Tortose puis Tripoli (1102)."
+      "question": "Quels sont les principaux États issus de la Première Croisade ?"
     },
     {
       "answer": "- Traditions chrétiennes différentes \n- Conceptions différentes du rôle des ecclésiastiques et des objectifs de l’expédition.",
@@ -104,9 +102,11 @@
       "question": "Pourquoi les relations entre les croisés et les Byzantins sont-elles tendues ?"
     },
     {
-      "question": "Quelle transformation majeure du rapport de force en Méditerranée le XIe siècle met-il en évidence ?",
       "answer": "- Le monde musulman connaît l’arrivée de nouveaux pouvoirs turcs et berbères\n- Les puissances chrétiennes latines connaissent une expansion territoriale en Sicile, dans la péninsule Ibérique et en Méditerranée orientale.",
-      "id": "1478adc7-67eb-4fec-88a7-1d2c4348e3b8"
+      "id": "1478adc7-67eb-4fec-88a7-1d2c4348e3b8",
+      "question": "Quelle transformation majeure du rapport de force en Méditerranée le XIe siècle met-il en évidence ?"
     }
-  ]
+  ],
+  "createdAt": "2026-10-10T20:16:44.808Z",
+  "name": "Méditerranée - Le tournant du XIe siècle"
 }

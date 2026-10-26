@@ -1,37 +1,37 @@
 {
-  "name": "Latin - Cas et fonctions grammaticales",
   "author": "Noan",
   "cards": [
     {
-      "question": "Quelle est la fonction grammaticale du nominatif ?",
       "answer": "Sujet ou attribut du sujet.",
-      "id": "793cd5e3-f56c-4cc1-aa29-f645ff4f46f9"
+      "id": "793cd5e3-f56c-4cc1-aa29-f645ff4f46f9",
+      "question": "Quelle est la fonction grammaticale du nominatif ?"
     },
     {
-      "question": "Quelle est la fonction grammaticale du vocatif ?",
       "answer": "Apostrophe.",
-      "id": "6a90b154-0834-47f1-b4e0-f6fd15643c9e"
+      "id": "6a90b154-0834-47f1-b4e0-f6fd15643c9e",
+      "question": "Quelle est la fonction grammaticale du vocatif ?"
     },
     {
-      "question": "Quelle est la fonction grammaticale de l'accusatif ?",
       "answer": "COD ou attribut du COD.",
-      "id": "5bc2f77e-58f1-43ce-96b5-11b99a799df2"
+      "id": "5bc2f77e-58f1-43ce-96b5-11b99a799df2",
+      "question": "Quelle est la fonction grammaticale de l'accusatif ?"
     },
     {
-      "question": "Quelle est la fonction grammaticale du génitif ?",
       "answer": "Complément du nom.",
-      "id": "2a5e030b-4b07-455a-8a60-ad7907286a1c"
+      "id": "2a5e030b-4b07-455a-8a60-ad7907286a1c",
+      "question": "Quelle est la fonction grammaticale du génitif ?"
     },
     {
-      "question": "Quelle est la fonction grammaticale du datif ?",
       "answer": "COS ou attribution, c'est-à-dire COI.",
-      "id": "64207ba1-9d4d-4fc3-bae0-882e886cc25a"
+      "id": "64207ba1-9d4d-4fc3-bae0-882e886cc25a",
+      "question": "Quelle est la fonction grammaticale du datif ?"
     },
     {
-      "question": "Quelle est la fonction grammaticale de l'ablatif ?",
       "answer": "Complément circonstanciel.",
-      "id": "63b0562d-2986-4190-bc22-7012a9bc2df5"
+      "id": "63b0562d-2986-4190-bc22-7012a9bc2df5",
+      "question": "Quelle est la fonction grammaticale de l'ablatif ?"
     }
   ],
-  "createdAt": "2026-10-10T20:16:44.110Z"
+  "createdAt": "2026-10-10T20:16:44.110Z",
+  "name": "Latin - Cas et fonctions grammaticales"
 }
