@@ -4,14 +4,14 @@
   "createdAt": "2026-10-10T20:16:44.748Z",
   "cards": [
     {
-      "question": "Quel terme désigne une école coranique ?",
       "answer": "Madrassa",
-      "id": "f1a1964a-ddfd-4125-bf41-51bf2ae30785"
+      "id": "f1a1964a-ddfd-4125-bf41-51bf2ae30785",
+      "question": "Quel terme désigne une école coranique ?"
     },
     {
-      "question": "Quel terme désigne les savants musulmans ?",
       "answer": "ʿulamā",
-      "id": "6df418d7-4171-4a6e-89a4-be75ae1f2883"
+      "id": "6df418d7-4171-4a6e-89a4-be75ae1f2883",
+      "question": "Quel terme désigne les savants musulmans ?"
     },
     {
       "question": "Quel terme signifie un serment de reconnaissance politique prononcé à la mosquée ?",
@@ -19,23 +19,23 @@
       "answer": "La khotba"
     },
     {
-      "id": "ff4f5d87-79d4-4b97-8a1e-5d410d39c9d5",
       "question": "Quel terme désigne le document le plus solennel produit par la chancellerie byzantine ?",
-      "answer": "Le chrysobulle"
+      "answer": "Le chrysobulle",
+      "id": "ff4f5d87-79d4-4b97-8a1e-5d410d39c9d5"
     },
     {
-      "id": "7a3c9dc8-e575-47e9-9ef5-eb31fa8a78c2",
       "question": "Quel terme désigne les droits de douanes sur les marchandises de 10%, appliqués dans l'empire byzantin ?",
-      "answer": "Le kommerkion"
+      "answer": "Le kommerkion",
+      "id": "7a3c9dc8-e575-47e9-9ef5-eb31fa8a78c2"
     },
     {
-      "id": "1398c3bf-5bcb-42a3-8bb0-4ad3505f0d9d",
+      "answer": "Le Dyptique",
       "question": "Quel terme désigne le livre où on inscrit les personnes pour lesquelles on prie durant l'office (chrétienne) ?",
-      "answer": "Le Dyptique"
+      "id": "1398c3bf-5bcb-42a3-8bb0-4ad3505f0d9d"
     },
     {
-      "question": "Quel est le terme qui désigne « le remplaçant », c'est-à-dire le remplaçant du prophète Muhammad ?",
       "answer": "Khalifa (calife)",
+      "question": "Quel est le terme qui désigne « le remplaçant », c'est-à-dire le remplaçant du prophète Muhammad ?",
       "id": "4f566f45-4881-42f8-a517-1ddafcda9785"
     },
     {
@@ -44,29 +44,29 @@
       "id": "26b70462-0c1c-49b1-bb27-b515a7481e5b"
     },
     {
+      "answer": "Diwan",
       "id": "d039b838-a04e-42ad-8dbb-9585ba04fc86",
-      "question": "Quel est le terme qui signifie « la liste », au sens de recensement, puis désigne le bureau administratif chargé d'établir ces listes, notamment comptables ?",
-      "answer": "Diwan"
+      "question": "Quel est le terme qui signifie « la liste », au sens de recensement, puis désigne le bureau administratif chargé d'établir ces listes, notamment comptables ?"
     },
     {
-      "answer": "Vizir",
       "id": "b8917cca-805c-45bf-b1e7-f6adb7e7e3fa",
-      "question": "Quel est le terme qui désigne un haut responsable de l'administration, équivalent à un Premier ministre ?"
+      "question": "Quel est le terme qui désigne un haut responsable de l'administration, équivalent à un Premier ministre ?",
+      "answer": "Vizir"
     },
     {
-      "question": "Quel est le terme qui désigne un juge musulman, le grand cadi étant le juge suprême ?",
+      "id": "7efa09fe-7987-414d-b5bc-49b12337d47d",
       "answer": "Cadi",
-      "id": "7efa09fe-7987-414d-b5bc-49b12337d47d"
+      "question": "Quel est le terme qui désigne un juge musulman ?"
     },
     {
+      "question": "Quel est le terme qui désigne un système dans lequel des terres de l'État sont accordées temporairement à des militaires, qui perçoivent l'impôt sur ces terres ?",
       "id": "f8063408-de98-4b97-8f62-f34d98ea14ac",
-      "answer": "Iqtâ",
-      "question": "Quel est le terme qui désigne un système dans lequel des terres de l'État sont accordées temporairement à des militaires, qui perçoivent l'impôt sur ces terres ?"
+      "answer": "Iqtâ"
     },
     {
-      "id": "7849e875-8636-4e82-8d07-cfb35cef7703",
       "answer": "Qanat",
-      "question": "Quel est le terme qui désigne un système d'irrigation permettant d'augmenter les terres cultivables ?"
+      "question": "Quel est le terme qui désigne un système d'irrigation permettant d'augmenter les terres cultivables ?",
+      "id": "7849e875-8636-4e82-8d07-cfb35cef7703"
     },
     {
       "answer": "Dirham",
@@ -80,28 +80,28 @@
     },
     {
       "id": "31dc5673-b4ff-4800-9652-e436e1e1b768",
-      "answer": "Mahdi",
-      "question": "Quel est le terme qui désigne le Messie dont les chiites attendent le retour ?"
+      "question": "Quel est le terme qui désigne le Messie dont les chiites attendent le retour ?",
+      "answer": "Mahdi"
     },
     {
-      "question": "Quel est le terme qui désigne un textile de luxe produit notamment sous les Fatimides ?",
+      "answer": "Tiraz",
       "id": "05b1506c-5a59-46e7-ae3c-ddd49e36ff83",
-      "answer": "Tiraz"
+      "question": "Quel est le terme qui désigne un textile de luxe produit notamment sous les Fatimides ?"
     },
     {
       "id": "a3c561bb-4fa9-4014-9570-f8568dac0f0d",
-      "question": "Quel est le terme grec signifiant « empereur », utilisé par les empereurs byzantins ?",
-      "answer": "Basileus"
+      "answer": "Basileus",
+      "question": "Quel est le terme grec signifiant « empereur », utilisé par les empereurs byzantins ?"
     },
     {
-      "id": "b3857355-4880-482f-9ecd-087e4cd253ec",
       "answer": "Basileus tōn Phrangōn",
-      "question": "Quel est le terme qui signifie « Empereur des Francs », titre attribué à Charlemagne en 812 ?"
+      "question": "Quel est le terme qui signifie « Empereur des Francs », titre attribué à Charlemagne en 812 ?",
+      "id": "b3857355-4880-482f-9ecd-087e4cd253ec"
     },
     {
+      "answer": "Cataphractaire",
       "id": "2c3c224f-aa24-453d-8b37-cfbce24d3767",
-      "question": "Quel est le terme qui désigne un cavalier lourd de l'armée byzantine ?",
-      "answer": "Cataphractaire"
+      "question": "Quel est le terme qui désigne un cavalier lourd de l'armée byzantine ?"
     },
     {
       "question": "Quel est le terme qui désigne un navire byzantin à voile et à rames ?",
@@ -109,29 +109,29 @@
       "id": "ad3acbbe-8de2-47ef-ae60-e4fabe8c0adb"
     },
     {
-      "answer": "Exarque",
       "id": "fc1b3b98-7397-4580-8f2d-d686095ab0b5",
-      "question": "Quel est le terme qui désigne un représentant de Byzance en province ?"
+      "question": "Quel est le terme qui désigne un représentant de Byzance en province ?",
+      "answer": "Exarque"
     },
     {
+      "answer": "Filioque",
       "id": "e4f46acd-6330-4247-a1f5-4bbccdd490ed",
-      "question": "Quel est le terme qui signifie « Et du Fils », ajout latin au symbole de foi concernant la procession du Saint-Esprit ?",
-      "answer": "Filioque"
+      "question": "Quel est le terme qui signifie « Et du Fils », ajout latin au symbole de foi concernant la procession du Saint-Esprit ?"
     },
     {
       "question": "Quel est le terme qui signifie « langue commune » et désigne la langue grecque utilisée comme langue de la culture et du commerce ?",
-      "id": "e102f99f-454c-4603-b5cb-870475fb4a39",
-      "answer": "Koinè"
+      "answer": "Koinè",
+      "id": "e102f99f-454c-4603-b5cb-870475fb4a39"
     },
     {
-      "question": "Quel est le terme qui signifie « monde habité » et désigne le monde connu ?",
+      "answer": "Oikouménè",
       "id": "f68ee242-186e-4519-99ac-7a7744836cf8",
-      "answer": "Oikouménè"
+      "question": "Quel est le terme qui signifie « monde habité » et désigne le monde connu ?"
     },
     {
       "question": "Quel est le terme qui désigne l'organisation de l'Église chrétienne autour de cinq patriarcats : Rome, Constantinople, Alexandrie, Antioche et Jérusalem ?",
-      "answer": "Pentarchie",
-      "id": "58639c28-10b7-48f8-8a1b-5877ca766ae5"
+      "id": "58639c28-10b7-48f8-8a1b-5877ca766ae5",
+      "answer": "Pentarchie"
     },
     {
       "answer": "Romaioi",
@@ -139,48 +139,48 @@
       "id": "a60fb32b-af7e-40ab-abca-9c0a6784376b"
     },
     {
+      "question": "Quel est le terme qui désigne un gouverneur d'un thème ?",
       "id": "1ddaf078-c6a8-426c-96ed-89aac28a27ed",
-      "answer": "Stratège",
-      "question": "Quel est le terme qui désigne un gouverneur d'un thème ?"
+      "answer": "Stratège"
     },
     {
-      "id": "a92a695b-6ca9-4893-bcfc-b61ce23fc1bc",
+      "question": "Quel est le terme qui désigne une circonscription administrative et militaire remplaçant les anciennes provinces romaines ?",
       "answer": "Thème",
-      "question": "Quel est le terme qui désigne une circonscription administrative et militaire remplaçant les anciennes provinces romaines ?"
+      "id": "a92a695b-6ca9-4893-bcfc-b61ce23fc1bc"
     },
     {
-      "id": "0f593f70-f155-43f5-85de-d5742986cf32",
       "question": "Quel est le terme qui désigne un chef arabe d'une province ou d'une tribu importante ?",
-      "answer": "Émir"
+      "answer": "Émir",
+      "id": "0f593f70-f155-43f5-85de-d5742986cf32"
     },
     {
-      "answer": "Banū Quraysh",
       "question": "Quel est le terme qui désigne le clan arabe auquel appartient le prophète Muhammad ?",
-      "id": "bf0fba72-cb79-45f5-af37-4259fd49f31d"
+      "id": "bf0fba72-cb79-45f5-af37-4259fd49f31d",
+      "answer": "Banū Quraysh"
     },
     {
-      "id": "669416b5-e068-4f91-a917-5971441a3c43",
       "question": "Quel est le terme qui désigne un petit État musulman issu de la fragmentation d'Al-Andalus après la disparition du califat de Cordoue ?",
-      "answer": "Taïfa"
+      "answer": "Taïfa",
+      "id": "669416b5-e068-4f91-a917-5971441a3c43"
     },
     {
-      "id": "3785e022-b725-4066-9b30-42890e9305e6",
       "question": "Quel est le terme qui désigne la région correspondant approximativement à la Tunisie actuelle et à une partie de l'est du Maghreb ?",
-      "answer": "Ifrikya ou Ifriqiya"
+      "answer": "Ifrikya ou Ifriqiya",
+      "id": "3785e022-b725-4066-9b30-42890e9305e6"
     },
     {
-      "answer": "Magrib",
+      "question": "Quel est le terme arabe signifiant « Occident » et désignant les régions occidentales du monde musulman ?",
       "id": "75cfe483-7532-4499-b8be-d87a01ff01eb",
-      "question": "Quel est le terme arabe signifiant « Occident » et désignant les régions occidentales du monde musulman ?"
+      "answer": "Magrib"
     },
     {
       "id": "0baab59e-e50a-4f12-baaa-2915b0201a4c",
-      "answer": "Mashriq",
-      "question": "Quel est le terme arabe signifiant « Orient » et désignant les régions orientales du monde musulman ?"
+      "question": "Quel est le terme arabe signifiant « Orient » et désignant les régions orientales du monde musulman ?",
+      "answer": "Mashriq"
     },
     {
-      "id": "d66ae4c6-4e9f-4f25-8005-ded73e2da663",
       "question": "Quel est le terme qui signifie « autorité » ou « pouvoir » et devient au XIe siècle un titre de souveraineté, notamment chez les Seldjoukides ?",
+      "id": "d66ae4c6-4e9f-4f25-8005-ded73e2da663",
       "answer": "Sultan"
     },
     {
