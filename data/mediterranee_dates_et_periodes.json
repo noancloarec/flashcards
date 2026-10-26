@@ -265,8 +265,14 @@
       "answer": "Été 1096",
       "id": "0fad0652-0c59-477a-8137-72e2c9e9e476",
       "question": "Quand la croisade populaire franchit-elle le détroit ?"
+    },
+    {
+      "answer": "En 1108, Bohémond est vassal de l'empereur Alexis, mais conserve Antioche.",
+      "id": "38233fa8-4196-4ef6-a069-8317a5a7f0cb",
+      "question": "Quand le traité de Déabolis est-il signé ?"
     }
   ],
   "createdAt": "2026-10-10T20:16:44.691Z",
+  "id": "iKoHn24i9geUod3j60gh",
   "name": "Méditerranée - Dates et périodes"
 }
