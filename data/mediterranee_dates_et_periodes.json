@@ -4,29 +4,34 @@
   "createdAt": "2026-10-10T20:16:44.691Z",
   "cards": [
     {
+      "question": "Quand la bataille de Manzikert a-t-elle lieu ?",
+      "answer": "26 aout 1071, Alp Arslan bat Romain IV",
+      "id": "179220ab-f89a-4802-8344-fe0ab7a53b26"
+    },
+    {
+      "id": "66b60e42-91d6-4374-aff4-fa84e89ebb18",
       "question": "Quand Saladin gagne-t-il la bataille d'Hattin ?",
-      "answer": "1187, il reprend alors Jérusalem à Guy de Lusignan",
-      "id": "66b60e42-91d6-4374-aff4-fa84e89ebb18"
+      "answer": "1187, il reprend alors Jérusalem à Guy de Lusignan"
     },
     {
-      "question": "Quand Saladin met-il fin au califat fatimide ?",
+      "id": "6cc63383-50ee-443b-8320-77d9461e6120",
       "answer": "En 1171, il fait prononcer la khutba au nom du calife abbasside.",
-      "id": "6cc63383-50ee-443b-8320-77d9461e6120"
+      "question": "Quand Saladin met-il fin au califat fatimide ?"
     },
     {
+      "id": "6847640b-1c75-471a-b6bc-ea22d5cdad72",
       "question": "Quand Nūr al-Dīn prend-il Damas ?",
-      "answer": "1154",
-      "id": "6847640b-1c75-471a-b6bc-ea22d5cdad72"
+      "answer": "1154"
     },
     {
-      "id": "043676b5-5164-458b-8557-7173a6e328f0",
       "question": "Quand a lieu la conquête totale par Byzance de l'ile de Chypre (auparavant partagé avec l'Islam) ?",
-      "answer": "965"
+      "answer": "965",
+      "id": "043676b5-5164-458b-8557-7173a6e328f0"
     },
     {
-      "id": "7171be67-dbbd-40c0-8317-c046894406ae",
       "question": "Quand Nicéphore II Phocas reprend-il la Crête ?",
-      "answer": "961"
+      "answer": "961",
+      "id": "7171be67-dbbd-40c0-8317-c046894406ae"
     },
     {
       "id": "4c124d1e-a313-43ba-9e51-5aaa70560e6c",
@@ -34,9 +39,9 @@
       "question": "Quand le pape Nicolas II reconnait-il Robert Guiscard (chef Normand) duc de Pouille et Calabre et futur duc de Sicile ?"
     },
     {
-      "answer": "En 1082, en échange de leur aide militaire contre les Normands",
       "question": "Quand Venise est-elle totalement exonéré de kommerkion par les byzantins ?",
-      "id": "7140cb33-3065-4b2a-a925-3f3070c14614"
+      "id": "7140cb33-3065-4b2a-a925-3f3070c14614",
+      "answer": "En 1082, en échange de leur aide militaire contre les Normands"
     },
     {
       "answer": "En 1071",
@@ -44,38 +49,38 @@
       "question": "Quand les normands prennent-ils Bari aux byzantins ?"
     },
     {
+      "question": "Quand a eu lieu la mort du prophète Muhammad ?",
       "id": "5da729df-e03b-44a7-9324-fd8771544ac4",
-      "answer": "En 632.",
-      "question": "Quand a eu lieu la mort du prophète Muhammad ?"
+      "answer": "En 632."
     },
     {
+      "id": "c820f0e4-742f-4d45-bf8c-6d60c44824cf",
       "question": "Quand le Califat omeyyade de Damas est-il au pouvoir ?",
-      "answer": "De 661 à 750.",
-      "id": "c820f0e4-742f-4d45-bf8c-6d60c44824cf"
+      "answer": "De 661 à 750."
     },
     {
       "question": "Quand la péninsule Ibérique se constitue-t-elle en émirat autonome ?",
-      "answer": "En 756.",
-      "id": "6e269879-8a6d-4b16-ac61-bcfb02ad09bc"
+      "id": "6e269879-8a6d-4b16-ac61-bcfb02ad09bc",
+      "answer": "En 756."
     },
     {
-      "answer": "En 910.",
       "id": "c23fa0c2-0391-4c13-a991-05be570e5cc9",
-      "question": "Quand Ubayd Allah prend-il le titre de Mahdi près de Kairouan ?"
+      "question": "Quand Ubayd Allah prend-il le titre de Mahdi près de Kairouan ?",
+      "answer": "En 910."
     },
     {
-      "id": "26ef2c0d-b8df-4c0d-8a9d-af7623953798",
       "question": "Quand Abd al-Rahman, émir de Cordoue, adopte-t-il le titre de calife pour faire face aux Fatimides ?",
-      "answer": "En 929."
+      "answer": "En 929.",
+      "id": "26ef2c0d-b8df-4c0d-8a9d-af7623953798"
     },
     {
-      "id": "0d029c2a-31f8-43c9-9169-98e2e434ea2a",
+      "answer": "En 936. Le calife se limite alors à ses fonctions religieuses et représentatives",
       "question": "Quand le calife abbasside nomme-t-il Ibn Râ'iq (le gouverneur de l'Irak) émir des émirs ?",
-      "answer": "En 936. Le calife se limite alors à ses fonctions religieuses et représentatives"
+      "id": "0d029c2a-31f8-43c9-9169-98e2e434ea2a"
     },
     {
-      "question": "Quand Ahmad Ibn Buwaih entre-t-il à Bagdad par les armes, chasse-t-il le calife et en choisit-il un plus docile ?",
       "answer": "En 945. Les Bouyides seront souverains sur Bagdad jusqu'en 1055",
+      "question": "Quand Ahmad Ibn Buwaih entre-t-il à Bagdad par les armes, chasse-t-il le calife et en choisit-il un plus docile ?",
       "id": "6bd38842-c27b-47e9-897e-83233ab3f3b8"
     },
     {
@@ -84,34 +89,34 @@
       "answer": "En 969."
     },
     {
-      "question": "Quand Al-Mansur, vizir, profite-t-il de la minorité du calife Hisham II pour s'emparer du pouvoir ?",
+      "id": "927eb4c4-4687-4901-9970-133640b71c57",
       "answer": "En 978.",
-      "id": "927eb4c4-4687-4901-9970-133640b71c57"
+      "question": "Quand Al-Mansur, vizir, profite-t-il de la minorité du calife Hisham II pour s'emparer du pouvoir ?"
     },
     {
-      "question": "Quand Byzance est-elle fondée par des colons grecs venus de Mégare ?",
       "answer": "Au VIIe siècle avant J.-C.",
-      "id": "da3f0866-4c38-4cf4-aa8e-396188e4911b"
+      "id": "da3f0866-4c38-4cf4-aa8e-396188e4911b",
+      "question": "Quand Byzance est-elle fondée par des colons grecs venus de Mégare ?"
     },
     {
+      "id": "a5a3b8ae-45ad-4b1f-a6e1-588bbb95887d",
       "question": "Quand Dioclétien met-il en place la tétrarchie ?",
-      "answer": "En 293.",
-      "id": "a5a3b8ae-45ad-4b1f-a6e1-588bbb95887d"
+      "answer": "En 293."
     },
     {
-      "question": "Quand a lieu la bataille du pont Milvius ?",
       "id": "7a4fc0ff-5064-4647-9810-67c8f46f9342",
-      "answer": "En 312. Les auteurs chrétiens en font le moment ou Constantin y a vu la volonté divine du Christ"
+      "answer": "En 312. Les auteurs chrétiens en font le moment ou Constantin y a vu la volonté divine du Christ",
+      "question": "Quand a lieu la bataille du pont Milvius ?"
     },
     {
       "question": "Quand l’édit de Milan rend-il le christianisme licite dans l’Empire romain ?",
-      "id": "e13d6417-e139-40ea-b526-00ae8999031e",
-      "answer": "En 313."
+      "answer": "En 313.",
+      "id": "e13d6417-e139-40ea-b526-00ae8999031e"
     },
     {
-      "question": "Quand Constantinople devient-elle la capitale de l’Empire romain ?",
       "answer": "Le 11 mai 330.",
-      "id": "8f591b1d-1a1d-478c-8402-0b73aec2aa33"
+      "id": "8f591b1d-1a1d-478c-8402-0b73aec2aa33",
+      "question": "Quand Constantinople devient-elle la capitale de l’Empire romain ?"
     },
     {
       "answer": "Entre 388 et 392.",
@@ -119,24 +124,24 @@
       "id": "3889818e-59a6-4e04-a2a9-d1001e6ca3d7"
     },
     {
-      "question": "Quand le Code théodosien est-il promulgué ?",
       "id": "a95d2159-ad5f-414c-97e6-20fca32baa90",
+      "question": "Quand le Code théodosien est-il promulgué ?",
       "answer": "En 438."
     },
     {
+      "answer": "Courant du VIIIe siècle.",
       "id": "1bffd8fc-1ba5-4d94-9281-5f2f08da1c85",
-      "question": "À quelle période les Lombards conquièrent-ils l’Italie ?",
-      "answer": "Courant du VIIIe siècle."
+      "question": "À quelle période les Lombards conquièrent-ils l’Italie ?"
     },
     {
-      "question": "Quand Charlemagne est-il couronné empereur à Rome par le pape ?",
       "id": "1c3095dc-5a27-4df8-a099-e051da9972cc",
+      "question": "Quand Charlemagne est-il couronné empereur à Rome par le pape ?",
       "answer": "Le 25 décembre 800."
     },
     {
-      "answer": "Au IXe siècle.",
+      "question": "Durant quel siècle les Byzantins vassalisent-ils des seigneurs lombards en Italie du Sud ?",
       "id": "d9f49112-73c6-49f2-9893-713712a3f753",
-      "question": "Durant quel siècle les Byzantins vassalisent-ils des seigneurs lombards en Italie du Sud ?"
+      "answer": "Au IXe siècle."
     },
     {
       "question": "Quels sont les bornes de la conquête de la Sicile par les arabes ?",
@@ -145,27 +150,27 @@
     },
     {
       "answer": "En 955.",
-      "question": "Quand Othon Ier vainc-il les Hongrois à la bataille de Lechfeld ?",
-      "id": "07255b60-6939-44cd-8a87-0a6fb148cddb"
+      "id": "07255b60-6939-44cd-8a87-0a6fb148cddb",
+      "question": "Quand Othon Ier vainc-il les Hongrois à la bataille de Lechfeld ?"
     },
     {
-      "question": "Quand Ier est-il couronné empereur par le pape à Rome ?",
+      "answer": "En février 962.",
       "id": "bf0520ae-0eda-4c8c-830d-ca5c7a0effdb",
-      "answer": "En février 962."
+      "question": "Quand Ier est-il couronné empereur par le pape à Rome ?"
     },
     {
+      "id": "388cf8e1-49fc-4a59-9a02-938a3beabff3",
       "question": "Quand les Byzantins prennent-ils Antioche ?",
-      "answer": "En 969.",
-      "id": "388cf8e1-49fc-4a59-9a02-938a3beabff3"
+      "answer": "En 969."
     },
     {
-      "question": "Quand Othon II épouse-t-il Théophano ?",
       "id": "e20db2cd-9d3a-4e8d-aade-53b297ead7ed",
-      "answer": "En 972."
+      "answer": "En 972.",
+      "question": "Quand Othon II épouse-t-il Théophano ?"
     },
     {
-      "question": "À quelle période Basile II annexe-t-il la Bulgarie ?",
       "answer": "Entre 1014 et 1018.",
+      "question": "À quelle période Basile II annexe-t-il la Bulgarie ?",
       "id": "6d87a1a0-aa52-4f99-aa14-166efae65d42"
     },
     {
@@ -179,68 +184,68 @@
       "answer": "812"
     },
     {
-      "answer": "1008-1009",
       "question": "Quand Sanchuelo se fait-il proclamer héritier du califat, déclenchant la révolution de Cordoue ?",
+      "answer": "1008-1009",
       "id": "b1d3f981-2708-4043-94f2-df2488e84360"
     },
     {
       "question": "Quand le califat de Cordoue prend-il fin ?",
-      "id": "8e563270-3dfd-4e77-a340-ab89d9668c16",
-      "answer": "1031"
+      "answer": "1031",
+      "id": "8e563270-3dfd-4e77-a340-ab89d9668c16"
     },
     {
-      "id": "6605be31-dd56-49d4-98a8-827908695deb",
+      "answer": "1049-1050",
       "question": "Quand l’émir ziride rompt-il avec le calife fatimide ?",
-      "answer": "1049-1050"
+      "id": "6605be31-dd56-49d4-98a8-827908695deb"
     },
     {
-      "answer": "Vers 1048",
+      "question": "Quand Ibn Yassin prêche-t-il une réforme religieuse ?",
       "id": "3744907c-a329-49de-9fcc-e587e48195ff",
-      "question": "Quand Ibn Yassin prêche-t-il une réforme religieuse ?"
+      "answer": "Vers 1048"
     },
     {
-      "question": "Quand Yusuf ben Tashfin prend-il le titre d’émir des musulmans ?",
       "answer": "1061",
+      "question": "Quand Yusuf ben Tashfin prend-il le titre d’émir des musulmans ?",
       "id": "c2e5cc95-b1c6-47a1-abc5-48f9e86c352e"
     },
     {
-      "id": "c547a439-5705-4810-a6d6-bac3e081e612",
       "answer": "1055",
+      "id": "c547a439-5705-4810-a6d6-bac3e081e612",
       "question": "Quand Tughril Beg s’installe-t-il à Bagdad ?"
     },
     {
       "answer": "1064",
-      "question": "Quand les Aragonais prennent-ils Barbastro, avant de la reperdre, événement associé à l’appel au djihad ?",
-      "id": "831b65f6-e9fc-4016-9913-8688ff79ab77"
+      "id": "831b65f6-e9fc-4016-9913-8688ff79ab77",
+      "question": "Quand les Aragonais prennent-ils Barbastro, avant de la reperdre, événement associé à l’appel au djihad ?"
     },
     {
+      "id": "a0d1fd65-4566-4d1d-8b43-49090783c23d",
       "answer": "1065-1071",
-      "question": "Quand a lieu la conquête de l’Anatolie par Alp Arslan ?",
-      "id": "a0d1fd65-4566-4d1d-8b43-49090783c23d"
+      "question": "Quand a lieu la conquête de l’Anatolie par Alp Arslan ?"
     },
     {
-      "id": "875c0b5e-886f-4792-bf9f-a3cb257afbd1",
+      "answer": "1072",
       "question": "Quand les Normands prennent-ils Palerme ?",
-      "answer": "1072"
+      "id": "875c0b5e-886f-4792-bf9f-a3cb257afbd1"
     },
     {
-      "question": "Quand prend fin la guerre civile fatimide et Badr al-Jamali devient-il « vizir de plume » ?",
       "answer": "1073",
+      "question": "Quand prend fin la guerre civile fatimide et Badr al-Jamali devient-il « vizir de plume » ?",
       "id": "040b9366-a089-4e36-bc8e-cba92425033d"
     },
     {
-      "id": "ba3664ad-5611-4a59-b40b-dcb402aa0971",
       "question": "Quand Alphonse VI prend-il Tolède ?",
+      "id": "ba3664ad-5611-4a59-b40b-dcb402aa0971",
       "answer": "1085"
     },
     {
       "id": "a1facaac-463b-49e9-97e2-a8318254e633",
-      "question": "Quand a lieu la conquête almoravide d’Al-Andalus ?",
-      "answer": "1086-1115"
+      "answer": "1086-1115",
+      "question": "Quand a lieu la conquête almoravide d’Al-Andalus ?"
     },
     {
-      "question": "Quand Urbain II appelle-t-il au pèlerinage armé à Clermont ?",
       "id": "8751fe43-1762-42ae-b962-c2a0da384d7f",
+      "question": "Quand Urbain II appelle-t-il au pèlerinage armé à Clermont ?",
       "answer": "1095"
     },
     {
@@ -249,9 +254,19 @@
       "question": "Quand ont lieu les conquêtes de la Première Croisade ?"
     },
     {
-      "id": "558130e1-3ba7-44d9-8716-4cdbd5fa62fa",
       "answer": "15 juillet 1099",
+      "id": "558130e1-3ba7-44d9-8716-4cdbd5fa62fa",
       "question": "Quand les croisés prennent-ils Jérusalem ?"
+    },
+    {
+      "question": "Quand les croisés de la première croisade (des barons) franchissent-ils le détroit ?",
+      "answer": "Printemps 1097",
+      "id": "f3fb7268-cb08-49ed-909e-3a9ca4755d47"
+    },
+    {
+      "question": "Quand la croisade populaire franchit-elle le détroit ?",
+      "answer": "Ete 1096",
+      "id": "0fad0652-0c59-477a-8137-72e2c9e9e476"
     }
   ]
 }
