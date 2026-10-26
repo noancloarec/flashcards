@@ -18,10 +18,6 @@ const allDecks: Ref<Deck[]> = ref([])
 
 const searchTerm = ref('')
 
-const filteredDecks = computed(() =>
-  searchResults(searchTerm.value, allDecks.value, (deck) => deck.name)
-)
-
 const getOrderedDecksByLatestMemorization = (
   decks: Deck[],
   memorizationStatus: UserMemorizationStatus
@@ -40,8 +36,13 @@ const getOrderedDecksByLatestMemorization = (
 }
 
 const orderedDecks = computed(() =>
-  getOrderedDecksByLatestMemorization(filteredDecks.value, memorizationStatus.value)
+  getOrderedDecksByLatestMemorization(allDecks.value, memorizationStatus.value)
 )
+
+const filteredDecks = computed(() =>
+  searchResults(searchTerm.value, orderedDecks.value, (deck) => deck.name)
+)
+
 onMounted(async () => {
   allDecks.value = await getDeckList()
 })
@@ -66,7 +67,7 @@ watch(
     <input type="text" v-model="searchTerm" class="deck-search" placeholder="Rechercher ..." />
 
     <div class="deck-list">
-      <div class="deck" v-for="deck in orderedDecks" :key="deck.id">
+      <div class="deck" v-for="deck in filteredDecks" :key="deck.id">
         <ProgressBar :deck="deck" :memorization-status="memorizationStatus[deck.id]" />
         <a class="deck-link" :href="`/memorize/${deck.id}`">
           <p>{{ deck.name }}</p>
