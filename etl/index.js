@@ -21,6 +21,27 @@ const addDeckToFirestore = async (deck, store) => {
 }
 
 /**
+ * Recursively sort object keys alphabetically.
+ * Arrays preserve their original order.
+ */
+const sortObjectKeys = (value) => {
+  if (Array.isArray(value)) {
+    return value.map(sortObjectKeys)
+  }
+
+  if (value !== null && typeof value === 'object') {
+    return Object.keys(value)
+      .sort((a, b) => a.localeCompare(b))
+      .reduce((sorted, key) => {
+        sorted[key] = sortObjectKeys(value[key])
+        return sorted
+      }, {})
+  }
+
+  return value
+}
+
+/**
  * Download the entire deck collection from Firestore.
  * Each deck is saved as a separate JSON file.
  * Filenames are lowercase, without accents, and with spaces replaced by underscores.
@@ -55,8 +76,7 @@ const downloadAllDecks = async (store, outputDir) => {
 
     const outputPath = path.join(outputDir, `${filename}.json`)
 
-    fs.writeFileSync(outputPath, JSON.stringify(serializedDeck, null, 2))
-
+    fs.writeFileSync(outputPath, JSON.stringify(sortObjectKeys(serializedDeck), null, 2))
     console.log(`Downloaded: ${outputPath}`)
   }
 
