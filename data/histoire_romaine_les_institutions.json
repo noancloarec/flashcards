@@ -1,162 +1,162 @@
 {
-  "name": "Histoire Romaine - Les institutions",
   "author": "Noan",
   "cards": [
     {
-      "question": "Définis la questure.",
       "answer": "Elle consiste en la gestion du trésor. Les questeurs exercent dans la cité et dans les provinces.",
-      "id": "324684e5-50d7-4681-b9df-d1416c89855e"
+      "id": "324684e5-50d7-4681-b9df-d1416c89855e",
+      "question": "Définis la questure."
     },
     {
-      "question": "Définis l’édilité.",
       "answer": "Charge de l’entretien des bâtiments publics, de la voirie et des temples, ainsi que de l’ordre et de l’approvisionnement de la cité (cura annonae). Les édiles peuvent également organiser des jeux.",
-      "id": "27b1651a-2902-4bba-95dd-f27739648078"
+      "id": "27b1651a-2902-4bba-95dd-f27739648078",
+      "question": "Définis l’édilité."
     },
     {
-      "question": "Définis le tribunat de la plèbe.",
       "answer": "Magistrature créée lors d’une révolte au début de la République entre patriciens et plébéiens. Le tribun de la plèbe peut s’opposer aux décisions des magistrats (intercessio) ou aux décisions du Sénat défavorables à la plèbe (veto). Il peut également convoquer le concile de la plèbe et organiser un plébiscite.",
-      "id": "081743d8-10f9-40d1-8ea0-43ae9ae8ee72"
+      "id": "081743d8-10f9-40d1-8ea0-43ae9ae8ee72",
+      "question": "Définis le tribunat de la plèbe."
     },
     {
-      "question": "Définis la préture.",
       "answer": "Les préteurs disposent de l’imperium et exercent des fonctions judiciaires. Le préteur urbain règle les conflits entre citoyens romains, tandis que le préteur pérégrin règle les conflits entre citoyens romains et étrangers, ou entre étrangers.",
-      "id": "edfdc6ce-63e2-48d1-937d-a6c5e898eaef"
+      "id": "edfdc6ce-63e2-48d1-937d-a6c5e898eaef",
+      "question": "Définis la préture."
     },
     {
-      "question": "Définis le consulat.",
       "answer": "Les consuls détiennent le pouvoir exécutif dans la cité et le pouvoir militaire à l’extérieur.",
-      "id": "c6fb7529-24a8-46e9-ba5e-b36c8e4d8c97"
+      "id": "c6fb7529-24a8-46e9-ba5e-b36c8e4d8c97",
+      "question": "Définis le consulat."
     },
     {
-      "question": "Définis la censure.",
       "answer": "Les censeurs sont élus tous les 5 ans parmi les anciens consuls. Ils sont chargés du recensement des citoyens, de l’évaluation de leur fortune et de leur honorabilité. Ils peuvent réviser l’album sénatorial et ont également la charge des contrats entre la cité et les sociétés de publicains. Ils n’ont pas d’imperium.",
-      "id": "2c497871-5c0f-4172-bcbb-f356e59463b4"
+      "id": "2c497871-5c0f-4172-bcbb-f356e59463b4",
+      "question": "Définis la censure."
     },
     {
-      "question": "Définis la dictature.",
       "answer": "C’est une charge extraordinaire, créée lorsque la République est en danger. Sur proposition du Sénat, les consuls nomment un dictateur. Son imperium est supérieur à celui de tous les autres magistrats et il exerce sa charge pour une durée de six mois.",
-      "id": "077ce1f8-71f9-4bbf-bf35-b83b033e266e"
+      "id": "077ce1f8-71f9-4bbf-bf35-b83b033e266e",
+      "question": "Définis la dictature."
     },
     {
-      "question": "Pourquoi Polybe parle-t-il de « constitution mixte » à propos de Rome ?",
       "answer": "Parce que les institutions romaines associent les trois formes de régime : la monarchie avec les magistratures, l’oligarchie avec le Sénat et la démocratie avec les assemblées du peuple.",
-      "id": "391c5471-82f5-4169-baa4-ff32788d9913"
+      "id": "391c5471-82f5-4169-baa4-ff32788d9913",
+      "question": "Pourquoi Polybe parle-t-il de « constitution mixte » à propos de Rome ?"
     },
     {
-      "question": "Pourquoi les détenteurs de l’imperium sont-ils liés à la religion ?",
       "answer": "Parce que l’imperium est considéré comme un pouvoir de nature divine. Ses détenteurs peuvent prendre les auspices et sont des intermédiaires entre les dieux et la cité.",
-      "id": "75a78c68-26c1-44b4-a7b8-c19832bf4523"
+      "id": "75a78c68-26c1-44b4-a7b8-c19832bf4523",
+      "question": "Pourquoi les détenteurs de l’imperium sont-ils liés à la religion ?"
     },
     {
-      "question": "Que représente le faisceau porté par les licteurs ?",
       "answer": "Il représente le droit de coercition, c’est-à-dire le droit de punir sans jugement.",
-      "id": "74508195-ead7-44ab-904c-232d840fc1a5"
+      "id": "74508195-ead7-44ab-904c-232d840fc1a5",
+      "question": "Que représente le faisceau porté par les licteurs ?"
     },
     {
-      "question": "Quelle différence existe-t-il entre le faisceau domi et le faisceau militiae ?",
       "answer": "Le faisceau domi est constitué uniquement de baguettes liées, tandis que le faisceau militiae contient également une hache.",
-      "id": "79eedbad-8623-479b-9eac-b0e2991b50ee"
+      "id": "79eedbad-8623-479b-9eac-b0e2991b50ee",
+      "question": "Quelle différence existe-t-il entre le faisceau domi et le faisceau militiae ?"
     },
     {
-      "question": "Pourquoi les Romains cherchent-ils à limiter l’itération des magistratures ?",
       "answer": "Pour réguler la compétition entre les aristocrates et préserver la libertas, notamment en permettant à différents individus d’accéder aux plus hautes charges.",
-      "id": "3702984a-c9e8-4505-b90b-5aa08dd0e4d0"
+      "id": "3702984a-c9e8-4505-b90b-5aa08dd0e4d0",
+      "question": "Pourquoi les Romains cherchent-ils à limiter l’itération des magistratures ?"
     },
     {
-      "question": "Pourquoi la prorogation de l’imperium est-elle mise en place ?",
       "answer": "Les Romains cessent de nommer de nouveaux préteurs afin de limiter la compétition pour le consulat. Ils prolongent donc l’imperium militiae des préteurs déjà en poste dans les provinces.",
-      "id": "e9ec8005-e742-4cf2-b495-b0ba5998e202"
+      "id": "e9ec8005-e742-4cf2-b495-b0ba5998e202",
+      "question": "Pourquoi la prorogation de l’imperium est-elle mise en place ?"
     },
     {
-      "question": "De quoi dépend le gradus dignitatis d’un aristocrate romain ?",
       "answer": "Il dépend à la fois des magistratures exercées par l’individu et de la famille à laquelle il appartient.",
-      "id": "5f09b959-3bfd-45df-9fee-da143b8e2b08"
+      "id": "5f09b959-3bfd-45df-9fee-da143b8e2b08",
+      "question": "De quoi dépend le gradus dignitatis d’un aristocrate romain ?"
     },
     {
-      "question": "Comment les familles aristocratiques entretiennent-elles la mémoire et le prestige de leurs ancêtres ?",
       "answer": "Elles conservent les masques mortuaires des ancêtres dans leur domus, les exposent dans l’atrium et les présentent notamment lors des funérailles.",
-      "id": "43089a28-e58d-4c34-b0a8-5c6af9a32a35"
+      "id": "43089a28-e58d-4c34-b0a8-5c6af9a32a35",
+      "question": "Comment les familles aristocratiques entretiennent-elles la mémoire et le prestige de leurs ancêtres ?"
     },
     {
-      "question": "Quels droits confère l'imperium ?",
       "answer": "L'imperium confère le droit de coercition, c'est-à-dire qu'il peut condamner un citoyen sans jugement. Il confère aussi le droit de prendre des auspices avant chaque décision importante auprès des augures, et le ius agendi cum populo, c'est-à-dire le droit d'assembler le peuple et le Sénat. Il préside également certains tribunaux et commande les armées hors de Rome. Il peut gouverner des provinces.",
-      "id": "49b11535-c77e-4a5f-86a4-061e09822b93"
+      "id": "49b11535-c77e-4a5f-86a4-061e09822b93",
+      "question": "Quels droits confère l'imperium ?"
     },
     {
-      "question": "Quelles sont les étapes du cursus honorum ?",
       "answer": "La première étape est la questure. La deuxième étape est soit l'édilité, soit le tribunat militaire. La troisième étape est la préture. La quatrième étape est le consulat.",
-      "id": "9014b494-3511-43a7-9aae-dd4706eba01c"
+      "id": "9014b494-3511-43a7-9aae-dd4706eba01c",
+      "question": "Quelles sont les étapes du cursus honorum ?"
     },
     {
-      "question": "Citez deux magistratures spécifiques en dehors du cursus honorum.",
       "answer": "La censure et la dictature.",
-      "id": "9cb2b0f3-1e55-4c31-97f0-edd56c0ba3e6"
+      "id": "9cb2b0f3-1e55-4c31-97f0-edd56c0ba3e6",
+      "question": "Citez deux magistratures spécifiques en dehors du cursus honorum."
     },
     {
-      "question": "Combien de temps sont élus les magistrats ?",
       "answer": "Un an, à l'exception des censeurs qui sont élus pour cinq ans et des dictateurs qui sont nommés pour six mois.",
-      "id": "f14caf8d-f68e-4dff-aca0-8a6bbf4b2f79"
+      "id": "f14caf8d-f68e-4dff-aca0-8a6bbf4b2f79",
+      "question": "Combien de temps sont élus les magistrats ?"
     },
     {
-      "question": "Quels sont les différents types d'assemblées ?",
       "answer": "Les comices centuriates, les comices tributes et le concile de la plèbe.",
-      "id": "c09245de-e0b8-4700-b188-6ca194111bdf"
+      "id": "c09245de-e0b8-4700-b188-6ca194111bdf",
+      "question": "Quels sont les différents types d'assemblées ?"
     },
     {
-      "question": "Comment votent les comices centuriates ?",
       "answer": "Une seule voix par centurie, en faisant commencer à voter les centuries de la première classe, c'est-à-dire les plus riches.",
-      "id": "f61b7778-0b22-49a3-9ced-4d96de5b14d7"
+      "id": "f61b7778-0b22-49a3-9ced-4d96de5b14d7",
+      "question": "Comment votent les comices centuriates ?"
     },
     {
-      "question": "À part voter lors des comices centuriates, à quoi servent les centuries ?",
       "answer": "Elles servent à mobiliser l'armée et à lever l'impôt.",
-      "id": "14bb0638-a656-45af-a588-c4d699aae328"
+      "id": "14bb0638-a656-45af-a588-c4d699aae328",
+      "question": "À part voter lors des comices centuriates, à quoi servent les centuries ?"
     },
     {
-      "question": "Où se réunissent les comices centuriates ?",
       "answer": "Sur le Champ de Mars.",
-      "id": "8e5673ae-c40d-4401-923e-a7c5be1edf21"
+      "id": "8e5673ae-c40d-4401-923e-a7c5be1edf21",
+      "question": "Où se réunissent les comices centuriates ?"
     },
     {
-      "question": "De quoi décident les comices centuriates ?",
       "answer": "Elles élisent les magistrats à imperium, elles décident de la guerre et répondent à la provocatio ad populum.",
-      "id": "8aaa2a44-aad7-43d2-87e6-0c66f3278044"
+      "id": "8aaa2a44-aad7-43d2-87e6-0c66f3278044",
+      "question": "De quoi décident les comices centuriates ?"
     },
     {
-      "question": "Comment fonctionnent les comices tributes ?",
       "answer": "Elles sont regroupées en tribus qui sont des circonscriptions géographiques au nombre de 35. Le vote se fait par tribu.",
-      "id": "b7a02682-55ab-4011-a95e-e1e025aac704"
+      "id": "b7a02682-55ab-4011-a95e-e1e025aac704",
+      "question": "Comment fonctionnent les comices tributes ?"
     },
     {
-      "question": "En quoi pourrait-on assimiler Rome à une démocratie ?",
       "answer": "Selon Fergus Millar, les assemblées préparatoires des différents comices et conciles donnaient la parole à plusieurs personnages et assuraient une grande liberté de parole. De plus, les lois tabellaires assuraient un vote sans pression. Enfin, la compétition aristocratique était arbitrée par le peuple.",
-      "id": "0861a6bb-601f-475d-a02b-b5cf480d00f7"
+      "id": "0861a6bb-601f-475d-a02b-b5cf480d00f7",
+      "question": "En quoi pourrait-on assimiler Rome à une démocratie ?"
     },
     {
-      "question": "En quoi Rome ne peut-elle pas être qualifiée de démocratie ?",
       "answer": "Selon Karl Joachim Hölkeskamp, ceux qui sont les plus pauvres ne peuvent pas s'exprimer politiquement. L'égalité n'est que géométrique. Ensuite, le principe d'auctoritas, de nature religieuse, s'impose au peuple et donne énormément de pouvoir aux magistrats à imperium et au Sénat.",
-      "id": "387c7a06-9748-4576-94f9-cd8878a86127"
+      "id": "387c7a06-9748-4576-94f9-cd8878a86127",
+      "question": "En quoi Rome ne peut-elle pas être qualifiée de démocratie ?"
     },
     {
-      "question": "Comment entre-t-on au Sénat ?",
       "answer": "On y entre après avoir été chargé d'une magistrature.",
-      "id": "3046dc21-4453-4084-a825-0fa6210c2322"
+      "id": "3046dc21-4453-4084-a825-0fa6210c2322",
+      "question": "Comment entre-t-on au Sénat ?"
     },
     {
-      "question": "Quelles sont les compétences du Sénat ?",
       "answer": "Il est sollicité pour toutes les décisions importantes de la cité. Il est compétent en matière religieuse. Il décide de qui on va honorer, quelle fête ou quel jeu organiser, quel triomphe faire. Il décide de la levée de l'armée, est chargé de créer les provinces, décide de la levée de nouveaux impôts et de mesures exceptionnelles pour lever la dictature.",
-      "id": "34be0d7f-7e83-41c6-8e11-0846b4164d7f"
+      "id": "34be0d7f-7e83-41c6-8e11-0846b4164d7f",
+      "question": "Quelles sont les compétences du Sénat ?"
     },
     {
-      "question": "Comment sont habillés les sénateurs ?",
       "answer": "Ils portent la toga praetexta, dotée du latus clavus, une bande pourpre.",
-      "id": "ca2ad47b-59f7-4217-9894-a30ecddf5e2a"
+      "id": "ca2ad47b-59f7-4217-9894-a30ecddf5e2a",
+      "question": "Comment sont habillés les sénateurs ?"
     },
     {
-      "question": "Quelles sont les obligations des sénateurs ?",
       "answer": "Ils sont tenus de résider à Rome et d'être assidus au Sénat. Dans les faits, cette obligation n'est pas toujours respectée.",
-      "id": "38d56491-933d-4928-b565-bb02066e43b0"
+      "id": "38d56491-933d-4928-b565-bb02066e43b0",
+      "question": "Quelles sont les obligations des sénateurs ?"
     }
   ],
-  "createdAt": "2026-10-10T20:16:43.806Z"
+  "createdAt": "2026-10-10T20:16:43.806Z",
+  "name": "Histoire Romaine - Les institutions"
 }

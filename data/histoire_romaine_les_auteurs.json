@@ -1,82 +1,80 @@
 {
   "author": "Noan",
-  "createdAt": "2026-10-10T20:16:43.741Z",
-  "name": "Histoire Romaine - Les auteurs",
   "cards": [
     {
-      "question": "Sur quelles sources Tite-Live s'appuie-t-il pour écrire les Histoires Romaines ?",
       "answer": "- Une compilation d'auteurs antérieurs\n- Des archives",
-      "id": "f33cdd7b-735a-43f9-aa77-e89bce39c07f"
+      "id": "f33cdd7b-735a-43f9-aa77-e89bce39c07f",
+      "question": "Sur quelles sources Tite-Live s'appuie-t-il pour écrire les Histoires Romaines ?"
     },
     {
-      "question": "Quand et où Tite-Live est-il né et mort, et quels éléments connaît-on de sa vie personnelle et de sa carrière intellectuelle ?",
       "answer": "- Né en 64 ou 59 av. J.-C. et mort en 17 apr. J.-C.\n- Originaire de Padoue, en Vénétie actuelle.\n- Issu d'une famille riche.\n- Étudie la rhétorique et s'installe à Rome.\n- N'exerce pas de magistrature.\n- Écrit des traités de philosophie, des œuvres rhétoriques et une œuvre historique majeure.",
-      "id": "b9929338-0c55-4df3-96e9-c7a2af2015d8"
+      "id": "b9929338-0c55-4df3-96e9-c7a2af2015d8",
+      "question": "Quand et où Tite-Live est-il né et mort, et quels éléments connaît-on de sa vie personnelle et de sa carrière intellectuelle ?"
     },
     {
+      "answer": "- Partisan de la République et de Pompée, opposé à César.\n- Soutient Auguste, qui prétend restaurer la République dans un contexte politique contesté.\n- Sa vision de l'histoire de Rome : croissance, décadence et restauration.",
       "id": "58c2f6da-4852-4a0e-ae11-ebbbb23d5686",
-      "question": "Quelles étaient les sympathies politiques de Tite-Live, et quelles étaient ses relations avec la République romaine et Auguste ?",
-      "answer": "- Partisan de la République et de Pompée, opposé à César.\n- Soutient Auguste, qui prétend restaurer la République dans un contexte politique contesté.\n- Sa vision de l'histoire de Rome : croissance, décadence et restauration."
+      "question": "Quelles étaient les sympathies politiques de Tite-Live, et quelles étaient ses relations avec la République romaine et Auguste ?"
     },
     {
-      "question": "Quelle est l'œuvre principale de Tite-Live, quel est son contenu et dans quel contexte politique a-t-elle été rédigée ?",
       "answer": "- Ab Urbe Condita Libri : histoire de Rome depuis sa fondation.\n- Veut faire consensus autour du nouveau régime.\n- Composée de 142 livres, couvrant l'histoire de Rome des origines jusqu'en 9 av. J.-C.\n- On a conservé intégralement les périodes :\n  - origines - 292\n  - 218-166\n",
-      "id": "994cd903-92c8-4724-96a0-b1e1bd65e6fa"
+      "id": "994cd903-92c8-4724-96a0-b1e1bd65e6fa",
+      "question": "Quelle est l'œuvre principale de Tite-Live, quel est son contenu et dans quel contexte politique a-t-elle été rédigée ?"
     },
     {
-      "id": "ab3a86db-022c-4aaf-bc90-4b3c3e0c51ed",
       "answer": "- -86\n- -34",
+      "id": "ab3a86db-022c-4aaf-bc90-4b3c3e0c51ed",
       "question": "Quand a vécu Salluste ?"
     },
     {
-      "question": "Quelle est l'œuvre de Salluste ?",
+      "answer": "- l'Histoire (par fragments)\n- La guerre de Jugurtha\n- La conjuration de Catilina.",
       "id": "eb4418c9-52f2-4117-8a4d-4ff231893dfc",
-      "answer": "- l'Histoire (par fragments)\n- La guerre de Jugurtha\n- La conjuration de Catilina."
+      "question": "Quelle est l'œuvre de Salluste ?"
     },
     {
-      "question": "Résume la conjuration de Catilina",
       "answer": "- Patricien désargenté\n- Partisan de Sylla dans les années 80\n- Perd les élections face à Cicéron en -63\n- Sera peut-être dernier sénateur de son lignage\n- Crée une conjuration avec les mécontents\n- Battu et tué à Pistoia en -62",
-      "id": "d32e413e-5d70-40df-9128-bdaf9b0610a4"
+      "id": "d32e413e-5d70-40df-9128-bdaf9b0610a4",
+      "question": "Résume la conjuration de Catilina"
     },
     {
-      "id": "44206bcf-4ebc-44a8-8705-70eaf7b09c82",
       "answer": "- Populares\n- Guerre civile et décadence romaine\n",
+      "id": "44206bcf-4ebc-44a8-8705-70eaf7b09c82",
       "question": "Quels sont les motivations de Salluste pour écrire son œuvre ?"
     },
     {
-      "question": "Quelle est la tria nomina de Salluste ?",
       "answer": "Caius Salustius Crispus",
-      "id": "9c1d5670-6d5f-464e-9134-b7610f046544"
+      "id": "9c1d5670-6d5f-464e-9134-b7610f046544",
+      "question": "Quelle est la tria nomina de Salluste ?"
     },
     {
-      "question": "Donne quelques éléments biographiques sur Salluste.",
       "answer": "- Nait à Amiternum en 86\n- Questeur en 55\n- Tribun de la plebe en 52\n- Exclu du sénat en 50 pour immoralité\n- Reintégré par Cesar, gouverneur d'Africa Nova\n- Accusé de repetundis\n- Echappe à un procès grâce à César\n- Se retire dans l'otium\n- Meurt en -34",
-      "id": "2dbf9c06-6385-4928-8fa2-476661b7ed0c"
+      "id": "2dbf9c06-6385-4928-8fa2-476661b7ed0c",
+      "question": "Donne quelques éléments biographiques sur Salluste."
     },
     {
-      "question": "Quand a vécu Denys d'Halicarnasse ?",
+      "answer": "-60 à 8 ap. J-C",
       "id": "78b4dda4-b8f5-45dc-b887-433267a6f9af",
-      "answer": "-60 à 8 ap. J-C"
+      "question": "Quand a vécu Denys d'Halicarnasse ?"
     },
     {
       "answer": "- Antiquités romaines\n- Opuscules rhétoriques.",
-      "question": "Quelle est l'œuvre de Denys d'Halicarnasse ?",
-      "id": "7a36e986-cbb3-4af5-9876-d4cad6fc1698"
+      "id": "7a36e986-cbb3-4af5-9876-d4cad6fc1698",
+      "question": "Quelle est l'œuvre de Denys d'Halicarnasse ?"
     },
     {
       "answer": "- Fournir des modèles éthique\n- Société romaine filiation des grecs\n- Exalte les origines de Rome pour justifier le retour à la république d'Auguste",
-      "question": "Quels sont les motivations de Denys d'Halicarnasse pour écrire son œuvre ?",
-      "id": "56cf116e-2660-435e-b783-2b397fe5ca8c"
+      "id": "56cf116e-2660-435e-b783-2b397fe5ca8c",
+      "question": "Quels sont les motivations de Denys d'Halicarnasse pour écrire son œuvre ?"
     },
     {
-      "id": "48e0a22f-5728-4f16-bf6b-271328120d30",
       "answer": "Origines jusqu'en -264",
+      "id": "48e0a22f-5728-4f16-bf6b-271328120d30",
       "question": "De quelle période traite l'œuvre de Denys d'Halicarnasse ? Pourquoi cette période ?"
     },
     {
+      "answer": "- né vers -60 à Halicarnasse, en Asie Mineure, sous tutelle romaine. \n- part pour l'Italie après Actium \n- Apprend le latin à son arrivée (rare de la part des grecs)\n- Proche de l'élite\n- Publie les Antiquités Romaines en -7",
       "id": "71771d90-bb97-44b9-9514-c7540a34f194",
-      "question": "Donne quelques éléments biographiques sur Denys d'Halicarnasse.",
-      "answer": "- né vers -60 à Halicarnasse, en Asie Mineure, sous tutelle romaine. \n- part pour l'Italie après Actium \n- Apprend le latin à son arrivée (rare de la part des grecs)\n- Proche de l'élite\n- Publie les Antiquités Romaines en -7"
+      "question": "Donne quelques éléments biographiques sur Denys d'Halicarnasse."
     },
     {
       "answer": "- Vers 200\n- 120\n",
@@ -84,24 +82,26 @@
       "question": "Quand a vécu Polybe ?"
     },
     {
-      "question": "Donne quelques éléments biographiques sur Polybe",
       "answer": "- Fait prisonnier après Pydna en 168\n- Précepteur des Scipions\n- Libéré en 150\n- Assiste Scipion Émilien à Carthage et Numance pour ses compétences en poliorcétique\n- Participe à la mise en place de l'Achaïe",
-      "id": "0775da4d-b78f-448c-9d13-5f6e27d42b1b"
+      "id": "0775da4d-b78f-448c-9d13-5f6e27d42b1b",
+      "question": "Donne quelques éléments biographiques sur Polybe"
     },
     {
-      "id": "3bb09793-9d41-41ce-b889-69a912347fc3",
       "answer": "Les Histoires (40 livres) dont (5 intégralement conservés).",
+      "id": "3bb09793-9d41-41ce-b889-69a912347fc3",
       "question": "Quelle est l'œuvre de Polybe ?"
     },
     {
-      "question": "Quelle période est couverte par Les Histoires de Polybe ?",
       "answer": "-264 à -146 (dissolution ligue achéenne et destruction Corinthe)",
-      "id": "47c1bbad-0c47-4566-acf7-73c8891991e9"
+      "id": "47c1bbad-0c47-4566-acf7-73c8891991e9",
+      "question": "Quelle période est couverte par Les Histoires de Polybe ?"
     },
     {
-      "question": "Quels sont les motivations de Polybe pour écrire son œuvre ?",
       "answer": "Comprendre comment et grâce à quel genre de constitution presque toutes les parties de la terre sont passées en moins de cinquante-trois ans sous la domination des Romains. ",
-      "id": "ca28668c-b3b6-404b-b41e-c1467c0221b0"
+      "id": "ca28668c-b3b6-404b-b41e-c1467c0221b0",
+      "question": "Quels sont les motivations de Polybe pour écrire son œuvre ?"
     }
-  ]
+  ],
+  "createdAt": "2026-10-10T20:16:43.741Z",
+  "name": "Histoire Romaine - Les auteurs"
 }
