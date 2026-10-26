@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, type Ref,ref, watch } from 'vue'
+import { computed, onMounted, type Ref, ref, watch } from 'vue'
 
 import ConnectionLinks from '../components/ConnectionLinks.vue'
 import ProgressBar from '../components/ProgressBar.vue'
@@ -11,32 +11,51 @@ import {
   type UserMemorizationStatus
 } from '../models/memorizationStatus.ts'
 import { getDeckList, getUserMemorizationHistory } from '../services/firebase'
-import { getUserMemorizationStatusFromLocalStorage } from '../services/localStorageInterface.ts'
+import { getUserMemorizationHistoryFromLocalStorage } from '../services/localStorageInterface.ts'
 import { searchResults } from '../services/search.ts'
 
-const decks: Ref<Deck[]> = ref([])
+const allDecks: Ref<Deck[]> = ref([])
 
 const searchTerm = ref('')
 
 const filteredDecks = computed(() =>
-  searchResults(searchTerm.value, decks.value, (deck) => deck.name)
+  searchResults(searchTerm.value, allDecks.value, (deck) => deck.name)
 )
 
+const getOrderedDecksByLatestMemorization = (
+  decks: Deck[],
+  memorizationStatus: UserMemorizationStatus
+) => {
+  const decksToSort = [...decks]
+  decksToSort.sort((a, b) => {
+    if (memorizationStatus[a.id]?.latestMemorization === undefined) return -1
+    if (memorizationStatus[b.id]?.latestMemorization === undefined) return 1
+
+    return (
+      memorizationStatus[a.id].latestMemorization!.toMillis() -
+      memorizationStatus[b.id].latestMemorization!.toMillis()
+    )
+  })
+  return decksToSort
+}
+
+const orderedDecks = computed(() =>
+  getOrderedDecksByLatestMemorization(filteredDecks.value, memorizationStatus.value)
+)
 onMounted(async () => {
-  const deckList = await getDeckList()
-  decks.value = deckList
+  allDecks.value = await getDeckList()
 })
 
 const { googleUser } = useAuth()
 const memorizationStatus = ref<UserMemorizationStatus>({})
 
 watch(
-  [googleUser, decks],
+  [googleUser, allDecks],
   async () => {
     const memorizationHistory: UserMemorizationHistory = googleUser.value?.email
       ? await getUserMemorizationHistory(googleUser.value.email)
-      : getUserMemorizationStatusFromLocalStorage()
-    memorizationStatus.value = getUserMemorizationStatus(decks.value, memorizationHistory)
+      : getUserMemorizationHistoryFromLocalStorage()
+    memorizationStatus.value = getUserMemorizationStatus(allDecks.value, memorizationHistory)
   },
   { immediate: true }
 )
@@ -47,9 +66,9 @@ watch(
     <input type="text" v-model="searchTerm" class="deck-search" placeholder="Rechercher ..." />
 
     <div class="deck-list">
-      <div class="deck" v-for="deck in filteredDecks" :key="deck.id">
+      <div class="deck" v-for="deck in orderedDecks" :key="deck.id">
         <ProgressBar :deck="deck" :memorization-status="memorizationStatus[deck.id]" />
-        <a class="deck-link" :href="`/memorize${deck.id}`">
+        <a class="deck-link" :href="`/memorize/${deck.id}`">
           <p>{{ deck.name }}</p>
         </a>
       </div>
