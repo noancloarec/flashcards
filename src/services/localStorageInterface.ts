@@ -2,7 +2,8 @@ import { Timestamp } from 'firebase/firestore'
 
 import type {
   DeckMemorizationHistory,
-  ElementByCardByDeck,
+  ElementByCardId,
+  ElementByDeckId,
   UserMemorizationHistory
 } from '../models/memorizationHistory'
 import { mapValues } from './javascriptMissingFunctions'
@@ -17,19 +18,21 @@ interface AttemptHistoryInLocalStorage {
   successfulAttempts: FirestoreTimestampNotParsed[]
 }
 
-type UserMemorizationStatusInLocalStorage = ElementByCardByDeck<AttemptHistoryInLocalStorage>
+type UserMemorizationHistoryInLocalStorage = ElementByDeckId<
+  ElementByCardId<AttemptHistoryInLocalStorage>
+>
 
 /**
- * Loads a UserMemorizationStatus in the db
+ * Loads a UserMemorizationHistoryInLocalStorage from the db
  * @param userId the id for the user
  * @param statuses statuses for learned cards in all 'touched' decks
  */
-export const getUserMemorizationStatusFromLocalStorage: () => UserMemorizationHistory = () => {
+export const getUserMemorizationHistoryFromLocalStorage: () => UserMemorizationHistory = () => {
   const memorizationStatus = localStorage.getItem('user_memorization_history')
   if (!memorizationStatus) {
     return {}
   } else {
-    const userMemorization: UserMemorizationStatusInLocalStorage = JSON.parse(memorizationStatus)
+    const userMemorization: UserMemorizationHistoryInLocalStorage = JSON.parse(memorizationStatus)
 
     return mapValues(userMemorization, (deckMemorizationStatus) =>
       mapValues(deckMemorizationStatus, (cardMemorizationStatus) => ({
@@ -45,10 +48,10 @@ export const getUserMemorizationStatusFromLocalStorage: () => UserMemorizationHi
  * Loads a DeckMemorizationStatus from the local storage
  * @param deckId the id of the deck
  */
-export const getDeckMemorizationStatusFromLocalStorage: (
+export const getDeckMemorizationHistoryFromLocalStorage: (
   deckId: string
 ) => DeckMemorizationHistory = (deckId) => {
-  const deckMemorisationStatus = getUserMemorizationStatusFromLocalStorage()[deckId]
+  const deckMemorisationStatus = getUserMemorizationHistoryFromLocalStorage()[deckId]
   if (!deckMemorisationStatus) {
     return {}
   } else {
@@ -57,16 +60,16 @@ export const getDeckMemorizationStatusFromLocalStorage: (
 }
 
 /**
- * Saves a DeckMemorizationStatus in the db
+ * Saves a DeckMemorizationHistory in the db
  * @param deckId the id of the deck
  * @param memorizationHistory history of attempts for the deck
  */
-export function saveDeckMemorizationStatusToLocalStorage(
+export function saveDeckMemorizationHistoryToLocalStorage(
   deckId: string,
   memorizationHistory: DeckMemorizationHistory
 ) {
   const userMemorizationStatus: UserMemorizationHistory =
-    getUserMemorizationStatusFromLocalStorage()
+    getUserMemorizationHistoryFromLocalStorage()
   userMemorizationStatus[deckId] = memorizationHistory
   localStorage.setItem('user_memorization_history', JSON.stringify(userMemorizationStatus))
 }

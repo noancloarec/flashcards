@@ -3,12 +3,12 @@ import { Timestamp } from 'firebase/firestore'
 import type { CardId } from './card'
 import type { DeckId } from './deck'
 
-export type ElementByCard<T> = {
+export type ElementByCardId<T> = {
   [cardId: CardId]: T
 }
 
-export type ElementByCardByDeck<T> = {
-  [deckId: DeckId]: ElementByCard<T>
+export type ElementByDeckId<T> = {
+  [deckId: DeckId]: T
 }
 
 /**
@@ -18,6 +18,6 @@ export interface MemorizationHistory {
   successfulAttempts: Timestamp[] // Sorted descendingly (most recent is first)
 }
 
-export type DeckMemorizationHistory = ElementByCard<MemorizationHistory>
+export type DeckMemorizationHistory = ElementByCardId<MemorizationHistory>
 
-export type UserMemorizationHistory = ElementByCardByDeck<MemorizationHistory>
+export type UserMemorizationHistory = ElementByDeckId<ElementByCardId<MemorizationHistory>>

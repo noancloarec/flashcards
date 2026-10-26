@@ -3,8 +3,8 @@ import { Timestamp } from 'firebase/firestore'
 import type { Deck } from './deck'
 import {
   type DeckMemorizationHistory,
-  type ElementByCard,
-  type ElementByCardByDeck,
+  type ElementByCardId,
+  type ElementByDeckId,
   type MemorizationHistory,
   type UserMemorizationHistory
 } from './memorizationHistory'
@@ -33,7 +33,10 @@ export interface CardMemorizationStatus {
   state: CardState
 }
 
-export type DeckMemorizationStatus = ElementByCard<CardMemorizationStatus>
+export interface DeckMemorizationStatus {
+  latestMemorization: Timestamp | undefined
+  cardsMemorization: ElementByCardId<CardMemorizationStatus>
+}
 
 /**
  * Determines the memorization status for a deck given its history
@@ -43,17 +46,27 @@ export type DeckMemorizationStatus = ElementByCard<CardMemorizationStatus>
  */
 export const getDeckMemorizationStatus: (
   deck: Deck,
-  deckMemorizationHistory: DeckMemorizationHistory
+  deckMemorizationHistory: DeckMemorizationHistory | undefined
 ) => DeckMemorizationStatus = (deck, deckMemorizationHistory) => {
-  return Object.fromEntries(
+  if (deckMemorizationHistory === undefined) {
+    return { cardsMemorization: {}, latestMemorization: undefined }
+  }
+
+  const cardsLatestMemorization = Object.values(deckMemorizationHistory).map(
+    (cardMemorizationHistory) => cardMemorizationHistory.successfulAttempts[0].toMillis()
+  )
+  const latestMemorization = Timestamp.fromMillis(Math.max(...cardsLatestMemorization))
+
+  const cardsMemorization = Object.fromEntries(
     deck.cards.map((card) => [
       card.id,
       getCardMemorizationStatus(deckMemorizationHistory?.[card.id])
     ])
   )
+  return { latestMemorization, cardsMemorization }
 }
 
-export type UserMemorizationStatus = ElementByCardByDeck<CardMemorizationStatus>
+export type UserMemorizationStatus = ElementByDeckId<DeckMemorizationStatus>
 
 export const getUserMemorizationStatus: (
   decks: Deck[],

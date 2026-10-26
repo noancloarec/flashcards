@@ -10,15 +10,16 @@ import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
   CardState,
   type DeckMemorizationStatus,
-  getDeckMemorizationStatus} from '../models/memorizationStatus.ts'
+  getDeckMemorizationStatus
+} from '../models/memorizationStatus.ts'
 import {
   getDeck,
   getDeckMemorizationHistory,
   saveDeckMemorizationHistory
 } from '../services/firebase.ts'
 import {
-  getDeckMemorizationStatusFromLocalStorage,
-  saveDeckMemorizationStatusToLocalStorage as saveDeckMemorizationHistoryToLocalStorage
+  getDeckMemorizationHistoryFromLocalStorage,
+  saveDeckMemorizationHistoryToLocalStorage as saveDeckMemorizationHistoryToLocalStorage
 } from '../services/localStorageInterface.ts'
 import CardDisplay from './CardDisplay.vue'
 import SpaceBar from './icons/SpaceBar.vue'
@@ -36,7 +37,10 @@ const deckState = ref<Deck | null>(null)
 const currentCardIndex = ref(0)
 const showAnswer = ref(false)
 const memorizationHistory = ref<DeckMemorizationHistory>({})
-const memorizationStatus = ref<DeckMemorizationStatus>({})
+const memorizationStatus = ref<DeckMemorizationStatus>({
+  cardsMemorization: {},
+  latestMemorization: undefined
+})
 const cardStates = ref<CardState[]>([])
 const { googleUser } = useAuth()
 const { elementSavingStatus } = useSavingStatus(memorizationHistory)
@@ -48,7 +52,9 @@ const { elementSavingStatus } = useSavingStatus(memorizationHistory)
  * @param deckMemorizationStatus deckMemorizationStatus from firestore
  */
 const initCardStates = () => {
-  cardStates.value = deckState.value!.cards.map((card) => memorizationStatus.value[card.id].state)
+  cardStates.value = deckState.value!.cards.map(
+    (card) => memorizationStatus.value.cardsMemorization[card.id].state
+  )
 
   if (cardStates.value[0] === CardState.Learned) {
     currentCardIndex.value = getNextIndex()
@@ -61,7 +67,7 @@ onMounted(async () => {
   deckState.value = deck
   memorizationHistory.value = googleUser.value
     ? await getDeckMemorizationHistory(googleUser.value.email!, deck.id)
-    : getDeckMemorizationStatusFromLocalStorage(deck.id)
+    : getDeckMemorizationHistoryFromLocalStorage(deck.id)
 
   memorizationStatus.value = getDeckMemorizationStatus(deck, memorizationHistory.value)
   initCardStates()
@@ -157,7 +163,7 @@ const saveProgress = async () => {
     <CardDisplay
       :card="cardToDisplay"
       :show-answer="showAnswer"
-      :memorization-status="memorizationStatus[cardToDisplay.id]"
+      :memorization-status="memorizationStatus.cardsMemorization[cardToDisplay.id]"
     />
     <div class="actions">
       <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
