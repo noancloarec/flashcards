@@ -5,6 +5,7 @@ import { useRoute } from 'vue-router'
 
 import { useAuth } from '../composables/useAuth.ts'
 import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
+import type { Card } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
@@ -43,7 +44,10 @@ const memorizationStatus = ref<DeckMemorizationStatus>({
 })
 const cardStates = ref<CardState[]>([])
 const { googleUser } = useAuth()
-const { elementSavingStatus } = useSavingStatus(memorizationHistory)
+
+const cardsLearnedInSession = ref<Card[]>([])
+
+const { elementSavingStatus } = useSavingStatus(cardsLearnedInSession)
 
 /**
  * Init the learning state of the cards in the deck, according to the deckMemorizationStatus from firestore if present
@@ -115,22 +119,24 @@ const cardToDisplay = computed(() => {
  * Register the attempt (learned or not learned) in the memorization history
  * @param success whether the user has learned the card or not
  */
-const registerSuccessInMemorizationHistory = () => {
-  const currentCardId = deckState.value!.cards[currentCardIndex.value].id
-  let memorizationHistoryForCard = memorizationHistory.value[currentCardId]
-  if (memorizationHistoryForCard === undefined) {
-    memorizationHistoryForCard = {
-      successfulAttempts: []
-    }
-  }
+const registerCardMemorization = (success: boolean) => {
+  const currentCard = deckState.value!.cards[currentCardIndex.value]
+  const cardIsInLearnedCards =
+    cardsLearnedInSession.value.find((card) => card.id === currentCard.id) !== undefined
 
-  memorizationHistoryForCard.successfulAttempts.unshift(Timestamp.now())
-  memorizationHistory.value[currentCardId] = memorizationHistoryForCard
+  if (!success && cardIsInLearnedCards) {
+    cardsLearnedInSession.value = cardsLearnedInSession.value.filter(
+      (card) => card.id !== currentCard.id
+    )
+  }
+  if (success && !cardIsInLearnedCards) {
+    cardsLearnedInSession.value.push(currentCard)
+  }
 }
 
 const nextQuestion = (success: boolean) => {
   showAnswer.value = false
-  if (success) registerSuccessInMemorizationHistory()
+  registerCardMemorization(success)
   cardStates.value[currentCardIndex.value] = success ? CardState.Learned : CardState.Notlearned
   currentCardIndex.value = getNextIndex()
 }
@@ -143,6 +149,18 @@ const reset = () => {
 
 const saveProgress = async () => {
   elementSavingStatus.value = SavingStatus.Saving
+
+  for (const learnedCard of cardsLearnedInSession.value) {
+    let memorizationHistoryForCard = memorizationHistory.value[learnedCard.id]
+    if (memorizationHistoryForCard === undefined) {
+      memorizationHistoryForCard = {
+        successfulAttempts: []
+      }
+    }
+
+    memorizationHistoryForCard.successfulAttempts.unshift(Timestamp.now())
+    memorizationHistory.value[learnedCard.id] = memorizationHistoryForCard
+  }
 
   const deckId = deckState.value!.id
   if (googleUser.value) {
