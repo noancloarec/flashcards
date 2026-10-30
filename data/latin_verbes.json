@@ -2,6 +2,51 @@
   "author": "Noan",
   "cards": [
     {
+      "answer": "pervenio, is, ere, ueni, uentum",
+      "id": "79cfb2b2-ad9d-4bd1-b87e-71e8ff9356b3",
+      "question": "parvenir"
+    },
+    {
+      "answer": "rapio, is, ere, rapui, raptum",
+      "id": "18d4fbdb-57c3-49cb-9e0c-e2051a3a74ef",
+      "question": "enlever"
+    },
+    {
+      "answer": "regno, as, are, aui, atum",
+      "id": "04971ba7-4c01-405f-ac6a-3135648c1acd",
+      "question": "régner"
+    },
+    {
+      "answer": "scribo, is, ere, scripsi, scriptum",
+      "id": "c692a84c-5114-452e-8a22-782e55f567d9",
+      "question": "écrire"
+    },
+    {
+      "answer": "statuo, is, ere, tui, tutum",
+      "id": "ceb3dc4b-d2c0-437c-98e9-66e4fdce2adb",
+      "question": "établir"
+    },
+    {
+      "answer": "sto, as, are, steti, statum",
+      "id": "016c57cb-f577-4d86-9eab-223b8f92986a",
+      "question": "rester"
+    },
+    {
+      "answer": "traho, is, ere, traxi, tractum",
+      "id": "ca4f6419-b104-43b7-8341-e3d02bfe34aa",
+      "question": "tirer, traîner"
+    },
+    {
+      "answer": "vinco, is, ere, uici, uictum",
+      "id": "f41f76eb-d0a5-401e-ae21-183438077ad0",
+      "question": "vaincre"
+    },
+    {
+      "answer": "voco, as, are, aui, atum",
+      "id": "68684b27-afd0-43d8-95a1-6b403c9668b3",
+      "question": "appeler, convoquer"
+    },
+    {
       "answer": "accipio, is, ere, cepit, ceptum",
       "id": "3e617705-4d4e-4847-9666-210fa4e91eab",
       "question": "recevoir"

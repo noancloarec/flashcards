@@ -2,6 +2,81 @@
   "author": "Noan",
   "cards": [
     {
+      "answer": "porta, ae, f.",
+      "id": "ffa29d16-6d6e-4832-8c40-2ec85ff24ac6",
+      "question": "porte"
+    },
+    {
+      "answer": "potentia, ae, f.",
+      "id": "2c4eac42-6d61-498f-aef5-4d70f3130f60",
+      "question": "pouvoir"
+    },
+    {
+      "answer": "prudentia, ae, f.",
+      "id": "075d5a21-a094-4dc2-9d5f-043a8cbdb5e0",
+      "question": "prudence, sagesse"
+    },
+    {
+      "answer": "puella, ae, f.",
+      "id": "ae9a11a5-698b-40f5-90f0-1bdab08a891e",
+      "question": "jeune fille"
+    },
+    {
+      "answer": "regnum, i, n.",
+      "id": "522bedfd-580f-401e-99b1-9432d1137139",
+      "question": "règne"
+    },
+    {
+      "answer": "Roma, ae, f.",
+      "id": "5721f00d-bd9e-4d18-ab62-8c3d2e10bc99",
+      "question": "Rome"
+    },
+    {
+      "answer": "sapientia, ae, f.",
+      "id": "988e4668-aca0-4fa9-afa4-dd3c4c02dce4",
+      "question": "sagesse"
+    },
+    {
+      "answer": "statua, ae, f.",
+      "id": "df7e55be-bd47-420f-83c1-a519f075d0ef",
+      "question": "statue"
+    },
+    {
+      "answer": "stultitia, ae, f.",
+      "id": "d6c0de7b-5576-4423-958f-db44eb515aac",
+      "question": "stupidité, déraison"
+    },
+    {
+      "answer": "terra, ae, f.",
+      "id": "a11ec06e-6fdd-4132-ba5e-1bc1b085898c",
+      "question": "terre"
+    },
+    {
+      "answer": "victoria, ae, f.",
+      "id": "8cad30d1-c3b2-4314-9682-ceaf95b52a9b",
+      "question": "victoire"
+    },
+    {
+      "answer": "vir, i, m.",
+      "id": "caabe439-c375-4431-9290-cdaa4e9562dd",
+      "question": "homme"
+    },
+    {
+      "answer": "vitium, ii, n.",
+      "id": "63eb37fe-e4d1-4e54-917d-2d82bc6691d9",
+      "question": "vice, défaut"
+    },
+    {
+      "answer": "votum, i, n.",
+      "id": "18a906c3-cd46-4f17-8036-4ac7195d121f",
+      "question": "vœu, souhait"
+    },
+    {
+      "answer": "vita, ae, f.",
+      "id": "41440706-a0b4-4752-9f22-7b6929fdec77",
+      "question": "vie"
+    },
+    {
       "answer": "anima, ae, f.",
       "id": "e1fc1361-d891-4c22-9fce-6324fa6d04cb",
       "question": "esprit"
