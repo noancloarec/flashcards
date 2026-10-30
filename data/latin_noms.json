@@ -1,187 +1,263 @@
 {
-  "name": "Latin - Noms",
   "author": "Noan",
   "cards": [
     {
-      "question": "esprit",
+      "answer": "porta, ae, f.",
+      "id": "ffa29d16-6d6e-4832-8c40-2ec85ff24ac6",
+      "question": "porte"
+    },
+    {
+      "answer": "potentia, ae, f.",
+      "id": "2c4eac42-6d61-498f-aef5-4d70f3130f60",
+      "question": "pouvoir"
+    },
+    {
+      "answer": "prudentia, ae, f.",
+      "id": "075d5a21-a094-4dc2-9d5f-043a8cbdb5e0",
+      "question": "prudence, sagesse"
+    },
+    {
+      "answer": "puella, ae, f.",
+      "id": "ae9a11a5-698b-40f5-90f0-1bdab08a891e",
+      "question": "jeune fille"
+    },
+    {
+      "answer": "regnum, i, n.",
+      "id": "522bedfd-580f-401e-99b1-9432d1137139",
+      "question": "règne"
+    },
+    {
+      "answer": "Roma, ae, f.",
+      "id": "5721f00d-bd9e-4d18-ab62-8c3d2e10bc99",
+      "question": "Rome"
+    },
+    {
+      "answer": "sapientia, ae, f.",
+      "id": "988e4668-aca0-4fa9-afa4-dd3c4c02dce4",
+      "question": "sagesse"
+    },
+    {
+      "answer": "statua, ae, f.",
+      "id": "df7e55be-bd47-420f-83c1-a519f075d0ef",
+      "question": "statue"
+    },
+    {
+      "answer": "stultitia, ae, f.",
+      "id": "d6c0de7b-5576-4423-958f-db44eb515aac",
+      "question": "stupidité, déraison"
+    },
+    {
+      "answer": "terra, ae, f.",
+      "id": "a11ec06e-6fdd-4132-ba5e-1bc1b085898c",
+      "question": "terre"
+    },
+    {
+      "answer": "victoria, ae, f.",
+      "id": "8cad30d1-c3b2-4314-9682-ceaf95b52a9b",
+      "question": "victoire"
+    },
+    {
+      "answer": "vir, i, m.",
+      "id": "caabe439-c375-4431-9290-cdaa4e9562dd",
+      "question": "homme"
+    },
+    {
+      "answer": "vitium, ii, n.",
+      "id": "63eb37fe-e4d1-4e54-917d-2d82bc6691d9",
+      "question": "vice, défaut"
+    },
+    {
+      "answer": "votum, i, n.",
+      "id": "18a906c3-cd46-4f17-8036-4ac7195d121f",
+      "question": "vœu, souhait"
+    },
+    {
+      "answer": "vita, ae, f.",
+      "id": "41440706-a0b4-4752-9f22-7b6929fdec77",
+      "question": "vie"
+    },
+    {
       "answer": "anima, ae, f.",
-      "id": "e1fc1361-d891-4c22-9fce-6324fa6d04cb"
+      "id": "e1fc1361-d891-4c22-9fce-6324fa6d04cb",
+      "question": "esprit"
     },
     {
-      "question": "année",
       "answer": "annus, i, m.",
-      "id": "75d6d306-80f9-4197-869d-6a4554577298"
+      "id": "75d6d306-80f9-4197-869d-6a4554577298",
+      "question": "année"
     },
     {
-      "question": "cupidité",
       "answer": "avaritia, ae, f.",
-      "id": "a013ebae-6ef7-44ad-a074-2d8c34d73036"
+      "id": "a013ebae-6ef7-44ad-a074-2d8c34d73036",
+      "question": "cupidité"
     },
     {
-      "question": "aide",
       "answer": "auxilium, ii, n.",
-      "id": "c31daa13-3887-4ccb-9e5d-f5135afa441f"
+      "id": "c31daa13-3887-4ccb-9e5d-f5135afa441f",
+      "question": "aide"
     },
     {
-      "question": "guerre",
       "answer": "bellum, i, n.",
-      "id": "67e91107-830e-4a4e-86a4-36361dad1114"
+      "id": "67e91107-830e-4a4e-86a4-36361dad1114",
+      "question": "guerre"
     },
     {
-      "question": "plaine",
       "answer": "campus, i, m.",
-      "id": "c42431f2-df99-4be1-8f2b-1d33213cbdc0"
+      "id": "c42431f2-df99-4be1-8f2b-1d33213cbdc0",
+      "question": "plaine"
     },
     {
-      "question": "cause",
       "answer": "causa, ae, f.",
-      "id": "df52f5f6-4b4c-4af2-aa45-ab36b07689d8"
+      "id": "df52f5f6-4b4c-4af2-aa45-ab36b07689d8",
+      "question": "cause"
     },
     {
-      "question": "concorde",
       "answer": "concordia, ae, f.",
-      "id": "27f4b373-25b0-4fdf-a4c8-2825abe3a75b"
+      "id": "27f4b373-25b0-4fdf-a4c8-2825abe3a75b",
+      "question": "concorde"
     },
     {
-      "question": "conseil, assemblée, décision, projet",
       "answer": "consilium, ii, n.",
-      "id": "57b6ad53-ade8-4f51-ba30-9f589ac6c578"
+      "id": "57b6ad53-ade8-4f51-ba30-9f589ac6c578",
+      "question": "conseil, assemblée, décision, projet"
     },
     {
-      "question": "déesse",
       "answer": "dea, ae, f.",
-      "id": "91800f44-c43e-4c1a-b4a2-925ee6ea32aa"
+      "id": "91800f44-c43e-4c1a-b4a2-925ee6ea32aa",
+      "question": "déesse"
     },
     {
-      "question": "désir",
       "answer": "desiderium, ii, n.",
-      "id": "90ca999c-a8ff-451a-935e-3552d1e1590d"
+      "id": "90ca999c-a8ff-451a-935e-3552d1e1590d",
+      "question": "désir"
     },
     {
-      "question": "dieu",
       "answer": "deus, i, m.",
-      "id": "4acaf38b-5c97-42ef-940c-75c24eaf12a4"
+      "id": "4acaf38b-5c97-42ef-940c-75c24eaf12a4",
+      "question": "dieu"
     },
     {
-      "question": "maîtresse",
       "answer": "domina, ae, f.",
-      "id": "f86c45f5-a035-409d-b3fc-49ea2a017129"
+      "id": "f86c45f5-a035-409d-b3fc-49ea2a017129",
+      "question": "maîtresse"
     },
     {
-      "question": "doute",
       "answer": "dubium, ii, n.",
-      "id": "a5cac3ad-9671-47b8-9c91-fd3f3b403e0c"
+      "id": "a5cac3ad-9671-47b8-9c91-fd3f3b403e0c",
+      "question": "doute"
     },
     {
-      "question": "famille",
       "answer": "familia, ae, f.",
-      "id": "040a7ac9-f515-492f-aee7-22d620a22df5"
+      "id": "040a7ac9-f515-492f-aee7-22d620a22df5",
+      "question": "famille"
     },
     {
-      "question": "femme",
       "answer": "femina, ae, f.",
-      "id": "4a0fc2ec-e62a-4169-a2b3-15324fe2ceb2"
+      "id": "4a0fc2ec-e62a-4169-a2b3-15324fe2ceb2",
+      "question": "femme"
     },
     {
-      "question": "fille",
       "answer": "filia, ae, f.",
-      "id": "170e968c-6d59-473f-90ab-16fc71733060"
+      "id": "170e968c-6d59-473f-90ab-16fc71733060",
+      "question": "fille"
     },
     {
-      "question": "fils",
       "answer": "filius, ii, m.",
-      "id": "c30cd0d9-b9de-45f7-a002-8168009a34f3"
+      "id": "c30cd0d9-b9de-45f7-a002-8168009a34f3",
+      "question": "fils"
     },
     {
-      "question": "flamme",
       "answer": "flamma, ae, f.",
-      "id": "e1844711-3357-4576-b042-ec1f489a6e32"
+      "id": "e1844711-3357-4576-b042-ec1f489a6e32",
+      "question": "flamme"
     },
     {
-      "question": "fortune, destin",
       "answer": "fortuna, ae, f.",
-      "id": "67c30c8b-24d9-402d-9848-291ad5cfb5fb"
+      "id": "67c30c8b-24d9-402d-9848-291ad5cfb5fb",
+      "question": "fortune, destin"
     },
     {
-      "question": "fuite",
       "answer": "fuga, ae, f.",
-      "id": "4b7f6968-6c42-4eef-a102-46d9906f5fff"
+      "id": "4b7f6968-6c42-4eef-a102-46d9906f5fff",
+      "question": "fuite"
     },
     {
-      "question": "pouvoir, commandement",
       "answer": "imperium, ii, n.",
-      "id": "0a290685-3cd0-478e-9756-acbff88eb2d2"
+      "id": "0a290685-3cd0-478e-9756-acbff88eb2d2",
+      "question": "pouvoir, commandement"
     },
     {
-      "question": "habitant",
       "answer": "incola, ae, f.",
-      "id": "4eaa0f40-66e5-4b02-83ae-1c2ac2801521"
+      "id": "4eaa0f40-66e5-4b02-83ae-1c2ac2801521",
+      "question": "habitant"
     },
     {
-      "question": "qualité, intelligence",
       "answer": "ingenium, ii, n.",
-      "id": "5ff06dd6-7e38-418b-b9da-0495b3f09bb4"
+      "id": "5ff06dd6-7e38-418b-b9da-0495b3f09bb4",
+      "question": "qualité, intelligence"
     },
     {
-      "question": "colère",
       "answer": "ira, ae, f.",
-      "id": "bf082023-b732-4a82-bfe2-21b1a1f48bb4"
+      "id": "bf082023-b732-4a82-bfe2-21b1a1f48bb4",
+      "question": "colère"
     },
     {
-      "question": "esclave affranchi",
       "answer": "libertus, i, m.",
-      "id": "4fe2af13-079a-497e-ab52-580eb2d50a67"
+      "id": "4fe2af13-079a-497e-ab52-580eb2d50a67",
+      "question": "esclave affranchi"
     },
     {
-      "question": "lieu",
       "answer": "locus, i, m.",
-      "id": "03a3b103-b370-40e8-aa6f-4da5818aaa45"
+      "id": "03a3b103-b370-40e8-aa6f-4da5818aaa45",
+      "question": "lieu"
     },
     {
-      "question": "jeu",
       "answer": "ludus, i, m.",
-      "id": "0d720387-27bb-44a9-8b11-f154104f582f"
+      "id": "0d720387-27bb-44a9-8b11-f154104f582f",
+      "question": "jeu"
     },
     {
-      "question": "mesure, moyen, manière",
       "answer": "modus, i, m.",
-      "id": "843a82d0-8be5-4518-a05a-c1c5792f1ef3"
+      "id": "843a82d0-8be5-4518-a05a-c1c5792f1ef3",
+      "question": "mesure, moyen, manière"
     },
     {
-      "question": "matelot",
       "answer": "nauta, ae, m.",
-      "id": "6447b55a-1811-4bbd-84da-c6d0f896a3a6"
+      "id": "6447b55a-1811-4bbd-84da-c6d0f896a3a6",
+      "question": "matelot"
     },
     {
-      "question": "nombre",
       "answer": "numerus, i, m.",
-      "id": "0cab6ff7-9ca8-4835-958c-260261c137ed"
+      "id": "0cab6ff7-9ca8-4835-958c-260261c137ed",
+      "question": "nombre"
     },
     {
-      "question": "œil",
       "answer": "oculus, i, m.",
-      "id": "4e68b9e2-7254-4ef7-b4c2-75fb6b200c54"
+      "id": "4e68b9e2-7254-4ef7-b4c2-75fb6b200c54",
+      "question": "œil"
     },
     {
-      "question": "loisir",
       "answer": "otium, ii, n.",
-      "id": "01d275e1-99dd-4a49-8268-8c845e459145"
+      "id": "01d275e1-99dd-4a49-8268-8c845e459145",
+      "question": "loisir"
     },
     {
-      "question": "patrie",
       "answer": "patria, ae, f.",
-      "id": "a4c4b146-5473-4d24-9d3e-9d9da4602910"
+      "id": "a4c4b146-5473-4d24-9d3e-9d9da4602910",
+      "question": "patrie"
     },
     {
-      "question": "poète",
       "answer": "poeta, ae, m.",
-      "id": "e4450130-ebb0-4cf8-9c48-b39a09bbd8eb"
+      "id": "e4450130-ebb0-4cf8-9c48-b39a09bbd8eb",
+      "question": "poète"
     },
     {
-      "question": "peuple",
       "answer": "populus, i, m.",
-      "id": "1855e4d2-dc60-4631-9848-d53483dabfb9"
+      "id": "1855e4d2-dc60-4631-9848-d53483dabfb9",
+      "question": "peuple"
     }
   ],
-  "createdAt": "2026-10-10T20:16:44.418Z"
+  "createdAt": "2026-10-10T20:16:44.418Z",
+  "id": "Y4DlXRkFgDoSlubuM0fD",
+  "name": "Latin - Noms"
 }

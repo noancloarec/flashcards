@@ -1,0 +1,78 @@
+{
+  "author": "noan.cloarec@gmail.com",
+  "cards": [
+    {
+      "answer": "- Différents types de sources\n- Constituer le corpus de sources\n- Que faire des sources ?",
+      "id": "5d3443b4-a46c-4cb0-86be-892fc116ace5",
+      "question": "Quelles sont les sous parties de la partie 2 - Travailler sur les sources ?"
+    },
+    {
+      "answer": "- Sources écrites\n  - Sources narratives\n  - Sources archivistiques\n- Sources matérielles. Elles requièrent une plus grande technicité.",
+      "id": "c4225d21-01d5-4f41-b54c-2b847aec220a",
+      "question": "Quelles sont les différents types de sources ?"
+    },
+    {
+      "answer": "- Les annales (texte qui résume les événements de chaque année)\n- Les chroniques (récit chronologique plus développé)\n- L'hagiographie : La vie des saint(e)s, pour fournir un modèle de vie aux lecteurs",
+      "id": "154e8f81-f844-4006-a22d-f875226f32e1",
+      "question": "Cite 3 différents types de sources narratives"
+    },
+    {
+      "answer": "3 résultats parmi\n\n- Chartes (regroupées dans des cartulaires)\n- Registre\n- Les correspondances\n- Les testaments",
+      "id": "df80432d-4571-465a-a3d0-9791a4181fdb",
+      "question": "Cite 3 différents types de sources archivistiques"
+    },
+    {
+      "answer": "- La conservation (parchemin > papier > papyrus)\n- Concernent les élités\n- Codifiées (formules stéréotypées)\n- Les mots peuvent avoir un sens différent (ex avec le mot efforcée --> violée)",
+      "id": "741038bd-2a72-4448-9cad-bfc7d21ae6db",
+      "question": "Quels problèmes posent les sources écrites ?"
+    },
+    {
+      "answer": "- Le Corpus des inscriptions de la France médiévale\n- Base sigilla (sceaux de rois et nobles français)\n- la Revue numismatique",
+      "id": "7c35bcc2-c29a-408d-bfa6-2921c11c72b4",
+      "question": "Cite 3 grands éditeurs de sources matérielles."
+    },
+    {
+      "answer": "L'étude d'autre chose que les élites.",
+      "id": "1ee35c67-346a-4cce-ba41-411fe0a741eb",
+      "question": "Quelle étude est notamment permise par les sources archéologiques ?"
+    },
+    {
+      "answer": "Recueil de toutes les sources disponibles d'un genre donné (ex : testament) ou d'un sujet donné (ex : personnage). Ou l'ensemble de données secondaires produites par des historien·nes",
+      "id": "da9c1069-b079-4178-868e-fb7842bacc8d",
+      "question": "Qu'est-ce qu'un corpus de source ?"
+    },
+    {
+      "answer": "- Le corpus d'archives sur la famille gasconne des Durfort par N. de Pen~a\n- La base de données des documents d'archives municipales de Troyes (1350 à 1500) par Cléo Rager, pour étudier la production d'archives de la ville (analyse quantitative)\n- Etude prosopographique des bâtards de Bourbon par Marie-Lise Fieyre\n- La base de données des réseaux autour de la reine Emma par Isabelle Rosé",
+      "id": "0ba1218b-f920-4705-be57-e527beab1a95",
+      "question": "Quels sont les 4 corpus de sources évoqués dans le cours ?"
+    },
+    {
+      "answer": "La question initiale que l'on se pose. A laquelle on répondra pour chaque ligne de la base ou chaque attribut d'individu",
+      "id": "2676ffd5-dbc6-44e3-a3c1-dbdfef3b2bb8",
+      "question": "Qu'est-ce qui est déterminant quand on constitue une base de données ou une prosopographie ?"
+    },
+    {
+      "answer": "Oui, comme toute production d'un historien, elle pourra devenir la source d'un travail historiographique.",
+      "id": "11d68516-d745-4040-a2f8-9a59cef0a507",
+      "question": "Un corpus de source et son analyse devient-il une source ?"
+    },
+    {
+      "answer": "C'est la question qui fait la source, sans quoi c'est juste un bout de papier.",
+      "id": "a8610747-9261-40d8-88ef-2f866c2bd30a",
+      "question": "Qu'est-ce qui fait la source ?"
+    },
+    {
+      "answer": "Appliquer la méthode du commentaire de texte, en commençant par la critique externe et la critique interne.",
+      "id": "338f4cd2-c10b-4a79-b3ed-ca88a2dec913",
+      "question": "Que faire des sources ?"
+    },
+    {
+      "answer": "- La correspondance d'Isabelle de Portugal éditée par Monique Sommé\n- La généalogie d'une chronique, analyse de chaque version pour trouver des traditions d'écriture et le manuscrit le plus fiable",
+      "id": "4ad55924-baa3-4f67-9393-88794ba69ed0",
+      "question": "Cite les 2 exemples de travail sur les sources présentés dans le cours"
+    }
+  ],
+  "createdAt": "2026-10-29T18:21:54.879Z",
+  "id": "dwyu9vs0iCIfVOgzT109",
+  "name": "Faire de l'histoire médiévale - Travailler sur les sources"
+}

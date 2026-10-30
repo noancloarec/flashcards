@@ -1,42 +1,40 @@
 {
-  "name": "La cité en question - Antiquité et économie",
   "author": "Noan",
-  "createdAt": "2026-10-10T20:16:43.958Z",
   "cards": [
     {
-      "question": "Définis le primitivisme.",
+      "answer": "Le primitivisme considère que l'économie antique est propre à son époque et qu'elle ne peut pas être comprise avec les catégories de l'économie moderne. Les comportements économiques sont principalement déterminés par des facteurs sociaux, politiques et religieux.",
       "id": "8dc124c9-d9f6-4f3e-a283-2d2f2ea02294",
-      "answer": "Le primitivisme considère que l'économie antique est propre à son époque et qu'elle ne peut pas être comprise avec les catégories de l'économie moderne. Les comportements économiques sont principalement déterminés par des facteurs sociaux, politiques et religieux."
+      "question": "Définis le primitivisme."
     },
     {
-      "question": "Définis le modernisme.",
+      "answer": "Le modernisme considère que l'on peut retrouver dans l'économie antique des caractéristiques de l'économie contemporaine, notamment des comportements rationnels, des marchés, du commerce et des formes de capitalisme.",
       "id": "c58c609e-2c82-4cf9-9b8b-7ae4b65efac4",
-      "answer": "Le modernisme considère que l'on peut retrouver dans l'économie antique des caractéristiques de l'économie contemporaine, notamment des comportements rationnels, des marchés, du commerce et des formes de capitalisme."
+      "question": "Définis le modernisme."
     },
     {
-      "question": "Quelle est la pensée de Bücher ?",
+      "answer": "Karl Bücher est un primitiviste. Pour lui, l'économie antique vise principalement à satisfaire les besoins du foyer. La monnaie joue un rôle limité, la division du travail est technique plutôt que capitaliste et le capital comme moyen de production est peu développé. Il distingue trois stades : l'économie domestique, l'économie urbaine et l'économie nationale.",
       "id": "b259b06f-299b-4273-b4de-1c2cd1fd00ab",
-      "answer": "Karl Bücher est un primitiviste. Pour lui, l'économie antique vise principalement à satisfaire les besoins du foyer. La monnaie joue un rôle limité, la division du travail est technique plutôt que capitaliste et le capital comme moyen de production est peu développé. Il distingue trois stades : l'économie domestique, l'économie urbaine et l'économie nationale."
+      "question": "Quelle est la pensée de Bücher ?"
     },
     {
+      "answer": "Édouard Meyer est moderniste. Il refuse de considérer l'Antiquité comme un bloc homogène et distingue plusieurs phases de développement économique (monde homérique=Moyen Âge, VIIIe siècle = époque moderne, Ve siècle = époque contemporaine). La guerre du Péloponnèse est une guerre de conquête de marché, une bourgeoisie émerge, Plutarque dénonce les très grandes propriétés agricoles tournées vers l'exportation.",
       "id": "c60006a1-121b-4ad9-b9be-91178cf3d7e3",
-      "question": "Quelle est la réponse de Meyer ?",
-      "answer": "Édouard Meyer est moderniste. Il refuse de considérer l'Antiquité comme un bloc homogène et distingue plusieurs phases de développement économique (monde homérique=Moyen Âge, VIIIe siècle = époque moderne, Ve siècle = époque contemporaine). La guerre du Péloponnèse est une guerre de conquête de marché, une bourgeoisie émerge, Plutarque dénonce les très grandes propriétés agricoles tournées vers l'exportation."
+      "question": "Quelle est la réponse de Meyer ?"
     },
     {
       "answer": "Ils mobilisent les sources qui servent leur propos. Ils portent sur les économies antiques un jugement de valeur par rapport à l'économie européenne de leur temps, ils ont un point de vue évolutionniste",
-      "question": "Pourquoi Bücher et Meyer peuvent-ils défendre des points de vue aussi opposés ?",
-      "id": "04118f0e-3334-43b6-ba55-14428e04978b"
+      "id": "04118f0e-3334-43b6-ba55-14428e04978b",
+      "question": "Pourquoi Bücher et Meyer peuvent-ils défendre des points de vue aussi opposés ?"
     },
     {
+      "answer": "Meyer a une vision classique, Bücher a une vision interventionniste",
       "id": "5dddc265-de95-4b62-b011-9c47bd8940c5",
-      "question": "Entre Meyer et Bücher, qui a une vision classique du marché (pro libre marché) et qui a une vision interventionniste ?",
-      "answer": "Meyer a une vision classique, Bücher a une vision interventionniste"
+      "question": "Entre Meyer et Bücher, qui a une vision classique du marché (pro libre marché) et qui a une vision interventionniste ?"
     },
     {
-      "question": "Que disent J. Hasebroek, E. Ziebert et O. Erb ?",
       "answer": "J. Hasebroek  : l'objectif principal est l'autarcie et la subsistance. \nE. Ziebert critique cette approche en s'appuyant davantage sur les sources archéologiques, notamment les mines du Laurion, et souligne leur caractère industriel. \nO. Erb distingue l'oikonomiké, correspondant au commerce local, de la chrematistiké, correspondant au commerce lointain ; il considère la première comme fondamentale et la seconde comme un complément risqué.",
-      "id": "879c740b-5607-4cca-876e-d58f13a1a8bb"
+      "id": "879c740b-5607-4cca-876e-d58f13a1a8bb",
+      "question": "Que disent J. Hasebroek, E. Ziebert et O. Erb ?"
     },
     {
       "answer": "Mikhaïl Rostovtzeff est moderniste.\nIl réfléchit sur la grandeur et la décadence de Rome.\nAntiquité : première mondialisation dans l'Antiquité, apogée économique dans le monde hellénistique. Exemple de l'état ptolémaique qui permet une activité de transformation (tissus, tapis, vaisselle, papyri), fait émerger une bourgeoisie qui investit et un état qui redistribue\nrégression sous l'Empire romain (un état pillard qui fait prospérer les magnats)\nConception cyclique de l'économie. ",
@@ -44,9 +42,9 @@
       "question": "Quelle est la pensée de M. Rostovtzeff ?"
     },
     {
+      "answer": "Claude Mossé : La crise de la démocratie est liée à la variation des prix qui paupérise des masses rurales. \nPierre Vidal-Naquet analyse la crise de la cité au IVe siècle et participe à la diffusion des thèses de Finley en France, il distingue les esclaves comme une classe en lutte.",
       "id": "eb4a9cd4-9653-4fa9-84bf-acc63f293ae7",
-      "question": "Cite 2 historien·nes marxistes impliqué·es dans la controverse, et ce qu'ielles apportent.",
-      "answer": "Claude Mossé : La crise de la démocratie est liée à la variation des prix qui paupérise des masses rurales. \nPierre Vidal-Naquet analyse la crise de la cité au IVe siècle et participe à la diffusion des thèses de Finley en France, il distingue les esclaves comme une classe en lutte."
+      "question": "Cite 2 historien·nes marxistes impliqué·es dans la controverse, et ce qu'ielles apportent."
     },
     {
       "answer": "l’économie est sphère séparée et peut être étudiée selon des règles universelles (approche  moderniste)",
@@ -54,34 +52,37 @@
       "question": "Définis le formalisme."
     },
     {
-      "id": "70c707d5-a4e0-49ff-a546-15cebc7da11e",
       "answer": "L’économie ne peut pas être comprise indépendamment des domaines sociaux et politiques",
+      "id": "70c707d5-a4e0-49ff-a546-15cebc7da11e",
       "question": "Définis le substantivisme."
     },
     {
-      "id": "00570ed5-7c38-4856-ad1b-906ce6b7f37b",
       "answer": "Les économies antiques sont encastrées dans le social et le politique\nIl distingue\n - La réciprocité (dont contre don, partage du travail)\n - La redistribution (ex : Rome et le blé)\n - L'échange commercial par le marché (Athenes qui achète du blé dans la mer Noire)",
+      "id": "00570ed5-7c38-4856-ad1b-906ce6b7f37b",
       "question": "Quelle est la pensée de K. Polanyi ?"
     },
     {
+      "answer": "Il est primitivite (mais pas complètement, il reconnait circuits économiques en dehors de la maison).\nIl insiste sur une forte \"irrationnalité économique\"\n - Recherche autarcie\n - Importance de l'agriculture\n - Esclavage et mentalité non productive\n - Part faible du commerce\n - La société favorise la possession de la terre\n\nLes statuts des personnes (plutôt que leur fonction) établissent les rapports sociaux : exemple d'un chantier à Athènes.",
       "id": "2dd27d56-ce17-4206-ae44-89cd0f221557",
-      "question": "Quelle est la pensée de Finley ?",
-      "answer": "Il est primitivite (mais pas complètement, il reconnait circuits économiques en dehors de la maison).\nIl insiste sur une forte \"irrationnalité économique\"\n - Recherche autarcie\n - Importance de l'agriculture\n - Esclavage et mentalité non productive\n - Part faible du commerce\n - La société favorise la possession de la terre\n\nLes statuts des personnes (plutôt que leur fonction) établissent les rapports sociaux : exemple d'un chantier à Athènes."
+      "question": "Quelle est la pensée de Finley ?"
     },
     {
-      "id": "fc13f96c-35a0-4af4-aa5d-caa82044e53a",
       "answer": "Cohérence de son œuvre\nEtude globale à une époque où on avait Peu de connaissances archéologiques\nCritique qu'il fait des modernistes",
+      "id": "fc13f96c-35a0-4af4-aa5d-caa82044e53a",
       "question": "Pourquoi la pensée de Finley est-elle très influente ?"
     },
     {
+      "answer": "Il généralise à toute l'Antiquité un modèle principalement fondé sur le monde grec. \nJean Andreau souligne la spécificité professionnelle des manieurs d'argent à Rome. \nAndré Tchernia utilise les sources archéologiques pour mettre en évidence des circuits commerciaux, des productions viticoles à grande échelle et des mesures protectionnistes romaines. \nL'école de Besançon montre l'existence de conscience de classes dans les révoltes d'esclaves et de comportements économiques rationnels.",
       "id": "70278611-f82e-4255-9669-7a0e58dd6219",
-      "question": "Quelles sont les oppositions à la pensée de Finley ?",
-      "answer": "Il généralise à toute l'Antiquité un modèle principalement fondé sur le monde grec. \nJean Andreau souligne la spécificité professionnelle des manieurs d'argent à Rome. \nAndré Tchernia utilise les sources archéologiques pour mettre en évidence des circuits commerciaux, des productions viticoles à grande échelle et des mesures protectionnistes romaines. \nL'école de Besançon montre l'existence de conscience de classes dans les révoltes d'esclaves et de comportements économiques rationnels."
+      "question": "Quelles sont les oppositions à la pensée de Finley ?"
     },
     {
+      "answer": "Le néo-institutionnalisme considère que les institutions jouent un rôle déterminant dans le fonctionnement de l'économie.\nDouglas North distingue les institutions formelles, comme les lois et les décrets, des institutions informelles, comme les coutumes.\n Elles définissent les règles de propriété et réduisent ou augmentent les coûts de transaction. \nL'économie ne peut donc pas être expliquée par le seul fonctionnement du marché.",
       "id": "0ed388c7-892d-4ce9-adb6-00218b8499f0",
-      "question": "Quelles idées avance le courant néo-institutionnaliste ?",
-      "answer": "Le néo-institutionnalisme considère que les institutions jouent un rôle déterminant dans le fonctionnement de l'économie.\nDouglas North distingue les institutions formelles, comme les lois et les décrets, des institutions informelles, comme les coutumes.\n Elles définissent les règles de propriété et réduisent ou augmentent les coûts de transaction. \nL'économie ne peut donc pas être expliquée par le seul fonctionnement du marché."
+      "question": "Quelles idées avance le courant néo-institutionnaliste ?"
     }
-  ]
+  ],
+  "createdAt": "2026-10-10T20:16:43.958Z",
+  "id": "YAKO9n4yyGImabkA9pqb",
+  "name": "La cité en question - Antiquité et économie"
 }
