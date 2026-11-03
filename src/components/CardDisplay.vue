@@ -2,7 +2,7 @@
 import { computed, onUnmounted, ref } from 'vue'
 
 import type { Card } from '../models/card'
-import { type CardMemorizationStatus,CardState } from '../models/memorizationStatus.ts'
+import { type CardMemorizationStatus, CardState } from '../models/memorizationStatus.ts'
 import { renderMarkdown } from '../services/markdown.ts'
 import StarProgress from './StarProgress.vue'
 
@@ -166,7 +166,7 @@ onUnmounted(() => {
 
 .question,
 .answer.shown {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   width: 90%;
   vertical-align: middle;
   line-height: 30px;
@@ -251,5 +251,6 @@ onUnmounted(() => {
 
 ul {
   list-style-type: '- ';
+  padding-left: 10px;
 }
 </style>
