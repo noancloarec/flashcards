@@ -385,7 +385,6 @@ const addBulkCards = () => {
 
 .deck-form input:focus,
 .deck-form textarea:focus {
-  outline: none;
   border-color: #b05a36;
   background-color: #ffffff;
   box-shadow: 0 0 0 3px rgb(176 90 54 / 12%);
