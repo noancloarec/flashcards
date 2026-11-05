@@ -25,6 +25,7 @@ import {
 import CardDisplay from './CardDisplay.vue'
 import SpaceBar from './icons/SpaceBar.vue'
 import MemorizationProgress from './MemorizationProgress.vue'
+import ToolBar from './ToolBar.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
@@ -212,16 +213,23 @@ const saveProgress = async () => {
   <div v-else>
     <p>Vous avez mémorisé toutes les cartes</p>
   </div>
-  <button @click="saveProgress" :disabled="elementSavingStatus !== SavingStatus.NotSaved">
-    <template v-if="elementSavingStatus === SavingStatus.NotSaved">
-      Sauvegarder la progression
-    </template>
-    <template v-else-if="elementSavingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
-    <template v-else-if="elementSavingStatus === SavingStatus.Saved">
-      Progression sauvegardée ✅
-    </template>
-  </button>
-  <button @click="reset()">Recommencer</button>
+  <ToolBar style="margin-top: 200px">
+    <a
+      :href="`/edit-deck/${deckState.id}`"
+      v-if="googleUser?.email && googleUser.email === deckState?.author"
+      >Modifier le jeu de cartes</a
+    >
+    <button @click="saveProgress" :disabled="elementSavingStatus !== SavingStatus.NotSaved">
+      <template v-if="elementSavingStatus === SavingStatus.NotSaved">
+        Sauvegarder la progression
+      </template>
+      <template v-else-if="elementSavingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
+      <template v-else-if="elementSavingStatus === SavingStatus.Saved">
+        Progression sauvegardée ✅
+      </template>
+    </button>
+    <button @click="reset()">Recommencer</button>
+  </ToolBar>
 </template>
 
 <style scoped>
