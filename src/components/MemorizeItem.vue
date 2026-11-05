@@ -76,18 +76,20 @@ onMounted(async () => {
   initCardStates()
 })
 
-document.addEventListener('keyup', (e) => {
-  // Space = Reveal answer
-  if (!showAnswer.value && e.code === 'Space') {
-    showAnswer.value = true
-    // Space on revealed == failure
-  } else if (showAnswer.value && e.code === 'Space') {
-    nextQuestion(false)
-    // Enter on revealed = success
+document.addEventListener('keydown', (e) => {
+  if (e.code === 'Space') {
+    e.preventDefault()
+
+    if (!showAnswer.value) {
+      showAnswer.value = true
+    } else {
+      nextQuestion(false)
+    }
   } else if (showAnswer.value && (e.code === 'Enter' || e.code === 'NumpadEnter')) {
     nextQuestion(true)
-    // Arrows = next or previous question
   } else if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') {
+    e.preventDefault()
+
     const shift = e.code === 'ArrowRight' ? 1 : -1
     showAnswer.value = false
     currentCardIndex.value = positiveMod(
