@@ -20,6 +20,7 @@ import {
 } from '../services/firebase.ts'
 import {
   getDeckMemorizationHistoryFromLocalStorage,
+  registerDeckMemorization,
   saveDeckMemorizationHistoryToLocalStorage as saveDeckMemorizationHistoryToLocalStorage
 } from '../services/localStorageInterface.ts'
 import CardDisplay from './CardDisplay.vue'
@@ -148,6 +149,7 @@ const reset = () => {
 }
 
 const saveProgress = async () => {
+  registerDeckMemorization(deckState.value!.id)
   for (const learnedCard of cardsLearnedInSession.value) {
     let memorizationHistoryForCard = memorizationHistory.value[learnedCard.id]
     if (memorizationHistoryForCard === undefined) {
