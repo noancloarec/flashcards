@@ -77,20 +77,19 @@ onMounted(async () => {
   initCardStates()
 })
 
-/** Keyboard nagivation through questions */
 document.addEventListener('keyup', (e) => {
   // Space = Reveal answer
-  if (!showAnswer.value && e.code == 'Space') {
+  if (!showAnswer.value && e.code === 'Space') {
     showAnswer.value = true
     // Space on revealed == failure
-  } else if (showAnswer.value && e.code == 'Space') {
+  } else if (showAnswer.value && e.code === 'Space') {
     nextQuestion(false)
     // Enter on revealed = success
-  } else if (showAnswer.value && e.code == 'Enter') {
+  } else if (showAnswer.value && (e.code === 'Enter' || e.code === 'NumpadEnter')) {
     nextQuestion(true)
     // Arrows = next or previous question
-  } else if (e.code == 'ArrowRight' || e.code == 'ArrowLeft') {
-    const shift = e.code == 'ArrowRight' ? 1 : -1
+  } else if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') {
+    const shift = e.code === 'ArrowRight' ? 1 : -1
     showAnswer.value = false
     currentCardIndex.value = positiveMod(
       currentCardIndex.value + shift,
