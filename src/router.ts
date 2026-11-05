@@ -40,7 +40,9 @@ const router = createRouter({
 })
 
 router.beforeEach(async (to) => {
-  await authReady
+  if (to.meta.requiresAuth || to.path === '/login') {
+    await authReady
+  }
 
   if (to.meta.requiresAuth && !isLoggedInGoogle.value) {
     return { path: '/login', query: { redirect: to.fullPath } }
