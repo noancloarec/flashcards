@@ -3,8 +3,8 @@ import { Timestamp } from 'firebase/firestore'
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
+import SaveButton from '../components/SaveButton.vue'
 import { useAuth } from '../composables/useAuth.ts'
-import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
 import type { Card } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
@@ -47,8 +47,6 @@ const cardStates = ref<CardState[]>([])
 const { googleUser } = useAuth()
 
 const cardsLearnedInSession = ref<Card[]>([])
-
-const { elementSavingStatus } = useSavingStatus(cardsLearnedInSession)
 
 /**
  * Init the learning state of the cards in the deck, according to the deckMemorizationStatus from firestore if present
@@ -148,8 +146,6 @@ const reset = () => {
 }
 
 const saveProgress = async () => {
-  elementSavingStatus.value = SavingStatus.Saving
-
   for (const learnedCard of cardsLearnedInSession.value) {
     let memorizationHistoryForCard = memorizationHistory.value[learnedCard.id]
     if (memorizationHistoryForCard === undefined) {
@@ -169,8 +165,6 @@ const saveProgress = async () => {
   } else {
     saveDeckMemorizationHistoryToLocalStorage(deckId, memorizationHistory.value)
   }
-
-  elementSavingStatus.value = SavingStatus.Saved
 }
 </script>
 
@@ -219,15 +213,7 @@ const saveProgress = async () => {
       v-if="googleUser?.email && googleUser.email === deckState?.author"
       >Modifier le jeu de cartes</a
     >
-    <button @click="saveProgress" :disabled="elementSavingStatus !== SavingStatus.NotSaved">
-      <template v-if="elementSavingStatus === SavingStatus.NotSaved">
-        Sauvegarder la progression
-      </template>
-      <template v-else-if="elementSavingStatus === SavingStatus.Saving"> Sauvegarde ... </template>
-      <template v-else-if="elementSavingStatus === SavingStatus.Saved">
-        Progression sauvegardée ✅
-      </template>
-    </button>
+    <SaveButton :elementToWatch="cardsLearnedInSession" @save="saveProgress" />
     <button @click="reset()">Recommencer</button>
   </ToolBar>
 </template>
