@@ -7,6 +7,7 @@ import type {
   UserMemorizationHistory
 } from '../models/memorizationHistory'
 import { mapValues } from './javascriptMissingFunctions'
+import type { DeckId } from '../models/deck'
 
 type FirestoreTimestampNotParsed = {
   type: 'firestore/timestamp/1.0'
@@ -72,4 +73,29 @@ export function saveDeckMemorizationHistoryToLocalStorage(
     getUserMemorizationHistoryFromLocalStorage()
   userMemorizationStatus[deckId] = memorizationHistory
   localStorage.setItem('user_memorization_history', JSON.stringify(userMemorizationStatus))
+}
+
+/**
+ * Retrieves last time each deck has been (partially) learnt
+ * Used to sort decks on the homepage to display decks currently being learnt
+ * The information can also be found in the memorizationHistory on firestore, basing the sort on these data adds too much complexity
+ * @returns Last time each deck has been (partially) learnt
+ */
+export const getDecksLatestMemorization: () => ElementByDeckId<number> = () => {
+  const decksTouchedDate = localStorage.getItem('DecksLatestMemorization')
+  if (!decksTouchedDate) {
+    return {}
+  }
+  return JSON.parse(decksTouchedDate)
+}
+
+/**
+ * Register the time at which a deck as partially learnt
+ * @param id the deck that has been partially learnt
+ */
+export const registerDeckMemorization = (id: DeckId) => {
+  const decksLatestMemorization = getDecksLatestMemorization()
+  decksLatestMemorization[id] = new Date().getTime()
+
+  localStorage.setItem('DecksLatestMemorization', JSON.stringify(decksLatestMemorization))
 }

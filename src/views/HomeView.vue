@@ -11,35 +11,35 @@ import {
   type UserMemorizationStatus
 } from '../models/memorizationStatus.ts'
 import { getDeckList, getUserMemorizationHistory } from '../services/firebase'
-import { getUserMemorizationHistoryFromLocalStorage } from '../services/localStorageInterface.ts'
+import {
+  getDecksLatestMemorization,
+  getUserMemorizationHistoryFromLocalStorage
+} from '../services/localStorageInterface.ts'
 import { searchResults } from '../services/search.ts'
 
 const allDecks: Ref<Deck[]> = ref([])
 
 const searchTerm = ref('')
 
-const loading = ref(true)
+const deckListLoading = ref(true)
+const progressStarsLoading = ref(true)
 
-const getOrderedDecksByLatestMemorization = (
-  decks: Deck[],
-  memorizationStatus: UserMemorizationStatus
-) => {
-  const decksToSort = [...decks]
-  decksToSort.sort((a, b) => {
-    if (memorizationStatus[a.id]?.latestMemorization === undefined) return 1
-    if (memorizationStatus[b.id]?.latestMemorization === undefined) return -1
+const getOrderedDecksByLatestMemorization = (decks: Deck[]) => {
+  const decksLatestMemorization = getDecksLatestMemorization()
 
-    return (
-      memorizationStatus[b.id].latestMemorization!.toMillis() -
-      memorizationStatus[a.id].latestMemorization!.toMillis()
-    )
+  return [...decks].sort((a, b) => {
+    const dateA = decksLatestMemorization[a.id]
+    const dateB = decksLatestMemorization[b.id]
+
+    if (dateA === undefined && dateB === undefined) return 0
+    if (dateA === undefined) return 1 // a has no date → after b
+    if (dateB === undefined) return -1 // b has no date → after a
+
+    return dateB - dateA // most recent first
   })
-  return decksToSort
 }
 
-const orderedDecks = computed(() =>
-  getOrderedDecksByLatestMemorization(allDecks.value, memorizationStatus.value)
-)
+const orderedDecks = computed(() => getOrderedDecksByLatestMemorization(allDecks.value))
 
 const filteredDecks = computed(() =>
   searchResults(searchTerm.value, orderedDecks.value, (deck) => deck.name)
@@ -47,8 +47,9 @@ const filteredDecks = computed(() =>
 
 onMounted(async () => {
   allDecks.value = await getDeckList()
+  deckListLoading.value = false
   memorizationStatus.value = await loadMemorizationStatus(allDecks.value, googleUser.value?.email)
-  loading.value = false
+  progressStarsLoading.value = false
 })
 
 const memorizationStatus = ref<UserMemorizationStatus>({})
@@ -65,12 +66,13 @@ const { googleUser } = useAuth()
 <template>
   <main>
     <input type="text" v-model="searchTerm" class="deck-search" placeholder="Rechercher ..." />
-    <div v-if="loading" class="deck-list" aria-busy="true">
+    <div v-if="deckListLoading" class="deck-list" aria-busy="true">
       <div v-for="n in 12" :key="n" class="deck skeleton" />
     </div>
     <div v-else class="deck-list">
       <div class="deck" v-for="deck in filteredDecks" :key="deck.id">
-        <ProgressBar :deck="deck" :memorization-status="memorizationStatus[deck.id]" />
+        <div v-if="progressStarsLoading" class="progress-loading"></div>
+        <ProgressBar v-else :deck="deck" :memorization-status="memorizationStatus[deck.id]" />
         <a class="deck-link" :href="`/memorize/${deck.id}`">
           <p>{{ deck.name }}</p>
         </a>
@@ -81,12 +83,18 @@ const { googleUser } = useAuth()
 </template>
 
 <style scoped>
-.skeleton {
+.skeleton,
+.progress-loading {
   /* shape comes from .deck: radius 10px, min-height 100px, padding */
   background: linear-gradient(90deg, #f5eee1 25%, #fbf7ef 50%, #f5eee1 75%);
   background-size: 200% 100%;
   animation: shimmer 1.2s infinite;
+}
+.skeleton {
   height: 128px;
+}
+.progress-loading {
+  height: 28px;
 }
 
 @keyframes shimmer {
