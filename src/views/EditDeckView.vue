@@ -3,8 +3,8 @@ import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 import DeckForm from '../components/DeckForm.vue'
+import SaveButton from '../components/SaveButton.vue'
 import ToolBar from '../components/ToolBar.vue'
-import { SavingStatus, useSavingStatus } from '../composables/useSavingStatus.ts'
 import type { Deck } from '../models/deck.ts'
 import { getDeck, updateDeck } from '../services/firebase.ts'
 
@@ -15,34 +15,20 @@ const loadDeckInUrl: () => Promise<Deck> = async () => {
   return await getDeck(deckId)
 }
 
-const { elementSavingStatus } = useSavingStatus(editedDeck)
-
 loadDeckInUrl().then((d) => {
   editedDeck.value = d
   document.title = `Édition - ${d.name}`
 })
-
-const saveDeck = async () => {
-  elementSavingStatus.value = SavingStatus.Saving
-  await updateDeck(editedDeck.value!)
-  elementSavingStatus.value = SavingStatus.Saved
-}
 </script>
 
 <template>
-  <main>
+  <main v-if="editedDeck">
     <DeckForm v-if="editedDeck" v-model="editedDeck" />
 
     <ToolBar :fixed="true">
       <a :href="`/memorize/${editedDeck?.id}`">Mémoriser</a>
 
-      <button @click="saveDeck" :disabled="elementSavingStatus !== SavingStatus.NotSaved">
-        <template v-if="elementSavingStatus === SavingStatus.NotSaved"> Sauvegarder </template>
-        <template v-else-if="elementSavingStatus === SavingStatus.Saving">
-          Sauvegarde ...
-        </template>
-        <template v-else-if="elementSavingStatus === SavingStatus.Saved"> Sauvegardée ✅ </template>
-      </button>
+      <SaveButton :elementToWatch="editedDeck" @save="() => updateDeck(editedDeck!)" />
     </ToolBar>
   </main>
 </template>
