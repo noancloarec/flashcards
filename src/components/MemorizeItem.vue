@@ -209,7 +209,7 @@ const saveProgress = async () => {
   <div v-else>
     <p>Vous avez mémorisé toutes les cartes</p>
   </div>
-  <ToolBar style="margin-top: 200px">
+  <ToolBar style="margin-top: 100px">
     <a
       :href="`/edit-deck/${deckState.id}`"
       v-if="googleUser?.email && googleUser.email === deckState?.author"
