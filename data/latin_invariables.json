@@ -27,11 +27,6 @@
       "question": "en dehors de, depuis"
     },
     {
-      "answer": "enim",
-      "id": "a1708e41-d51a-43a3-b7de-4b14a57824f8",
-      "question": "car, en effet"
-    },
-    {
       "answer": "ergo",
       "id": "26f520a0-6a41-4598-8854-3cb21ef58bb8",
       "question": "donc, ainsi"
@@ -62,7 +57,7 @@
       "question": "c’est pourquoi"
     },
     {
-      "answer": "nam",
+      "answer": "_enim_ ou _nam_",
       "id": "019c1f85-83a6-453d-bd63-f6ac0eeb50c9",
       "question": "car, en effet"
     },

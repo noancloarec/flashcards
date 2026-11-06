@@ -1,5 +1,5 @@
 {
-  "author": "Noan",
+  "author": "noan.cloarec@gmail.com",
   "cards": [
     {
       "answer": "196 av. J.-C., par T. Quinctius Flamininus.",
@@ -145,6 +145,11 @@
       "answer": "Entre 73 et 71, dans le sud de l'Italie",
       "id": "ae60bd27-7a56-423e-9ae3-075eb548a2c0",
       "question": "Quand la révolte d'esclave de Spartacus a-t-elle lieu ?"
+    },
+    {
+      "answer": "184",
+      "id": "773b88a5-ea2d-47ba-b87f-b795071f4d57",
+      "question": "Quand Caton l'Ancien, pendant sa censure, accuse-t-il les Scipions (Africain et Asiatique) d'abus de pouvoir ?\n"
     }
   ],
   "createdAt": "2026-10-10T20:16:43.574Z",

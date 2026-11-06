@@ -1,5 +1,5 @@
 {
-  "author": "Noan",
+  "author": "noan.cloarec@gmail.com",
   "cards": [
     {
       "answer": "Madrassa",
@@ -185,6 +185,16 @@
       "answer": "Parias",
       "id": "87c47e3a-941e-433e-a48a-72f81ec588b8",
       "question": "Quel est le terme qui désigne les tributs versés par les royaumes musulmans de Taïfa aux royaumes chrétiens du Nord de la péninsule Ibérique ?"
+    },
+    {
+      "answer": "Les ghazi",
+      "id": "5ffcb96d-683b-49d8-a8c1-599418e3e829",
+      "question": "Quel terme arabe désigne les cavaleries turkmènes ?"
+    },
+    {
+      "answer": "Le mouvement soufi",
+      "id": "18af2d0a-bebe-4f7a-9d49-5da0d9cba148",
+      "question": "Quel terme désigne un mouvement religieux d'ascètes pendant l'époque seldjoukide ?"
     }
   ],
   "createdAt": "2026-10-10T20:16:44.748Z",
