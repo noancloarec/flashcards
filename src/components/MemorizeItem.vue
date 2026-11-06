@@ -25,9 +25,9 @@ import {
 } from '../services/localStorageInterface.ts'
 import CardDisplay from './CardDisplay.vue'
 import SpaceBar from './icons/SpaceBar.vue'
+import LoadingIndicator from './LoadingIndicator.vue'
 import MemorizationProgress from './MemorizationProgress.vue'
 import ToolBar from './ToolBar.vue'
-import LoadingIndicator from './LoadingIndicator.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
