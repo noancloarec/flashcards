@@ -27,6 +27,7 @@ import CardDisplay from './CardDisplay.vue'
 import SpaceBar from './icons/SpaceBar.vue'
 import MemorizationProgress from './MemorizationProgress.vue'
 import ToolBar from './ToolBar.vue'
+import LoadingIndicator from './LoadingIndicator.vue'
 
 /** @see https://stackoverflow.com/questions/4467539/javascript-modulo-gives-a-negative-result-for-negative-numbers */
 const positiveMod = (a: number, b: number) => ((a % b) + b) % b
@@ -44,6 +45,7 @@ const memorizationStatus = ref<DeckMemorizationStatus>({
   cardsMemorization: {},
   latestMemorization: undefined
 })
+const loading = ref(true)
 const cardStates = ref<CardState[]>([])
 const { googleUser } = useAuth()
 
@@ -75,6 +77,7 @@ onMounted(async () => {
 
   memorizationStatus.value = getDeckMemorizationStatus(deck, memorizationHistory.value)
   initCardStates()
+  loading.value = false
 })
 
 document.addEventListener('keydown', (e) => {
@@ -173,53 +176,53 @@ const saveProgress = async () => {
 </script>
 
 <template>
-  <div v-if="deckState === null || Object.keys(memorizationStatus.cardsMemorization).length === 0">
-    Loading
-  </div>
-  <div v-else-if="currentCardIndex !== -1">
-    <h2>{{ deckState.name }}</h2>
-    <CardDisplay
-      :card="cardToDisplay"
-      :show-answer="showAnswer"
-      :memorization-status="memorizationStatus.cardsMemorization[cardToDisplay.id]"
-    />
-    <div class="actions">
-      <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
-        Voir la réponse [
-        <SpaceBar class="space-bar" />]
-      </button>
-
-      <template v-else>
-        <button @click="nextQuestion(true)" class="success">Je le savais [↲]</button>
-        <button @click="nextQuestion(false)" class="failed">
-          Je ne le savais pas [
+  <LoadingIndicator v-if="true" />
+  <template v-else>
+    <div v-if="currentCardIndex !== -1">
+      <h2>{{ deckState!.name }}</h2>
+      <CardDisplay
+        :card="cardToDisplay"
+        :show-answer="showAnswer"
+        :memorization-status="memorizationStatus.cardsMemorization[cardToDisplay.id]"
+      />
+      <div class="actions">
+        <button v-if="!showAnswer" @click="showAnswer = true" class="show-anwser">
+          Voir la réponse [
           <SpaceBar class="space-bar" />]
         </button>
-      </template>
+
+        <template v-else>
+          <button @click="nextQuestion(true)" class="success">Je le savais [↲]</button>
+          <button @click="nextQuestion(false)" class="failed">
+            Je ne le savais pas [
+            <SpaceBar class="space-bar" />]
+          </button>
+        </template>
+      </div>
+      <MemorizationProgress
+        :card-states="cardStates"
+        :current-card-index="currentCardIndex"
+        @index-change="
+          (i) => {
+            showAnswer = false
+            currentCardIndex = i
+          }
+        "
+      />
     </div>
-    <MemorizationProgress
-      :card-states="cardStates"
-      :current-card-index="currentCardIndex"
-      @index-change="
-        (i) => {
-          showAnswer = false
-          currentCardIndex = i
-        }
-      "
-    />
-  </div>
-  <div v-else>
-    <p>Vous avez mémorisé toutes les cartes</p>
-  </div>
-  <ToolBar style="margin-top: 100px">
-    <a
-      :href="`/edit-deck/${deckState.id}`"
-      v-if="googleUser?.email && googleUser.email === deckState?.author"
-      >Modifier le jeu de cartes</a
-    >
-    <SaveButton :elementToWatch="cardsLearnedInSession" @save="saveProgress" />
-    <button @click="reset()">Recommencer</button>
-  </ToolBar>
+    <div v-else>
+      <p>Vous avez mémorisé toutes les cartes</p>
+    </div>
+    <ToolBar style="margin-top: 100px">
+      <a
+        :href="`/edit-deck/${deckState.id}`"
+        v-if="googleUser?.email && googleUser.email === deckState?.author"
+        >Modifier le jeu de cartes</a
+      >
+      <SaveButton :elementToWatch="cardsLearnedInSession" @save="saveProgress" />
+      <button @click="reset()">Recommencer</button>
+    </ToolBar>
+  </template>
 </template>
 
 <style scoped>
