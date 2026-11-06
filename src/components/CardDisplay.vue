@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, onUnmounted, ref } from 'vue'
 
-import type { Card } from '../models/card'
+import { type Card, cardIsDateCard, cardIsSimpleCard } from '../models/card'
 import { type CardMemorizationStatus, CardState } from '../models/memorizationStatus.ts'
 import { renderMarkdown } from '../services/markdown.ts'
 import StarProgress from './StarProgress.vue'
+import { asAnwser } from '../models/timeMarker.ts'
 
 interface Props {
   card: Card
@@ -115,7 +116,16 @@ onUnmounted(() => {
     <div class="question-content" v-html="renderMarkdown(card.question)"></div>
   </div>
 
-  <div class="answer" :class="{ shown: showAnswer }" v-html="renderMarkdown(card.answer)"></div>
+  <div
+    class="answer"
+    :class="{ shown: showAnswer }"
+    v-if="cardIsSimpleCard(card)"
+    v-html="renderMarkdown(card.answer)"
+  ></div>
+  <div class="answer" :class="{ shown: showAnswer }" v-else-if="cardIsDateCard(card)">
+    <p v-html="asAnwser(card.answer.time)"></p>
+    <small v-if="card.answer.details">{{ card.answer.details }}</small>
+  </div>
 
   <!--
     Teleport places the notification directly under <body>, preventing
