@@ -1,67 +1,188 @@
 {
-  "name": "Latin - adjectifs de la première classe",
-  "author": "Noan",
+  "author": "noan.cloarec@gmail.com",
   "cards": [
     {
-      "question": "Décline bonus, a, um au nominatif.",
-      "answer": "m. bonus ; n. bonum ; f. bona — m. pl. boni ; n. pl. bona ; f. pl. bonae",
-      "id": "69942c7f-29f4-46d0-9748-917743b1f512"
+      "answer": "bonus — boni",
+      "id": "b2aff4da-1a6c-437a-b26e-16eb42cac410",
+      "question": "Décline bonus, a, um au nominatif masculin."
     },
     {
-      "question": "Décline bonus, a, um au vocatif.",
-      "answer": "m. bone ; n. bonum ; f. bona — m. pl. boni ; n. pl. bona ; f. pl. bonae",
-      "id": "1acbf44d-e77c-4734-a5c8-2ab26f72e9dd"
+      "answer": "bona — bonae",
+      "id": "9fa346c2-f9ce-42c3-a191-1ea235913d97",
+      "question": "Décline bonus, a, um au nominatif féminin."
     },
     {
-      "question": "Décline bonus, a, um à l’accusatif.",
-      "answer": "m. bonum ; n. bonum ; f. bonam — m. pl. bonos ; n. pl. bona ; f. pl. bonas",
-      "id": "dd27d942-289e-4618-9b21-c92ad462c9ac"
+      "answer": "bonum — bona",
+      "id": "83a42b65-fcfe-4594-90b9-0cf7f21a3d7b",
+      "question": "Décline bonus, a, um au nominatif neutre."
     },
     {
-      "question": "Décline bonus, a, um au génitif.",
-      "answer": "m. boni ; n. boni ; f. bonae — m. pl. bonorum ; n. pl. bonorum ; f. pl. bonarum",
-      "id": "917f16aa-22b4-458c-9d2f-478b9f915343"
+      "answer": "bone — boni",
+      "id": "d2f83032-be29-47b5-b314-d645ed35e005",
+      "question": "Décline bonus, a, um au vocatif masculin."
     },
     {
-      "question": "Décline bonus, a, um au datif.",
-      "answer": "m. bono ; n. bono ; f. bonae — m. pl. bonis ; n. pl. bonis ; f. pl. bonis",
-      "id": "df38fa89-665a-4de6-b11a-fa860abfb40e"
+      "answer": "bona — bonae",
+      "id": "e1faaa2f-d5b0-4927-a562-cc1755749bee",
+      "question": "Décline bonus, a, um au vocatif féminin."
     },
     {
-      "question": "Décline bonus, a, um à l’ablatif.",
-      "answer": "m. bono ; n. bono ; f. bona — m. pl. bonis ; n. pl. bonis ; f. pl. bonis",
-      "id": "eaa703ea-c1b0-4c14-8f11-0f6840206597"
+      "answer": "bonum — bona",
+      "id": "68a37624-5757-45cb-a14e-66e177b81273",
+      "question": "Décline bonus, a, um au vocatif neutre."
     },
     {
-      "question": "Décline pulcher, chra, chrum au nominatif.",
-      "answer": "m. pulcher ; n. pulchrum ; f. pulchra — m. pl. pulchri ; n. pl. pulchra ; f. pl. pulchrae",
-      "id": "24864f03-dac5-4839-a854-a5e36efbe136"
+      "answer": "bonum — bonos",
+      "id": "238c9d22-c67f-4b0b-9980-bf5f3f8256ca",
+      "question": "Décline bonus, a, um à l’accusatif masculin."
     },
     {
-      "question": "Décline pulcher, chra, chrum au vocatif.",
-      "answer": "m. pulcher ; n. pulchrum ; f. pulchra — m. pl. pulchri ; n. pl. pulchra ; f. pl. pulchrae",
-      "id": "bd3b885c-2608-41cd-bf3a-33789b3a03b3"
+      "answer": "bonam — bonas",
+      "id": "2c81143a-b3fb-4c95-9027-77260c45b405",
+      "question": "Décline bonus, a, um à l’accusatif féminin."
     },
     {
-      "question": "Décline pulcher, chra, chrum à l’accusatif.",
-      "answer": "m. pulchrum ; n. pulchrum ; f. pulchram — m. pl. pulchros ; n. pl. pulchra ; f. pl. pulchras",
-      "id": "d9399e16-320e-4723-a411-b0c69df6cd28"
+      "answer": "bonum — bona",
+      "id": "1311ff3a-c19e-46be-b3b5-e072e1dcffd0",
+      "question": "Décline bonus, a, um à l’accusatif neutre."
     },
     {
-      "question": "Décline pulcher, chra, chrum au génitif.",
-      "answer": "m. pulchri ; n. pulchri ; f. pulchrae — m. pl. pulchrorum ; n. pl. pulchrorum ; f. pl. pulchrarum",
-      "id": "dd22229c-c476-4fa2-95f0-7809427b478a"
+      "answer": "boni — bonorum",
+      "id": "f04723ab-8ce1-4317-9d7b-fc784415c5eb",
+      "question": "Décline bonus, a, um au génitif masculin."
     },
     {
-      "question": "Décline pulcher, chra, chrum au datif.",
-      "answer": "m. pulchro ; n. pulchro ; f. pulchrae — m. pl. pulchris ; n. pl. pulchris ; f. pl. pulchris",
-      "id": "4031ace9-4740-4a51-8d0e-9d91c52691d8"
+      "answer": "bonae — bonarum",
+      "id": "707fba38-beca-468e-a3a1-a3eaa1f91dbd",
+      "question": "Décline bonus, a, um au génitif féminin."
     },
     {
-      "question": "Décline pulcher, chra, chrum à l’ablatif.",
-      "answer": "m. pulchro ; n. pulchro ; f. pulchra — m. pl. pulchris ; n. pl. pulchris ; f. pl. pulchris",
-      "id": "e06af093-c34a-4fbb-acb2-fd429c2384ae"
+      "answer": "boni — bonorum",
+      "id": "34811d1c-67bb-4d1a-b714-99411c80bfba",
+      "question": "Décline bonus, a, um au génitif neutre."
+    },
+    {
+      "answer": "bono — bonis",
+      "id": "3c902715-2199-4314-902d-9ad252b5ca58",
+      "question": "Décline bonus, a, um au datif masculin."
+    },
+    {
+      "answer": "bonae — bonis",
+      "id": "d817d004-1af5-4520-acc6-4713824e9069",
+      "question": "Décline bonus, a, um au datif féminin."
+    },
+    {
+      "answer": "bono — bonis",
+      "id": "72361d8a-0d32-4fc6-8555-d3f76d11123a",
+      "question": "Décline bonus, a, um au datif neutre."
+    },
+    {
+      "answer": "bono — bonis",
+      "id": "1add945c-6f07-43db-b5e1-4df6f3011086",
+      "question": "Décline bonus, a, um à l’ablatif masculin."
+    },
+    {
+      "answer": "bona — bonis",
+      "id": "bf5789da-fe44-4dc7-8db6-94d49ae54f23",
+      "question": "Décline bonus, a, um à l’ablatif féminin."
+    },
+    {
+      "answer": "bono — bonis",
+      "id": "b226e3a7-2af7-4a70-8d5e-9c0e65615657",
+      "question": "Décline bonus, a, um à l’ablatif neutre."
+    },
+    {
+      "answer": "pulcher — pulchri",
+      "id": "726c2425-eaa8-4a80-9161-08717cef93ce",
+      "question": "Décline pulcher, chra, chrum au nominatif masculin."
+    },
+    {
+      "answer": "pulchra — pulchrae",
+      "id": "314834cc-4a9a-4506-89bb-d399c68d425f",
+      "question": "Décline pulcher, chra, chrum au nominatif féminin."
+    },
+    {
+      "answer": "pulchrum — pulchra",
+      "id": "e33557e0-4117-4132-aa1f-6e3121193d92",
+      "question": "Décline pulcher, chra, chrum au nominatif neutre."
+    },
+    {
+      "answer": "pulcher — pulchri",
+      "id": "c4503d40-7fb8-4b51-8631-5278a0c5b9bf",
+      "question": "Décline pulcher, chra, chrum au vocatif masculin."
+    },
+    {
+      "answer": "pulchra — pulchrae",
+      "id": "75607fd0-2a6f-4029-84ce-0e587c8335b2",
+      "question": "Décline pulcher, chra, chrum au vocatif féminin."
+    },
+    {
+      "answer": "pulchrum — pulchra",
+      "id": "7fb05bd5-2db8-41ed-bbb2-b848fe6498b5",
+      "question": "Décline pulcher, chra, chrum au vocatif neutre."
+    },
+    {
+      "answer": "pulchrum — pulchros",
+      "id": "8d39a9d1-9c4f-4573-b62d-04724c5dd2ad",
+      "question": "Décline pulcher, chra, chrum à l’accusatif masculin."
+    },
+    {
+      "answer": "pulchram — pulchras",
+      "id": "011a562c-ca86-4701-a174-ba3aa4345aa7",
+      "question": "Décline pulcher, chra, chrum à l’accusatif féminin."
+    },
+    {
+      "answer": "pulchrum — pulchra",
+      "id": "14cad021-b945-4c68-9a83-12391ebb78f1",
+      "question": "Décline pulcher, chra, chrum à l’accusatif neutre."
+    },
+    {
+      "answer": "pulchri — pulchrorum",
+      "id": "49178b1c-5ac3-4f3a-bbb7-d216736cb9f4",
+      "question": "Décline pulcher, chra, chrum au génitif masculin."
+    },
+    {
+      "answer": "pulchrae — pulchrarum",
+      "id": "13f5dbca-a78b-4bad-ba2f-12b25fa0a229",
+      "question": "Décline pulcher, chra, chrum au génitif féminin."
+    },
+    {
+      "answer": "pulchri — pulchrorum",
+      "id": "353045c4-882f-4075-bb3f-d497cf493cc5",
+      "question": "Décline pulcher, chra, chrum au génitif neutre."
+    },
+    {
+      "answer": "pulchro — pulchris",
+      "id": "6b77e19a-492e-4000-a4cb-c904e02fbbba",
+      "question": "Décline pulcher, chra, chrum au datif masculin."
+    },
+    {
+      "answer": "pulchrae — pulchris",
+      "id": "4fe4017f-54cb-4688-86e2-2d87332eb1a9",
+      "question": "Décline pulcher, chra, chrum au datif féminin."
+    },
+    {
+      "answer": "pulchro — pulchris",
+      "id": "d6473635-2b9f-4d47-a310-27e1d9745328",
+      "question": "Décline pulcher, chra, chrum au datif neutre."
+    },
+    {
+      "answer": "pulchro — pulchris",
+      "id": "42893bd3-ef19-4f6b-a63d-ed9b0be1bed7",
+      "question": "Décline pulcher, chra, chrum à l’ablatif masculin."
+    },
+    {
+      "answer": "pulchra — pulchris",
+      "id": "ee184f45-27ec-412f-b23e-4b0442a26cfe",
+      "question": "Décline pulcher, chra, chrum à l’ablatif féminin."
+    },
+    {
+      "answer": "pulchro — pulchris",
+      "id": "bcd53b8d-6c5e-461a-a07c-162654a2b0f7",
+      "question": "Décline pulcher, chra, chrum à l’ablatif neutre."
     }
   ],
-  "createdAt": "2026-10-10T20:16:44.033Z"
+  "createdAt": "2026-10-10T20:16:44.033Z",
+  "id": "Wx82IWmsFrx1wz7FhZAx",
+  "name": "Latin - adjectifs de la première classe"
 }

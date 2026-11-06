@@ -1,0 +1,78 @@
+{
+  "author": "noan.cloarec@gmail.com",
+  "cards": [
+    {
+      "answer": "- Différents types de publications\n- Agencer les sources et l'historiographie\n- La scientificité du propos",
+      "id": "178ea3a5-2b68-4fa3-bfc3-6d7dbb949579",
+      "question": "Quelles sont les sous parties de la partie 3. Rédiger et publier ?"
+    },
+    {
+      "answer": "La revue par les pairs.\n\n- Edition de sources\n- Monographie (ex : thèse)\n- Ouvrage collectif\n- Article de revue",
+      "id": "97aac98a-980a-4849-bc22-f4a2fad23906",
+      "question": "Cite 4 exemples de publication universitaire, qu'est-ce qui les distingue des autres publications ?"
+    },
+    {
+      "answer": "- Dictionnaire\n- Encyclopédie\n- Livre \"grand public\"\n- Articles de blog, video youtube, ..",
+      "id": "26cce2a2-d143-4249-8605-3abb42ac5c9b",
+      "question": "Cite 4 exemples de publications non universitaire"
+    },
+    {
+      "answer": "- Soumission\n- Evaluation formelle par un membre du comité éditorial\n- Envoi aux relecteurs\n- Mise en commun des commentaires et envoi au comité éditorial\n- Si modifications demandées :\n  - Retour à l'auteur pour correction\n  - Révision",
+      "id": "ffdcadf2-7e63-4ebc-9da2-91703db08413",
+      "question": "Liste les étapes de la revue par les pairs"
+    },
+    {
+      "answer": "Le prix du papier.",
+      "id": "a54b692e-6d38-46bc-8fcf-5289f3456cd9",
+      "question": "Quelle est la contrainte majeure pour l'éditeur ?"
+    },
+    {
+      "answer": "- Généralistes, ne font pas que de l'histoire (Perrin, Tallandier)\n- Spécialisé, pour un public large (Passé composé, Libertalia)\n- Universitaire (Presse universitaire de France, de Rennes), publication de thèses",
+      "id": "cdcc5823-bb5b-4df6-9a05-68238feeef30",
+      "question": "Cite 3 types d'éditeurs avec un exemple à chaque fois"
+    },
+    {
+      "answer": "- Le récit, chronologique (biographie, guerre)\n- Le tableau, répond à la question \"comment c'était ?\"\n- La démonstration, répond à une problématique",
+      "id": "9310c944-52e0-4ef8-be47-342e247aa0dc",
+      "question": "Cite 3 types d'écrit"
+    },
+    {
+      "answer": "Pour la bataille de Bouvines :\n\n- 27 juillet 1214 : Qui combattait ? Que s'est-il passé ?\n- Règne de Philippe-Auguste (1180-1223) : Affirmation du pouvoir royal et construction de l'état monarchique.\n- Relations franco-anglaises : 1194 (début des hostilités avec Richard Ier) - 1259 (Traité de Paris)",
+      "id": "d2b3dd23-5001-4350-a574-52661caeb252",
+      "question": "Décrit l'exemple du cours illustrant l'intérêt du choix des bornes spatiales et chronologique."
+    },
+    {
+      "answer": "Chefs de guerre --> Histoire bataille\nCombattants --> Approche anthropologique (si les sources le permettent)",
+      "id": "153a2b30-a574-4956-9077-e671a0411066",
+      "question": "Pour la bataille de Bouvines, comment le choix des personnages influe-t-il le récit ?"
+    },
+    {
+      "answer": "Jean-Baptiste Santa Maria qui écrit à propos de Marguerite de France (XIVème siècle)\n\n- 1er livre : Biographie classique : sa vie et sa manière d'exercer\n- 2ème livre : Pratiques du pouvoir et mise en perspective avec les autres acteur·ices de son temps, approche comparatiste",
+      "id": "48a07955-eaa1-4f6b-925b-f9e2a0d402e4",
+      "question": "Quel exemple du cours illustre deux traitements différents d'une même princesse par un même historien ?"
+    },
+    {
+      "answer": "\"Saint-Louis\" de Jacques Le Goff, il intègre les apports de l'école des annales.\n\n1.  Récit chronologique de sa vie\n2.  Etude de la mémoire de Saint-Louis\n3.  Etude de la culture politique (construction de l'image du roi idéal, contemporaine de sa vie)",
+      "id": "ba31d730-ad44-43f8-98a6-ba2033c8edcf",
+      "question": "Quelle publication a renouvelé le genre biographique à la fin du XXème siècle ? Quels en sont les grandes parties ?"
+    },
+    {
+      "answer": "Faire parler son imagination pour combler les manquement des sources ou l'austérité du sujet\n\n- Philippe Josserand assume une part d'imagination dans \"Les sept vies de Jacques de Molay\"\n- Simone Beta fait parler son manuscrit dans \"Moi, un manuscrit. Autobiographie de l'Anthologie palatine\"",
+      "id": "74161832-4f7e-4399-ac52-53847c16b5c9",
+      "question": "Quelle approche peut être adoptée par les historien·nes pour rendre le récit plus attractif ? Cite 2 exemples"
+    },
+    {
+      "answer": "- De la qualité de l'argumentation\n- la citation de sources (note de bas de page)\n- Revue par les pairs\n  - Lors de colloque\n  - Lors de débats",
+      "id": "ce856472-8217-4339-a0a4-3263a8094a21",
+      "question": "De quoi dépend la scientificité du propos ?"
+    },
+    {
+      "answer": "Le débat sur la réforme grégorienne entre Florian Mazel et Dominique Barthélémy\n\n- Florian Mazel en fait une transformation profonde de l'Eglise et de la société du XIème au XIIIème siècle\n- Dominique Barthélémy en fait une crise principale à la fin du XIème, suivie de compromis, à distinguer d'autres évolutions sociales.",
+      "id": "cfacd027-e560-4959-9358-71b4ca8a24fb",
+      "question": "Cite un débat historique évoqué dans le cours"
+    }
+  ],
+  "createdAt": "2026-10-29T18:23:51.611Z",
+  "id": "ii9rAjfp6odfHYX6ynYG",
+  "name": "Faire de l'histoire médiévale - Rédiger et publier"
+}

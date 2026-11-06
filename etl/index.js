@@ -134,14 +134,13 @@ const downloadAllDecks = async (store, outputDir) => {
 
     const filename =
       (deck.name || doc.id)
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .normalize('NFKD') // compatibility decomposition: ᵉ -> e, ﬁ -> fi, etc.
+        .replace(/[\u0300-\u036f]/g, '') // strip combining accents
         .toLowerCase()
-        .trim()
-        .replace(/\s+/g, '_')
-        .replace(/[-<>:"/\\|?*\x00-\x1F]/g, '_')
-        .replace(/_+/g, '_')
-        .replace(/^_+|_+$/g, '') || doc.id
+        .replace(/[^a-z0-9]+/g, '_') // whitelist: anything else becomes _
+        .replace(/^_+|_+$/g, '') // trim leading/trailing _
+        .slice(0, 100) || // optional: keep filenames a reasonable length
+      doc.id
 
     const serializedDeck = {
       ...deck,
