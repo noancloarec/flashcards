@@ -14,7 +14,7 @@ export interface TimeMarker {
   sortKey: number // for orderBy / timeline ordering
 }
 
-export const sortKey = (p: TimePoint) => p.year * 10000 + (p.month ?? 0) * 100 + (p.day ?? 0)
+export const sortKey = (p: TimePoint) => p.year * 10000 + (p.month ?? 1) * 100 + (p.day ?? 1)
 
 const ROMAN_NUMERALS: [number, string][] = [
   [50, 'L'],
@@ -40,31 +40,35 @@ const toRoman = (n: number): string => {
   return result
 }
 
-export const asAnwser = (timeMarker: TimeMarker): string => {
-  let year = timeMarker.start.year
-  let eraIndicator = ''
-  if (year <= 0) {
-    year -= 1
-    year = Math.abs(year)
-    eraIndicator = 'av. J-C'
+const fromAstro = (year: number) =>
+  year <= 0 ? { year: -(year - 1), bce: true } : { year: year, bce: false }
+
+export const toReadableTimeMarker = (timeMarker: TimeMarker): string => {
+  const { year: startYear, bce: startYearBce } = fromAstro(timeMarker.start.year)
+  const startEraIndicator = startYearBce ? ' av. J-C' : ''
+
+  if (timeMarker.end) {
+    const { year: endYear, bce: endYearBce } = fromAstro(timeMarker.end.year)
+
+    switch (timeMarker.precision) {
+      case 'century':
+        const century = Math.ceil(startYear / 100)
+        const centurySuffix = century === 1 ? 'er' : 'e'
+        return `Au ${toRoman(century)}<sup>${centurySuffix}</sup> siècle${startEraIndicator}`
+      case 'year':
+        return startYearBce && !endYearBce
+          ? `De ${startYear} av. J-C à ${endYear} ap. J-C`
+          : `De ${startYear} à ${endYear}${startEraIndicator}`
+    }
   }
-  let result: string
 
   switch (timeMarker.precision) {
     case 'century':
-      const century = Math.ceil(year / 100)
-      const centurySuffix = century === 1 ? 'er' : 'e'
-      result = `Au ${toRoman(century)}<sup>${centurySuffix}</sup> siècle`
-      break
     case 'year':
-      result = `En ${year}`
-      break
+      return `En ${startYear}${startEraIndicator}`
     case 'month':
-      result = `En ${timeMarker.start.month} ${year}`
-      break
+      return `En ${timeMarker.start.month} ${startYear}${startEraIndicator}`
     case 'day':
-      result = `Le ${timeMarker.start.day} ${timeMarker.start.month} ${year}`
-      break
+      return `Le ${timeMarker.start.day} ${timeMarker.start.month} ${startYear}${startEraIndicator}`
   }
-  return `${result} ${eraIndicator}`
 }

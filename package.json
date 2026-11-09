@@ -9,7 +9,9 @@
     "type-check": "vue-tsc --noEmit",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "test": "vitest",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "dompurify": "^3.4.17",
@@ -37,6 +39,7 @@
     "typescript": "^6.0.3",
     "vite": "^8.3.2",
     "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.0",
     "vue-tsc": "^3.3.13"
   }
 }

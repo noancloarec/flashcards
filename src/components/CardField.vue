@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 
 import {
   type Card,
@@ -9,6 +9,8 @@ import {
   type DateCard,
   type SimpleCard
 } from '../models/card'
+import { toReadableTimeMarker } from '../models/timeMarker.ts'
+import { findFirstTimeMarker, type TimeMatch } from '../services/timeMarkerDetection.ts'
 import DateCardField from './DateCardField.vue'
 import SimpleCardField from './SimpleCardField.vue'
 
@@ -19,11 +21,37 @@ const cachedDateAnswer = ref<any>(
 )
 const answerIsADate = ref(cardIsDateCard(card.value))
 
+const dateDetectedInStringAnswer = computed<TimeMatch | null>(() =>
+  cardIsSimpleCard(card.value) ? findFirstTimeMarker(card.value.answer) : null
+)
+
+const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
+
+const dateAnswerFromTimeMatch = (match: TimeMatch, originalAnwser: string): DateAnswer => {
+  let details = originalAnwser.substring(match.index + match.text.length).trim()
+  if (details.startsWith(',')) {
+    details = details.substring(1).trim()
+  }
+  let result: DateAnswer = { time: match.marker }
+  if (details) {
+    result = { ...result, details: capitalize(details) }
+  }
+  return result
+}
+
 const toggleDate = () => {
   answerIsADate.value = !answerIsADate.value
   if (answerIsADate.value) {
     cachedSimpleAnswer.value = card.value.answer as string
-    card.value.answer = cachedDateAnswer.value
+
+    if (dateDetectedInStringAnswer.value && !cachedDateAnswer.value?.time) {
+      card.value.answer = dateAnswerFromTimeMatch(
+        dateDetectedInStringAnswer.value,
+        cachedSimpleAnswer.value
+      )
+    } else {
+      card.value.answer = cachedDateAnswer.value
+    }
   } else {
     cachedDateAnswer.value = card.value.answer as DateAnswer
     card.value.answer = cachedSimpleAnswer.value
@@ -32,12 +60,18 @@ const toggleDate = () => {
 </script>
 <template>
   <div class="card-fields">
-    <label class="checkbox-label">
-      <input type="checkbox" :checked="answerIsADate" @change="toggleDate" />
-      Cette réponse est une date
-    </label>
     <DateCardField v-if="answerIsADate" v-model="card as DateCard" />
     <SimpleCardField v-else v-model="card as SimpleCard" />
+    <label
+      class="checkbox-label"
+      v-if="dateDetectedInStringAnswer || answerIsADate || cachedDateAnswer?.time"
+    >
+      <input type="checkbox" :checked="answerIsADate" @change="toggleDate" />
+      Cette réponse est une date
+      <span v-if="dateDetectedInStringAnswer && !answerIsADate && !cachedDateAnswer?.time">
+        ({{ toReadableTimeMarker(dateDetectedInStringAnswer.marker) }})
+      </span>
+    </label>
   </div>
 </template>
 <style>
