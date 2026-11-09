@@ -10,7 +10,13 @@
  */
 import { computed, ref, watch } from 'vue'
 
-import { type Precision, sortKey, type TimeMarker, type TimePoint } from '../models/timeMarker'
+import {
+  type Precision,
+  sortKey,
+  type TimeMarker,
+  type TimePoint,
+  toReadableTimeMarker
+} from '../models/timeMarker'
 
 /* ---------- Draft (form state) ---------- */
 
@@ -137,6 +143,7 @@ const draft = ref<TimeDraft>(model.value ? draftFromMarker(model.value) : newDra
 
 /** The marker described by the current form state (null if incomplete) */
 const marker = computed(() => buildMarker(draft.value))
+const readable = computed(() => (marker.value ? toReadableTimeMarker(marker.value) : ''))
 
 const pointKeys = (d: TimeDraft): ('start' | 'end')[] =>
   d.isRange && d.precision !== 'century' ? ['start', 'end'] : ['start']
@@ -162,59 +169,65 @@ watch(model, (value) => {
 
 <template>
   <div class="time-editor">
-    <div class="time-row">
-      <select v-model="draft.precision" aria-label="Précision">
-        <option value="day">Jour précis</option>
-        <option value="month">Mois</option>
-        <option value="year">Année</option>
-        <option value="century">Siècle</option>
-      </select>
+    <div class="time-fields">
+      <div class="time-row">
+        <select v-model="draft.precision" aria-label="Précision">
+          <option value="day">Jour précis</option>
+          <option value="month">Mois</option>
+          <option value="year">Année</option>
+          <option value="century">Siècle</option>
+        </select>
 
-      <label v-if="draft.precision !== 'century'" class="checkbox-label">
-        <input v-model="draft.isRange" type="checkbox" /> Période
-      </label>
-      <label class="checkbox-label">
-        <input v-model="draft.approximate" type="checkbox" /> Approximatif (« vers »)
-      </label>
+        <label v-if="draft.precision !== 'century'" class="checkbox-label">
+          <input v-model="draft.isRange" type="checkbox" /> Période
+        </label>
+        <label class="checkbox-label">
+          <input v-model="draft.approximate" type="checkbox" /> Approximatif (« vers »)
+        </label>
+      </div>
+
+      <div v-for="key in pointKeys(draft)" :key="key" class="time-row">
+        <span class="time-label">{{ pointLabel(draft, key) }}</span>
+
+        <input
+          v-if="draft.precision === 'day'"
+          v-model.number="draft[key].day"
+          type="number"
+          min="1"
+          max="31"
+          placeholder="Jour"
+          aria-label="Jour"
+        />
+        <select
+          v-if="draft.precision === 'day' || draft.precision === 'month'"
+          v-model="draft[key].month"
+          aria-label="Mois"
+        >
+          <option :value="null">Mois</option>
+          <option v-for="(name, i) in MONTH_NAMES" :key="name" :value="i + 1">{{ name }}</option>
+        </select>
+        <input
+          v-model.number="draft[key].year"
+          class="year-input"
+          type="number"
+          min="1"
+          :placeholder="draft.precision === 'century' ? 'Siècle (ex. 9)' : 'Année'"
+          :aria-label="draft.precision === 'century' ? 'Siècle' : 'Année'"
+        />
+        <select v-model="draft[key].bce" aria-label="Ère">
+          <option :value="false">ap. J.-C.</option>
+          <option :value="true">av. J.-C.</option>
+        </select>
+      </div>
+
+      <p v-if="!marker" class="time-hint">
+        Complétez la date pour qu'elle soit enregistrée avec la carte.
+      </p>
     </div>
-
-    <div v-for="key in pointKeys(draft)" :key="key" class="time-row">
-      <span class="time-label">{{ pointLabel(draft, key) }}</span>
-
-      <input
-        v-if="draft.precision === 'day'"
-        v-model.number="draft[key].day"
-        type="number"
-        min="1"
-        max="31"
-        placeholder="Jour"
-        aria-label="Jour"
-      />
-      <select
-        v-if="draft.precision === 'day' || draft.precision === 'month'"
-        v-model="draft[key].month"
-        aria-label="Mois"
-      >
-        <option :value="null">Mois</option>
-        <option v-for="(name, i) in MONTH_NAMES" :key="name" :value="i + 1">{{ name }}</option>
-      </select>
-      <input
-        v-model.number="draft[key].year"
-        class="year-input"
-        type="number"
-        min="1"
-        :placeholder="draft.precision === 'century' ? 'Siècle (ex. 9)' : 'Année'"
-        :aria-label="draft.precision === 'century' ? 'Siècle' : 'Année'"
-      />
-      <select v-model="draft[key].bce" aria-label="Ère">
-        <option :value="false">ap. J.-C.</option>
-        <option :value="true">av. J.-C.</option>
-      </select>
+    <div class="time-preview" aria-live="polite">
+      <span v-if="readable" class="time-preview-value">{{ readable }}</span>
+      <span v-else class="time-preview-empty">—</span>
     </div>
-
-    <p v-if="!marker" class="time-hint">
-      Complétez la date pour qu'elle soit enregistrée avec la carte.
-    </p>
   </div>
 </template>
 
@@ -264,14 +277,45 @@ select:focus {
 
 .time-editor {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
   padding: 14px;
   border: 1px solid #eee5da;
   border-radius: 8px;
   background-color: #faf5ed;
 }
 
+.time-fields {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.time-preview {
+  display: flex;
+  flex: 0 1 220px;
+  flex-direction: column;
+  gap: 4px;
+  align-self: stretch;
+  justify-content: center;
+  padding-left: 16px;
+  border-left: 1px solid #eee5da;
+  text-align: left;
+}
+
+.time-preview-value {
+  color: #2a2b2f;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.time-preview-empty {
+  color: #a79d90;
+  font-size: 16px;
+}
 .time-row {
   display: flex;
   flex-wrap: wrap;
