@@ -8,6 +8,7 @@ import HomeView from './views/HomeView.vue'
 import LoginView from './views/LoginView.vue'
 import MemorizeView from './views/MemorizeView.vue'
 import NewDeckView from './views/NewDeckView.vue'
+import TimelineView from './views/TimelineView.vue'
 
 const { isLoggedInGoogle, authReady } = useAuth()
 
@@ -23,6 +24,11 @@ const router = createRouter({
       path: '/memorize/:deckId',
       name: 'memorize',
       component: MemorizeView
+    },
+    {
+      path: '/timeline/:deckId',
+      name: 'timeline',
+      component: TimelineView
     },
     { path: '/login', component: LoginView },
     {

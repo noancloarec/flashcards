@@ -178,6 +178,7 @@ const saveProgress = async () => {
 <template>
   <LoadingIndicator v-if="loading" />
   <template v-else>
+    <a :href="`/timeline/${deckState!.id}`">Timeline</a>
     <div v-if="currentCardIndex !== -1">
       <h2>{{ deckState!.name }}</h2>
       <CardDisplay

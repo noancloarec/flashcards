@@ -98,7 +98,7 @@ const adjustElementsYOffset = () => {
 /**
  * A mirror of Date Answers containing their actual y-coordinate
  */
-const stepsY = ref<number[]>(props.events.map((answer) => computeY(answer.time.start)))
+const stepsY = ref<number[]>(sortedAnswers.value.map((answer) => computeY(answer.time.start)))
 
 const svgHeight = ref<string>('99%')
 const svgViewBoxHeight = ref<number>(1000)
