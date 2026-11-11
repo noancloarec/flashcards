@@ -107,7 +107,7 @@ describe('findFirstTimeMarker', () => {
     it('parses a bare year without approximate flag', () => {
       const m = find('Né en 1048')!
       expect(m.text).toBe('1048')
-      expect(m.marker.approximate).toBeUndefined()
+      expect(m.marker.approximate).toBe(false)
     })
 
     it('parses a short BCE year', () => {

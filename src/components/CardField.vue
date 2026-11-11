@@ -13,6 +13,7 @@ import { toReadableTimeMarker } from '../models/timeMarker.ts'
 import { findFirstTimeMarker, type TimeMatch } from '../services/timeMarkerDetection.ts'
 import DateCardField from './DateCardField.vue'
 import SimpleCardField from './SimpleCardField.vue'
+import { getEventName } from '../services/eventNameDetection.ts'
 
 const card = defineModel<Card>({ required: true })
 const cachedSimpleAnswer = ref<string>(cardIsSimpleCard(card.value) ? card.value.answer : '')
@@ -27,12 +28,16 @@ const dateDetectedInStringAnswer = computed<TimeMatch | null>(() =>
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1)
 
-const dateAnswerFromTimeMatch = (match: TimeMatch, originalAnwser: string): DateAnswer => {
+const predictDateAnswer = (
+  match: TimeMatch,
+  originalAnwser: string,
+  question: string
+): DateAnswer => {
   let details = originalAnwser.substring(match.index + match.text.length).trim()
   if (details.startsWith(',')) {
     details = details.substring(1).trim()
   }
-  let result: DateAnswer = { time: match.marker }
+  let result: DateAnswer = { time: match.marker, name: getEventName(question) }
   if (details) {
     result = { ...result, details: capitalize(details) }
   }
@@ -45,9 +50,10 @@ const toggleDate = () => {
     cachedSimpleAnswer.value = card.value.answer as string
 
     if (dateDetectedInStringAnswer.value && !cachedDateAnswer.value?.time) {
-      card.value.answer = dateAnswerFromTimeMatch(
+      card.value.answer = predictDateAnswer(
         dateDetectedInStringAnswer.value,
-        cachedSimpleAnswer.value
+        cachedSimpleAnswer.value,
+        card.value.question
       )
     } else {
       card.value.answer = cachedDateAnswer.value
@@ -70,7 +76,8 @@ const toggleDate = () => {
       <span class="checkbox-text">
         Cette réponse est une date
         <template v-if="dateDetectedInStringAnswer && !answerIsADate && !cachedDateAnswer?.time">
-          (<span v-html="toReadableTimeMarker(dateDetectedInStringAnswer.marker)"></span>)
+          (<span v-html="toReadableTimeMarker(dateDetectedInStringAnswer.marker)"></span>) :
+          {{ getEventName(card.question) }}
         </template>
       </span>
     </label>
