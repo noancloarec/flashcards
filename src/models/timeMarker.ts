@@ -43,6 +43,8 @@ const toRoman = (n: number): string => {
 const fromAstro = (year: number) =>
   year <= 0 ? { year: -(year - 1), bce: true } : { year: year, bce: false }
 
+export const numericYearFromAstro = (year: number) => (year <= 0 ? year - 1 : year)
+
 export const toReadableTimeMarker = (timeMarker: TimeMarker): string => {
   const { year: startYear, bce: startYearBce } = fromAstro(timeMarker.start.year)
   const startEraIndicator = startYearBce ? ' av. J-C' : ''

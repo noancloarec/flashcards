@@ -2,6 +2,8 @@
 /**
  * This is the component for an event on the timeline
  */
+import type { DateAnswer } from '../models/card.ts'
+import { numericYearFromAstro } from '../models/timeMarker.ts'
 import TextWrapped from './TextWrapped.vue'
 
 defineProps<{
@@ -14,17 +16,17 @@ defineProps<{
    */
   textY: number
   /**
-   * The year to display
+   * The event to display
    */
-  year: number
+  event: DateAnswer
   /**
    * The title of the event
    */
   title: string
   /**
-   * Wether the year should be drawn or not. It should not be drawn when 2 events take place the same year
+   * Wether the date should be drawn or not. It should not be drawn when 2 events take place at the same date
    */
-  displayYear: boolean
+  displayDate: boolean
 
   /**
    * When the text is wrapped, an event is fired so the parent can adjust the coordinates if needed (used to avoid component overlapping)
@@ -52,13 +54,13 @@ defineProps<{
   ></line>
   <text
     :class="{ shown: isShown }"
-    v-if="displayYear"
+    v-if="displayDate"
     x="180"
     text-anchor="end"
     :y="textY"
     dominant-baseline="middle"
   >
-    {{ year }}
+    {{ numericYearFromAstro(event.time.start.year) }}
   </text>
   <TextWrapped
     :x="220"
@@ -90,7 +92,7 @@ defineProps<{
       stroke-width="1"
     ></line>
   </template>
-  <template v-if="displayYear && textY !== tickY">
+  <template v-if="displayDate && textY !== tickY">
     <!-- Lines from the tick to the year -->
     <line
       :class="{ shown: isShown }"
