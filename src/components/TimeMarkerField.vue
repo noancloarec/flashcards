@@ -169,6 +169,10 @@ watch(model, (value) => {
 
 <template>
   <div class="time-editor">
+    <div class="time-preview" aria-live="polite">
+      <span v-if="readable" class="time-preview-value">{{ readable }}</span>
+      <span v-else class="time-preview-empty">—</span>
+    </div>
     <div class="time-fields">
       <div class="time-row">
         <select v-model="draft.precision" aria-label="Précision">
@@ -223,10 +227,6 @@ watch(model, (value) => {
       <p v-if="!marker" class="time-hint">
         Complétez la date pour qu'elle soit enregistrée avec la carte.
       </p>
-    </div>
-    <div class="time-preview" aria-live="polite">
-      <span v-if="readable" class="time-preview-value">{{ readable }}</span>
-      <span v-else class="time-preview-empty">—</span>
     </div>
   </div>
 </template>
@@ -301,8 +301,8 @@ select:focus {
   gap: 4px;
   align-self: stretch;
   justify-content: center;
-  padding-left: 16px;
-  border-left: 1px solid #eee5da;
+  padding-right: 16px;
+  border-right: 1px solid #eee5da;
   text-align: left;
 }
 

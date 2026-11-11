@@ -70,7 +70,7 @@ const rules: Rule[] = [
       return {
         start,
         precision: 'day',
-        approximate: !!m[1] || undefined,
+        approximate: !!m[1] || false,
         sortKey: sortKey(start)
       }
     }
@@ -83,7 +83,7 @@ const rules: Rule[] = [
       return {
         start,
         precision: 'month',
-        approximate: !!m[1] || undefined,
+        approximate: !!m[1] || false,
         sortKey: sortKey(start)
       }
     }
@@ -104,7 +104,7 @@ const rules: Rule[] = [
         start,
         end,
         precision: 'century',
-        approximate: !!m[1] || undefined,
+        approximate: !!m[1] || false,
         sortKey: sortKey(start)
       }
     }
@@ -134,7 +134,7 @@ const rules: Rule[] = [
         start,
         end,
         precision: 'year',
-        approximate: !!m[1] || undefined,
+        approximate: !!m[1] || false,
         sortKey: sortKey(start)
       }
     }
@@ -144,7 +144,7 @@ const rules: Rule[] = [
     re: new RegExp(String.raw`(?<![\w-])${APPROX}-(\d{1,4})(?!\d)`, 'gi'),
     build: (m) => {
       const start = { year: toAstro(+m[2], true) }
-      return { start, precision: 'year', approximate: !!m[1] || undefined, sortKey: sortKey(start) }
+      return { start, precision: 'year', approximate: !!m[1] || false, sortKey: sortKey(start) }
     }
   },
   {
@@ -155,7 +155,7 @@ const rules: Rule[] = [
       return {
         start,
         precision: 'year',
-        approximate: !!m[1] || undefined,
+        approximate: !!m[1] || false,
         sortKey: sortKey(start)
       }
     }
@@ -168,7 +168,7 @@ const rules: Rule[] = [
       return {
         start,
         precision: 'year',
-        approximate: !!m[1] || undefined,
+        approximate: !!m[1] || false,
         sortKey: sortKey(start)
       }
     }
