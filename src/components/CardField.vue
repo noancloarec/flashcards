@@ -67,12 +67,12 @@ const toggleDate = () => {
       v-if="dateDetectedInStringAnswer || answerIsADate || cachedDateAnswer?.time"
     >
       <input type="checkbox" :checked="answerIsADate" @change="toggleDate" />
-      Cette réponse est une date (<span
-        v-if="dateDetectedInStringAnswer && !answerIsADate && !cachedDateAnswer?.time"
-        v-html="toReadableTimeMarker(dateDetectedInStringAnswer.marker)"
-      >
-      </span
-      >)
+      <span class="checkbox-text">
+        Cette réponse est une date
+        <template v-if="dateDetectedInStringAnswer && !answerIsADate && !cachedDateAnswer?.time">
+          (<span v-html="toReadableTimeMarker(dateDetectedInStringAnswer.marker)"></span>)
+        </template>
+      </span>
     </label>
   </div>
 </template>
@@ -179,13 +179,20 @@ const toggleDate = () => {
 }
 
 .card-fields .checkbox-label {
-  display: inline-flex;
-  align-items: center;
-  align-self: flex-start;
-  gap: 8px;
-  color: #45413d;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
+  display: flex;
+  align-items: flex-start; /* keeps the checkbox on the first line if the text wraps */
+  gap: 0.5em;
+}
+
+.card-fields .checkbox-label input[type='checkbox'] {
+  margin: 0.25em 0 0; /* tweak to align with the first text line */
+}
+
+.card-fields .checkbox-text sup {
+  font-size: 0.75em;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.5em;
 }
 </style>
