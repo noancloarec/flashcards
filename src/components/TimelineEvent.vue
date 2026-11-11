@@ -2,7 +2,7 @@
 /**
  * This is the component for an event on the timeline
  */
-import TextWrapped from '@/components/TextWrapped.vue'
+import TextWrapped from './TextWrapped.vue'
 
 defineProps<{
   /**

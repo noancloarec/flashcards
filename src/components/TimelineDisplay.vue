@@ -4,15 +4,13 @@
  */
 import { computed, onMounted, onUpdated, type Ref, ref, useTemplateRef, watch } from 'vue'
 
-import TimeLineEvent from '@/components/TimeLineEvent.vue'
-import { getYearSpanWithoutDiscontinuities, sortedSteps, type Story } from '@/models/Story'
-import type { StoryEvent } from '@/models/StoryEvent'
-
-import { sumYearSpan, type Discontinuity } from '../models/discontinuity'
-import type { DateAnswer } from '../models/card'
+import type { DateAnswer } from '../models/card.ts'
+import { type Discontinuity, sumYearSpan } from '../models/discontinuity.ts'
+import type { TimePoint } from '../models/timeMarker.ts'
+import TimelineEvent from './TimelineEvent.vue'
 
 const props = defineProps<{
-  dateAnswers: DateAnswer[]
+  events: DateAnswer[]
   currentEvent: DateAnswer
   discontinuities: Discontinuity[]
 }>()
@@ -23,13 +21,15 @@ const svgElement = useTemplateRef<SVGGraphicsElement>('svgElement')
  * The answers be drawn on the timeline
  */
 const sortedAnswers = computed(() =>
-  [...props.dateAnswers].sort((a, b) => a.time.sortKey - b.time.sortKey)
+  [...props.events].sort((a, b) => a.time.sortKey - b.time.sortKey)
 )
+const startYear = computed(() => sortedAnswers.value[0].time.start.year)
+const endYear = computed(() => sortedAnswers.value.slice(-1)[0].time.start.year)
 
 /**
  * A mirror array of stepsToDisplay containing their height
  */
-const stepsHeightOnSvg = ref<number[]>(Array<number>(props.dateAnswers.length))
+const stepsHeightOnSvg = ref<number[]>(Array<number>(props.events.length))
 
 /**
  * A story spans accross a time range (for example a story starting in 1500 and ending in 2000 spans through 500 years)
@@ -38,10 +38,8 @@ const stepsHeightOnSvg = ref<number[]>(Array<number>(props.dateAnswers.length))
  * @param story
  * @returns
  */
-export const getYearSpanWithoutDiscontinuities = computed<number>(() => {
-  const firstYear = sortedAnswers.value[0].time.start.year
-  const endYear = sortedAnswers.value.slice(-1)[0].time.start.year
-  const yearSpan = endYear - firstYear
+const yearSpanWithoutDiscontinuities = computed<number>(() => {
+  const yearSpan = endYear.value - startYear.value
 
   return yearSpan - sumYearSpan(props.discontinuities)
 })
@@ -51,11 +49,11 @@ export const getYearSpanWithoutDiscontinuities = computed<number>(() => {
  * @param time The date of the event
  * @returns the y coordinate of the tick on the svg
  */
-const computeY = (time: Date) => {
-  const eventYear = time.getUTCFullYear()
+const computeY = (time: TimePoint) => {
+  const eventYear = time.year
   const discontinuitiesBeforeYear = props.discontinuities.filter((d) => d.to.year <= eventYear)
-  const discontinutySizeBeforeYear = sumYearSpan(discontinuitiesBeforeYear)
-  const nbNotDiscontinuedYears = getYearSpanWithoutDiscontinuities(props.story)
+  const yearsDiscontinuedBeforeEvent = sumYearSpan(discontinuitiesBeforeYear)
+  const nbNotDiscontinuedYears = yearSpanWithoutDiscontinuities.value
 
   /**
    * In order to avoid having an event at the 0 coordinate on the svg (it would hardly be visible)
@@ -63,12 +61,13 @@ const computeY = (time: Date) => {
    */
   const yearMargin = nbNotDiscontinuedYears * 0.1
 
-  const minYear = stepsToDisplay.value[0].time.getUTCFullYear() - yearMargin
-  const nbNotDiscontinuedYearsBeforeYear = eventYear - minYear - discontinutySizeBeforeYear
+  const minYear = startYear.value - yearMargin
+  const yearsOnDisplayBeforeEvent = eventYear - minYear - yearsDiscontinuedBeforeEvent
 
   return (
-    (nbNotDiscontinuedYearsBeforeYear * 1000) / nbNotDiscontinuedYears +
-    100 * discontinuitiesBeforeYear.length
+    (yearsOnDisplayBeforeEvent * 1000) / // Times 1000 because it is the height of the svg
+      nbNotDiscontinuedYears +
+    100 * discontinuitiesBeforeYear.length // Times 100 because each discontinuity is 100 unit tall
   )
 }
 
@@ -97,9 +96,9 @@ const adjustElementsYOffset = () => {
   }
 }
 /**
- * A mirror of stepsToDisplay containing their actual y-coordinate
+ * A mirror of Date Answers containing their actual y-coordinate
  */
-const stepsY = ref<number[]>(stepsToDisplay.value.map((step) => computeY(step.time)))
+const stepsY = ref<number[]>(props.events.map((answer) => computeY(answer.time.start)))
 
 const svgHeight = ref<string>('99%')
 const svgViewBoxHeight = ref<number>(1000)
@@ -151,11 +150,11 @@ const eventIsVisible = (
   return eventClientY > containerClientRect.y && eventClientY < containerClientRect.bottom
 }
 
-const shownEvents: Ref<StoryEvent[]> = ref([props.currentEvent])
+const shownEvents: Ref<DateAnswer[]> = ref(props.events)
 watch(
   () => props.currentEvent,
   () => {
-    const y = computeY(props.currentEvent.time)
+    const y = computeY(props.currentEvent.time.start)
     const shouldScroll = !eventIsVisible(y, svgElement.value!, svgContainer.value!)
     if (shouldScroll) {
       svgContainer.value?.scroll({
@@ -182,14 +181,14 @@ watch(
         x2="100"
         :y1="-16"
         :y2="10"
-        :transform="`translate(0, ${stepsY[stepsToDisplay.indexOf(currentEvent)]})`"
+        :transform="`translate(0, ${stepsY[events.indexOf(currentEvent)]})`"
         stroke-width="3"
         stroke="black"
       ></line>
       <line x1="200" y1="0" x2="200" :y2="svgViewBoxHeight" stroke="black" :stroke-width="1" />
       <line
         v-for="discontinuity in discontinuities"
-        :key="discontinuity.from.getUTCFullYear()"
+        :key="discontinuity.from.year"
         x1="200"
         x2="200"
         :y1="computeY(discontinuity.from)"
@@ -198,14 +197,15 @@ watch(
         :stroke-width="3"
         stroke-dasharray="6"
       ></line>
-      <template v-for="(step, i) in stepsToDisplay" :key="step.name">
-        <TimeLineEvent
-          :tick-y="computeY(step.time)"
+      <template v-for="(step, i) in sortedAnswers" :key="step.details">
+        <TimelineEvent
+          :tick-y="computeY(step.time.start)"
           :text-y="stepsY[i]"
-          :title="step.name"
-          :year="step.time.getUTCFullYear()"
+          :title="step.details ?? 'TBD'"
+          :year="step.time.start.year"
           :display-year="
-            i === 0 || step.time.getUTCFullYear() !== stepsToDisplay[i - 1].time.getUTCFullYear()
+            i === 0 || step.time.start.year !== sortedAnswers[i - 1].time.start.year
+            // Time label should not be displayed if several events happen at the same dat
           "
           :max-x="svgViewBoxWidth"
           @height-change="(newHeight) => updateElementsY(newHeight, i)"
