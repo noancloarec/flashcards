@@ -4,6 +4,7 @@ export type CardId = string
 
 export interface DateAnswer {
   time: TimeMarker
+  name: string
   details?: string
 }
 

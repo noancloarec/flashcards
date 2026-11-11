@@ -35,6 +35,19 @@ const previewDetailsMarkdown = ref(false)
   </div>
 
   <div class="field">
+    <div class="field-heading">
+      <label :for="`name-${card.id}`">Nom de l'événement</label>
+    </div>
+    <input
+      :id="`name-${card.id}`"
+      v-model="card.answer.name"
+      type="text"
+      required
+      placeholder="Ex. Bataille de Marignan"
+    />
+  </div>
+
+  <div class="field">
     <TimeMarkerField v-model="card.answer.time" />
   </div>
 
