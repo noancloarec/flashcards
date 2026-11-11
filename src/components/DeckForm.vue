@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { nextTick, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 import type { Card } from '../models/card'
 import type { FunctionalDeck } from '../models/deck'
@@ -10,6 +11,20 @@ const deck = defineModel<FunctionalDeck>({ required: true })
 const displayJsonField = ref(false)
 
 const bulkCards = ref<Card[]>([])
+const route = useRoute()
+
+async function scrollToHash(): Promise<void> {
+  if (!route.hash) return
+  await nextTick()
+
+  const el = document.getElementById(decodeURIComponent(route.hash.slice(1)))
+  if (!el) return
+
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  el.focus({ preventScroll: true })
+}
+
+watch(() => deck, scrollToHash, { immediate: true })
 
 const moveUp = (card: Card) => {
   const cards = deck.value.cards
@@ -132,6 +147,7 @@ const addBulkCards = () => {
           :key="card.id"
           :id="card.id"
           class="card-editor"
+          tabindex="-1"
         >
           <div class="card-editor-header">
             <div class="card-actions">

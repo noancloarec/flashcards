@@ -215,9 +215,9 @@ const saveProgress = async () => {
     </div>
     <ToolBar style="margin-top: 100px">
       <a
-        :href="`/edit-deck/${deckState.id}`"
+        :href="`/edit-deck/${deckState.id}#${cardToDisplay.id}`"
         v-if="googleUser?.email && googleUser.email === deckState?.author"
-        >Modifier le jeu de cartes</a
+        >Éditer la carte</a
       >
       <SaveButton :elementToWatch="cardsLearnedInSession" @save="saveProgress" />
       <button @click="reset()">Recommencer</button>

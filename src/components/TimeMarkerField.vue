@@ -170,7 +170,7 @@ watch(model, (value) => {
 <template>
   <div class="time-editor">
     <div class="time-preview" aria-live="polite">
-      <span v-if="readable" class="time-preview-value">{{ readable }}</span>
+      <span v-if="readable" class="time-preview-value" v-html="readable"></span>
       <span v-else class="time-preview-empty">—</span>
     </div>
     <div class="time-fields">

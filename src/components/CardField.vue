@@ -67,10 +67,12 @@ const toggleDate = () => {
       v-if="dateDetectedInStringAnswer || answerIsADate || cachedDateAnswer?.time"
     >
       <input type="checkbox" :checked="answerIsADate" @change="toggleDate" />
-      Cette réponse est une date
-      <span v-if="dateDetectedInStringAnswer && !answerIsADate && !cachedDateAnswer?.time">
-        ({{ toReadableTimeMarker(dateDetectedInStringAnswer.marker) }})
-      </span>
+      Cette réponse est une date (<span
+        v-if="dateDetectedInStringAnswer && !answerIsADate && !cachedDateAnswer?.time"
+        v-html="toReadableTimeMarker(dateDetectedInStringAnswer.marker)"
+      >
+      </span
+      >)
     </label>
   </div>
 </template>
