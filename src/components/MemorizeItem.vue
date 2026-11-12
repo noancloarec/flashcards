@@ -5,7 +5,7 @@ import { useRoute } from 'vue-router'
 
 import SaveButton from '../components/SaveButton.vue'
 import { useAuth } from '../composables/useAuth.ts'
-import type { Card } from '../models/card.ts'
+import { cardIsDateCard, type Card } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
@@ -178,7 +178,6 @@ const saveProgress = async () => {
 <template>
   <LoadingIndicator v-if="loading" />
   <template v-else>
-    <a :href="`/timeline/${deckState!.id}`">Timeline</a>
     <div v-if="currentCardIndex !== -1">
       <h2>{{ deckState!.name }}</h2>
       <CardDisplay
@@ -215,6 +214,10 @@ const saveProgress = async () => {
       <p>Vous avez mémorisé toutes les cartes</p>
     </div>
     <ToolBar style="margin-top: 100px">
+      <a :href="`/timeline/${deckState!.id}`" v-if="deckState?.cards.filter(cardIsDateCard).length"
+        >Frise chronologique</a
+      >
+
       <a
         :href="`/edit-deck/${deckState.id}#${cardToDisplay.id}`"
         v-if="googleUser?.email && googleUser.email === deckState?.author"

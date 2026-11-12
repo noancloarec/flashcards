@@ -2,6 +2,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
+import LoadingIndicator from '../components/LoadingIndicator.vue'
 import TimelineDisplay from '../components/TimelineDisplay.vue'
 import { cardIsDateCard, type DateAnswer } from '../models/card.ts'
 import type { Deck } from '../models/deck'
@@ -30,7 +31,7 @@ const eventsOnDisplay = computed<DateAnswer[]>(
       :current-event="eventsOnDisplay[0]"
       :discontinuities="[]"
     />
-    <p v-else>No events to display</p>
+    <LoadingIndicator v-else />
   </section>
 </template>
 <style scoped>
