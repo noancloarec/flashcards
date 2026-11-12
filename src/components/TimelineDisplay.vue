@@ -192,19 +192,19 @@ const shownEvents: Ref<DateAnswer[]> = ref([...props.events])
         :stroke-width="3"
         stroke-dasharray="6"
       ></line>
-      <template v-for="(step, i) in sortedAnswers" :key="step.details">
+      <template v-for="(event, i) in sortedAnswers" :key="event.details">
         <TimelineEvent
-          :tick-y="computeY(step.time.start)"
+          :tick-y="computeY(event.time.start)"
           :text-y="stepsY[i]"
-          :title="step.details ?? 'TBD'"
-          :event="step"
+          :title="event.name"
+          :event="event"
           :displayDate="
-            i === 0 || step.time.start.year !== sortedAnswers[i - 1].time.start.year
+            i === 0 || event.time.start.year !== sortedAnswers[i - 1].time.start.year
             // Time label should not be displayed if several events happen at the same dat
           "
           :max-x="svgViewBoxWidth"
           @height-change="(newHeight) => updateElementsY(newHeight, i)"
-          :is-shown="shownEvents.includes(step)"
+          :is-shown="shownEvents.includes(event)"
         />
       </template>
     </svg>

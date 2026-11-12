@@ -18,11 +18,7 @@ onMounted(async () => {
 })
 
 const eventsOnDisplay = computed<DateAnswer[]>(
-  () =>
-    deck.value?.cards
-      .filter(cardIsDateCard)
-      .map((card) => card.answer)
-      .filter((a) => a.details) ?? []
+  () => deck.value?.cards.filter(cardIsDateCard).map((card) => card.answer) ?? []
 )
 </script>
 
