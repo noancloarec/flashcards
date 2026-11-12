@@ -26,6 +26,23 @@ const ROMAN_NUMERALS: [number, string][] = [
   [1, 'I']
 ]
 
+const months = [
+  'janvier',
+  'février',
+  'mars',
+  'avril',
+  'mai',
+  'juin',
+  'juillet',
+  'août',
+  'septembre',
+  'octobre',
+  'novembre',
+  'décembre'
+]
+
+const monthFromNumber = (monthNumber: number) => months[monthNumber - 1]
+
 const toRoman = (n: number): string => {
   if (!Number.isInteger(n) || n < 1 || n > 50) {
     throw new RangeError(`toRoman only supports integers from 1 to 50, got ${n}`)
@@ -42,6 +59,8 @@ const toRoman = (n: number): string => {
 
 const fromAstro = (year: number) =>
   year <= 0 ? { year: -(year - 1), bce: true } : { year: year, bce: false }
+
+export const numericYearFromAstro = (year: number) => (year <= 0 ? year - 1 : year)
 
 export const toReadableTimeMarker = (timeMarker: TimeMarker): string => {
   const { year: startYear, bce: startYearBce } = fromAstro(timeMarker.start.year)
@@ -67,8 +86,8 @@ export const toReadableTimeMarker = (timeMarker: TimeMarker): string => {
     case 'year':
       return `En ${startYear}${startEraIndicator}`
     case 'month':
-      return `En ${timeMarker.start.month} ${startYear}${startEraIndicator}`
+      return `En ${monthFromNumber(timeMarker.start.month!)} ${startYear}${startEraIndicator}`
     case 'day':
-      return `Le ${timeMarker.start.day} ${timeMarker.start.month} ${startYear}${startEraIndicator}`
+      return `Le ${timeMarker.start.day} ${monthFromNumber(timeMarker.start.month!)} ${startYear}${startEraIndicator}`
   }
 }
