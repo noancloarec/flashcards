@@ -10,14 +10,34 @@ admin.initializeApp({
 })
 
 /**
- * Register one deck to Firestore.
- * @param {import("@/utils/cards").Deck} deck
- * @param {firestore.Firestore} store
+ * Create or update one deck.
+ * - No `id` in the JSON  -> new document (auto id, createdAt = now)
+ * - `id` in the JSON     -> document is fully replaced with the JSON content
+ *                           (createdAt is preserved)
+ * @returns {Promise<{ id: string, action: 'created' | 'updated' }>}
  */
-const addDeckToFirestore = async (deck, store) => {
-  const deckReference = store.collection('deck').doc()
-  deck = { ...deck, createdAt: firestore.FieldValue.serverTimestamp() }
-  await deckReference.create(deck)
+const upsertDeck = async (deck, store) => {
+  const { id, createdAt, ...data } = deck // id is the doc key, not a field
+
+  if (!id) {
+    const ref = store.collection('deck').doc()
+    await ref.create({ ...data, createdAt: firestore.FieldValue.serverTimestamp() })
+    return { id: ref.id, action: 'created' }
+  }
+
+  const ref = store.collection('deck').doc(id)
+  const snap = await ref.get()
+
+  // The JSON holds createdAt as an ISO string (see downloadAllDecks): convert it back.
+  const resolvedCreatedAt = createdAt
+    ? firestore.Timestamp.fromDate(new Date(createdAt))
+    : (snap.get('createdAt') ?? firestore.FieldValue.serverTimestamp())
+
+  // set() without merge = full replace, so fields you removed from the JSON
+  // (e.g. an old data-model field) are removed in Firestore too.
+  await ref.set({ ...data, createdAt: resolvedCreatedAt })
+
+  return { id, action: snap.exists ? 'updated' : 'created' }
 }
 
 /**
@@ -194,21 +214,27 @@ const main = async () => {
   }
 
   for (const input of inputs) {
-    console.log(`Adding deck from ${input}...`)
+    console.log(`Processing ${input}...`)
 
     const deck = JSON.parse(fs.readFileSync(input, 'utf8'))
 
     for (const card of deck.cards) {
       if (!card.id) {
-        s
         card.id = crypto.randomUUID()
       }
     }
 
-    await addDeckToFirestore(deck, store)
+    const { id, action } = await upsertDeck(deck, store)
+    console.log(`  ${action}: deck/${id}`)
+
+    // Write the id back into the file so re-running updates instead of duplicating
+    if (!deck.id) {
+      deck.id = id
+      fs.writeFileSync(input, JSON.stringify(sortObjectKeys(deck), null, 2))
+    }
   }
 
-  console.log(`Added ${inputs.length} deck(s).`)
+  console.log(`Processed ${inputs.length} deck(s).`)
 }
 
 main().catch((error) => {

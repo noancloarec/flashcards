@@ -1,0 +1,129 @@
+{
+  "author": "noan.cloarec@gmail.com",
+  "cards": [
+    {
+      "answer": {
+        "name": "Bataille de Marignan",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 15150101,
+          "start": {
+            "year": 1515
+          }
+        }
+      },
+      "id": "60becdc2-122d-471b-aca1-3b5e4d16dc5d",
+      "question": "Marignan ?"
+    },
+    {
+      "answer": {
+        "name": "Bataille de Cynocéphale",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1959899,
+          "start": {
+            "year": -196
+          }
+        }
+      },
+      "id": "5531776e-45f9-4791-bf1d-5ca78b04b0d4",
+      "question": "Quand a lieu la bataille de Cynocéphale ?"
+    },
+    {
+      "answer": {
+        "name": "Rome développe la technique de l'opus caementicium",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": -100
+          },
+          "precision": "century",
+          "sortKey": -1989899,
+          "start": {
+            "year": -199
+          }
+        }
+      },
+      "id": "aae59fcc-848c-46dd-8a42-f3ab6b5471b0",
+      "question": "Quand Rome développe-t-elle la technique de l'opus caementicium ?"
+    },
+    {
+      "answer": {
+        "name": "Ayyoubides prennent du pouvoir",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": 1300
+          },
+          "precision": "century",
+          "sortKey": 12010101,
+          "start": {
+            "year": 1201
+          }
+        }
+      },
+      "id": "48e0979a-bda9-408f-993d-4e61dd15c249",
+      "question": "Quand les ayyoubides prennent-ils du pouvoir ?"
+    },
+    {
+      "answer": {
+        "name": "Guerres civiles de la republique romaine",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": 0
+          },
+          "precision": "century",
+          "sortKey": -989899,
+          "start": {
+            "year": -99
+          }
+        }
+      },
+      "id": "732d8dba-06f3-40e2-b9f9-dae0d0eb5a22",
+      "question": "Quand ont lieu les guerres civiles de la republique romaine ?"
+    },
+    {
+      "answer": {
+        "details": "Il se fait plein d'amis",
+        "name": "Jésus prêche",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": 100
+          },
+          "precision": "century",
+          "sortKey": 10101,
+          "start": {
+            "year": 1
+          }
+        }
+      },
+      "id": "f419440c-19c4-4fcf-b85c-1f2069b34a9f",
+      "question": "Quand Jésus prêche-t-il ?"
+    },
+    {
+      "answer": {
+        "details": "Romain IV perd contre les Seldjoukides",
+        "name": "Bataille de Manzikert",
+        "time": {
+          "approximate": false,
+          "precision": "day",
+          "sortKey": 10710826,
+          "start": {
+            "day": 26,
+            "month": 8,
+            "year": 1071
+          }
+        }
+      },
+      "id": "8dce830d-4d9a-4fcd-a9bc-0cd790a442ce",
+      "question": "Quand a lieu la bataille de Manzikert ?"
+    }
+  ],
+  "createdAt": "2026-11-07T20:01:46.332Z",
+  "id": "9iT9qn4DRCJMpfkTrzud",
+  "name": "Test"
+}
