@@ -178,7 +178,7 @@ const saveProgress = async () => {
 <template>
   <LoadingIndicator v-if="loading" />
   <template v-else>
-    <div v-if="currentCardIndex !== -1">
+    <div v-if="cardToDisplay">
       <h2>{{ deckState!.name }}</h2>
       <CardDisplay
         :card="cardToDisplay"
@@ -220,7 +220,7 @@ const saveProgress = async () => {
 
       <a
         :href="`/edit-deck/${deckState.id}#${cardToDisplay.id}`"
-        v-if="googleUser?.email && googleUser.email === deckState?.author"
+        v-if="cardToDisplay && googleUser?.email && googleUser.email === deckState?.author"
         >Éditer la carte</a
       >
       <SaveButton :elementToWatch="cardsLearnedInSession" @save="saveProgress" />
