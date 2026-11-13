@@ -213,8 +213,16 @@
     },
     {
       "answer": {
-        "details": "En 180 av. J.-C., elle définit l'ordre des magistratures et les ages minimum pour y accéder",
-        "name": "Loi Villia Annalis"
+        "details": "Elle définit l'ordre des magistratures et les ages minimum pour y accéder",
+        "name": "Loi Villia Annalis",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1789899,
+          "start": {
+            "year": -179
+          }
+        }
       },
       "id": "b6b55c93-a0b2-475c-97f3-2ae00052ec69",
       "question": "Quand est adoptée la loi Villia Annalis ?"
@@ -239,56 +247,117 @@
     },
     {
       "answer": {
-        "details": "De 107 à 100 av. J.-C.",
-        "name": "Six consulats consécutifs de Marius"
+        "name": "Six consulats consécutifs de Marius",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1059899,
+          "start": {
+            "year": -106
+          },
+          "end": {
+            "year": -99
+          }
+        }
       },
       "id": "099c227d-cc56-448a-9f49-70200cc727c4",
       "question": "Quand Caius Marius est-il consul six fois de suite ?"
     },
     {
       "answer": {
-        "details": "En 65 av. J.-C., il s'endette lourdement en organisant des jeux et des combats de gladiateurs ",
-        "name": "Édilité de César"
+        "details": "Il s'endette lourdement en organisant des jeux et des combats de gladiateurs ",
+        "name": "Édilité de César",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -639899,
+          "start": {
+            "year": -64
+          }
+        }
       },
       "id": "7d39e1ed-cb3e-4f1d-b092-1e88b1a6f472",
       "question": "Quand César est-il édile"
     },
     {
       "answer": {
-        "details": "-306, c'est un partage territorial entre Rome et Carthage (Rome n'intervient pas en Sicile, Carthage n'intervient pas en Italie)",
-        "name": "Traité de Filinos"
+        "details": "C'est un partage territorial entre Rome et Carthage (Rome n'intervient pas en Sicile, Carthage n'intervient pas en Italie)",
+        "name": "Traité de Filinos",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -3049899,
+          "start": {
+            "year": -305
+          }
+        }
       },
       "id": "086e8f19-7b4d-4227-9ceb-80e02cd4fb40",
       "question": "Quand a lieu le traité de Filinos ?"
     },
     {
       "answer": {
-        "details": "-272, elle commence alors à s'intéresser à la Sicile",
-        "name": "Prise de Tarente"
+        "details": "Rome commence alors à s'intéresser à la Sicile",
+        "name": "Prise de Tarente",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2709899,
+          "start": {
+            "year": -271
+          }
+        }
       },
       "id": "fe0a2f97-91f3-41f0-9685-3420d0d25e4d",
       "question": "Quand Rome prend-elle Tarente ?"
     },
     {
       "answer": {
-        "details": "-264 à -241",
-        "name": "Première guerre punique"
+        "name": "Première guerre punique",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2629899,
+          "start": {
+            "year": -263
+          },
+          "end": {
+            "year": -240
+          }
+        }
       },
       "id": "a57e89ac-05f6-4c42-9cf0-e88462e8770b",
       "question": "Quand a lieu la première guerre punique ?"
     },
     {
       "answer": {
-        "details": "-218 à -202",
-        "name": "Deuxième guerre punique"
+        "name": "Deuxième guerre punique",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2169899,
+          "start": {
+            "year": -217
+          },
+          "end": {
+            "year": -201
+          }
+        }
       },
       "id": "08875d81-a8f6-4ee9-94bb-a2fed8b8ced2",
       "question": "Quand a lieu la deuxième guerre punique ?"
     },
     {
       "answer": {
-        "details": "-218",
-        "name": "Arrivée d'Hannibal en Italie"
+        "name": "Arrivée d'Hannibal en Italie",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2169899,
+          "start": {
+            "year": -217
+          }
+        }
       },
       "id": "633636c9-f4ba-4547-951e-ca8bbd203a34",
       "question": "Quand Hannibal arrive-t-il en Italie ?"
@@ -409,8 +478,15 @@
     },
     {
       "answer": {
-        "details": "184",
-        "name": "Accusation des Scipions par Caton l'Ancien"
+        "name": "Accusation des Scipions par Caton l'Ancien",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1829899,
+          "start": {
+            "year": -183
+          }
+        }
       },
       "id": "773b88a5-ea2d-47ba-b87f-b795071f4d57",
       "question": "Quand Caton l'Ancien, pendant sa censure, accuse-t-il les Scipions (Africain et Asiatique) d'abus de pouvoir ?\n"
