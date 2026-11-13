@@ -2,52 +2,160 @@
   "author": "noan.cloarec@gmail.com",
   "cards": [
     {
-      "answer": "26 aout 1071, Alp Arslan bat Romain IV",
+      "answer": {
+        "details": "Alp Arslan bat Romain IV",
+        "name": "Bataille de Manzikert",
+        "time": {
+          "approximate": false,
+          "precision": "day",
+          "sortKey": 10710826,
+          "start": {
+            "day": 26,
+            "month": 8,
+            "year": 1071
+          }
+        }
+      },
       "id": "179220ab-f89a-4802-8344-fe0ab7a53b26",
       "question": "Quand la bataille de Manzikert a-t-elle lieu ?"
     },
     {
-      "answer": "1187, il reprend alors Jérusalem à Guy de Lusignan",
+      "answer": {
+        "details": "Il reprend alors Jérusalem à Guy de Lusignan",
+        "name": "Saladin gagne la bataille d'Hattin",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 11870101,
+          "start": {
+            "year": 1187
+          }
+        }
+      },
       "id": "66b60e42-91d6-4374-aff4-fa84e89ebb18",
       "question": "Quand Saladin gagne-t-il la bataille d'Hattin ?"
     },
     {
-      "answer": "En 1171, il fait prononcer la khutba au nom du calife abbasside.",
+      "answer": {
+        "details": "Il fait prononcer la khutba au nom du calife abbasside.",
+        "name": "Saladin met fin au califat fatimide",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 11710101,
+          "start": {
+            "year": 1171
+          }
+        }
+      },
       "id": "6cc63383-50ee-443b-8320-77d9461e6120",
       "question": "Quand Saladin met-il fin au califat fatimide ?"
     },
     {
-      "answer": "1154",
+      "answer": {
+        "name": "Nūr al-Dīn prend Damas",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 11540101,
+          "start": {
+            "year": 1154
+          }
+        }
+      },
       "id": "6847640b-1c75-471a-b6bc-ea22d5cdad72",
       "question": "Quand Nūr al-Dīn prend-il Damas ?"
     },
     {
-      "answer": "965",
+      "answer": {
+        "name": "Conquête totale par Byzance de l'ile de Chypre (auparavant partagé avec l'Islam)",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 9650101,
+          "start": {
+            "year": 965
+          }
+        }
+      },
       "id": "043676b5-5164-458b-8557-7173a6e328f0",
       "question": "Quand a lieu la conquête totale par Byzance de l'ile de Chypre (auparavant partagé avec l'Islam) ?"
     },
     {
-      "answer": "961",
+      "answer": {
+        "name": "Nicéphore II Phocas reprend la Crête",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 9610101,
+          "start": {
+            "year": 961
+          }
+        }
+      },
       "id": "7171be67-dbbd-40c0-8317-c046894406ae",
       "question": "Quand Nicéphore II Phocas reprend-il la Crête ?"
     },
     {
-      "answer": "1059, au synode de Melfi",
+      "answer": {
+        "details": "Au synode de Melfi",
+        "name": "Pape Nicolas II reconnait Robert Guiscard (chef Normand) duc de Pouille et Calabre et futur duc de Sicile",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 10590101,
+          "start": {
+            "year": 1059
+          }
+        }
+      },
       "id": "4c124d1e-a313-43ba-9e51-5aaa70560e6c",
       "question": "Quand le pape Nicolas II reconnait-il Robert Guiscard (chef Normand) duc de Pouille et Calabre et futur duc de Sicile ?"
     },
     {
-      "answer": "En 1082, en échange de leur aide militaire contre les Normands",
+      "answer": {
+        "details": "En échange de leur aide militaire contre les Normands",
+        "name": "Venise totalement exonéré de kommerkion par les byzantins",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 10820101,
+          "start": {
+            "year": 1082
+          }
+        }
+      },
       "id": "7140cb33-3065-4b2a-a925-3f3070c14614",
       "question": "Quand Venise est-elle totalement exonéré de kommerkion par les byzantins ?"
     },
     {
-      "answer": "En 1071",
+      "answer": {
+        "name": "Normands prennent Bari aux byzantins",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 10710101,
+          "start": {
+            "year": 1071
+          }
+        }
+      },
       "id": "2703546d-3a40-45c4-90f0-a2ed6f6f052d",
       "question": "Quand les normands prennent-ils Bari aux byzantins ?"
     },
     {
-      "answer": "En 632.",
+      "answer": {
+        "details": ".",
+        "name": "Mort du prophète Muhammad",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": 6320101,
+          "start": {
+            "year": 632
+          }
+        }
+      },
       "id": "5da729df-e03b-44a7-9324-fd8771544ac4",
       "question": "Quand a eu lieu la mort du prophète Muhammad ?"
     },

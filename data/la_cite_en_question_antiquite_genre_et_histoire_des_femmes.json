@@ -2,12 +2,22 @@
   "author": "noan.cloarec@gmail.com",
   "cards": [
     {
+      "answer": "1. De l'histoire des femmes à l'histoire du genre\n2. Évolutions et renouvellements contemporains de l’histoire des femmes : le cas de l’Antiquité\n",
+      "id": "5dfbd86e-2fb4-4fed-893a-4ebfa6536ec1",
+      "question": "Quelles sont les grandes parties du cours ?"
+    },
+    {
+      "answer": "A. La première histoire des femmes  \nB. L’émergence des Gender Studies  \nC. La deuxième histoire des femmes\n\n\n\n",
+      "id": "18dcc415-bdc1-4967-8ea7-183387a429ab",
+      "question": "Quelles sont les sous-parties de la partie 1.De l'histoire des femmes à l'histoire du genre ?"
+    },
+    {
       "answer": "- Michelet qui les cantonnes à leur nature maternelle, ou sauvage\n- L'école méthodique et l'école des annales (au début) ne s'y intéressent pas\n- Levi-Strauss --> Elles sont un objet d'échange",
       "id": "5065afe7-52f5-4a96-9df6-2b5c32e57549",
       "question": "Quelles sont les premiers courants de l'historiographie qui ne s'intéressent pas à l'histoire des femmes ? Evoquer Michelet, Levi-Strauss"
     },
     {
-      "answer": "- Seminaire Les femmes ont-elles une histoire par Michèle Perrot, Fabienne Bock et Pauline Schmitt (1973)\n- Influence de la sociologie (Condition de la francaise d'aujourd'hui)\n- C'est d'abord une histoire de la famille.",
+      "answer": "- Seminaire *Les femmes ont-elles une histoire?* par Michèle Perrot, Fabienne Bock et Pauline Schmitt (1973)\n- Influence de la sociologie (Andrée Michel et Geneviève Texier, *Condition de la francaise d'aujourd'hui*, 1964)\n- C'est d'abord une histoire de la famille.",
       "id": "f559f44d-cdb4-42af-8cb6-cc75c47e33d7",
       "question": "Comment est abordée la première histoire des femmes ?"
     },
@@ -30,6 +40,11 @@
       "answer": "- Un courant historiographique en France influencé par les gender studies et les travaux de Joan Scott\n- Une étude des femmes dans leurs milieux sociaux\n- Un début d'étude de l'histoire des masculinités, indispensable à l'histoire féminine (et inversement)",
       "id": "a75bc28c-c437-482d-bfea-71418e5e40b2",
       "question": "Qu'est-ce que la deuxième histoire des femmes ?"
+    },
+    {
+      "answer": "A. Femmes et politique  \nB. Femmes et religion  \nC. Le cas de l’archéologie  ",
+      "id": "bf1ae03a-d467-44db-a43e-ef5bf6e37d31",
+      "question": "Quelles sont les sous-parties de la partie 2. Évolutions et renouvellements contemporains de l’histoire des femmes : le cas de l’Antiquité ?"
     },
     {
       "answer": "- D'abord ignorée\n  - Histoire politique en France passée de mode depuis les Annales\n  - Femmes exclues de la politique au XXe siècle\n- Pourquoi elles sont exclues des activités\n  - De délibération\n  - Judiciaires\n  - Exécutive\n- Comment elles sont inclues dans la vie politique, en ayant une définition plus large de la politique\n  - Participation au culte\n- Comment l'expression de genre est importante\n  - Timarque prostitué interdit de tribune\n  - Nééra trop libre sexuellement interdite de citoyenneté",
