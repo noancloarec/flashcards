@@ -124,7 +124,7 @@ onUnmounted(() => {
   ></div>
   <div class="answer" :class="{ shown: showAnswer }" v-else-if="cardIsDateCard(card)">
     <p v-html="toReadableTimeMarker(card.answer.time)"></p>
-    <small v-if="card.answer.details">{{ card.answer.details }}</small>
+    <p v-if="card.answer.details" v-html="renderMarkdown(card.answer.details)"></p>
   </div>
 
   <!--
