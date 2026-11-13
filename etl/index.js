@@ -148,6 +148,7 @@ const downloadAllDecks = async (store, outputDir) => {
   fs.mkdirSync(outputDir, { recursive: true })
 
   const snapshot = await store.collection('deck').get()
+  const writtenPaths = new Map() // deck id -> output path
 
   for (const doc of snapshot.docs) {
     const deck = doc.data()
@@ -171,10 +172,78 @@ const downloadAllDecks = async (store, outputDir) => {
     const outputPath = path.join(outputDir, `${filename}.json`)
 
     fs.writeFileSync(outputPath, JSON.stringify(sortObjectKeys(serializedDeck), null, 2))
+    writtenPaths.set(doc.id, outputPath)
     console.log(`Downloaded: ${outputPath}`)
   }
 
   console.log(`Downloaded ${snapshot.size} deck(s) to "${outputDir}".`)
+  reportLocalDiscrepancies(outputDir, writtenPaths)
+}
+
+/**
+ * Compare the JSON files in the output folder with what was just downloaded
+ * from Firestore, and report the discrepancies. Nothing is deleted.
+ * @param {string} outputDir
+ * @param {Map<string, string>} writtenPaths deck id -> path written during this run
+ */
+const reportLocalDiscrepancies = (outputDir, writtenPaths) => {
+  const orphans = [] // id not in Firestore (deleted from the DB, or wrong id)
+  const stale = [] // id exists in Firestore but under another filename (deck renamed)
+  const withoutId = [] // never uploaded yet
+  const invalid = [] // not parseable as JSON
+
+  const files = fs.readdirSync(outputDir).filter((f) => f.endsWith('.json'))
+
+  for (const file of files) {
+    const filePath = path.join(outputDir, file)
+
+    let json
+    try {
+      json = JSON.parse(fs.readFileSync(filePath, 'utf8'))
+    } catch {
+      invalid.push(filePath)
+      continue
+    }
+
+    if (!json.id) {
+      withoutId.push(filePath)
+      continue
+    }
+
+    const writtenPath = writtenPaths.get(json.id)
+    if (!writtenPath) {
+      orphans.push({ filePath, id: json.id, name: json.name })
+    } else if (path.resolve(writtenPath) !== path.resolve(filePath)) {
+      stale.push({ filePath, id: json.id, current: writtenPath })
+    }
+  }
+
+  if (orphans.length > 0) {
+    console.warn(`\n⚠ ${orphans.length} local file(s) with an id that does NOT exist in Firestore:`)
+    for (const o of orphans) console.warn(`  - ${o.filePath} (id: ${o.id}, name: "${o.name}")`)
+    console.warn('  Uploading them again would re-create these decks under the same id.')
+  }
+
+  if (stale.length > 0) {
+    console.warn(
+      `\n⚠ ${stale.length} outdated duplicate(s) (deck renamed, same id in a newer file):`
+    )
+    for (const s of stale) console.warn(`  - ${s.filePath} -> now ${s.current}`)
+  }
+
+  if (withoutId.length > 0) {
+    console.log(`\nℹ ${withoutId.length} local file(s) without an id (not uploaded yet):`)
+    for (const f of withoutId) console.log(`  - ${f}`)
+  }
+
+  if (invalid.length > 0) {
+    console.warn(`\n⚠ ${invalid.length} file(s) could not be parsed as JSON:`)
+    for (const f of invalid) console.warn(`  - ${f}`)
+  }
+
+  if (!orphans.length && !stale.length && !withoutId.length && !invalid.length) {
+    console.log('\nLocal folder is in sync with Firestore.')
+  }
 }
 
 const main = async () => {
