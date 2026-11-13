@@ -2,6 +2,26 @@
   "author": "noan.cloarec@gmail.com",
   "cards": [
     {
+      "answer": "Homo novus",
+      "id": "050968d2-8971-40de-bf12-c75d897fe00a",
+      "question": "Quel terme désigne un consul n'ayant pas d'ancêtre consul ou sénateur ?"
+    },
+    {
+      "answer": "Auctoritas",
+      "id": "8cb18299-e9e5-46bf-8158-f85eda12e5bc",
+      "question": "Quel terme désigne l'autorité informelle, issue du prestige"
+    },
+    {
+      "answer": "Privati",
+      "id": "ecf1bc32-a758-4cf1-a6bf-67c56446b49f",
+      "question": "Quel terme désigne des citoyens qui ne sont pas magistrats, et reçoivent notamment l'imperium pendant la IIème gerre punique"
+    },
+    {
+      "answer": "legati",
+      "id": "ab4084f8-0b0d-4ab2-ba84-c6897941885f",
+      "question": "Quel terme désigne les délégués du Sénat envoyés auprès des généraux ?"
+    },
+    {
       "answer": "si vis pacem, para bellum",
       "id": "a36a0109-93d7-4ff5-b1b8-1f60931fbd75",
       "question": "Quelle expression signifie \"si tu veux la guerre, prépare la paix\" ?"
@@ -179,7 +199,7 @@
     {
       "answer": "Nobilitas",
       "id": "898746b6-a403-4fac-b66e-dd13ef1e76f5",
-      "question": "Quel est le terme qui désigne l'élite aristocratique romaine constituée notamment des familles ayant été consuls ?"
+      "question": "Quel est le terme qui désigne l'élite aristocratique romaine constituée notamment des familles ayant été magistrat curule ?"
     },
     {
       "answer": "Pontifex maximus",

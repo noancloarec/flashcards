@@ -2,152 +2,416 @@
   "author": "noan.cloarec@gmail.com",
   "cards": [
     {
-      "answer": "196 av. J.-C., par T. Quinctius Flamininus.",
+      "answer": {
+        "details": "Par T. Quinctius Flamininus.",
+        "name": "Proclamation de la liberté des Grecs",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1949899,
+          "start": {
+            "year": -195
+          }
+        }
+      },
       "id": "ce2c1a16-5089-4636-83a4-3f4b4eb931df",
       "question": "Quand Rome proclame-t-elle la liberté du monde grec ?"
     },
     {
-      "answer": "Entre 241 et 227 av. J.-C.",
+      "answer": {
+        "name": "Création des provinces de Sicile, Sardaigne et Corse",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": -226
+          },
+          "precision": "year",
+          "sortKey": -2399899,
+          "start": {
+            "year": -240
+          }
+        }
+      },
       "id": "0dc65a3b-8947-49ac-8c87-23de345d74e5",
       "question": "Quand les provinces de Sicile, Sardaigne et Corse sont-elles créées ?"
     },
     {
-      "answer": "En 197 av. J.-C.",
+      "answer": {
+        "name": "Création des provinces d'Espagne",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1959899,
+          "start": {
+            "year": -196
+          }
+        }
+      },
       "id": "f305d069-45f5-4b5f-a0d8-22683a3d30fc",
       "question": "Quand les provinces d'Espagne sont-elles créées ?"
     },
     {
-      "answer": "En 148 av. J.-C.",
+      "answer": {
+        "name": "Création de la province de Macédoine",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1469899,
+          "start": {
+            "year": -147
+          }
+        }
+      },
       "id": "feae2926-1828-43cc-b20c-04b5a48ff25a",
       "question": "Quand la province de Macédoine est-elle créée ?"
     },
     {
-      "answer": "En 146 av. J.-C.",
+      "answer": {
+        "name": "Création des provinces d'Afrique et d'Achaïe",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1449899,
+          "start": {
+            "year": -145
+          }
+        }
+      },
       "id": "17d49a09-50e6-4f05-9c75-e052a162c253",
       "question": "Quand les provinces d'Afrique et d'Achaïe sont-elles créées ?"
     },
     {
-      "answer": "En 129 av. J.-C.",
+      "answer": {
+        "name": "Création de la province d'Asie",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1279899,
+          "start": {
+            "year": -128
+          }
+        }
+      },
       "id": "fda6fd45-3a88-4afd-9b0a-7be8c4880a3b",
       "question": "Quand la province d'Asie est-elle créée ?"
     },
     {
-      "answer": "Entre 122 et 118 av. J.-C. (ou en 72 av. J.-C.).",
+      "answer": {
+        "details": "(ou en 72 av. J.-C.).",
+        "name": "Création de la province de Gaule transalpine",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": -117
+          },
+          "precision": "year",
+          "sortKey": -1209899,
+          "start": {
+            "year": -121
+          }
+        }
+      },
       "id": "39283d37-6d05-47ff-b564-db8fbddad1a9",
       "question": "Quand la province de Gaule transalpine est-elle créée ?"
     },
     {
-      "answer": "Début de la deuxième guerre punique.",
+      "answer": {
+        "name": "Début de la deuxième guerre punique",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2169899,
+          "start": {
+            "year": -217
+          }
+        }
+      },
       "id": "9110d7bb-3657-42cf-8089-2c436536811a",
-      "question": "Que se passe-t-il en 218 av. J.-C. ?"
+      "question": "Quand débute la deuxième guerre punique ?"
     },
     {
-      "answer": "En 509 av. J.-C.",
+      "answer": {
+        "name": "Début de la République romaine",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -5079899,
+          "start": {
+            "year": -508
+          }
+        }
+      },
       "id": "c9561e6c-cba1-46fc-aaa0-733719553dd8",
       "question": "Quand débute la République romaine ?"
     },
     {
-      "answer": "En 494 av. J.-C.",
+      "answer": {
+        "details": "Sécession de la plèbe sur l'Aventin et la création des tribuns de la plèbe ?",
+        "name": "Première révolte plébéienne",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -4929899,
+          "start": {
+            "year": -493
+          }
+        }
+      },
       "id": "9c5f7686-f13b-431e-86e9-4ef544ef078e",
-      "question": "Quand a lieu la première révolte plébéienne, avec la sécession de la plèbe sur l'Aventin et la création des tribuns de la plèbe ?"
+      "question": "Quand a lieu la première révolte plébéienne ?"
     },
     {
-      "answer": "En 451–450 av. J.-C., elles mettent à l'écrit le droit romain auparavant détenu par les patriciens",
+      "answer": {
+        "details": "Elles mettent à l'écrit le droit romain auparavant détenu par les patriciens",
+        "name": "Loi des Douze Tables",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": -449
+          },
+          "precision": "year",
+          "sortKey": -4499899,
+          "start": {
+            "year": -450
+          }
+        }
+      },
       "id": "b2fd45ff-655b-4560-a010-996ca5f2fa3d",
       "question": "Quand la loi des Douze Tables est-elle rédigée ?"
     },
     {
-      "answer": "En 300 av. J.-C., elle ouvre aux plébéiens l'accès aux sacerdoces",
+      "answer": {
+        "details": "Elle ouvre aux plébéiens l'accès aux sacerdoces",
+        "name": "Loi Ogulnia",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2989899,
+          "start": {
+            "year": -299
+          }
+        }
+      },
       "id": "2bc2549a-cb61-4ae3-a3c4-47f98abded65",
       "question": "Quand est adoptée la loi Ogulnia ?"
     },
     {
-      "answer": "En 287 av. J.-C., les décisions du Concile de la plèbe s'appliquent alors aussi aux patriciens",
+      "answer": {
+        "details": "Les décisions du Concile de la plèbe s'appliquent alors aussi aux patriciens",
+        "name": "Loi Hortensia",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2859899,
+          "start": {
+            "year": -286
+          }
+        }
+      },
       "id": "754fc3a1-627c-46c1-a499-d2c933bfc651",
       "question": "Quand est adoptée la loi Hortensia ?"
     },
     {
-      "answer": "En 180 av. J.-C., elle définit l'ordre des magistratures et les ages minimum pour y accéder",
+      "answer": {
+        "details": "En 180 av. J.-C., elle définit l'ordre des magistratures et les ages minimum pour y accéder",
+        "name": "Loi Villia Annalis"
+      },
       "id": "b6b55c93-a0b2-475c-97f3-2ae00052ec69",
       "question": "Quand est adoptée la loi Villia Annalis ?"
     },
     {
-      "answer": "En 139, 137 et 130  av. J.-C., elles introduisent le vote à bulletin secret sur des tablettes ",
+      "answer": {
+        "details": "Elles introduisent le vote à bulletin secret sur des tablettes",
+        "name": "Lois Gabinia, Cassia et Papiria (lois tabellaires)",
+        "time": {
+          "end": {
+            "year": -129
+          },
+          "precision": "year",
+          "sortKey": -1379899,
+          "start": {
+            "year": -138
+          }
+        }
+      },
       "id": "81ff3080-cf57-4682-890b-7cb351698c48",
       "question": "Quand sont adoptée les lois Gabinia, Cassia et Papiria?"
     },
     {
-      "answer": "De 107 à 100 av. J.-C.",
+      "answer": {
+        "details": "De 107 à 100 av. J.-C.",
+        "name": "Six consulats consécutifs de Marius"
+      },
       "id": "099c227d-cc56-448a-9f49-70200cc727c4",
       "question": "Quand Caius Marius est-il consul six fois de suite ?"
     },
     {
-      "answer": "En 65 av. J.-C., il s'endette lourdement en organisant des jeux et des combats de gladiateurs ",
+      "answer": {
+        "details": "En 65 av. J.-C., il s'endette lourdement en organisant des jeux et des combats de gladiateurs ",
+        "name": "Édilité de César"
+      },
       "id": "7d39e1ed-cb3e-4f1d-b092-1e88b1a6f472",
       "question": "Quand César est-il édile"
     },
     {
-      "answer": "-306, c'est un partage territorial entre Rome et Carthage (Rome n'intervient pas en Sicile, Carthage n'intervient pas en Italie)",
+      "answer": {
+        "details": "-306, c'est un partage territorial entre Rome et Carthage (Rome n'intervient pas en Sicile, Carthage n'intervient pas en Italie)",
+        "name": "Traité de Filinos"
+      },
       "id": "086e8f19-7b4d-4227-9ceb-80e02cd4fb40",
       "question": "Quand a lieu le traité de Filinos ?"
     },
     {
-      "answer": "-272, elle commence alors à s'intéresser à la Sicile",
+      "answer": {
+        "details": "-272, elle commence alors à s'intéresser à la Sicile",
+        "name": "Prise de Tarente"
+      },
       "id": "fe0a2f97-91f3-41f0-9685-3420d0d25e4d",
       "question": "Quand Rome prend-elle Tarente ?"
     },
     {
-      "answer": "-264 à -241",
+      "answer": {
+        "details": "-264 à -241",
+        "name": "Première guerre punique"
+      },
       "id": "a57e89ac-05f6-4c42-9cf0-e88462e8770b",
       "question": "Quand a lieu la première guerre punique ?"
     },
     {
-      "answer": "-218 à -202",
+      "answer": {
+        "details": "-218 à -202",
+        "name": "Deuxième guerre punique"
+      },
       "id": "08875d81-a8f6-4ee9-94bb-a2fed8b8ced2",
       "question": "Quand a lieu la deuxième guerre punique ?"
     },
     {
-      "answer": "-218",
+      "answer": {
+        "details": "-218",
+        "name": "Arrivée d'Hannibal en Italie"
+      },
       "id": "633636c9-f4ba-4547-951e-ca8bbd203a34",
       "question": "Quand Hannibal arrive-t-il en Italie ?"
     },
     {
-      "answer": "-216",
+      "answer": {
+        "name": "Bataille de Cannes",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2149899,
+          "start": {
+            "year": -215
+          }
+        }
+      },
       "id": "0a34e942-de3a-4de7-9d59-eec2036b4de6",
       "question": "Quand a lieu la bataille de Cannes ?"
     },
     {
-      "answer": "-212, les Romains recrutent une armée et reprennent Capoue",
+      "answer": {
+        "details": "Les Romains recrutent une armée et reprennent Capoue",
+        "name": "Tournant de la deuxième guerre punique",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2109899,
+          "start": {
+            "year": -211
+          }
+        }
+      },
       "id": "b3e7647b-a4ed-4997-9379-7a03bef566db",
       "question": "Quand a lieu le tournant de la deuxième guerre punique ?"
     },
     {
-      "answer": "-202, Scipion bat Hannibal",
+      "answer": {
+        "details": "Scipion bat Hannibal",
+        "name": "Bataille de Zama",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -2009899,
+          "start": {
+            "year": -201
+          }
+        }
+      },
       "id": "5896fb0f-6512-478d-9d4a-7be01d6a9d19",
       "question": "Quand a lieu la bataille de Zama ?"
     },
     {
-      "answer": "-149 à -146",
+      "answer": {
+        "name": "Troisième guerre punique",
+        "time": {
+          "approximate": false,
+          "end": {
+            "year": -145
+          },
+          "precision": "year",
+          "sortKey": -1479899,
+          "start": {
+            "year": -148
+          }
+        }
+      },
       "id": "3dd7b631-f585-47b2-8d94-a4b0f3d5c9a8",
       "question": "Quand a lieu la troisième guerre punique ?"
     },
     {
-      "answer": "-146",
+      "answer": {
+        "name": "Carthage détruite",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1449899,
+          "start": {
+            "year": -145
+          }
+        }
+      },
       "id": "f555f534-9d5e-41c3-aa13-766f71e16223",
       "question": "Quand Carthage est-elle détruite et les guerres puniques prennent-elles fin ?"
     },
     {
-      "answer": "En 149, elle met en place la, *Quaestio de repundis* pour punir les extorsions des gouverneurs.",
+      "answer": {
+        "details": "Elle met en place la, *Quaestio de repetundis* pour punir les extorsions des gouverneurs.",
+        "name": "Lex Calpurnia",
+        "time": {
+          "approximate": false,
+          "precision": "year",
+          "sortKey": -1479899,
+          "start": {
+            "year": -148
+          }
+        }
+      },
       "id": "1aa67f65-1a44-4de6-bf5c-e5ba0c0077c7",
       "question": "Quand la lex Calpurnia est-elle promulguée ?"
     },
     {
-      "answer": "Entre 73 et 71, dans le sud de l'Italie",
+      "answer": {
+        "details": "Dans le sud de l'Italie",
+        "name": "Révolte de Spartacus",
+        "time": {
+          "end": {
+            "year": -70
+          },
+          "precision": "year",
+          "sortKey": -719899,
+          "start": {
+            "year": -72
+          }
+        }
+      },
       "id": "ae60bd27-7a56-423e-9ae3-075eb548a2c0",
       "question": "Quand la révolte d'esclave de Spartacus a-t-elle lieu ?"
     },
     {
-      "answer": "184",
+      "answer": {
+        "details": "184",
+        "name": "Accusation des Scipions par Caton l'Ancien"
+      },
       "id": "773b88a5-ea2d-47ba-b87f-b795071f4d57",
       "question": "Quand Caton l'Ancien, pendant sa censure, accuse-t-il les Scipions (Africain et Asiatique) d'abus de pouvoir ?\n"
     }
