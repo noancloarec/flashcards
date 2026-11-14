@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 import { SavingStatus } from '../models/savingStatus'
 
@@ -16,12 +16,21 @@ const warnNoUnsavedChanges = (event: BeforeUnloadEvent) => {
   }
 }
 
+const onKeydown = (e: KeyboardEvent) => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's') {
+    e.preventDefault()
+    save()
+  }
+}
+
 onMounted(() => {
   window.addEventListener('beforeunload', warnNoUnsavedChanges)
+  window.addEventListener('keydown', onKeydown)
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
   window.removeEventListener('beforeunload', warnNoUnsavedChanges)
+  window.removeEventListener('keydown', onKeydown)
 })
 
 watch(
