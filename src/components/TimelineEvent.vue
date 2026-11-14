@@ -16,6 +16,10 @@ defineProps<{
    */
   textY: number
   /**
+   * Where the year should be drawn, not necessarily the same as the tick to prevent year overlapping
+   */
+  yearY: number
+  /**
    * The event to display
    */
   event: DateAnswer
@@ -57,7 +61,7 @@ defineProps<{
     v-if="displayDate"
     x="180"
     text-anchor="end"
-    :y="textY"
+    :y="yearY"
     dominant-baseline="middle"
   >
     {{ numericYearFromAstro(event.time.start.year) }}
@@ -92,14 +96,14 @@ defineProps<{
       stroke-width="1"
     ></line>
   </template>
-  <template v-if="displayDate && textY !== tickY">
+  <template v-if="displayDate && yearY !== tickY">
     <!-- Lines from the tick to the year -->
     <line
       :class="{ shown: isShown }"
       x1="190"
       x2="190"
       :y1="tickY"
-      :y2="textY"
+      :y2="yearY"
       stroke="black"
       stroke-width="1"
     ></line>
@@ -107,8 +111,8 @@ defineProps<{
       :class="{ shown: isShown }"
       x1="185"
       x2="190"
-      :y1="textY"
-      :y2="textY"
+      :y1="yearY"
+      :y2="yearY"
       stroke="black"
       stroke-width="1"
     ></line>
