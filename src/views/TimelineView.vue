@@ -36,7 +36,7 @@ const eventsOnDisplay = computed<DateAnswer[]>(
 </template>
 <style scoped>
 #timeline {
-  height: 80vh;
-  width: 50vw;
+  width: 100%;
+  height: 90dvh;
 }
 </style>

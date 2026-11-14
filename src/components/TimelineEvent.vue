@@ -18,7 +18,7 @@ defineProps<{
   /**
    * Where the year should be drawn, not necessarily the same as the tick to prevent year overlapping
    */
-  yearY: number
+  yearY?: number
   /**
    * The event to display
    */
@@ -54,7 +54,7 @@ defineProps<{
     :y1="tickY"
     :y2="tickY"
     stroke="black"
-    stroke-width="1"
+    stroke-width="3"
   ></line>
   <text
     :class="{ shown: isShown }"
@@ -92,27 +92,6 @@ defineProps<{
       x2="215"
       :y1="textY"
       :y2="textY"
-      stroke="black"
-      stroke-width="1"
-    ></line>
-  </template>
-  <template v-if="displayDate && yearY !== tickY">
-    <!-- Lines from the tick to the year -->
-    <line
-      :class="{ shown: isShown }"
-      x1="190"
-      x2="190"
-      :y1="tickY"
-      :y2="yearY"
-      stroke="black"
-      stroke-width="1"
-    ></line>
-    <line
-      :class="{ shown: isShown }"
-      x1="185"
-      x2="190"
-      :y1="yearY"
-      :y2="yearY"
       stroke="black"
       stroke-width="1"
     ></line>

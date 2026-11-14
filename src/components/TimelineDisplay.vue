@@ -2,7 +2,16 @@
 /**
  * A timeline to be displayed to the reader so they can better understand how a Story evolves in time
  */
-import { computed, onMounted, onUpdated, type Ref, ref, useTemplateRef } from 'vue'
+import {
+  computed,
+  nextTick,
+  onBeforeUnmount,
+  onMounted,
+  onUpdated,
+  type Ref,
+  ref,
+  useTemplateRef
+} from 'vue'
 
 import type { DateAnswer } from '../models/card.ts'
 import { type Discontinuity, sumYearSpan } from '../models/discontinuity.ts'
@@ -233,7 +242,7 @@ const measuredBottom = ref(0)
  * This function ensures both the svg height and its viewbox height fit the content (the y-overflow of the svg within the div is scrollable)
  */
 const measureContentBottom = () => {
-  const box = svgElement.value!.getBBox()
+  const box = contentGroup.value!.getBBox()
   measuredBottom.value = box.y + box.height
 }
 
@@ -275,6 +284,50 @@ const shownEvents: Ref<DateAnswer[]> = ref([...props.events])
 //     shownEvents.value.push(props.currentEvent)
 //   }
 // )
+
+const contentGroup = useTemplateRef<SVGGraphicsElement>('contentGroup')
+
+const layoutKey = ref(0)
+
+let observer: ResizeObserver | undefined
+let timer: ReturnType<typeof setTimeout> | undefined
+let lastWidth = 0
+
+onMounted(() => {
+  const el = svgContainer.value!
+  computeViewboxWidth()
+  lastWidth = el.clientWidth
+
+  observer = new ResizeObserver(() => {
+    clearTimeout(timer)
+    // Debounce: a rotation fires several resize events in a row
+    timer = setTimeout(() => {
+      const width = el.clientWidth
+      // Ignore height-only changes (mobile toolbars showing or hiding)
+      if (Math.abs(width - lastWidth) < 20) return
+      lastWidth = width
+
+      const scrollRatio = el.scrollTop / el.scrollHeight
+
+      computeViewboxWidth()
+      measuredBottom.value = 0
+      layoutKey.value++ // remounts the events, so every label re-wraps and re-measures
+
+      // Restore the reading position once the new layout is rendered
+      nextTick(() =>
+        requestAnimationFrame(() => {
+          el.scrollTop = scrollRatio * el.scrollHeight
+        })
+      )
+    }, 150)
+  })
+  observer.observe(el)
+})
+
+onBeforeUnmount(() => {
+  observer?.disconnect()
+  clearTimeout(timer)
+})
 </script>
 
 <template>
@@ -307,22 +360,27 @@ const shownEvents: Ref<DateAnswer[]> = ref([...props.events])
         :stroke-width="3"
         stroke-dasharray="6"
       ></line>
-      <template v-for="(event, i) in sortedAnswers" :key="event.details">
-        <TimelineEvent
-          :tick-y="computeY(event.time.start)"
-          :text-y="stepsY[i]"
-          :year-y="yearsY[i]"
-          :title="event.name"
-          :event="event"
-          :displayDate="
-            i === 0 || event.time.start.year !== sortedAnswers[i - 1].time.start.year
-            // Time label should not be displayed if several events happen at the same dat
-          "
-          :max-x="svgViewBoxWidth"
-          @height-change="(newHeight) => updateElementsY(newHeight, i)"
-          :is-shown="shownEvents.includes(event)"
-        />
-      </template>
+      <g ref="contentGroup">
+        <template
+          v-for="(event, i) in sortedAnswers"
+          :key="`${layoutKey}-${event.time.sortKey}-${event.name}`"
+        >
+          <TimelineEvent
+            :tick-y="computeY(event.time.start)"
+            :text-y="stepsY[i]"
+            :year-y="yearsY[i]"
+            :title="event.name"
+            :event="event"
+            :displayDate="
+              i === 0 || event.time.start.year !== sortedAnswers[i - 1].time.start.year
+              // Time label should not be displayed if several events happen at the same dat
+            "
+            :max-x="svgViewBoxWidth"
+            @height-change="(newHeight) => updateElementsY(newHeight, i)"
+            :is-shown="shownEvents.includes(event)"
+          />
+        </template>
+      </g>
     </svg>
   </div>
 </template>
