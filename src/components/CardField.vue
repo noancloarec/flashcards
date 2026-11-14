@@ -10,10 +10,10 @@ import {
   type SimpleCard
 } from '../models/card'
 import { toReadableTimeMarker } from '../models/timeMarker.ts'
+import { getEventName } from '../services/eventNameDetection.ts'
 import { findFirstTimeMarker, type TimeMatch } from '../services/timeMarkerDetection.ts'
 import DateCardField from './DateCardField.vue'
 import SimpleCardField from './SimpleCardField.vue'
-import { getEventName } from '../services/eventNameDetection.ts'
 
 const card = defineModel<Card>({ required: true })
 const cachedSimpleAnswer = ref<string>(cardIsSimpleCard(card.value) ? card.value.answer : '')
@@ -34,7 +34,7 @@ const predictDateAnswer = (
   question: string
 ): DateAnswer => {
   let details = originalAnwser.substring(match.index + match.text.length).trim()
-  if (details.startsWith(',')) {
+  if (details.startsWith(',') || details.startsWith('.')) {
     details = details.substring(1).trim()
   }
   let result: DateAnswer = { time: match.marker, name: getEventName(question) }
