@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { Timestamp } from 'firebase/firestore'
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 import SaveButton from '../components/SaveButton.vue'
 import { useAuth } from '../composables/useAuth.ts'
-import { cardIsDateCard, type Card } from '../models/card.ts'
+import { type Card, cardIsDateCard } from '../models/card.ts'
 import type { Deck } from '../models/deck.ts'
 import { type DeckMemorizationHistory } from '../models/memorizationHistory.ts'
 import {
@@ -80,16 +80,18 @@ onMounted(async () => {
   loading.value = false
 })
 
-document.addEventListener('keydown', (e) => {
+const onKeyDown = (e: KeyboardEvent) => {
   if (e.code === 'Space') {
     e.preventDefault()
-
+    ;(document.activeElement as HTMLElement | null)?.blur()
     if (!showAnswer.value) {
       showAnswer.value = true
     } else {
       nextQuestion(false)
     }
   } else if (showAnswer.value && (e.code === 'Enter' || e.code === 'NumpadEnter')) {
+    e.preventDefault()
+    ;(document.activeElement as HTMLElement | null)?.blur()
     nextQuestion(true)
   } else if (e.code === 'ArrowRight' || e.code === 'ArrowLeft') {
     e.preventDefault()
@@ -101,7 +103,10 @@ document.addEventListener('keydown', (e) => {
       deckState.value!.cards.length
     )
   }
-})
+}
+
+onMounted(() => document.addEventListener('keydown', onKeyDown))
+onUnmounted(() => document.removeEventListener('keydown', onKeyDown))
 
 const getNextIndex = () => {
   let i = currentCardIndex.value
@@ -127,7 +132,6 @@ const registerCardMemorization = (success: boolean) => {
   const currentCard = deckState.value!.cards[currentCardIndex.value]
   const cardIsInLearnedCards =
     cardsLearnedInSession.value.find((card) => card.id === currentCard.id) !== undefined
-
   if (!success && cardIsInLearnedCards) {
     cardsLearnedInSession.value = cardsLearnedInSession.value.filter(
       (card) => card.id !== currentCard.id
